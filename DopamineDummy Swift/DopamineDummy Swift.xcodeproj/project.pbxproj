@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		848EA2E71CC0D5FF00EF2735 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2E61CC0D5FF00EF2735 /* AppDelegate.swift */; };
+		848EA2E91CC0D5FF00EF2735 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2E81CC0D5FF00EF2735 /* RootViewController.swift */; };
+		848EA2EB1CC0D5FF00EF2735 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2EA1CC0D5FF00EF2735 /* DataViewController.swift */; };
+		848EA2ED1CC0D5FF00EF2735 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2EC1CC0D5FF00EF2735 /* ModelController.swift */; };
+		848EA2F01CC0D5FF00EF2735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EA2EE1CC0D5FF00EF2735 /* Main.storyboard */; };
+		848EA2F21CC0D5FF00EF2735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848EA2F11CC0D5FF00EF2735 /* Assets.xcassets */; };
+		848EA2F51CC0D5FF00EF2735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EA2F31CC0D5FF00EF2735 /* LaunchScreen.storyboard */; };
+		848EA2FE1CC0D6AB00EF2735 /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848EA2FC1CC0D62200EF2735 /* DopamineKit.framework */; };
+		84C95AF01CC0DC92003E781D /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C95AEF1CC0DC92003E781D /* DopamineKit.framework */; };
+		84C95AF11CC0DCA5003E781D /* DopamineKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84C95AEF1CC0DC92003E781D /* DopamineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84C95AF41CC0E249003E781D /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C95AF31CC0E249003E781D /* DopamineProperties.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		848EA3001CC0D6AB00EF2735 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84C95AF11CC0DCA5003E781D /* DopamineKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		848EA2E31CC0D5FF00EF2735 /* DopamineDummy Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DopamineDummy Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		848EA2E61CC0D5FF00EF2735 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		848EA2E81CC0D5FF00EF2735 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		848EA2EA1CC0D5FF00EF2735 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		848EA2EC1CC0D5FF00EF2735 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		848EA2EF1CC0D5FF00EF2735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		848EA2F11CC0D5FF00EF2735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		848EA2F41CC0D5FF00EF2735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		848EA2F61CC0D5FF00EF2735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848EA2FC1CC0D62200EF2735 /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DopamineKit.framework; path = "/Users/cuddergambino/Code/Dopamine/DopamineAPI_Swift-Demo/DopamineDummy Swift/DopamineKit.framework"; sourceTree = "<absolute>"; };
+		84C95AEF1CC0DC92003E781D /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DopamineKit.framework; sourceTree = "<group>"; };
+		84C95AF31CC0E249003E781D /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		848EA2E01CC0D5FF00EF2735 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C95AF01CC0DC92003E781D /* DopamineKit.framework in Frameworks */,
+				848EA2FE1CC0D6AB00EF2735 /* DopamineKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		848EA2DA1CC0D5FF00EF2735 = {
+			isa = PBXGroup;
+			children = (
+				848EA2E51CC0D5FF00EF2735 /* DopamineDummy Swift */,
+				848EA2E41CC0D5FF00EF2735 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		848EA2E41CC0D5FF00EF2735 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				848EA2E31CC0D5FF00EF2735 /* DopamineDummy Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		848EA2E51CC0D5FF00EF2735 /* DopamineDummy Swift */ = {
+			isa = PBXGroup;
+			children = (
+				84C95AEF1CC0DC92003E781D /* DopamineKit.framework */,
+				848EA2E61CC0D5FF00EF2735 /* AppDelegate.swift */,
+				848EA2E81CC0D5FF00EF2735 /* RootViewController.swift */,
+				848EA2EA1CC0D5FF00EF2735 /* DataViewController.swift */,
+				848EA2EC1CC0D5FF00EF2735 /* ModelController.swift */,
+				848EA2EE1CC0D5FF00EF2735 /* Main.storyboard */,
+				848EA2F11CC0D5FF00EF2735 /* Assets.xcassets */,
+				848EA2F31CC0D5FF00EF2735 /* LaunchScreen.storyboard */,
+				84C95AF31CC0E249003E781D /* DopamineProperties.plist */,
+				848EA2F61CC0D5FF00EF2735 /* Info.plist */,
+			);
+			path = "DopamineDummy Swift";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		848EA2E21CC0D5FF00EF2735 /* DopamineDummy Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 848EA2F91CC0D5FF00EF2735 /* Build configuration list for PBXNativeTarget "DopamineDummy Swift" */;
+			buildPhases = (
+				848EA2DF1CC0D5FF00EF2735 /* Sources */,
+				848EA2E01CC0D5FF00EF2735 /* Frameworks */,
+				848EA2E11CC0D5FF00EF2735 /* Resources */,
+				848EA3001CC0D6AB00EF2735 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DopamineDummy Swift";
+			productName = "DopamineDummy Swift";
+			productReference = 848EA2E31CC0D5FF00EF2735 /* DopamineDummy Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		848EA2DB1CC0D5FF00EF2735 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = DopamineLabs;
+				TargetAttributes = {
+					848EA2E21CC0D5FF00EF2735 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 367K5HG48M;
+					};
+				};
+			};
+			buildConfigurationList = 848EA2DE1CC0D5FF00EF2735 /* Build configuration list for PBXProject "DopamineDummy Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 848EA2DA1CC0D5FF00EF2735;
+			productRefGroup = 848EA2E41CC0D5FF00EF2735 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				848EA2E21CC0D5FF00EF2735 /* DopamineDummy Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		848EA2E11CC0D5FF00EF2735 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C95AF41CC0E249003E781D /* DopamineProperties.plist in Resources */,
+				848EA2F51CC0D5FF00EF2735 /* LaunchScreen.storyboard in Resources */,
+				848EA2F21CC0D5FF00EF2735 /* Assets.xcassets in Resources */,
+				848EA2F01CC0D5FF00EF2735 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		848EA2DF1CC0D5FF00EF2735 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				848EA2E91CC0D5FF00EF2735 /* RootViewController.swift in Sources */,
+				848EA2ED1CC0D5FF00EF2735 /* ModelController.swift in Sources */,
+				848EA2EB1CC0D5FF00EF2735 /* DataViewController.swift in Sources */,
+				848EA2E71CC0D5FF00EF2735 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		848EA2EE1CC0D5FF00EF2735 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				848EA2EF1CC0D5FF00EF2735 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		848EA2F31CC0D5FF00EF2735 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				848EA2F41CC0D5FF00EF2735 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		848EA2F71CC0D5FF00EF2735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		848EA2F81CC0D5FF00EF2735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		848EA2FA1CC0D5FF00EF2735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
+				);
+				INFOPLIST_FILE = "DopamineDummy Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DopamineLabs.DopamineDummy-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		848EA2FB1CC0D5FF00EF2735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
+				);
+				INFOPLIST_FILE = "DopamineDummy Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DopamineLabs.DopamineDummy-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		848EA2DE1CC0D5FF00EF2735 /* Build configuration list for PBXProject "DopamineDummy Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848EA2F71CC0D5FF00EF2735 /* Debug */,
+				848EA2F81CC0D5FF00EF2735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		848EA2F91CC0D5FF00EF2735 /* Build configuration list for PBXNativeTarget "DopamineDummy Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848EA2FA1CC0D5FF00EF2735 /* Debug */,
+				848EA2FB1CC0D5FF00EF2735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 848EA2DB1CC0D5FF00EF2735 /* Project object */;
+}
