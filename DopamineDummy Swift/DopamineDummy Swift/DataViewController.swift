@@ -32,13 +32,14 @@ class DataViewController: UIViewController {
     }
     
     @IBAction func trackButton(sender: AnyObject) {
+        
         DopamineKit.track("some action")
 //        dispatch_async(dispatch_get_main_queue(), {
         self.responseLabel.text = "Tracked"
 //        })
     }
     @IBAction func reinforceButton(sender: AnyObject) {
-        DopamineKit.reinforce("action1", callback: {response in
+        DopamineKit.reinforce("action1", metaData:["key":"value"], secondaryIdentity: "user", callback: {response in
             dispatch_async(dispatch_get_main_queue(), {
                 self.responseLabel.text = response
             })

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84604FC51CC17074003EE96A /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84604FC41CC17074003EE96A /* DopamineKit.framework */; };
+		84604FC61CC17086003EE96A /* DopamineKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84604FC41CC17074003EE96A /* DopamineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84604FC71CC17094003EE96A /* DopamineKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84604FC41CC17074003EE96A /* DopamineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		848EA2E71CC0D5FF00EF2735 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2E61CC0D5FF00EF2735 /* AppDelegate.swift */; };
 		848EA2E91CC0D5FF00EF2735 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2E81CC0D5FF00EF2735 /* RootViewController.swift */; };
 		848EA2EB1CC0D5FF00EF2735 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2EA1CC0D5FF00EF2735 /* DataViewController.swift */; };
@@ -14,20 +17,27 @@
 		848EA2F01CC0D5FF00EF2735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EA2EE1CC0D5FF00EF2735 /* Main.storyboard */; };
 		848EA2F21CC0D5FF00EF2735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848EA2F11CC0D5FF00EF2735 /* Assets.xcassets */; };
 		848EA2F51CC0D5FF00EF2735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EA2F31CC0D5FF00EF2735 /* LaunchScreen.storyboard */; };
-		848EA2FE1CC0D6AB00EF2735 /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848EA2FC1CC0D62200EF2735 /* DopamineKit.framework */; };
-		84C95AF01CC0DC92003E781D /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C95AEF1CC0DC92003E781D /* DopamineKit.framework */; };
-		84C95AF11CC0DCA5003E781D /* DopamineKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84C95AEF1CC0DC92003E781D /* DopamineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84C95AF41CC0E249003E781D /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C95AF31CC0E249003E781D /* DopamineProperties.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		84604FC21CC16F63003EE96A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84604FC71CC17094003EE96A /* DopamineKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		848EA3001CC0D6AB00EF2735 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				84C95AF11CC0DCA5003E781D /* DopamineKit.framework in Embed Frameworks */,
+				84604FC61CC17086003EE96A /* DopamineKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		84604FC41CC17074003EE96A /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DopamineKit.framework; sourceTree = "<group>"; };
 		848EA2E31CC0D5FF00EF2735 /* DopamineDummy Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DopamineDummy Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		848EA2E61CC0D5FF00EF2735 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848EA2E81CC0D5FF00EF2735 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -44,8 +55,6 @@
 		848EA2F11CC0D5FF00EF2735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		848EA2F41CC0D5FF00EF2735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		848EA2F61CC0D5FF00EF2735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		848EA2FC1CC0D62200EF2735 /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DopamineKit.framework; path = "/Users/cuddergambino/Code/Dopamine/DopamineAPI_Swift-Demo/DopamineDummy Swift/DopamineKit.framework"; sourceTree = "<absolute>"; };
-		84C95AEF1CC0DC92003E781D /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DopamineKit.framework; sourceTree = "<group>"; };
 		84C95AF31CC0E249003E781D /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,17 +63,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84C95AF01CC0DC92003E781D /* DopamineKit.framework in Frameworks */,
-				848EA2FE1CC0D6AB00EF2735 /* DopamineKit.framework in Frameworks */,
+				84604FC51CC17074003EE96A /* DopamineKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84604FC11CC16F0C003EE96A /* OtherDir */ = {
+			isa = PBXGroup;
+			children = (
+				84C95AF31CC0E249003E781D /* DopamineProperties.plist */,
+			);
+			name = OtherDir;
+			path = "DopamineDummy Swift";
+			sourceTree = "<group>";
+		};
 		848EA2DA1CC0D5FF00EF2735 = {
 			isa = PBXGroup;
 			children = (
+				84604FC11CC16F0C003EE96A /* OtherDir */,
 				848EA2E51CC0D5FF00EF2735 /* DopamineDummy Swift */,
 				848EA2E41CC0D5FF00EF2735 /* Products */,
 			);
@@ -81,7 +99,7 @@
 		848EA2E51CC0D5FF00EF2735 /* DopamineDummy Swift */ = {
 			isa = PBXGroup;
 			children = (
-				84C95AEF1CC0DC92003E781D /* DopamineKit.framework */,
+				84604FC41CC17074003EE96A /* DopamineKit.framework */,
 				848EA2E61CC0D5FF00EF2735 /* AppDelegate.swift */,
 				848EA2E81CC0D5FF00EF2735 /* RootViewController.swift */,
 				848EA2EA1CC0D5FF00EF2735 /* DataViewController.swift */,
@@ -89,7 +107,6 @@
 				848EA2EE1CC0D5FF00EF2735 /* Main.storyboard */,
 				848EA2F11CC0D5FF00EF2735 /* Assets.xcassets */,
 				848EA2F31CC0D5FF00EF2735 /* LaunchScreen.storyboard */,
-				84C95AF31CC0E249003E781D /* DopamineProperties.plist */,
 				848EA2F61CC0D5FF00EF2735 /* Info.plist */,
 			);
 			path = "DopamineDummy Swift";
@@ -106,6 +123,7 @@
 				848EA2E01CC0D5FF00EF2735 /* Frameworks */,
 				848EA2E11CC0D5FF00EF2735 /* Resources */,
 				848EA3001CC0D6AB00EF2735 /* Embed Frameworks */,
+				84604FC21CC16F63003EE96A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -288,6 +306,8 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/DopamineDummy",
 					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
 				);
 				INFOPLIST_FILE = "DopamineDummy Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -303,6 +323,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",
 					Swift,
 				);
