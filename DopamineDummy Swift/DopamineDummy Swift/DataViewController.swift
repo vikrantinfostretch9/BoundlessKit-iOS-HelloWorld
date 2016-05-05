@@ -1,3 +1,4 @@
+
 //
 //  DataViewController.swift
 //  DopamineDummy Swift
@@ -29,19 +30,43 @@ class DataViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.dataLabel!.text = dataObject
+        
+        
     }
     
     @IBAction func trackButton(sender: AnyObject) {
         
         DopamineKit.track("some action")
-//        dispatch_async(dispatch_get_main_queue(), {
         self.responseLabel.text = "Tracked"
-//        })
     }
+    
+    func dismissmodal(gestureRecognizer: UIGestureRecognizer){
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    
     @IBAction func reinforceButton(sender: AnyObject) {
         DopamineKit.reinforce("action1", metaData:["key":"value"], secondaryIdentity: "user", callback: {response in
             dispatch_async(dispatch_get_main_queue(), {
                 self.responseLabel.text = response
+                
+                var str = String()
+                
+                switch(response!){
+                    case "awesomeRewardOne":
+                        str = "FistBump"
+                    case "encouragingRewardTwo":
+                        str = "ThumbsUp"
+                default:
+                        return
+                }
+                
+                let vc = DopamineKit.showReinforcer(str)
+                let tap = UITapGestureRecognizer(target: self, action: "dismissmodal:")
+                vc.view.addGestureRecognizer(tap)
+                self.presentViewController(vc, animated: true, completion: nil)
+                
             })
         })
     }
