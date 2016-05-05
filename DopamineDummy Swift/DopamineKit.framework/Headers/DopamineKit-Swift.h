@@ -86,8 +86,18 @@ typedef int swift_int2  __attribute__((__ext_vector_type__(2)));
 typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
 typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
+@import ObjectiveC;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+@class UIViewController;
+
+SWIFT_CLASS("_TtC11DopamineKit11DopamineKit")
+@interface DopamineKit : NSObject
++ (void)track:(NSString * __nonnull)actionID metaData:(NSDictionary<NSString *, id> * __nullable)metaData secondaryIdentity:(NSString * __nullable)secondaryIdentity callback:(void (^ __nonnull)(NSString * __nullable))callback;
++ (void)reinforce:(NSString * __nonnull)actionID metaData:(NSDictionary<NSString *, id> * __nullable)metaData secondaryIdentity:(NSString * __nullable)secondaryIdentity timeoutSeconds:(float)timeoutSeconds callback:(void (^ __nonnull)(NSString * __nullable))callback;
++ (UIViewController * __nonnull)showReinforcer:(NSString * __nonnull)reinforceName;
+@end
+
 #pragma clang diagnostic pop
