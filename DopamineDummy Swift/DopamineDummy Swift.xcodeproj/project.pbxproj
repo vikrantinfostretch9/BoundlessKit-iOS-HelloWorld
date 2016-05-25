@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		843585261CC9496600075702 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 843585251CC9496600075702 /* DopamineProperties.plist */; };
-		845D8E981CD4909A00CC5E5C /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845D8E971CD4909A00CC5E5C /* DopamineKit.framework */; };
-		845D8E991CD490A400CC5E5C /* DopamineKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 845D8E971CD4909A00CC5E5C /* DopamineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8439620E1CF309C600BDEA09 /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8439620B1CF309BD00BDEA09 /* DopamineKit.framework */; };
 		848EA2E71CC0D5FF00EF2735 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2E61CC0D5FF00EF2735 /* AppDelegate.swift */; };
 		848EA2E91CC0D5FF00EF2735 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2E81CC0D5FF00EF2735 /* RootViewController.swift */; };
 		848EA2EB1CC0D5FF00EF2735 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2EA1CC0D5FF00EF2735 /* DataViewController.swift */; };
@@ -19,6 +18,23 @@
 		848EA2F51CC0D5FF00EF2735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EA2F31CC0D5FF00EF2735 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8439620A1CF309BD00BDEA09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 843962041CF309BC00BDEA09 /* DopamineKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 845D8EBB1CDA8E8900CC5E5C;
+			remoteInfo = DopamineKit;
+		};
+		8439620C1CF309BD00BDEA09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 843962041CF309BC00BDEA09 /* DopamineKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 845D8EC51CDA8E8900CC5E5C;
+			remoteInfo = DopamineKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		84604FC21CC16F63003EE96A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -26,7 +42,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				845D8E991CD490A400CC5E5C /* DopamineKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,7 +49,7 @@
 
 /* Begin PBXFileReference section */
 		843585251CC9496600075702 /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
-		845D8E971CD4909A00CC5E5C /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DopamineKit.framework; sourceTree = "<group>"; };
+		843962041CF309BC00BDEA09 /* DopamineKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DopamineKit.xcodeproj; path = "../../DopamineAPI_Swift-Client/DopamineKit/DopamineKit.xcodeproj"; sourceTree = "<group>"; };
 		848EA2E31CC0D5FF00EF2735 /* DopamineDummy Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DopamineDummy Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		848EA2E61CC0D5FF00EF2735 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848EA2E81CC0D5FF00EF2735 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -51,17 +66,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845D8E981CD4909A00CC5E5C /* DopamineKit.framework in Frameworks */,
+				8439620E1CF309C600BDEA09 /* DopamineKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843962051CF309BC00BDEA09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8439620B1CF309BD00BDEA09 /* DopamineKit.framework */,
+				8439620D1CF309BD00BDEA09 /* DopamineKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		848EA2DA1CC0D5FF00EF2735 = {
 			isa = PBXGroup;
 			children = (
-				845D8E971CD4909A00CC5E5C /* DopamineKit.framework */,
+				843962041CF309BC00BDEA09 /* DopamineKit.xcodeproj */,
 				848EA2E51CC0D5FF00EF2735 /* DopamineDummy Swift */,
 				848EA2E41CC0D5FF00EF2735 /* Products */,
 			);
@@ -139,12 +163,35 @@
 			mainGroup = 848EA2DA1CC0D5FF00EF2735;
 			productRefGroup = 848EA2E41CC0D5FF00EF2735 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 843962051CF309BC00BDEA09 /* Products */;
+					ProjectRef = 843962041CF309BC00BDEA09 /* DopamineKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				848EA2E21CC0D5FF00EF2735 /* DopamineDummy Swift */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8439620B1CF309BD00BDEA09 /* DopamineKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DopamineKit.framework;
+			remoteRef = 8439620A1CF309BD00BDEA09 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8439620D1CF309BD00BDEA09 /* DopamineKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DopamineKitTests.xctest;
+			remoteRef = 8439620C1CF309BD00BDEA09 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		848EA2E11CC0D5FF00EF2735 /* Resources */ = {
@@ -298,6 +345,14 @@
 					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",
 					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
 				);
 				INFOPLIST_FILE = "DopamineDummy Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -313,6 +368,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",
 					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",

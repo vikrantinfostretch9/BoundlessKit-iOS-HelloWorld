@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="703-4V-yAM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="703-4V-yAM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -40,31 +42,48 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-V9-EN7">
-                                <rect key="frame" x="20" y="44" width="560" height="536"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-V9-EN7">
+                                <rect key="frame" x="20" y="45" width="560" height="535"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Os-ES-u1n">
-                                        <rect key="frame" x="205" y="353" width="150" height="54"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResponseLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8H-V0-LBO">
+                                        <rect key="frame" x="34" y="43" width="117" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Os-ES-u1n">
+                                        <rect key="frame" x="210" y="241" width="150" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="vwL-rL-475"/>
+                                        </constraints>
                                         <state key="normal" title="Reinforce"/>
                                         <connections>
                                             <action selector="reinforceButton:" destination="S4R-Ja-viH" eventType="touchUpInside" id="Muz-Ca-JTj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Tr-9Z-Gz3">
-                                        <rect key="frame" x="29" y="353" width="150" height="54"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Tr-9Z-Gz3">
+                                        <rect key="frame" x="52" y="241" width="150" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="PqW-e5-u5H"/>
+                                            <constraint firstAttribute="width" constant="150" id="gqe-7T-T2D"/>
+                                        </constraints>
                                         <state key="normal" title="Track"/>
                                         <connections>
                                             <action selector="trackButton:" destination="S4R-Ja-viH" eventType="touchUpInside" id="WZ3-D1-mfD"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ResponseLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8H-V0-LBO">
-                                        <rect key="frame" x="135" y="45" width="269" height="95"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="0Os-ES-u1n" firstAttribute="firstBaseline" secondItem="6Tr-9Z-Gz3" secondAttribute="baseline" id="JdP-N6-Coa"/>
+                                    <constraint firstItem="0Os-ES-u1n" firstAttribute="baseline" secondItem="6Tr-9Z-Gz3" secondAttribute="firstBaseline" id="MfD-Ek-wUm"/>
+                                    <constraint firstItem="6Tr-9Z-Gz3" firstAttribute="centerY" secondItem="s1b-V9-EN7" secondAttribute="centerY" id="Sga-Sw-NoX"/>
+                                    <constraint firstItem="Q8H-V0-LBO" firstAttribute="top" secondItem="s1b-V9-EN7" secondAttribute="top" constant="43" id="VJ8-M7-a9B"/>
+                                    <constraint firstItem="6Tr-9Z-Gz3" firstAttribute="leading" secondItem="s1b-V9-EN7" secondAttribute="leading" constant="52" id="Wre-Qa-2Ru"/>
+                                    <constraint firstItem="0Os-ES-u1n" firstAttribute="top" secondItem="6Tr-9Z-Gz3" secondAttribute="top" id="fWB-Uc-Vxq"/>
+                                    <constraint firstItem="Q8H-V0-LBO" firstAttribute="leading" secondItem="s1b-V9-EN7" secondAttribute="leading" constant="34" id="mg8-1A-6Jd"/>
+                                    <constraint firstItem="0Os-ES-u1n" firstAttribute="leading" secondItem="6Tr-9Z-Gz3" secondAttribute="trailing" constant="8" symbolic="YES" id="nOc-9S-Mcf"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.97826086960000003" green="0.91848131079999995" blue="0.73914263440000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,6 +98,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonReinforce" destination="0Os-ES-u1n" id="gwp-Bw-dZ7"/>
                         <outlet property="dataLabel" destination="cF2-Le-7mQ" id="3EH-BK-JV6"/>
                         <outlet property="responseLabel" destination="Q8H-V0-LBO" id="AQA-xC-ix3"/>
                     </connections>

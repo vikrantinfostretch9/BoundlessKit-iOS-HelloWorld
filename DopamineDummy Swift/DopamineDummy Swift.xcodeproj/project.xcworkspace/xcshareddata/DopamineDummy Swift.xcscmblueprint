@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F3446E9360013312A1B5D7E8F1F5D7B5683B5BE3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EAFD779227FF37546EB51B1CB8E83D8FDDC8988D" : 0,
+    "80739E9618C82A5630A13DE711584E8FC42EBB11" : 0,
+    "F3446E9360013312A1B5D7E8F1F5D7B5683B5BE3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "48A2A2AC-0793-487C-A6E1-0185D41AB47E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EAFD779227FF37546EB51B1CB8E83D8FDDC8988D" : "DopamineAPI_Objective-C-Client\/",
+    "80739E9618C82A5630A13DE711584E8FC42EBB11" : "DopamineAPI_Swift-Client\/",
+    "F3446E9360013312A1B5D7E8F1F5D7B5683B5BE3" : "DopamineAPI_Swift-Demo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DopamineDummy Swift",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DopamineDummy Swift\/DopamineDummy Swift.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DopamineLabs\/DopamineAPI_Swift-Client.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "80739E9618C82A5630A13DE711584E8FC42EBB11"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DopamineLabs\/DopamineAPI_Objective-C-Client.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EAFD779227FF37546EB51B1CB8E83D8FDDC8988D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DopamineLabs\/DopamineAPI_Swift-Demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F3446E9360013312A1B5D7E8F1F5D7B5683B5BE3"
+    }
+  ]
+}

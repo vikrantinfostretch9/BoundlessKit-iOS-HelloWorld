@@ -12,6 +12,9 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
 
     var pageViewController: UIPageViewController?
 
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
