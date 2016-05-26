@@ -7,125 +7,156 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		843585261CC9496600075702 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 843585251CC9496600075702 /* DopamineProperties.plist */; };
-		8439620E1CF309C600BDEA09 /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8439620B1CF309BD00BDEA09 /* DopamineKit.framework */; };
-		848EA2E71CC0D5FF00EF2735 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2E61CC0D5FF00EF2735 /* AppDelegate.swift */; };
-		848EA2E91CC0D5FF00EF2735 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2E81CC0D5FF00EF2735 /* RootViewController.swift */; };
-		848EA2EB1CC0D5FF00EF2735 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2EA1CC0D5FF00EF2735 /* DataViewController.swift */; };
-		848EA2ED1CC0D5FF00EF2735 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EA2EC1CC0D5FF00EF2735 /* ModelController.swift */; };
-		848EA2F01CC0D5FF00EF2735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EA2EE1CC0D5FF00EF2735 /* Main.storyboard */; };
-		848EA2F21CC0D5FF00EF2735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848EA2F11CC0D5FF00EF2735 /* Assets.xcassets */; };
-		848EA2F51CC0D5FF00EF2735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EA2F31CC0D5FF00EF2735 /* LaunchScreen.storyboard */; };
+		843961BA1CEE665F00BDEA09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843961B91CEE665F00BDEA09 /* AppDelegate.swift */; };
+		843961BC1CEE665F00BDEA09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843961BB1CEE665F00BDEA09 /* ViewController.swift */; };
+		843961BF1CEE665F00BDEA09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843961BD1CEE665F00BDEA09 /* Main.storyboard */; };
+		843961C11CEE665F00BDEA09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843961C01CEE665F00BDEA09 /* Assets.xcassets */; };
+		843961C41CEE665F00BDEA09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843961C21CEE665F00BDEA09 /* LaunchScreen.storyboard */; };
+		843961CF1CEE665F00BDEA09 /* DopamineDummy_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843961CE1CEE665F00BDEA09 /* DopamineDummy_SwiftTests.swift */; };
+		843961DA1CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843961D91CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift */; };
+		843961F01CEE67A600BDEA09 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 843961EE1CEE67A600BDEA09 /* DopamineProperties.plist */; };
+		84DF76651CF66E4900E03A7E /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DF76641CF66E4900E03A7E /* DopamineKit.framework */; };
+		84DF76661CF66E5400E03A7E /* DopamineKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84DF76641CF66E4900E03A7E /* DopamineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8439620A1CF309BD00BDEA09 /* PBXContainerItemProxy */ = {
+		843961CB1CEE665F00BDEA09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 843962041CF309BC00BDEA09 /* DopamineKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 845D8EBB1CDA8E8900CC5E5C;
-			remoteInfo = DopamineKit;
+			containerPortal = 843961AE1CEE665F00BDEA09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 843961B51CEE665F00BDEA09;
+			remoteInfo = "DopamineDummy Swift";
 		};
-		8439620C1CF309BD00BDEA09 /* PBXContainerItemProxy */ = {
+		843961D61CEE665F00BDEA09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 843962041CF309BC00BDEA09 /* DopamineKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 845D8EC51CDA8E8900CC5E5C;
-			remoteInfo = DopamineKitTests;
+			containerPortal = 843961AE1CEE665F00BDEA09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 843961B51CEE665F00BDEA09;
+			remoteInfo = "DopamineDummy Swift";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		84604FC21CC16F63003EE96A /* CopyFiles */ = {
+		843961EB1CEE672B00BDEA09 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				84DF76661CF66E5400E03A7E /* DopamineKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		843585251CC9496600075702 /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
-		843962041CF309BC00BDEA09 /* DopamineKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DopamineKit.xcodeproj; path = "../../DopamineAPI_Swift-Client/DopamineKit/DopamineKit.xcodeproj"; sourceTree = "<group>"; };
-		848EA2E31CC0D5FF00EF2735 /* DopamineDummy Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DopamineDummy Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		848EA2E61CC0D5FF00EF2735 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		848EA2E81CC0D5FF00EF2735 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		848EA2EA1CC0D5FF00EF2735 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		848EA2EC1CC0D5FF00EF2735 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
-		848EA2EF1CC0D5FF00EF2735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		848EA2F11CC0D5FF00EF2735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		848EA2F41CC0D5FF00EF2735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		848EA2F61CC0D5FF00EF2735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843961B61CEE665F00BDEA09 /* DopamineDummy Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DopamineDummy Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		843961B91CEE665F00BDEA09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		843961BB1CEE665F00BDEA09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		843961BE1CEE665F00BDEA09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		843961C01CEE665F00BDEA09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		843961C31CEE665F00BDEA09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		843961C51CEE665F00BDEA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843961CA1CEE665F00BDEA09 /* DopamineDummy SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DopamineDummy SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		843961CE1CEE665F00BDEA09 /* DopamineDummy_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopamineDummy_SwiftTests.swift; sourceTree = "<group>"; };
+		843961D01CEE665F00BDEA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843961D51CEE665F00BDEA09 /* DopamineDummy SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DopamineDummy SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		843961D91CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopamineDummy_SwiftUITests.swift; sourceTree = "<group>"; };
+		843961DB1CEE665F00BDEA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843961EE1CEE67A600BDEA09 /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
+		84DF76641CF66E4900E03A7E /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DopamineKit.framework; path = "DopamineDummy Swift/DopamineKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		848EA2E01CC0D5FF00EF2735 /* Frameworks */ = {
+		843961B31CEE665F00BDEA09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8439620E1CF309C600BDEA09 /* DopamineKit.framework in Frameworks */,
+				84DF76651CF66E4900E03A7E /* DopamineKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843961C71CEE665F00BDEA09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843961D21CEE665F00BDEA09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		843962051CF309BC00BDEA09 /* Products */ = {
+		843961AD1CEE665F00BDEA09 = {
 			isa = PBXGroup;
 			children = (
-				8439620B1CF309BD00BDEA09 /* DopamineKit.framework */,
-				8439620D1CF309BD00BDEA09 /* DopamineKitTests.xctest */,
+				84DF76641CF66E4900E03A7E /* DopamineKit.framework */,
+				843961B81CEE665F00BDEA09 /* DopamineDummy Swift */,
+				843961CD1CEE665F00BDEA09 /* DopamineDummy SwiftTests */,
+				843961D81CEE665F00BDEA09 /* DopamineDummy SwiftUITests */,
+				843961B71CEE665F00BDEA09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		843961B71CEE665F00BDEA09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				843961B61CEE665F00BDEA09 /* DopamineDummy Swift.app */,
+				843961CA1CEE665F00BDEA09 /* DopamineDummy SwiftTests.xctest */,
+				843961D51CEE665F00BDEA09 /* DopamineDummy SwiftUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		848EA2DA1CC0D5FF00EF2735 = {
+		843961B81CEE665F00BDEA09 /* DopamineDummy Swift */ = {
 			isa = PBXGroup;
 			children = (
-				843962041CF309BC00BDEA09 /* DopamineKit.xcodeproj */,
-				848EA2E51CC0D5FF00EF2735 /* DopamineDummy Swift */,
-				848EA2E41CC0D5FF00EF2735 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		848EA2E41CC0D5FF00EF2735 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				848EA2E31CC0D5FF00EF2735 /* DopamineDummy Swift.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		848EA2E51CC0D5FF00EF2735 /* DopamineDummy Swift */ = {
-			isa = PBXGroup;
-			children = (
-				848EA2E61CC0D5FF00EF2735 /* AppDelegate.swift */,
-				848EA2E81CC0D5FF00EF2735 /* RootViewController.swift */,
-				848EA2EA1CC0D5FF00EF2735 /* DataViewController.swift */,
-				843585251CC9496600075702 /* DopamineProperties.plist */,
-				848EA2EC1CC0D5FF00EF2735 /* ModelController.swift */,
-				848EA2EE1CC0D5FF00EF2735 /* Main.storyboard */,
-				848EA2F11CC0D5FF00EF2735 /* Assets.xcassets */,
-				848EA2F31CC0D5FF00EF2735 /* LaunchScreen.storyboard */,
-				848EA2F61CC0D5FF00EF2735 /* Info.plist */,
+				843961B91CEE665F00BDEA09 /* AppDelegate.swift */,
+				843961BB1CEE665F00BDEA09 /* ViewController.swift */,
+				843961EE1CEE67A600BDEA09 /* DopamineProperties.plist */,
+				843961BD1CEE665F00BDEA09 /* Main.storyboard */,
+				843961C01CEE665F00BDEA09 /* Assets.xcassets */,
+				843961C21CEE665F00BDEA09 /* LaunchScreen.storyboard */,
+				843961C51CEE665F00BDEA09 /* Info.plist */,
 			);
 			path = "DopamineDummy Swift";
+			sourceTree = "<group>";
+		};
+		843961CD1CEE665F00BDEA09 /* DopamineDummy SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				843961CE1CEE665F00BDEA09 /* DopamineDummy_SwiftTests.swift */,
+				843961D01CEE665F00BDEA09 /* Info.plist */,
+			);
+			path = "DopamineDummy SwiftTests";
+			sourceTree = "<group>";
+		};
+		843961D81CEE665F00BDEA09 /* DopamineDummy SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				843961D91CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift */,
+				843961DB1CEE665F00BDEA09 /* Info.plist */,
+			);
+			path = "DopamineDummy SwiftUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		848EA2E21CC0D5FF00EF2735 /* DopamineDummy Swift */ = {
+		843961B51CEE665F00BDEA09 /* DopamineDummy Swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 848EA2F91CC0D5FF00EF2735 /* Build configuration list for PBXNativeTarget "DopamineDummy Swift" */;
+			buildConfigurationList = 843961DE1CEE665F00BDEA09 /* Build configuration list for PBXNativeTarget "DopamineDummy Swift" */;
 			buildPhases = (
-				848EA2DF1CC0D5FF00EF2735 /* Sources */,
-				848EA2E01CC0D5FF00EF2735 /* Frameworks */,
-				848EA2E11CC0D5FF00EF2735 /* Resources */,
-				84604FC21CC16F63003EE96A /* CopyFiles */,
+				843961B21CEE665F00BDEA09 /* Sources */,
+				843961B31CEE665F00BDEA09 /* Frameworks */,
+				843961B41CEE665F00BDEA09 /* Resources */,
+				843961EB1CEE672B00BDEA09 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -133,26 +164,72 @@
 			);
 			name = "DopamineDummy Swift";
 			productName = "DopamineDummy Swift";
-			productReference = 848EA2E31CC0D5FF00EF2735 /* DopamineDummy Swift.app */;
+			productReference = 843961B61CEE665F00BDEA09 /* DopamineDummy Swift.app */;
 			productType = "com.apple.product-type.application";
+		};
+		843961C91CEE665F00BDEA09 /* DopamineDummy SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 843961E11CEE665F00BDEA09 /* Build configuration list for PBXNativeTarget "DopamineDummy SwiftTests" */;
+			buildPhases = (
+				843961C61CEE665F00BDEA09 /* Sources */,
+				843961C71CEE665F00BDEA09 /* Frameworks */,
+				843961C81CEE665F00BDEA09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				843961CC1CEE665F00BDEA09 /* PBXTargetDependency */,
+			);
+			name = "DopamineDummy SwiftTests";
+			productName = "DopamineDummy SwiftTests";
+			productReference = 843961CA1CEE665F00BDEA09 /* DopamineDummy SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		843961D41CEE665F00BDEA09 /* DopamineDummy SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 843961E41CEE665F00BDEA09 /* Build configuration list for PBXNativeTarget "DopamineDummy SwiftUITests" */;
+			buildPhases = (
+				843961D11CEE665F00BDEA09 /* Sources */,
+				843961D21CEE665F00BDEA09 /* Frameworks */,
+				843961D31CEE665F00BDEA09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				843961D71CEE665F00BDEA09 /* PBXTargetDependency */,
+			);
+			name = "DopamineDummy SwiftUITests";
+			productName = "DopamineDummy SwiftUITests";
+			productReference = 843961D51CEE665F00BDEA09 /* DopamineDummy SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		848EA2DB1CC0D5FF00EF2735 /* Project object */ = {
+		843961AE1CEE665F00BDEA09 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = DopamineLabs;
 				TargetAttributes = {
-					848EA2E21CC0D5FF00EF2735 = {
-						CreatedOnToolsVersion = 7.2.1;
+					843961B51CEE665F00BDEA09 = {
+						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 367K5HG48M;
+					};
+					843961C91CEE665F00BDEA09 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 367K5HG48M;
+						TestTargetID = 843961B51CEE665F00BDEA09;
+					};
+					843961D41CEE665F00BDEA09 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 367K5HG48M;
+						TestTargetID = 843961B51CEE665F00BDEA09;
 					};
 				};
 			};
-			buildConfigurationList = 848EA2DE1CC0D5FF00EF2735 /* Build configuration list for PBXProject "DopamineDummy Swift" */;
+			buildConfigurationList = 843961B11CEE665F00BDEA09 /* Build configuration list for PBXProject "DopamineDummy Swift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -160,80 +237,100 @@
 				en,
 				Base,
 			);
-			mainGroup = 848EA2DA1CC0D5FF00EF2735;
-			productRefGroup = 848EA2E41CC0D5FF00EF2735 /* Products */;
+			mainGroup = 843961AD1CEE665F00BDEA09;
+			productRefGroup = 843961B71CEE665F00BDEA09 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 843962051CF309BC00BDEA09 /* Products */;
-					ProjectRef = 843962041CF309BC00BDEA09 /* DopamineKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				848EA2E21CC0D5FF00EF2735 /* DopamineDummy Swift */,
+				843961B51CEE665F00BDEA09 /* DopamineDummy Swift */,
+				843961C91CEE665F00BDEA09 /* DopamineDummy SwiftTests */,
+				843961D41CEE665F00BDEA09 /* DopamineDummy SwiftUITests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		8439620B1CF309BD00BDEA09 /* DopamineKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DopamineKit.framework;
-			remoteRef = 8439620A1CF309BD00BDEA09 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8439620D1CF309BD00BDEA09 /* DopamineKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = DopamineKitTests.xctest;
-			remoteRef = 8439620C1CF309BD00BDEA09 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
-		848EA2E11CC0D5FF00EF2735 /* Resources */ = {
+		843961B41CEE665F00BDEA09 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843585261CC9496600075702 /* DopamineProperties.plist in Resources */,
-				848EA2F51CC0D5FF00EF2735 /* LaunchScreen.storyboard in Resources */,
-				848EA2F21CC0D5FF00EF2735 /* Assets.xcassets in Resources */,
-				848EA2F01CC0D5FF00EF2735 /* Main.storyboard in Resources */,
+				843961F01CEE67A600BDEA09 /* DopamineProperties.plist in Resources */,
+				843961C41CEE665F00BDEA09 /* LaunchScreen.storyboard in Resources */,
+				843961C11CEE665F00BDEA09 /* Assets.xcassets in Resources */,
+				843961BF1CEE665F00BDEA09 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843961C81CEE665F00BDEA09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843961D31CEE665F00BDEA09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		848EA2DF1CC0D5FF00EF2735 /* Sources */ = {
+		843961B21CEE665F00BDEA09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				848EA2E91CC0D5FF00EF2735 /* RootViewController.swift in Sources */,
-				848EA2ED1CC0D5FF00EF2735 /* ModelController.swift in Sources */,
-				848EA2EB1CC0D5FF00EF2735 /* DataViewController.swift in Sources */,
-				848EA2E71CC0D5FF00EF2735 /* AppDelegate.swift in Sources */,
+				843961BC1CEE665F00BDEA09 /* ViewController.swift in Sources */,
+				843961BA1CEE665F00BDEA09 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843961C61CEE665F00BDEA09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843961CF1CEE665F00BDEA09 /* DopamineDummy_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843961D11CEE665F00BDEA09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843961DA1CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		843961CC1CEE665F00BDEA09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 843961B51CEE665F00BDEA09 /* DopamineDummy Swift */;
+			targetProxy = 843961CB1CEE665F00BDEA09 /* PBXContainerItemProxy */;
+		};
+		843961D71CEE665F00BDEA09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 843961B51CEE665F00BDEA09 /* DopamineDummy Swift */;
+			targetProxy = 843961D61CEE665F00BDEA09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		848EA2EE1CC0D5FF00EF2735 /* Main.storyboard */ = {
+		843961BD1CEE665F00BDEA09 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				848EA2EF1CC0D5FF00EF2735 /* Base */,
+				843961BE1CEE665F00BDEA09 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		848EA2F31CC0D5FF00EF2735 /* LaunchScreen.storyboard */ = {
+		843961C21CEE665F00BDEA09 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				848EA2F41CC0D5FF00EF2735 /* Base */,
+				843961C31CEE665F00BDEA09 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -241,10 +338,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		848EA2F71CC0D5FF00EF2735 /* Debug */ = {
+		843961DC1CEE665F00BDEA09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -277,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -285,10 +383,11 @@
 			};
 			name = Debug;
 		};
-		848EA2F81CC0D5FF00EF2735 /* Release */ = {
+		843961DD1CEE665F00BDEA09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -315,36 +414,22 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		848EA2FA1CC0D5FF00EF2735 /* Debug */ = {
+		843961DF1CEE665F00BDEA09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",
 					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",
@@ -356,34 +441,20 @@
 				);
 				INFOPLIST_FILE = "DopamineDummy Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "DopamineLabs.DopamineDummy-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.DopamineDummy-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		848EA2FB1CC0D5FF00EF2735 /* Release */ = {
+		843961E01CEE665F00BDEA09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",
 					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",
@@ -395,33 +466,97 @@
 				);
 				INFOPLIST_FILE = "DopamineDummy Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "DopamineLabs.DopamineDummy-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.DopamineDummy-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		843961E21CEE665F00BDEA09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "DopamineDummy SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.DopamineDummy-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DopamineDummy Swift.app/DopamineDummy Swift";
+			};
+			name = Debug;
+		};
+		843961E31CEE665F00BDEA09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "DopamineDummy SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.DopamineDummy-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DopamineDummy Swift.app/DopamineDummy Swift";
+			};
+			name = Release;
+		};
+		843961E51CEE665F00BDEA09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DopamineDummy SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.DopamineDummy-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "DopamineDummy Swift";
+			};
+			name = Debug;
+		};
+		843961E61CEE665F00BDEA09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DopamineDummy SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.DopamineDummy-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "DopamineDummy Swift";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		848EA2DE1CC0D5FF00EF2735 /* Build configuration list for PBXProject "DopamineDummy Swift" */ = {
+		843961B11CEE665F00BDEA09 /* Build configuration list for PBXProject "DopamineDummy Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				848EA2F71CC0D5FF00EF2735 /* Debug */,
-				848EA2F81CC0D5FF00EF2735 /* Release */,
+				843961DC1CEE665F00BDEA09 /* Debug */,
+				843961DD1CEE665F00BDEA09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		848EA2F91CC0D5FF00EF2735 /* Build configuration list for PBXNativeTarget "DopamineDummy Swift" */ = {
+		843961DE1CEE665F00BDEA09 /* Build configuration list for PBXNativeTarget "DopamineDummy Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				848EA2FA1CC0D5FF00EF2735 /* Debug */,
-				848EA2FB1CC0D5FF00EF2735 /* Release */,
+				843961DF1CEE665F00BDEA09 /* Debug */,
+				843961E01CEE665F00BDEA09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		843961E11CEE665F00BDEA09 /* Build configuration list for PBXNativeTarget "DopamineDummy SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843961E21CEE665F00BDEA09 /* Debug */,
+				843961E31CEE665F00BDEA09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		843961E41CEE665F00BDEA09 /* Build configuration list for PBXNativeTarget "DopamineDummy SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843961E51CEE665F00BDEA09 /* Debug */,
+				843961E61CEE665F00BDEA09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 848EA2DB1CC0D5FF00EF2735 /* Project object */;
+	rootObject = 843961AE1CEE665F00BDEA09 /* Project object */;
 }
