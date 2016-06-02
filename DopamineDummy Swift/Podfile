@@ -1,3 +1,0 @@
-target 'DopamineDummy Swift' do
-pod 'DopamineKit', :path => '../../DopamineAPI_Swift-CocoaPod/DopamineKit'
-end
