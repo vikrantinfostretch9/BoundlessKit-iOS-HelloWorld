@@ -12,29 +12,10 @@
 		843961BF1CEE665F00BDEA09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843961BD1CEE665F00BDEA09 /* Main.storyboard */; };
 		843961C11CEE665F00BDEA09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843961C01CEE665F00BDEA09 /* Assets.xcassets */; };
 		843961C41CEE665F00BDEA09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843961C21CEE665F00BDEA09 /* LaunchScreen.storyboard */; };
-		843961CF1CEE665F00BDEA09 /* DopamineDummy_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843961CE1CEE665F00BDEA09 /* DopamineDummy_SwiftTests.swift */; };
-		843961DA1CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843961D91CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift */; };
 		843961F01CEE67A600BDEA09 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 843961EE1CEE67A600BDEA09 /* DopamineProperties.plist */; };
 		84532E6B1D0160FA006DA6B0 /* DopamineKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B226861D00F27400A9D9E6 /* DopamineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		84F197141D01AB7D00B526E8 /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B226861D00F27400A9D9E6 /* DopamineKit.framework */; };
+		84F197181D01C70500B526E8 /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B226861D00F27400A9D9E6 /* DopamineKit.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		843961CB1CEE665F00BDEA09 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 843961AE1CEE665F00BDEA09 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 843961B51CEE665F00BDEA09;
-			remoteInfo = "DopamineDummy Swift";
-		};
-		843961D61CEE665F00BDEA09 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 843961AE1CEE665F00BDEA09 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 843961B51CEE665F00BDEA09;
-			remoteInfo = "DopamineDummy Swift";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		843961EB1CEE672B00BDEA09 /* CopyFiles */ = {
@@ -57,14 +38,8 @@
 		843961C01CEE665F00BDEA09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843961C31CEE665F00BDEA09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843961C51CEE665F00BDEA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		843961CA1CEE665F00BDEA09 /* DopamineDummy SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DopamineDummy SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		843961CE1CEE665F00BDEA09 /* DopamineDummy_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopamineDummy_SwiftTests.swift; sourceTree = "<group>"; };
-		843961D01CEE665F00BDEA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		843961D51CEE665F00BDEA09 /* DopamineDummy SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DopamineDummy SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		843961D91CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopamineDummy_SwiftUITests.swift; sourceTree = "<group>"; };
-		843961DB1CEE665F00BDEA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		843961EE1CEE67A600BDEA09 /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
-		84B226861D00F27400A9D9E6 /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DopamineKit.framework; path = "DopamineDummy Swift/DopamineKit.framework"; sourceTree = "<group>"; };
+		84B226861D00F27400A9D9E6 /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DopamineKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,21 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F197141D01AB7D00B526E8 /* DopamineKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		843961C71CEE665F00BDEA09 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		843961D21CEE665F00BDEA09 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				84F197181D01C70500B526E8 /* DopamineKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,10 +57,7 @@
 		843961AD1CEE665F00BDEA09 = {
 			isa = PBXGroup;
 			children = (
-				84B226861D00F27400A9D9E6 /* DopamineKit.framework */,
 				843961B81CEE665F00BDEA09 /* DopamineDummy Swift */,
-				843961CD1CEE665F00BDEA09 /* DopamineDummy SwiftTests */,
-				843961D81CEE665F00BDEA09 /* DopamineDummy SwiftUITests */,
 				843961B71CEE665F00BDEA09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				843961B61CEE665F00BDEA09 /* DopamineDummy Swift.app */,
-				843961CA1CEE665F00BDEA09 /* DopamineDummy SwiftTests.xctest */,
-				843961D51CEE665F00BDEA09 /* DopamineDummy SwiftUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +75,7 @@
 			children = (
 				843961B91CEE665F00BDEA09 /* AppDelegate.swift */,
 				843961BB1CEE665F00BDEA09 /* ViewController.swift */,
+				84B226861D00F27400A9D9E6 /* DopamineKit.framework */,
 				843961EE1CEE67A600BDEA09 /* DopamineProperties.plist */,
 				843961BD1CEE665F00BDEA09 /* Main.storyboard */,
 				843961C01CEE665F00BDEA09 /* Assets.xcassets */,
@@ -126,24 +83,6 @@
 				843961C51CEE665F00BDEA09 /* Info.plist */,
 			);
 			path = "DopamineDummy Swift";
-			sourceTree = "<group>";
-		};
-		843961CD1CEE665F00BDEA09 /* DopamineDummy SwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				843961CE1CEE665F00BDEA09 /* DopamineDummy_SwiftTests.swift */,
-				843961D01CEE665F00BDEA09 /* Info.plist */,
-			);
-			path = "DopamineDummy SwiftTests";
-			sourceTree = "<group>";
-		};
-		843961D81CEE665F00BDEA09 /* DopamineDummy SwiftUITests */ = {
-			isa = PBXGroup;
-			children = (
-				843961D91CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift */,
-				843961DB1CEE665F00BDEA09 /* Info.plist */,
-			);
-			path = "DopamineDummy SwiftUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,42 +107,6 @@
 			productReference = 843961B61CEE665F00BDEA09 /* DopamineDummy Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		843961C91CEE665F00BDEA09 /* DopamineDummy SwiftTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 843961E11CEE665F00BDEA09 /* Build configuration list for PBXNativeTarget "DopamineDummy SwiftTests" */;
-			buildPhases = (
-				843961C61CEE665F00BDEA09 /* Sources */,
-				843961C71CEE665F00BDEA09 /* Frameworks */,
-				843961C81CEE665F00BDEA09 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				843961CC1CEE665F00BDEA09 /* PBXTargetDependency */,
-			);
-			name = "DopamineDummy SwiftTests";
-			productName = "DopamineDummy SwiftTests";
-			productReference = 843961CA1CEE665F00BDEA09 /* DopamineDummy SwiftTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		843961D41CEE665F00BDEA09 /* DopamineDummy SwiftUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 843961E41CEE665F00BDEA09 /* Build configuration list for PBXNativeTarget "DopamineDummy SwiftUITests" */;
-			buildPhases = (
-				843961D11CEE665F00BDEA09 /* Sources */,
-				843961D21CEE665F00BDEA09 /* Frameworks */,
-				843961D31CEE665F00BDEA09 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				843961D71CEE665F00BDEA09 /* PBXTargetDependency */,
-			);
-			name = "DopamineDummy SwiftUITests";
-			productName = "DopamineDummy SwiftUITests";
-			productReference = 843961D51CEE665F00BDEA09 /* DopamineDummy SwiftUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,16 +120,6 @@
 					843961B51CEE665F00BDEA09 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 367K5HG48M;
-					};
-					843961C91CEE665F00BDEA09 = {
-						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 367K5HG48M;
-						TestTargetID = 843961B51CEE665F00BDEA09;
-					};
-					843961D41CEE665F00BDEA09 = {
-						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 367K5HG48M;
-						TestTargetID = 843961B51CEE665F00BDEA09;
 					};
 				};
 			};
@@ -244,8 +137,6 @@
 			projectRoot = "";
 			targets = (
 				843961B51CEE665F00BDEA09 /* DopamineDummy Swift */,
-				843961C91CEE665F00BDEA09 /* DopamineDummy SwiftTests */,
-				843961D41CEE665F00BDEA09 /* DopamineDummy SwiftUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,20 +150,6 @@
 				843961C41CEE665F00BDEA09 /* LaunchScreen.storyboard in Resources */,
 				843961C11CEE665F00BDEA09 /* Assets.xcassets in Resources */,
 				843961BF1CEE665F00BDEA09 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		843961C81CEE665F00BDEA09 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		843961D31CEE665F00BDEA09 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,36 +181,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		843961C61CEE665F00BDEA09 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				843961CF1CEE665F00BDEA09 /* DopamineDummy_SwiftTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		843961D11CEE665F00BDEA09 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				843961DA1CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		843961CC1CEE665F00BDEA09 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 843961B51CEE665F00BDEA09 /* DopamineDummy Swift */;
-			targetProxy = 843961CB1CEE665F00BDEA09 /* PBXContainerItemProxy */;
-		};
-		843961D71CEE665F00BDEA09 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 843961B51CEE665F00BDEA09 /* DopamineDummy Swift */;
-			targetProxy = 843961D61CEE665F00BDEA09 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		843961BD1CEE665F00BDEA09 /* Main.storyboard */ = {
@@ -443,22 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",
 					Swift,
 				);
@@ -474,22 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
-					"$(PROJECT_DIR)/DopamineDummy",
-					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",
 					Swift,
 				);
@@ -497,52 +315,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.DopamineDummy-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		843961E21CEE665F00BDEA09 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "DopamineDummy SwiftTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.DopamineDummy-SwiftTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DopamineDummy Swift.app/DopamineDummy Swift";
-			};
-			name = Debug;
-		};
-		843961E31CEE665F00BDEA09 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "DopamineDummy SwiftTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.DopamineDummy-SwiftTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DopamineDummy Swift.app/DopamineDummy Swift";
-			};
-			name = Release;
-		};
-		843961E51CEE665F00BDEA09 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "DopamineDummy SwiftUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.DopamineDummy-SwiftUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "DopamineDummy Swift";
-			};
-			name = Debug;
-		};
-		843961E61CEE665F00BDEA09 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "DopamineDummy SwiftUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.DopamineDummy-SwiftUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "DopamineDummy Swift";
 			};
 			name = Release;
 		};
@@ -563,24 +335,6 @@
 			buildConfigurations = (
 				843961DF1CEE665F00BDEA09 /* Debug */,
 				843961E01CEE665F00BDEA09 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		843961E11CEE665F00BDEA09 /* Build configuration list for PBXNativeTarget "DopamineDummy SwiftTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				843961E21CEE665F00BDEA09 /* Debug */,
-				843961E31CEE665F00BDEA09 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		843961E41CEE665F00BDEA09 /* Build configuration list for PBXNativeTarget "DopamineDummy SwiftUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				843961E51CEE665F00BDEA09 /* Debug */,
-				843961E61CEE665F00BDEA09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -29,15 +29,14 @@ class ViewController: UIViewController {
                 var title:String?
                 var subtitle:String?
                 var backgroundColor:UIColor = UIColor.blueColor()
-                var visibilityDuration:NSTimeInterval = 2.0
+                var visibilityDuration:NSTimeInterval = 1.75
                 
                 // Set up a couple of different responses to keep your users surprised
                 switch(response!){
-                case "thumbsUp":
-                    reinforcerType = Candy.ThumbsUp
-                    title = "Awesome run!"
-                    subtitle = "Either you run the day,\nOr the day runs you."
-                    backgroundColor = DopamineKit.hexStringToUIColor("#ff0000")
+                case "medalStar":
+                    reinforcerType = Candy.MedalStar
+                    title = "You should drop an album soon"
+                    subtitle = "Cuz you're on 🔥"
                     break
                 case "stars":
                     reinforcerType = Candy.Stars
@@ -45,10 +44,12 @@ class ViewController: UIViewController {
                     subtitle = "It's not called sweating, it's called glisenting"
                     backgroundColor = UIColor.orangeColor()
                     break
-                case "medalStar":
-                    reinforcerType = Candy.MedalStar
-                    title = "You should drop an album soon"
-                    subtitle = "Cuz you're on 🔥"
+                case "thumbsUp":
+                    reinforcerType = Candy.ThumbsUp
+                    title = "Awesome run!"
+                    subtitle = "Either you run the day,\nOr the day runs you."
+                    backgroundColor = DopamineKit.hexStringToUIColor("#ff0000")
+                    visibilityDuration = 2.5
                     break
                 default:
                     return
