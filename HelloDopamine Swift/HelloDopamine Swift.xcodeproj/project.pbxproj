@@ -280,7 +280,7 @@
 					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = "HelloDopamine Swift/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.HelloDopamine-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -297,7 +297,7 @@
 					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = "HelloDopamine Swift/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.HelloDopamine-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
