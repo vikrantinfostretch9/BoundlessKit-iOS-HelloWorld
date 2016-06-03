@@ -9,76 +9,67 @@
 import UIKit
 import DopamineKit
 
-class ViewController: UIViewController, ReinforcementModalPresenterDelegate {
+class ViewController: UIViewController {
     
     func action1Performed(){
-        // Now reinforce the action and make it sticky!!
-        DopamineKit.reinforce("action1", metaData: ["key":"value"], secondaryIdentity: "Bob", callback: {response in
+        
+        // Reinforce the action to make it sticky!!
+        
+        DopamineKit.reinforce("action1", callback: {response in
+            // So we don't run on the main thread
             dispatch_async(dispatch_get_main_queue(), {
                 
-                // Show reinforcement decision on screen
+                // Update UI to display reinforcement decision on screen for learning purposes
                 self.responseLabel.text = response
                 self.flash(self.responseLabel)
                 
                 
+                // Try out CandyBar as a form of reinforcement!
+                var reinforcerType:Candy
+                var title:String?
+                var subtitle:String?
+                var backgroundColor:UIColor = UIColor.blueColor()
+                var visibilityDuration:NSTimeInterval = 2.0
                 
-                
-              //  /* Using Designer Reinforcements
-                // Create dopamine designer reinforcement
-                var reinforcerType:DesignerReinforcementType
+                // Set up a couple of different responses to keep your users surprised
                 switch(response!){
-                case "awesomeRewardOne":
-                    reinforcerType = .NyanCat
+                case "thumbsUp":
+                    reinforcerType = Candy.ThumbsUp
+                    title = "Awesome run!"
+                    subtitle = "Either you run the day,\nOr the day runs you."
+                    backgroundColor = DopamineKit.hexStringToUIColor("#ff0000")
                     break
-                case "encouragingRewardTwo":
-                    reinforcerType = .Cake
+                case "stars":
+                    reinforcerType = Candy.Stars
+                    title = "Great workout 💯"
+                    subtitle = "It's not called sweating, it's called glisenting"
+                    backgroundColor = UIColor.orangeColor()
                     break
-                case "delightfulRewardThree":
-                    reinforcerType = .Star
+                case "medalStar":
+                    reinforcerType = Candy.MedalStar
+                    title = "You should drop an album soon"
+                    subtitle = "Cuz you're on 🔥"
                     break
                 default:
-                    // Your original app response method once a user has done the action goes here.
-                    // Note: You should also add your original app response method as a callback to the DopamineKit ReinforcementModalPresenter by inheriting from ReinforcementModalPresenterDelegate
                     return
                 }
-                
-                // Create the ReinforcementModalPresenter
-                let vc = DopamineKit.createReinforcement(reinforcerType)
-                
-                // Assign self as delegate so the didDismissReinforcement() method gets called when the reinforcement is dismissed
-                vc.delegate = self
-                
-                
-                // Present the ReinforcementModalPresenter
-                vc.show(self, animated: true)
-                 
- 
+        
+                // Woo hoo! Treat yoself
+                let candyBar = CandyBar.init(title: title, subtitle: subtitle, icon: reinforcerType, backgroundColor: backgroundColor)
+                candyBar.position = .Bottom
+                    // if `nil` or no duration is provided, the CandyBar will go away when the user clicks on it
+                candyBar.show(duration: visibilityDuration)
                 
             })
         })
     }
+    
     
     func action2Performed(){
         // Tracking call is sent asynchronously
-        DopamineKit.track("action2", callback: {response in
-            dispatch_async(dispatch_get_main_queue(), {
-                // Note: the HTTP status code is returned in a .track() callback as a string
-                self.responseLabel.text = "Action was tracked with status \(response!)"
-                self.flash(self.responseLabel)
-            })
-            
-        })
-        
-        // Your original app logic after action2 has been performed
-        // ...
-        
+        DopamineKit.track("action2")
     }
     
-    
-    // Implement this method to call your original next UX method
-    func didDismissReinforcement(sender: ReinforcementModalPresenter) {
-        NSLog("Inheriting from the Delegate class lets you integrate with Dopamine without making changes to your UX!")
-    }
     
     
 

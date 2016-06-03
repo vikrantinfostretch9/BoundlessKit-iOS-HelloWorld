@@ -15,8 +15,8 @@
 		843961CF1CEE665F00BDEA09 /* DopamineDummy_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843961CE1CEE665F00BDEA09 /* DopamineDummy_SwiftTests.swift */; };
 		843961DA1CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843961D91CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift */; };
 		843961F01CEE67A600BDEA09 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 843961EE1CEE67A600BDEA09 /* DopamineProperties.plist */; };
-		84DF76651CF66E4900E03A7E /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DF76641CF66E4900E03A7E /* DopamineKit.framework */; };
-		84DF76661CF66E5400E03A7E /* DopamineKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84DF76641CF66E4900E03A7E /* DopamineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84532E6B1D0160FA006DA6B0 /* DopamineKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84B226861D00F27400A9D9E6 /* DopamineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84F197141D01AB7D00B526E8 /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B226861D00F27400A9D9E6 /* DopamineKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				84DF76661CF66E5400E03A7E /* DopamineKit.framework in CopyFiles */,
+				84532E6B1D0160FA006DA6B0 /* DopamineKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +64,7 @@
 		843961D91CEE665F00BDEA09 /* DopamineDummy_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopamineDummy_SwiftUITests.swift; sourceTree = "<group>"; };
 		843961DB1CEE665F00BDEA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		843961EE1CEE67A600BDEA09 /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
-		84DF76641CF66E4900E03A7E /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DopamineKit.framework; path = "DopamineDummy Swift/DopamineKit.framework"; sourceTree = "<group>"; };
+		84B226861D00F27400A9D9E6 /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DopamineKit.framework; path = "DopamineDummy Swift/DopamineKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84DF76651CF66E4900E03A7E /* DopamineKit.framework in Frameworks */,
+				84F197141D01AB7D00B526E8 /* DopamineKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +96,7 @@
 		843961AD1CEE665F00BDEA09 = {
 			isa = PBXGroup;
 			children = (
-				84DF76641CF66E4900E03A7E /* DopamineKit.framework */,
+				84B226861D00F27400A9D9E6 /* DopamineKit.framework */,
 				843961B81CEE665F00BDEA09 /* DopamineDummy Swift */,
 				843961CD1CEE665F00BDEA09 /* DopamineDummy SwiftTests */,
 				843961D81CEE665F00BDEA09 /* DopamineDummy SwiftUITests */,
@@ -157,6 +157,7 @@
 				843961B31CEE665F00BDEA09 /* Frameworks */,
 				843961B41CEE665F00BDEA09 /* Resources */,
 				843961EB1CEE672B00BDEA09 /* CopyFiles */,
+				84F197161D01C18900B526E8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -277,6 +278,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		84F197161D01C18900B526E8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script strips all non-valid architectures from dynamic libraries in\n# the application's `Frameworks` directory.\n\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		843961B21CEE665F00BDEA09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -377,7 +394,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -438,6 +455,12 @@
 					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",
 					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
 				);
 				INFOPLIST_FILE = "DopamineDummy Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -455,6 +478,12 @@
 					"$(PROJECT_DIR)/DopamineDummy",
 					Swift,
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
+					"$(PROJECT_DIR)/DopamineDummy",
+					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",
 					Swift,
 					"$(PROJECT_DIR)/DopamineDummy",
