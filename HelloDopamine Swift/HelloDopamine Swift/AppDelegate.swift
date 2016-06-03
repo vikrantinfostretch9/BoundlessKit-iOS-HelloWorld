@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  DopamineDummy Swift
+//  HelloDopamine Swift
 //
-//  Created by Akash Desai on 5/19/16.
+//  Created by Akash Desai on 6/3/16.
 //  Copyright © 2016 DopamineLabs. All rights reserved.
 //
 

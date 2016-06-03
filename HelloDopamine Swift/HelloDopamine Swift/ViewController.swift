@@ -54,11 +54,11 @@ class ViewController: UIViewController {
                 default:
                     return
                 }
-        
+                
                 // Woo hoo! Treat yoself
                 let candyBar = CandyBar.init(title: title, subtitle: subtitle, icon: reinforcerType, backgroundColor: backgroundColor)
                 candyBar.position = .Bottom
-                    // if `nil` or no duration is provided, the CandyBar will go away when the user clicks on it
+                // if `nil` or no duration is provided, the CandyBar will go away when the user clicks on it
                 candyBar.show(duration: visibilityDuration)
                 
             })
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
     
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -136,6 +136,6 @@ class ViewController: UIViewController {
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.Portrait
     }
-
+    
 }
 
