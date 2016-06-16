@@ -1,0 +1,12 @@
+PODS:
+  - DopamineKit (3.0.1)
+
+DEPENDENCIES:
+  - DopamineKit
+
+SPEC CHECKSUMS:
+  DopamineKit: 85c4937bdac1a68808831974c22a4523edacdace
+
+PODFILE CHECKSUM: 9cd0b04c862dfaa6746357abfb25c3252b22710e
+
+COCOAPODS: 1.0.1

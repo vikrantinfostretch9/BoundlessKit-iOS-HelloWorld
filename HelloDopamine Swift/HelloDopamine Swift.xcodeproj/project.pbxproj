@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63DFAD3EBC7C9B53971653FC /* Pods_HelloDopamine_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B04DD7E05F31B967E868A0 /* Pods_HelloDopamine_Swift.framework */; };
 		846E4D861D01EA8D00A4E34F /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 846E4D851D01EA8D00A4E34F /* DopamineProperties.plist */; };
-		846E4D8A1D01EAE900A4E34F /* DopamineKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 846E4D871D01EAAF00A4E34F /* DopamineKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		846E4D8C1D01ED4900A4E34F /* DopamineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846E4D871D01EAAF00A4E34F /* DopamineKit.framework */; };
 		849145CD1D01E87000E1E889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849145CC1D01E87000E1E889 /* AppDelegate.swift */; };
 		849145CF1D01E87000E1E889 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849145CE1D01E87000E1E889 /* ViewController.swift */; };
 		849145D21D01E87000E1E889 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849145D01D01E87000E1E889 /* Main.storyboard */; };
@@ -24,15 +23,16 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				846E4D8A1D01EAE900A4E34F /* DopamineKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27B04DD7E05F31B967E868A0 /* Pods_HelloDopamine_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloDopamine_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		588012A233437BED5ECEEA8D /* Pods-HelloDopamine Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDopamine Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloDopamine Swift/Pods-HelloDopamine Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		5BD0D97D19B5ABF21F0E01CC /* Pods-HelloDopamine Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloDopamine Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloDopamine Swift/Pods-HelloDopamine Swift.release.xcconfig"; sourceTree = "<group>"; };
 		846E4D851D01EA8D00A4E34F /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
-		846E4D871D01EAAF00A4E34F /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DopamineKit.framework; sourceTree = "<group>"; };
 		849145C91D01E87000E1E889 /* HelloDopamine Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloDopamine Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		849145CC1D01E87000E1E889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849145CE1D01E87000E1E889 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846E4D8C1D01ED4900A4E34F /* DopamineKit.framework in Frameworks */,
+				63DFAD3EBC7C9B53971653FC /* Pods_HelloDopamine_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +59,8 @@
 			children = (
 				849145CB1D01E87000E1E889 /* HelloDopamine Swift */,
 				849145CA1D01E87000E1E889 /* Products */,
+				9CE0E97A12911778DF004A6E /* Pods */,
+				DD980B58F58A3DA79705767F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,7 +77,6 @@
 			children = (
 				849145CC1D01E87000E1E889 /* AppDelegate.swift */,
 				849145CE1D01E87000E1E889 /* ViewController.swift */,
-				846E4D871D01EAAF00A4E34F /* DopamineKit.framework */,
 				846E4D851D01EA8D00A4E34F /* DopamineProperties.plist */,
 				849145D01D01E87000E1E889 /* Main.storyboard */,
 				849145D31D01E87000E1E889 /* Assets.xcassets */,
@@ -85,6 +86,23 @@
 			path = "HelloDopamine Swift";
 			sourceTree = "<group>";
 		};
+		9CE0E97A12911778DF004A6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				588012A233437BED5ECEEA8D /* Pods-HelloDopamine Swift.debug.xcconfig */,
+				5BD0D97D19B5ABF21F0E01CC /* Pods-HelloDopamine Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD980B58F58A3DA79705767F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27B04DD7E05F31B967E868A0 /* Pods_HelloDopamine_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,10 +110,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849145DB1D01E87000E1E889 /* Build configuration list for PBXNativeTarget "HelloDopamine Swift" */;
 			buildPhases = (
+				48ADF50BE120A9664197E36F /* [CP] Check Pods Manifest.lock */,
 				846E4D891D01EAE500A4E34F /* CopyFiles */,
 				849145C51D01E87000E1E889 /* Sources */,
 				849145C61D01E87000E1E889 /* Frameworks */,
 				849145C71D01E87000E1E889 /* Resources */,
+				55B2F3693DCFA6BF71DAF8C4 /* [CP] Embed Pods Frameworks */,
+				EE9850B6EC1EB59B26441AA1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,6 +174,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48ADF50BE120A9664197E36F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		55B2F3693DCFA6BF71DAF8C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloDopamine Swift/Pods-HelloDopamine Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE9850B6EC1EB59B26441AA1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloDopamine Swift/Pods-HelloDopamine Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		849145C51D01E87000E1E889 /* Sources */ = {
@@ -271,6 +340,7 @@
 		};
 		849145DC1D01E87000E1E889 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 588012A233437BED5ECEEA8D /* Pods-HelloDopamine Swift.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -288,6 +358,7 @@
 		};
 		849145DD1D01E87000E1E889 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BD0D97D19B5ABF21F0E01CC /* Pods-HelloDopamine Swift.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

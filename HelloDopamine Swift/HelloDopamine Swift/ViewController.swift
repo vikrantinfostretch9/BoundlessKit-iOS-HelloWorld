@@ -32,7 +32,7 @@ class ViewController: UIViewController {
                 var visibilityDuration:NSTimeInterval = 1.75
                 
                 // Set up a couple of different responses to keep your users surprised
-                switch(response!){
+                switch(response){
                 case "medalStar":
                     reinforcerType = Candy.MedalStar
                     title = "You should drop an album soon"
