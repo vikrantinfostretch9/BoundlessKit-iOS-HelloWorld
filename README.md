@@ -25,4 +25,6 @@ Once a task is completed by the user, the user will delete the task from the lis
 
 There are 4 possible paths, shown by the `switch` statement, that can be taken based on the resulting `reinforcement` string. 
 
-3 out of the 4 paths were chosen by the app developer on the [Dopamine Developer Dashboard](http://dashboard.usedopamine.com), and the last 1 is a "neutralResponse" which purposefully does not show anything to maintain a certain surprise factor. 
+3 out of the 4 paths were chosen by the app developer on the [Dopamine Developer Dashboard](http://dashboard.usedopamine.com).
+
+The last 1 possible path is a "neutralResponse" which purposefully does not show anything to maintain a certain surprise factor. 
