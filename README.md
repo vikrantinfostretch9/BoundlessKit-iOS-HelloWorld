@@ -3,7 +3,7 @@
 Contained is a simple "To Do List" app that demonstrates how DopamineKit may be used in your code.
 
 
-<img src="readme/CandyBar.png" width="300" align="middle">
+<img src="readme/CandyBar.png" width="300">
 
 ## "To Do List" app
 
