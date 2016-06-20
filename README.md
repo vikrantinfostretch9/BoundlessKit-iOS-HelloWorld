@@ -1,18 +1,19 @@
 # DopamineKit Example App
-## "To Do List" app
 
 Contained is a simple "To Do List" app that demonstrates how DopamineKit may be used in your code.
 
 ![Opaque screenshot](readme/CandyBar.png)
 
-After downloading the project files, open "__To Do List.xcworkspace__" with Xcode. Run a simulation and play around with it, and then pay attention to the TaskViewCell module.
+## "To Do List" app
+
+After downloading the project files, open "__To Do List.xcworkspace__" with Xcode. Run a simulation and play around with it, and then pay attention to the _`TaskViewCell.swift`_ module.
 
 ### Importing DopamineKit
-The project uses the [CocoaPod](https://cocoapods.org/) named 'DopamineKit'. Look at the [Podfile](To Do List/Podfile) in the project. [Here](https://github.com/DopamineLabs/DopamineKit-iOS-binary/) are instructions to import the framework.
+The project uses the [CocoaPod](https://cocoapods.org/) named 'DopamineKit'. Look at the [Podfile](To Do List/Podfile) in the project. [Here](https://github.com/DopamineLabs/DopamineKit-iOS-binary/) are instructions to import the framework into your own project.
 
 ### Actions that represent Habits
 
-When choosing an action to reinforce, choose one that would create a positive habit for the user. In a To List app, completing tasks is a key result of productivity so we will reinforce this. 
+When choosing an action to reinforce, choose one that would create a positive habit for the user. In a To Do List app, completing tasks is a key result of productivity so we will reinforce this. 
 
 ![Workspace screenshot](readme/Opaque workspace.png)
 
