@@ -10,7 +10,7 @@ Contained is a simple "To Do List" app that demonstrates how DopamineKit may be 
 After downloading the project files, open "__To Do List.xcworkspace__" with Xcode. Run a simulation and play around with it, and then pay attention to the _`TaskViewCell.swift`_ module.
 
 ### Importing DopamineKit
-The project uses the [CocoaPod](https://cocoapods.org/) named 'DopamineKit'. Look at the [Podfile](To Do List/Podfile) in the project. [Here](https://github.com/DopamineLabs/DopamineKit-iOS-binary/) are instructions to import the framework into your own project.
+The project uses a [CocoaPod](https://cocoapods.org/) named 'DopamineKit'. Look at file [To Do List/Podfile](To Do List/Podfile) in the project. Here is a guide for [importing DopamineKit into your own project](https://github.com/DopamineLabs/DopamineKit-iOS-binary/).
 
 ### Actions that represent Habits
 
