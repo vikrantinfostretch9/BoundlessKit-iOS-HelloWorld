@@ -14,12 +14,14 @@ The project uses a [CocoaPod](https://cocoapods.org/) named 'DopamineKit'. Look 
 
 ### Actions that represent Habits
 
-When choosing an action to reinforce, choose one that would create a positive habit for the user. In a To Do List app, completing tasks is a key result of productivity so we will reinforce this. 
+Reinforce your apps ​_essential_​ actions; what users come to your app to do. Three actions is definitely enough; one is often best. 
+
+Our "To Do List" app ​_exists_​ to help uses be more productive by completing items on their list. So we will reinforce that. 
 
 ![Workspace screenshot](readme/Opaque workspace.png)
 
 ### Responding to an Action
-Once a task is completed by the user, the user will delete the task from the list by swiping it away. When this happens, `DopamineKit.reinforce()` is called. 
+When the user completes a task, they will swipe it off of their check-list. When this happens, `DopamineKit.reinforce()` is called. 
 
  - __Note:__ The chosen form of reinforcement in this example app is using a `CandyBar` from DopamineKit. Developers should use visual reinforcement that meshes well with their UX, and the `CandyBar` is shown as a general solution.
 
@@ -27,4 +29,4 @@ There are 4 possible paths, shown by the `switch` statement, that can be taken b
 
 3 out of the 4 paths were chosen by the app developer on the [Dopamine Developer Dashboard](http://dashboard.usedopamine.com).
 
-The last 1 possible path is a "neutralResponse" which purposefully does not show anything to maintain a certain surprise factor. 
+The default case, or “neutral response", no reward will be delivered. This builds anticipation for the next surprising reward.
