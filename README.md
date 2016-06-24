@@ -14,7 +14,7 @@ The project uses a [CocoaPod](https://cocoapods.org/) named 'DopamineKit'. Look 
 
 ### Actions that represent Habits
 
-Reinforce your apps ​_essential_​ actions; what users come to your app to do. Three actions is definitely enough; one is often best. 
+Reinforce your apps ​_essential_​ actions; what users come to your app to do. Three actions is definitely enough, and one is often best. 
 
 Our "To Do List" app ​_exists_​ to help uses be more productive by completing items on their list. So we will reinforce that. 
 
