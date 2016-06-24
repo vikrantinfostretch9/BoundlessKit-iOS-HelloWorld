@@ -20,6 +20,9 @@ Our "To Do List" app ​_exists_​ to help uses be more productive by completin
 
 ![Workspace screenshot](readme/Opaque workspace.png)
 
+ - __Note:__ The possible return strings ["stars", "medalStar", "thumbsUp"] were configured on the [developer dashboard](http://dashboard.usedopamine.com).
+
+ 
 ### Responding to an Action
 When the user completes a task, they will swipe it off of their check-list. When this happens, `DopamineKit.reinforce()` is called. 
 
@@ -27,6 +30,6 @@ When the user completes a task, they will swipe it off of their check-list. When
 
 There are 4 possible paths, shown by the `switch` statement, that can be taken based on the resulting `reinforcement` string. 
 
-3 out of the 4 paths were chosen by the app developer on the [Dopamine Developer Dashboard](http://dashboard.usedopamine.com).
+ - 3 out of the 4 paths were chosen by the app developer on the [Dopamine Developer Dashboard](http://dashboard.usedopamine.com).
 
-The default case, or “neutral response", no reward will be delivered. This builds anticipation for the next surprising reward.
+ - The default case, or “neutral response", no reward will be delivered. This builds anticipation for the next surprising reward.
