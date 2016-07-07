@@ -33,10 +33,14 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         textTask.text = ""
         textDescription.text = ""
+        
+        tabBarController?.selectedIndex = 0
     }
     
     @IBAction func btnAddDemo_click(sender: UIButton){
         taskManager.addDemo()
+        
+        tabBarController?.selectedIndex = 0
     }
     
     
