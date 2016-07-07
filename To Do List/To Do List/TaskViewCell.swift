@@ -134,7 +134,7 @@ class TaskViewCell: UITableViewCell {
                             
                             switch(reinforcement){
                             case "thumbsUp" :
-                                title = "Great job!!!!11"
+                                title = "Great job!!"
                                 subtitle = nil
                                 icon = Candy.ThumbsUp
                                 
@@ -155,7 +155,10 @@ class TaskViewCell: UITableViewCell {
                             }
                             
                             // Show some candy and make them feel good!
-                            DopamineKit.showCandyBar(icon, title: title, subtitle: subtitle, duration:1.2,backgroundColor: color)
+                            let candyBar = CandyBar.init(title: title, subtitle: subtitle, icon: icon, backgroundColor: color)
+                            candyBar.position = .Bottom
+                            candyBar.show(duration: 1.2)
+                            
                             return
                         })
                     })
