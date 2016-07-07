@@ -148,6 +148,8 @@ class TaskViewCell: UITableViewCell {
                                 icon = Candy.MedalStar
                                 color = self.dopeYellow
                                 
+                            case "neutralResponse" :
+                                fallthrough
                             default:
                                 // Show nothing! This is called a neutral response, and builds up the good feelings for the next surprise!
                                 return
