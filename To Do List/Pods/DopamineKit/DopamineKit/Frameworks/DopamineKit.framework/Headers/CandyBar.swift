@@ -43,6 +43,7 @@ public class CandyBar: Banner {
     
         super.init(title: title, subtitle: subtitle, image: image, backgroundColor: backgroundColor, didTapBlock: didTapBlock)
         
+        self.position = .Bottom
     }
     
     /// A CandyBar with the provided `title`, `subtitle`, and an optional icon, ready to be presented with `show()`.
@@ -60,10 +61,39 @@ public class CandyBar: Banner {
         
         
         super.init(title: title, subtitle: subtitle, image: retrievedImage, backgroundColor: backgroundColor, didTapBlock: didTapBlock)
+        
+        self.position = .Bottom
     }
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    /// This function takes a hex string and returns a UIColor
+    ///
+    /// - parameter hex: A hex string with either format `"#ffffff"` or `"ffffff"` or `"#FFFFFF"`
+    /// - returns: The corresponding UIColor for valid hex strings, `UIColor.grayColor()` otherwise
+    public static func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet() as NSCharacterSet).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = cString.substringFromIndex(cString.startIndex.advancedBy(1))
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.grayColor()
+        }
+        
+        var rgbValue:UInt32 = 0
+        NSScanner(string: cString).scanHexInt(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
     

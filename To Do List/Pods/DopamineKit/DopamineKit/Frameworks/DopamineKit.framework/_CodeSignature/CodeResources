@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		rZqJD+SCmc+Fj6ZoPc8+ox+TjUU=
+		Uo6lfJEW+iy0j5SQW1t74d5M9B0=
 		</data>
 		<key>Headers/CandyBar.swift</key>
 		<data>
-		eTyhSGnROqz54fCxmyc6rynjXH8=
+		R8H4ID7SXwyvHmG0Ep7b6VwW4hk=
 		</data>
 		<key>Headers/DopamineKit-Swift.h</key>
 		<data>
-		2kIvwhq/HOK3RCUQJiaEwB+pvig=
+		uLC8P3C0E/qTkHiC3ENMYKjZpKY=
 		</data>
 		<key>Headers/DopamineKit.h</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/DopamineKit.swiftmodule/arm.swiftdoc</key>
 		<data>
-		muxJJM1skwDKd63ubO8v1IQPhw8=
+		xvL6+uAW8el++DY4TuGoC5kwDJI=
 		</data>
 		<key>Modules/DopamineKit.swiftmodule/arm.swiftmodule</key>
 		<data>
-		VfMTnSg3A2HAPA10Xy23dxvqaD4=
+		eH4Kn4lDHwHRIWRz9SvUuwKYuLY=
 		</data>
 		<key>Modules/DopamineKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		1/TM/119V8Jq5Y2seOeoyFJZXc4=
+		XcIOnLOVsLSZXE6xrGQQCZQrX2o=
 		</data>
 		<key>Modules/DopamineKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		RAHbsoHD1P1kZIkQCdcMMt/Os/8=
+		p/Rqkz4Bklq+aQ8scFIjG5bHuWU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,33 +51,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rZqJD+SCmc+Fj6ZoPc8+ox+TjUU=
+			Uo6lfJEW+iy0j5SQW1t74d5M9B0=
 			</data>
 			<key>hash2</key>
 			<data>
-			1wlNuvy9omdwYy2lNw9cLC96xs+xWE0r4Wr2CjvsXBc=
+			k0JgR2beGBiofBgrF5kXLdmAISjlf/QiEhnCTK7nnIs=
 			</data>
 		</dict>
 		<key>Headers/CandyBar.swift</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eTyhSGnROqz54fCxmyc6rynjXH8=
+			R8H4ID7SXwyvHmG0Ep7b6VwW4hk=
 			</data>
 			<key>hash2</key>
 			<data>
-			l60j46WOZulLpUCgvDSTohTOeFA/SuRuppCyoha1vqQ=
+			rhCTipPHvT38KUQvvn9jN9UScEOG1NdSlmvwD5Cp8VU=
 			</data>
 		</dict>
 		<key>Headers/DopamineKit-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2kIvwhq/HOK3RCUQJiaEwB+pvig=
+			uLC8P3C0E/qTkHiC3ENMYKjZpKY=
 			</data>
 			<key>hash2</key>
 			<data>
-			kGypO/uY5IoetzxplpkO9j6e5LTNyU+YdBAUqOAO8gk=
+			a/2/qHglk4mkfGe9BWyRuDa8bCmeFKCo+AxqxX0VU88=
 			</data>
 		</dict>
 		<key>Headers/DopamineKit.h</key>
@@ -95,44 +95,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			muxJJM1skwDKd63ubO8v1IQPhw8=
+			xvL6+uAW8el++DY4TuGoC5kwDJI=
 			</data>
 			<key>hash2</key>
 			<data>
-			LukN/qc36aTyyLp6Kyzr2Ze16FNAneYIKHhyGLVPnLk=
+			5JVob//P8ogfnF4+boM3D2dYifnUd981W1SISnbh92U=
 			</data>
 		</dict>
 		<key>Modules/DopamineKit.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VfMTnSg3A2HAPA10Xy23dxvqaD4=
+			eH4Kn4lDHwHRIWRz9SvUuwKYuLY=
 			</data>
 			<key>hash2</key>
 			<data>
-			hlsElP+Idcese/KGuYO5SuA5Q6R6bO9m1lr12TnzXz0=
+			GTA7P5gyIzCOTRoICyMDJbLbqd1wJ4RpXh87qjzNKF8=
 			</data>
 		</dict>
 		<key>Modules/DopamineKit.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1/TM/119V8Jq5Y2seOeoyFJZXc4=
+			XcIOnLOVsLSZXE6xrGQQCZQrX2o=
 			</data>
 			<key>hash2</key>
 			<data>
-			qdmR0lgkjFV5Zr7zQeQugp8N1NJHyYP3yAjzQEKhjc8=
+			r9Y3ubW0Q2M6DhlGrdx+2cmifSCPFJfwTmMQtp4lhsg=
 			</data>
 		</dict>
 		<key>Modules/DopamineKit.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RAHbsoHD1P1kZIkQCdcMMt/Os/8=
+			p/Rqkz4Bklq+aQ8scFIjG5bHuWU=
 			</data>
 			<key>hash2</key>
 			<data>
-			VQONMYbvPako9Fyn+Bjm0Gievj+kKR3OnJde2QyRIGQ=
+			HSv+NKg16ZxkRGApAM2XXZY+1hdeZeBZ/UWVyrwmEVc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

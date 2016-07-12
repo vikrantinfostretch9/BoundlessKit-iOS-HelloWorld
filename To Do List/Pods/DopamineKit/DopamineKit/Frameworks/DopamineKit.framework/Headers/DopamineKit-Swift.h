@@ -256,6 +256,17 @@ SWIFT_CLASS("_TtC11DopamineKit8CandyBar")
 /// </code>.
 - (nonnull instancetype)initWithTitle:(NSString * _Nullable)title subtitle:(NSString * _Nullable)subtitle icon:(enum Candy)icon backgroundColor:(UIColor * _Nonnull)backgroundColor didTapBlock:(void (^ _Nullable)(void))didTapBlock OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+
+/// This function takes a hex string and returns a UIColor
+///
+/// \param hex A hex string with either format <code>"#ffffff"
+/// </code> or <code>"ffffff"
+/// </code> or <code>"#FFFFFF"
+/// </code>
+///
+/// \returns  The corresponding UIColor for valid hex strings, <code>UIColor.grayColor()
+/// </code> otherwise
++ (UIColor * _Nonnull)hexStringToUIColor:(NSString * _Nonnull)hex;
 @end
 
 

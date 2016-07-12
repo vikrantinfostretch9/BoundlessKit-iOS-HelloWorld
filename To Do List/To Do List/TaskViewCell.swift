@@ -128,15 +128,19 @@ class TaskViewCell: UITableViewCell {
                         // So we don't run on the main thread
                         dispatch_async(dispatch_get_main_queue(), {
                             var title:String = "title"
-                            var subtitle:String? = "subtitle"
+                            let subtitle:String? = nil
                             var icon:Candy = Candy.None
                             var color:UIColor = self.dopeRed
+                            
+                            CandyBar.init(title: "Great job!", icon: Candy.Crown).show(duration: 1.2)
                             
                             switch(reinforcement){
                             case "thumbsUp" :
                                 title = "Great job!!"
-                                subtitle = nil
                                 icon = Candy.ThumbsUp
+                                color = CandyBar.hexStringToUIColor("#C0C0C0")
+                                
+                                
                                 
                             case "stars" :
                                 title = "You're a super star!"
@@ -153,12 +157,10 @@ class TaskViewCell: UITableViewCell {
                             default:
                                 // Show nothing! This is called a neutral response, and builds up the good feelings for the next surprise!
                                 return
-                                
                             }
                             
                             // Show some candy and make them feel good!
                             let candyBar = CandyBar.init(title: title, subtitle: subtitle, icon: icon, backgroundColor: color)
-                            candyBar.position = .Bottom
                             candyBar.show(duration: 1.2)
                             
                             return
