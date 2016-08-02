@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DopamineKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-To Do List.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -12,7 +17,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2C357AB1440DA586D88F62D5A3A3ADF8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9B1D572F585C270EB347DB190E367B79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F108E1913E3315D8F1E3AB62CE1F538</key>
 		<dict>
 			<key>primary</key>
 			<true/>

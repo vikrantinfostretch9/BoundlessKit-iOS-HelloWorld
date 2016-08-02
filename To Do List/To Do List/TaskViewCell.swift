@@ -132,15 +132,11 @@ class TaskViewCell: UITableViewCell {
                             var icon:Candy = Candy.None
                             var color:UIColor = self.dopeRed
                             
-                            CandyBar.init(title: "Great job!", icon: Candy.Crown).show(duration: 1.2)
-                            
                             switch(reinforcement){
                             case "thumbsUp" :
                                 title = "Great job!!"
                                 icon = Candy.ThumbsUp
                                 color = CandyBar.hexStringToUIColor("#C0C0C0")
-                                
-                                
                                 
                             case "stars" :
                                 title = "You're a super star!"

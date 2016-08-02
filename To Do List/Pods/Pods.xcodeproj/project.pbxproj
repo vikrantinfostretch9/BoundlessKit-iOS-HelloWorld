@@ -7,36 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F55CBBE7DD36DB986C1B1B254A275C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		45F07B92669C5099962E99678B9FCFA1 /* Pods-To Do List-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC05E0C7E3935D87F1C2FFC91896232B /* Pods-To Do List-dummy.m */; };
+		2E09683A3593FF836C2F871D02B8D8D7 /* Pods-To Do List-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD32FFA695456A8E2A1C7D792F6AAB0E /* Pods-To Do List-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		729F1BD4FA2565F51E23A006EA69E160 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87165D9025B7CB6A4645BF7EBCDA11FC /* Banner.swift */; };
+		7E3349A2CB4F14BCFD0C98DA3CBBE246 /* DopamineKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9EB8EBE3AE0BF4D5862E94D22640B7 /* DopamineKit.swift */; };
+		87C191B4A4246A4CC9CE11781B291181 /* Pods-To Do List-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7437B35919438F2D46D165E4032AD45 /* Pods-To Do List-dummy.m */; };
+		939EB22724E243A9DFB96BA37B9F252F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		A72E46C688E11777F40D3A9767031BDD /* CandyBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBFD37B24E5C8B5ACE6F3C17F86BD5 /* CandyBar.swift */; };
+		B3AB9DFE592B7ED7330985F9A389ABCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43395868E41B16E19A61AB5B5E42C9D /* Assets.xcassets */; };
+		C3879EB85E82FA7BD6174D263F55D44B /* DopamineKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DE0239848BFE74330CA5A52E9B42BA /* DopamineKit-dummy.m */; };
+		DE3FD7E18742572DB3C09E63C3F2EFC7 /* DopamineKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C621383A1CAE84895CFB9B7CAD4D60 /* DopamineKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E353C20A9AFEC689985AA66977383F36 /* DopamineKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1CC6481A937CC3ABB62B5E31DE622D /* DopamineKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCA66461FF8E18066603704A82E81288 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		09B526F5ED2EEB084417AC1497A0788D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C357AB1440DA586D88F62D5A3A3ADF8;
+			remoteInfo = DopamineKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		3A174ED7C713B6EB17ACA4623609D3D0 /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DopamineKit.framework; path = DopamineKit/Frameworks/DopamineKit.framework; sourceTree = "<group>"; };
-		74F2C25C7FC8959F0F5ED3C1D63AD96C /* Pods-To Do List-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To Do List-resources.sh"; sourceTree = "<group>"; };
-		88B4016C1BA4C604F0469DCE174199AF /* Pods-To Do List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To Do List.debug.xcconfig"; sourceTree = "<group>"; };
+		05C2F94757C8592EA486E5A2809DA56E /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15C621383A1CAE84895CFB9B7CAD4D60 /* DopamineKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DopamineKit.h; path = Sources/DopamineKit.h; sourceTree = "<group>"; };
+		33F75703557DCE1C1BF6BFCC5873165A /* Pods-To Do List-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-To Do List-acknowledgements.plist"; sourceTree = "<group>"; };
+		3CC9F93D2E310899371C7E977EE8B54A /* DopamineKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DopamineKit-prefix.pch"; sourceTree = "<group>"; };
+		41FA64694AB7A3C642929E22026423DD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		472BE35A55494269667AFF09FBCBC5AA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52FB6866EEB4EA3CA17DF6A1EF451225 /* Pods-To Do List-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To Do List-resources.sh"; sourceTree = "<group>"; };
+		6FEB1D5BECE81E587DEF6408541B1F97 /* Pods-To Do List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To Do List.release.xcconfig"; sourceTree = "<group>"; };
+		72FE740230D4164611C79828636B7207 /* Pods-To Do List-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To Do List-frameworks.sh"; sourceTree = "<group>"; };
+		7E213872995BAA2DE9389AE2020480AC /* Pods-To Do List-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-To Do List-acknowledgements.markdown"; sourceTree = "<group>"; };
+		80DE0239848BFE74330CA5A52E9B42BA /* DopamineKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DopamineKit-dummy.m"; sourceTree = "<group>"; };
+		87165D9025B7CB6A4645BF7EBCDA11FC /* Banner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Banner.swift; path = Sources/Banner.swift; sourceTree = "<group>"; };
+		89BAEEF900EF8391839C0DEC56F47AF1 /* DopamineKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DopamineKit.modulemap; sourceTree = "<group>"; };
+		8A93599D2473949A2A0BBB150B7E14CE /* DopamineKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DopamineKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B44ED7A83F702EE9F62C8AB677DBBFA0 /* Pods-To Do List-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-To Do List-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A1BBFD37B24E5C8B5ACE6F3C17F86BD5 /* CandyBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandyBar.swift; path = Sources/CandyBar.swift; sourceTree = "<group>"; };
+		A7437B35919438F2D46D165E4032AD45 /* Pods-To Do List-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-To Do List-dummy.m"; sourceTree = "<group>"; };
+		AD9EB8EBE3AE0BF4D5862E94D22640B7 /* DopamineKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopamineKit.swift; path = Sources/DopamineKit.swift; sourceTree = "<group>"; };
+		BD1CC6481A937CC3ABB62B5E31DE622D /* DopamineKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DopamineKit-umbrella.h"; sourceTree = "<group>"; };
+		BD32FFA695456A8E2A1C7D792F6AAB0E /* Pods-To Do List-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-To Do List-umbrella.h"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D1876DAEA2912253B8AD3183E49A901A /* Pods-To Do List-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-To Do List-acknowledgements.plist"; sourceTree = "<group>"; };
-		D4D81BD164BF3F33D059F515A18DE00E /* libPods-To Do List.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-To Do List.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC05E0C7E3935D87F1C2FFC91896232B /* Pods-To Do List-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-To Do List-dummy.m"; sourceTree = "<group>"; };
-		EFC4353A6FEFF06A6896CC9CA62BD3CF /* Pods-To Do List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To Do List.release.xcconfig"; sourceTree = "<group>"; };
-		FFC3B63411566BDE4168F6427065740B /* Pods-To Do List-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To Do List-frameworks.sh"; sourceTree = "<group>"; };
+		D43395868E41B16E19A61AB5B5E42C9D /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		D494947C1B9E59E6AEAD2FF720B01AD2 /* Pods-To Do List.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-To Do List.modulemap"; sourceTree = "<group>"; };
+		DEF6EEA89F2D87D429F6D89B8252949B /* DopamineKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DopamineKit.xcconfig; sourceTree = "<group>"; };
+		ECC275C701D700D63B0A2788F10674F6 /* Pods-To Do List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To Do List.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		885F191D60861D671D83060C413FE9C4 /* Frameworks */ = {
+		38EC2EEA599F2A9A943B719B48942B0E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F55CBBE7DD36DB986C1B1B254A275C1 /* Foundation.framework in Frameworks */,
+				939EB22724E243A9DFB96BA37B9F252F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BEBCFDBDA562D3D8A945905237874E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCA66461FF8E18066603704A82E81288 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00E77FC22898ED5F54DD78F21EC918AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D43395868E41B16E19A61AB5B5E42C9D /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3616AC489703F4178C128FE9468337D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A93599D2473949A2A0BBB150B7E14CE /* DopamineKit.framework */,
+				05C2F94757C8592EA486E5A2809DA56E /* Pods_To_Do_List.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -45,20 +103,38 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		3FAF79FE75B246C86AD985C9E3777A1F /* Targets Support Files */ = {
+		458E7B870134D05FD30E08634BCCD653 /* Pods-To Do List */ = {
 			isa = PBXGroup;
 			children = (
-				DFD96E6C48294509507D905D61007C48 /* Pods-To Do List */,
+				472BE35A55494269667AFF09FBCBC5AA /* Info.plist */,
+				D494947C1B9E59E6AEAD2FF720B01AD2 /* Pods-To Do List.modulemap */,
+				7E213872995BAA2DE9389AE2020480AC /* Pods-To Do List-acknowledgements.markdown */,
+				33F75703557DCE1C1BF6BFCC5873165A /* Pods-To Do List-acknowledgements.plist */,
+				A7437B35919438F2D46D165E4032AD45 /* Pods-To Do List-dummy.m */,
+				72FE740230D4164611C79828636B7207 /* Pods-To Do List-frameworks.sh */,
+				52FB6866EEB4EA3CA17DF6A1EF451225 /* Pods-To Do List-resources.sh */,
+				BD32FFA695456A8E2A1C7D792F6AAB0E /* Pods-To Do List-umbrella.h */,
+				ECC275C701D700D63B0A2788F10674F6 /* Pods-To Do List.debug.xcconfig */,
+				6FEB1D5BECE81E587DEF6408541B1F97 /* Pods-To Do List.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-To Do List";
+			path = "Target Support Files/Pods-To Do List";
 			sourceTree = "<group>";
 		};
-		6EFDC418EB399E3C18921961167E0A09 /* Pods */ = {
+		535E3957C4D66F2291F6BA81F2A22D44 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E235C8C98A386483832DA566757205EF /* DopamineKit */,
+				F65004E52CDBF968A952BEB89C396672 /* DopamineKit */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6486498A44D92FC460538EB44F978172 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				458E7B870134D05FD30E08634BCCD653 /* Pods-To Do List */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -66,9 +142,9 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6EFDC418EB399E3C18921961167E0A09 /* Pods */,
-				E9C73BFFE1F46200792F2AB13D6A0E47 /* Products */,
-				3FAF79FE75B246C86AD985C9E3777A1F /* Targets Support Files */,
+				535E3957C4D66F2291F6BA81F2A22D44 /* Pods */,
+				3616AC489703F4178C128FE9468337D7 /* Products */,
+				6486498A44D92FC460538EB44F978172 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,63 +156,91 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CFFF4A8D2C01ED2892FCBDC65506E0EF /* Frameworks */ = {
+		EC71009D764AD3E2883D21248AE56C5E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3A174ED7C713B6EB17ACA4623609D3D0 /* DopamineKit.framework */,
+				89BAEEF900EF8391839C0DEC56F47AF1 /* DopamineKit.modulemap */,
+				DEF6EEA89F2D87D429F6D89B8252949B /* DopamineKit.xcconfig */,
+				80DE0239848BFE74330CA5A52E9B42BA /* DopamineKit-dummy.m */,
+				3CC9F93D2E310899371C7E977EE8B54A /* DopamineKit-prefix.pch */,
+				BD1CC6481A937CC3ABB62B5E31DE622D /* DopamineKit-umbrella.h */,
+				41FA64694AB7A3C642929E22026423DD /* Info.plist */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/DopamineKit";
 			sourceTree = "<group>";
 		};
-		DFD96E6C48294509507D905D61007C48 /* Pods-To Do List */ = {
+		F65004E52CDBF968A952BEB89C396672 /* DopamineKit */ = {
 			isa = PBXGroup;
 			children = (
-				B44ED7A83F702EE9F62C8AB677DBBFA0 /* Pods-To Do List-acknowledgements.markdown */,
-				D1876DAEA2912253B8AD3183E49A901A /* Pods-To Do List-acknowledgements.plist */,
-				EC05E0C7E3935D87F1C2FFC91896232B /* Pods-To Do List-dummy.m */,
-				FFC3B63411566BDE4168F6427065740B /* Pods-To Do List-frameworks.sh */,
-				74F2C25C7FC8959F0F5ED3C1D63AD96C /* Pods-To Do List-resources.sh */,
-				88B4016C1BA4C604F0469DCE174199AF /* Pods-To Do List.debug.xcconfig */,
-				EFC4353A6FEFF06A6896CC9CA62BD3CF /* Pods-To Do List.release.xcconfig */,
-			);
-			name = "Pods-To Do List";
-			path = "Target Support Files/Pods-To Do List";
-			sourceTree = "<group>";
-		};
-		E235C8C98A386483832DA566757205EF /* DopamineKit */ = {
-			isa = PBXGroup;
-			children = (
-				CFFF4A8D2C01ED2892FCBDC65506E0EF /* Frameworks */,
+				87165D9025B7CB6A4645BF7EBCDA11FC /* Banner.swift */,
+				A1BBFD37B24E5C8B5ACE6F3C17F86BD5 /* CandyBar.swift */,
+				15C621383A1CAE84895CFB9B7CAD4D60 /* DopamineKit.h */,
+				AD9EB8EBE3AE0BF4D5862E94D22640B7 /* DopamineKit.swift */,
+				00E77FC22898ED5F54DD78F21EC918AD /* Resources */,
+				EC71009D764AD3E2883D21248AE56C5E /* Support Files */,
 			);
 			path = DopamineKit;
 			sourceTree = "<group>";
 		};
-		E9C73BFFE1F46200792F2AB13D6A0E47 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D4D81BD164BF3F33D059F515A18DE00E /* libPods-To Do List.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		5523B88628B9E390851BCD168774B829 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E09683A3593FF836C2F871D02B8D8D7 /* Pods-To Do List-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B46DA9E007D38BB999866A416EE01B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E353C20A9AFEC689985AA66977383F36 /* DopamineKit-umbrella.h in Headers */,
+				DE3FD7E18742572DB3C09E63C3F2EFC7 /* DopamineKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		9B1D572F585C270EB347DB190E367B79 /* Pods-To Do List */ = {
+		2C357AB1440DA586D88F62D5A3A3ADF8 /* DopamineKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA1F5A940C322A5BA8580024D090DA9F /* Build configuration list for PBXNativeTarget "Pods-To Do List" */;
+			buildConfigurationList = 19B648AB9032C665150A6DCD9DCEEFAC /* Build configuration list for PBXNativeTarget "DopamineKit" */;
 			buildPhases = (
-				04F42ED128671E376BAF6DB9F290F9EC /* Sources */,
-				885F191D60861D671D83060C413FE9C4 /* Frameworks */,
+				4B7E316D3F95203C5907381EDDB410F8 /* Sources */,
+				38EC2EEA599F2A9A943B719B48942B0E /* Frameworks */,
+				66B46DA9E007D38BB999866A416EE01B /* Headers */,
+				B70ED75C7019204C520190D9D3A98EDE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = DopamineKit;
+			productName = DopamineKit;
+			productReference = 8A93599D2473949A2A0BBB150B7E14CE /* DopamineKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9F108E1913E3315D8F1E3AB62CE1F538 /* Pods-To Do List */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FC0E28010A6B579CFF344803B76736B /* Build configuration list for PBXNativeTarget "Pods-To Do List" */;
+			buildPhases = (
+				2ABA58533FF42E59EBCC151E9C1C14A7 /* Sources */,
+				6BEBCFDBDA562D3D8A945905237874E5 /* Frameworks */,
+				5523B88628B9E390851BCD168774B829 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				880A1197CBE07FB04C844771D0665478 /* PBXTargetDependency */,
+			);
 			name = "Pods-To Do List";
 			productName = "Pods-To Do List";
-			productReference = D4D81BD164BF3F33D059F515A18DE00E /* libPods-To Do List.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 05C2F94757C8592EA486E5A2809DA56E /* Pods_To_Do_List.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -155,47 +259,87 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = E9C73BFFE1F46200792F2AB13D6A0E47 /* Products */;
+			productRefGroup = 3616AC489703F4178C128FE9468337D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B1D572F585C270EB347DB190E367B79 /* Pods-To Do List */,
+				2C357AB1440DA586D88F62D5A3A3ADF8 /* DopamineKit */,
+				9F108E1913E3315D8F1E3AB62CE1F538 /* Pods-To Do List */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		B70ED75C7019204C520190D9D3A98EDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3AB9DFE592B7ED7330985F9A389ABCD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		04F42ED128671E376BAF6DB9F290F9EC /* Sources */ = {
+		2ABA58533FF42E59EBCC151E9C1C14A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F07B92669C5099962E99678B9FCFA1 /* Pods-To Do List-dummy.m in Sources */,
+				87C191B4A4246A4CC9CE11781B291181 /* Pods-To Do List-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B7E316D3F95203C5907381EDDB410F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				729F1BD4FA2565F51E23A006EA69E160 /* Banner.swift in Sources */,
+				A72E46C688E11777F40D3A9767031BDD /* CandyBar.swift in Sources */,
+				C3879EB85E82FA7BD6174D263F55D44B /* DopamineKit-dummy.m in Sources */,
+				7E3349A2CB4F14BCFD0C98DA3CBBE246 /* DopamineKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		880A1197CBE07FB04C844771D0665478 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DopamineKit;
+			target = 2C357AB1440DA586D88F62D5A3A3ADF8 /* DopamineKit */;
+			targetProxy = 09B526F5ED2EEB084417AC1497A0788D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		38C9B01EABD8C62B8D36F7CF222A1201 /* Debug */ = {
+		123A1767264CFAC9EB0455A492366131 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88B4016C1BA4C604F0469DCE174199AF /* Pods-To Do List.debug.xcconfig */;
+			baseConfigurationReference = DEF6EEA89F2D87D429F6D89B8252949B /* DopamineKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Target Support Files/DopamineKit/DopamineKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DopamineKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DopamineKit/DopamineKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DopamineKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -277,30 +421,115 @@
 			};
 			name = Debug;
 		};
-		E3F2F87AD2E4611E9CCE31E6293ECC83 /* Release */ = {
+		AD465A5FAF2E3696B00E5C78017F93C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFC4353A6FEFF06A6896CC9CA62BD3CF /* Pods-To Do List.release.xcconfig */;
+			baseConfigurationReference = ECC275C701D700D63B0A2788F10674F6 /* Pods-To Do List.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-To Do List/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-To Do List/Pods-To Do List.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_To_Do_List;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C4B29594DB37CE6D8444EDAA46B7085D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FEB1D5BECE81E587DEF6408541B1F97 /* Pods-To Do List.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-To Do List/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-To Do List/Pods-To Do List.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_To_Do_List;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		D18A923C01828B27A9141E2BAF7359D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEF6EEA89F2D87D429F6D89B8252949B /* DopamineKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DopamineKit/DopamineKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DopamineKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DopamineKit/DopamineKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DopamineKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		19B648AB9032C665150A6DCD9DCEEFAC /* Build configuration list for PBXNativeTarget "DopamineKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D18A923C01828B27A9141E2BAF7359D7 /* Debug */,
+				123A1767264CFAC9EB0455A492366131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -310,11 +539,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA1F5A940C322A5BA8580024D090DA9F /* Build configuration list for PBXNativeTarget "Pods-To Do List" */ = {
+		2FC0E28010A6B579CFF344803B76736B /* Build configuration list for PBXNativeTarget "Pods-To Do List" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38C9B01EABD8C62B8D36F7CF222A1201 /* Debug */,
-				E3F2F87AD2E4611E9CCE31E6293ECC83 /* Release */,
+				AD465A5FAF2E3696B00E5C78017F93C6 /* Debug */,
+				C4B29594DB37CE6D8444EDAA46B7085D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

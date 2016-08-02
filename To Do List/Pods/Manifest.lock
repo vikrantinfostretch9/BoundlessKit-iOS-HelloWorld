@@ -1,12 +1,12 @@
 PODS:
-  - DopamineKit (3.0.3)
+  - DopamineKit (3.1.0)
 
 DEPENDENCIES:
-  - DopamineKit (~> 3.0.3)
+  - DopamineKit (~> 3.1.0)
 
 SPEC CHECKSUMS:
-  DopamineKit: 9b1d9f4461576ff2afcbb19e0479f442ff770475
+  DopamineKit: 250fce3d13ce0196a169bd56e2f38ab01183721c
 
-PODFILE CHECKSUM: dd334788dda8072e4ba7327a67453fc989bcb714
+PODFILE CHECKSUM: 01c51014626422b5135f9cca75a9cf59b5a22f20
 
 COCOAPODS: 1.0.1
