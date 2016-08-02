@@ -124,28 +124,28 @@ class TaskViewCell: UITableViewCell {
                     
                     // The completed task has been deleted
                     // Let's give em some positive reinforcement!
-                    DopamineKit.reinforce("action1", callback: {reinforcement in
+                    DopamineKit.reinforce("action1", completion: {reinforcement in
                         // So we don't run on the main thread
                         dispatch_async(dispatch_get_main_queue(), {
                             var title:String = "title"
                             let subtitle:String? = nil
-                            var icon:Candy = Candy.None
+                            var icon:CandyIcon = CandyIcon.None
                             var color:UIColor = self.dopeRed
                             
                             switch(reinforcement){
                             case "thumbsUp" :
                                 title = "Great job!!"
-                                icon = Candy.ThumbsUp
+                                icon = CandyIcon.ThumbsUp
                                 color = CandyBar.hexStringToUIColor("#C0C0C0")
                                 
                             case "stars" :
                                 title = "You're a super star!"
-                                icon = Candy.Stars
+                                icon = CandyIcon.Stars
                                 color = self.dopeYellow
                                 
                             case "medalStar" :
                                 title = "How does achieving something feel?"
-                                icon = Candy.MedalStar
+                                icon = CandyIcon.MedalStar
                                 color = self.dopeYellow
                                 
                             case "neutralResponse" :
@@ -157,7 +157,7 @@ class TaskViewCell: UITableViewCell {
                             
                             // Show some candy and make them feel good!
                             let candyBar = CandyBar.init(title: title, subtitle: subtitle, icon: icon, backgroundColor: color)
-                            candyBar.show(duration: 1.2)
+                            candyBar.show(1.2)
                             
                             return
                         })
