@@ -13,8 +13,8 @@ import SQLite
 @objc
 public class DopamineKit : NSObject {
     
-    // Singleton pattern
     public static let sharedInstance: DopamineKit = DopamineKit()
+    
     private let dataStore:SQLiteDataStore = SQLiteDataStore.sharedInstance
     private let cartridgeSyncer = CartridgeSyncer.sharedInstance
     private let trackSyncer = TrackSyncer.sharedInstance
@@ -23,11 +23,6 @@ public class DopamineKit : NSObject {
     private override init() {
         dataStore.createTables()
     }
-    
-    deinit {
-        
-    }
-    
         
     /// This function sends an asynchronous tracking call for the specified actionID
     ///
@@ -79,18 +74,14 @@ public class DopamineKit : NSObject {
     ///     - line?: Used to get the line of bug. Do not use this parameter. Defaults to #line.
     ///
     internal static func DebugLog(message: String,  filePath: String = #file, function: String =  #function, line: Int = #line) {
-//        #if DEBUG
+        #if DEBUG
             var functionSignature:String = function
             if let parameterNames = functionSignature.rangeOfString("\\((.*?)\\)", options: .RegularExpressionSearch){
                 functionSignature.replaceRange(parameterNames, with: "()")
             }
             let fileName = NSString(string: filePath).lastPathComponent.componentsSeparatedByString(".")[0]
             NSLog("[\(fileName):\(line):\(functionSignature)] - \(message)")
-//        #endif
+        #endif
     }
-        
-    
-    
-    
 
 }

@@ -1,15 +1,15 @@
 PODS:
-  - DopamineKit (4.0.0.beta):
+  - DopamineKit (4.0.0beta2):
     - SQLite.swift
   - SQLite.swift (0.10.1)
 
 DEPENDENCIES:
-  - DopamineKit (~> 4.0.0.beta)
+  - DopamineKit (~> 4.0.0beta2)
 
 SPEC CHECKSUMS:
-  DopamineKit: 4a1d9179fe83d4d5940da9119a8429bce827a4ec
+  DopamineKit: d40ac1956addc95dbdcb94e5d3810c8603c3d9ce
   SQLite.swift: 6a6e4b034efc317ce4e203b6af2d3024fee2b570
 
-PODFILE CHECKSUM: 35cd05c6062cfa134c7ff59f947142a21b709d14
+PODFILE CHECKSUM: 3729735b5b94aac6232bf9e10a2245dfe0d56bd8
 
 COCOAPODS: 1.1.0.beta.1

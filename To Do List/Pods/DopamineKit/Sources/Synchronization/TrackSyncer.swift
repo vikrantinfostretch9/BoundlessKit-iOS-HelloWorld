@@ -28,7 +28,7 @@ class TrackSyncer : NSObject {
         }
     }
     
-    func updateTrack(suggestedSize: Int?=nil, timerMarker: Int64=Int64( 1000*NSDate().timeIntervalSince1970 ), timerLength: Int64?=nil) {
+    private func updateTrack(suggestedSize: Int?=nil, timerMarker: Int64=Int64( 1000*NSDate().timeIntervalSince1970 ), timerLength: Int64?=nil) {
         if let suggestedSize = suggestedSize {
             track.suggestedSize = suggestedSize
         }
@@ -44,7 +44,6 @@ class TrackSyncer : NSObject {
     func shouldSync() -> Bool {
         return !syncInProgress && track.shouldSync()
     }
-    
     
     func sync(completion: (Int) -> () = { _ in }) {
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)){
@@ -69,7 +68,8 @@ class TrackSyncer : NSObject {
                     DopeAction(
                         actionID: action.actionID,
                         metaData: action.metaData,
-                        utc: action.utc )
+                        utc: action.utc,
+                        deviceTimezoneOffset: action.deviceTimezoneOffset )
                 )
             }
             
@@ -92,11 +92,11 @@ class TrackSyncer : NSObject {
     func store(action: DopeAction) {
         guard let _ = SQLTrackedActionDataHelper.insert(
             SQLTrackedAction(
-                index:0,
-                actionID:
-                action.actionID,
+                index: 0,
+                actionID: action.actionID,
                 metaData: action.metaData,
-                utc: action.utc )
+                utc: action.utc,
+                deviceTimezoneOffset: action.deviceTimezoneOffset )
             )
             else{
                 // if it couldnt be saved, send it

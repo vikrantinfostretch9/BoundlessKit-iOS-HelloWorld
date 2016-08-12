@@ -9,11 +9,13 @@
 import Foundation
 
 public class SyncCoordinator {
+    
     static let sharedInstance = SyncCoordinator()
     
     private init() { }
     
     static private var syncInProgress = false
+    
     static func sync() {
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
             guard !syncInProgress else {
@@ -27,10 +29,14 @@ public class SyncCoordinator {
             let trackSyncer = TrackSyncer.sharedInstance
             let reportSyncer = ReportSyncer.sharedInstance
             
+            let cartridges = cartridgeSyncer.whichShouldSync()
+            let reportShouldSync = cartridges.count > 0 || reportSyncer.shouldSync()
+            let trackerShouldSync = reportShouldSync || trackSyncer.shouldSync()
+            
             var goodProgress = true
             
-            if trackSyncer.shouldSync() {
-                DopamineKit.DebugLog("Sending \(SQLTrackedActionDataHelper.count()) tracked actions for all cartridges reload...")
+            if trackerShouldSync {
+                DopamineKit.DebugLog("Sending \(SQLTrackedActionDataHelper.count()) tracked actions...")
                 trackSyncer.sync() {
                     status in
                     guard status == 200 else {
@@ -40,13 +46,11 @@ public class SyncCoordinator {
                     }
                 }
                 sleep(1)
-            } else {
-                DopamineKit.DebugLog("Track has \(SQLTrackedActionDataHelper.count()) actions so does not need sync...")
             }
             
             if !goodProgress { return }
             
-            if reportSyncer.shouldSync() {
+            if reportShouldSync {
                 DopamineKit.DebugLog("Sending \(SQLReportedActionDataHelper.count()) reported actions...")
                 reportSyncer.sync() {
                     status in
@@ -57,13 +61,10 @@ public class SyncCoordinator {
                     }
                 }
                 sleep(5)
-            } else {
-                DopamineKit.DebugLog("Report has \(SQLReportedActionDataHelper.count()) actions so does not need sync...")
             }
             
             if !goodProgress { return }
             
-            let cartridges = cartridgeSyncer.whichShouldSync()
             if cartridges.count > 0 {
                 DopamineKit.DebugLog("Refreshing \(cartridges.count)/\(SQLCartridgeDataHelper.getTablesCount()) cartidges.")
                 for (actionID, cartridge) in cartridges where goodProgress {
@@ -74,10 +75,8 @@ public class SyncCoordinator {
                             return
                         }
                     }
-                    sleep(1)
+//                    sleep(1)
                 }
-            } else {
-                DopamineKit.DebugLog("There are \(SQLCartridgeDataHelper.getTablesCount()) cartridges and none need to reload!")
             }
         }
     }

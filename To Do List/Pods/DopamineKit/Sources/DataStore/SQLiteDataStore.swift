@@ -9,7 +9,6 @@
 import Foundation
 import SQLite
 
-
 enum SQLDataAccessError: ErrorType {
     case Datastore_Connection_Error
     case Insert_Error
@@ -20,15 +19,16 @@ enum SQLDataAccessError: ErrorType {
 
 public class SQLiteDataStore : NSObject{
     
-    let DDB: Connection?
-    
     public static let sharedInstance: SQLiteDataStore = SQLiteDataStore()
+    
+    let DDB: Connection?
     
     private override init() {
         var path = "DopamineDB.sqlite"
         if let dirs: [NSString] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as [NSString] {
             let dir = dirs[0]
             path = dir.stringByAppendingPathComponent(path);
+            NSLog("Sqlite db path:\(path)")
         }
         
         do {
@@ -51,7 +51,7 @@ public class SQLiteDataStore : NSObject{
         SQLReportedActionDataHelper.createTable()
     }
     
-    func dropTables(){
+    public func dropTables(){
         guard let _ = DDB else {
             DopamineKit.DebugLog("No connection to SQLite")
             return

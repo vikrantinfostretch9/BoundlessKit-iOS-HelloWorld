@@ -1,5 +1,5 @@
 use_frameworks!
 
 target 'To Do List' do
-  pod 'DopamineKit', '~> 4.0.0.beta'
+  pod 'DopamineKit', '~> 4.0.0beta2'
 end

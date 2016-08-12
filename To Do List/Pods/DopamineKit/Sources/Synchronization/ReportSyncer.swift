@@ -28,7 +28,7 @@ class ReportSyncer : NSObject {
         }
     }
     
-    func updateReport(suggestedSize: Int?=nil, timerMarker: Int64=Int64( 1000*NSDate().timeIntervalSince1970 ), timerLength: Int64?=nil) {
+    private func updateReport(suggestedSize: Int?=nil, timerMarker: Int64=Int64( 1000*NSDate().timeIntervalSince1970 ), timerLength: Int64?=nil) {
         if let suggestedSize = suggestedSize {
             report.suggestedSize = suggestedSize
         }
@@ -69,8 +69,8 @@ class ReportSyncer : NSObject {
                         actionID: action.actionID,
                         reinforcementDecision: action.reinforcementDecision,
                         metaData: action.metaData,
-                        utc: action.utc
-                    )
+                        utc: action.utc,
+                        deviceTimezoneOffset: action.deviceTimezoneOffset )
                 )
             }
             
@@ -97,7 +97,8 @@ class ReportSyncer : NSObject {
                 actionID: action.actionID,
                 reinforcementDecision: action.reinforcementDecision!,
                 metaData: action.metaData,
-                utc: action.utc)
+                utc: action.utc,
+                deviceTimezoneOffset: action.deviceTimezoneOffset )
             )
             else{
                 // if it couldnt be saved, send it
