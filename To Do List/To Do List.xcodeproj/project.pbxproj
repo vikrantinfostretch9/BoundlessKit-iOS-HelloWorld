@@ -11,8 +11,6 @@
 		8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */; };
 		8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFE1D08F5BC003BB094 /* Task.swift */; };
 		8497238A1D07FFB60014E975 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849723891D07FFB60014E975 /* DopamineProperties.plist */; };
-		8498BB5A1D5125830044B63B /* CandyBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498BB571D5125830044B63B /* CandyBar.swift */; };
-		8498BB5B1D5125830044B63B /* CandyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498BB581D5125830044B63B /* CandyIcon.swift */; };
 		84B7B9A11D078EA1008BF664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A01D078EA1008BF664 /* AppDelegate.swift */; };
 		84B7B9A31D078EA1008BF664 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A21D078EA1008BF664 /* FirstViewController.swift */; };
 		84B7B9A51D078EA1008BF664 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A41D078EA1008BF664 /* SecondViewController.swift */; };
@@ -39,8 +37,6 @@
 		8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
 		8426EEFE1D08F5BC003BB094 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		849723891D07FFB60014E975 /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
-		8498BB571D5125830044B63B /* CandyBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandyBar.swift; sourceTree = "<group>"; };
-		8498BB581D5125830044B63B /* CandyIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandyIcon.swift; sourceTree = "<group>"; };
 		84B7B99D1D078EA1008BF664 /* To Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B7B9A01D078EA1008BF664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B7B9A21D078EA1008BF664 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -92,15 +88,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8498BB561D5125830044B63B /* Candy */ = {
-			isa = PBXGroup;
-			children = (
-				8498BB571D5125830044B63B /* CandyBar.swift */,
-				8498BB581D5125830044B63B /* CandyIcon.swift */,
-			);
-			path = Candy;
-			sourceTree = "<group>";
-		};
 		84B7B9941D078EA1008BF664 = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +115,6 @@
 				84B7B9A21D078EA1008BF664 /* FirstViewController.swift */,
 				84B7B9A41D078EA1008BF664 /* SecondViewController.swift */,
 				8426EEFE1D08F5BC003BB094 /* Task.swift */,
-				8498BB561D5125830044B63B /* Candy */,
 				84B7B9C21D078EE5008BF664 /* TaskManager.swift */,
 				8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */,
 				84B7B9A61D078EA1008BF664 /* Main.storyboard */,
@@ -203,10 +189,12 @@
 					84B7B99C1D078EA1008BF664 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 367K5HG48M;
+						LastSwiftMigration = 0800;
 					};
 					84B7B9B21D078EA1008BF664 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 367K5HG48M;
+						LastSwiftMigration = 0800;
 						TestTargetID = 84B7B99C1D078EA1008BF664;
 					};
 				};
@@ -306,9 +294,7 @@
 			files = (
 				84B7B9A51D078EA1008BF664 /* SecondViewController.swift in Sources */,
 				84B7B9A11D078EA1008BF664 /* AppDelegate.swift in Sources */,
-				8498BB5B1D5125830044B63B /* CandyIcon.swift in Sources */,
 				8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */,
-				8498BB5A1D5125830044B63B /* CandyBar.swift in Sources */,
 				84B7B9C31D078EE5008BF664 /* TaskManager.swift in Sources */,
 				8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */,
 				84B7B9A31D078EA1008BF664 /* FirstViewController.swift in Sources */,
@@ -393,6 +379,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -431,6 +418,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -443,9 +431,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "To Do List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.usedopamine.ios.Dope-To-Do-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -456,9 +447,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "To Do List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.usedopamine.ios.Dope-To-Do-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -470,6 +464,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.usedopamine.ios.Dope-To-Do-ListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To Do List.app/To Do List";
 			};
 			name = Debug;
@@ -482,6 +477,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.usedopamine.ios.Dope-To-Do-ListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To Do List.app/To Do List";
 			};
 			name = Release;

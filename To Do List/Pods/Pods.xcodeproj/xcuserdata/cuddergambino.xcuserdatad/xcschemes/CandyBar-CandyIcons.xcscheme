@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0F8606CD974037B3F00E13B75CA46A90'
-               BlueprintName = 'DopamineKit'
+               BlueprintIdentifier = '507B9832DB81C37C00FD25C6DCB44E61'
+               BlueprintName = 'CandyBar-CandyIcons'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'DopamineKit.framework'>
+               BuildableName = 'CandyIcons.bundle'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

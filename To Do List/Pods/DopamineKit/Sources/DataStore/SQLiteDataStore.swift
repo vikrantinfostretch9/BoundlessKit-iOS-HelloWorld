@@ -19,16 +19,22 @@ enum SQLDataAccessError: ErrorType {
 
 public class SQLiteDataStore : NSObject{
     
-    public static let sharedInstance: SQLiteDataStore = SQLiteDataStore()
+    static let sharedInstance: SQLiteDataStore = SQLiteDataStore()
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    let defaultsKey = "DopamineSQLiteVersion"
+    
+    private let DatabaseVersion: Int = 2
     let DDB: Connection?
     
+    /// Creates a SQLite database and tables for DopamineKit
+    ///
     private override init() {
         var path = "DopamineDB.sqlite"
         if let dirs: [NSString] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as [NSString] {
             let dir = dirs[0]
             path = dir.stringByAppendingPathComponent(path);
-            NSLog("Sqlite db path:\(path)")
+            DopamineKit.DebugLog("DopamineKit SQLite db path:\(path)")
         }
         
         do {
@@ -39,8 +45,15 @@ public class SQLiteDataStore : NSObject{
         }
         
         super.init()
+        
+        if defaults.integerForKey(defaultsKey) != DatabaseVersion {
+            clearTables()
+            defaults.setInteger(DatabaseVersion, forKey: defaultsKey)
+        }
     }
     
+    /// Creates all the tables needed for DopamineKit
+    ///
     func createTables(){
         guard let _ = DDB else {
             DopamineKit.DebugLog("No connection to SQLite")
@@ -49,9 +62,14 @@ public class SQLiteDataStore : NSObject{
         
         SQLTrackedActionDataHelper.createTable()
         SQLReportedActionDataHelper.createTable()
+        SQLCartridgeDataHelper.createTable()
+        SQLSyncOverviewDataHelper.createTable()
+        SQLDopeExceptionDataHelper.createTable()
     }
     
-    public func dropTables(){
+    /// Drops all tables used in DopamineKit
+    ///
+    func dropTables(){
         guard let _ = DDB else {
             DopamineKit.DebugLog("No connection to SQLite")
             return
@@ -59,7 +77,16 @@ public class SQLiteDataStore : NSObject{
         
         SQLTrackedActionDataHelper.dropTable()
         SQLReportedActionDataHelper.dropTable()
-        SQLCartridgeDataHelper.dropTables()
+        SQLCartridgeDataHelper.dropTable()
+        SQLSyncOverviewDataHelper.dropTable()
+        SQLDopeExceptionDataHelper.dropTable()
+    }
+    
+    /// Drops and the Creates all tables
+    ///
+    public func clearTables() {
+        dropTables()
+        createTables()
     }
     
 }

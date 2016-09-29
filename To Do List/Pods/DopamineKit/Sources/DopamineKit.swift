@@ -15,53 +15,42 @@ public class DopamineKit : NSObject {
     
     public static let sharedInstance: DopamineKit = DopamineKit()
     
-    private let dataStore:SQLiteDataStore = SQLiteDataStore.sharedInstance
-    private let cartridgeSyncer = CartridgeSyncer.sharedInstance
-    private let trackSyncer = TrackSyncer.sharedInstance
-    private let reportSyncer = ReportSyncer.sharedInstance
+    public let dataStore = SQLiteDataStore.sharedInstance
+    public let syncCoordinator = SyncCoordinator.sharedInstance
     
-    private override init() {
-        dataStore.createTables()
-    }
-        
     /// This function sends an asynchronous tracking call for the specified actionID
     ///
     /// - parameters:
-    ///     - actionID: Descriptive name of the action.
+    ///     - actionID: Descriptive name for the action.
     ///     - metaData?: Action details i.e. calories or streak_count. 
     ///                  Must be JSON formattable (Number, String, Bool, Array, Object).
     ///                  Defaults to `nil`.
     ///
     public static func track(actionID: String, metaData: [String: AnyObject]? = nil) {
-        let si = sharedInstance
-
         // store the action to be synced
         let action = DopeAction(actionID: actionID, metaData:metaData)
-        si.trackSyncer.store(action)
-        SyncCoordinator.sync()
+        sharedInstance.syncCoordinator.storeTrackedAction(action)
     }
 
     /// This function sends an asynchronous reinforcement call for the specified actionID
     ///
     /// - parameters:
-    ///     - actionID: Descriptive name of the action.
+    ///     - actionID: Action name configured on the Dopamine Dashboard
     ///     - metaData?: Action details i.e. calories or streak_count.
     ///                  Must be JSON formattable (Number, String, Bool, Array, Object).
     ///                  Defaults to `nil`.
-    ///     - completion: A closure with the reinforcement response passed in as a `String`.
+    ///     - completion: A closure with the reinforcement decision passed as a `String`.
     ///
     public static func reinforce(actionID: String, metaData: [String: AnyObject]? = nil, completion: (String) -> ()) {
-        let si = sharedInstance
-        let reinforcementDecision = si.cartridgeSyncer.unload(actionID)
+        var action = DopeAction(actionID: actionID, metaData: metaData)
+        action.reinforcementDecision =  sharedInstance.syncCoordinator.retrieveReinforcementDecisionFor(actionID)
         
         dispatch_async(dispatch_get_main_queue(), {
-            completion(reinforcementDecision)
+            completion(action.reinforcementDecision!)
         })
         
         // store the action to be synced
-        let action = DopeAction(actionID: actionID, reinforcementDecision: reinforcementDecision, metaData: metaData)
-        si.reportSyncer.store(action)
-        SyncCoordinator.sync()
+        sharedInstance.syncCoordinator.storeReportedAction(action)
     }
     
     

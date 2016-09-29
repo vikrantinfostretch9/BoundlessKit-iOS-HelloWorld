@@ -2,20 +2,20 @@
 //  CandyIcon.swift
 //  Pods
 //
-//  Created by Akash Desai on 7/16/16.
+//  Created by Akash Desai on 9/28/16.
 //
 //
 
 import Foundation
 import UIKit
 
-/// Candy is an icon that can appear on a CandyBar.
-/// Look at `DopamineKit/Resources/CandyIcons.xcassets` to see what each icon looks like.
-///
-@objc public enum CandyIcon : Int{
+@objc
+public enum CandyIcon : Int{
     case None = 0, Certificate, Crown, Crown2, MedalStar, RibbonStar, Stars, Stopwatch, ThumbsUp, TrophyHand, TrophyStar, WreathStar
     
-    internal var filename:String{
+    /// The filename for the icon image from the CandyBar framework
+    ///
+    internal var filename: String{
         switch self{
         case .Certificate: return "certificate"
         case .Crown: return "crown"
@@ -32,7 +32,16 @@ import UIKit
         }
     }
     
-    internal var image:UIImage?{
-        return UIImage(named: filename, inBundle:NSBundle.mainBundle(), compatibleWithTraitCollection: nil)
+    /// The icon image to be displayed on the left of a CandyBar
+    ///
+    internal var image: UIImage?{
+        
+        if let bundleURL = NSBundle(forClass: CandyBar.classForCoder()).URLForResource("CandyIcons", withExtension: "bundle"),
+        let bundle = NSBundle.init(URL: bundleURL) {
+            return UIImage(named: filename, inBundle: bundle, compatibleWithTraitCollection: nil)
+        } else {
+            return nil
+        }
+        
     }
 }

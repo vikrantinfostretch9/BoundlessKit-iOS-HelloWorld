@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CandyBar
 import DopamineKit
 
 // A protocol that the TaskViewCell uses to inform its delegate of state change
@@ -157,6 +158,7 @@ class TaskViewCell: UITableViewCell {
                             
                             // Show some candy and make them feel good!
                             let candyBar = CandyBar.init(title: title, subtitle: subtitle, icon: icon, backgroundColor: color)
+                            candyBar.alpha = 1.0
                             candyBar.show(1.2)
                             
                             return
