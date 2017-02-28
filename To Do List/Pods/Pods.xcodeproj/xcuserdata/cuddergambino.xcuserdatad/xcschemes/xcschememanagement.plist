@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CandyBar-CandyIcons.xcscheme</key>
+		<key>BasalGifglia-BasalGifglia.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>CandyBar.xcscheme</key>
+		<key>BasalGifglia.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,35 +24,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SQLite.swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00C55681757097B54B1CCEF40ACAA5F6</key>
+		<key>52EF694F44AAA86F61F5CEB0F37B0AF4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0F8606CD974037B3F00E13B75CA46A90</key>
+		<key>66CE43EFC8BF061AEBC82F4DE624A220</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>507B9832DB81C37C00FD25C6DCB44E61</key>
+		<key>C15CEC2342FD902A6FCAC1D3F055EE44</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEBCD381129F95534952C42F4922CAA2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F129946BD4471C44AB58D02DB551553A</key>
+		<key>FA1267442E2AFCD55F290AE104A0782F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

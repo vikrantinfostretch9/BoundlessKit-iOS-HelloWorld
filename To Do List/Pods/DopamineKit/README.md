@@ -1,6 +1,6 @@
 # DopamineKit
 
-<!--[![CI Status](http://img.shields.io/travis/DopamineLabs/DopamineKit-iOS.svg?style=flat) ](https://travis-ci.org/DopamineLabs/DopamineKit-iOS)-->
+[![Build Status](https://travis-ci.org/DopamineLabs/DopamineKit-iOS.svg?branch=master)](https://travis-ci.org/DopamineLabs/DopamineKit-iOS)
 [![Version](https://img.shields.io/cocoapods/v/DopamineKit.svg?style=flat)](http://cocoapods.org/pods/DopamineKit)
 [![License](https://img.shields.io/cocoapods/l/DopamineKit.svg?style=flat)](http://cocoapods.org/pods/DopamineKit)
 [![Platform](https://img.shields.io/cocoapods/p/DopamineKit.svg?style=flat)](http://cocoapods.org/pods/DopamineKit)
@@ -78,7 +78,7 @@ https://github.com/DopamineLabs/DopamineKit-iOS-binary/) the framework.
 
   ```objective-c
   // Objective-C
-  [DopamineKit reinforce:@"some_action" metaData:nil timeoutSeconds:2.0 completion:^(NSString* reinforcement){
+  [DopamineKit reinforce:@"some_action" metaData:nil completion:^(NSString* reinforcement){
         
         if([reinforcement isEqualToString:@"quote"]){
             // show some positive reinforcement View

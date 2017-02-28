@@ -8,28 +8,32 @@
 
 import Foundation
 
+
+
 public class DopamineAPI : NSObject{
     
-    static let sharedInstance: DopamineAPI = DopamineAPI()
+    /// Valid API actions appeneded to the DopamineAPI URL
+    ///
+    internal enum CallType{
+        case track, report, refresh, sync
+        var pathExtenstion:String{ switch self{
+        case .track: return "app/track/"
+        case .report: return "app/report/"
+        case .refresh: return "app/refresh/"
+        case .sync: return "telemetry/sync/"
+            }
+        }
+    }
+    
+    internal static let sharedInstance: DopamineAPI = DopamineAPI()
     
     private static let dopamineAPIURL = "https://api.usedopamine.com/v4/"
-    private static let clientSDKVersion = "4.0.2"
+    private static let clientSDKVersion = Bundle(for: DopamineAPI.self).object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     private static let clientOS = "iOS"
-    private static let clientOSVersion = UIDevice.currentDevice().systemVersion
+    private static let clientOSVersion = UIDevice.current.systemVersion
     
     private override init() {
         super.init()
-    }
-    
-    private enum CallType{
-        case Track, Report, Refresh, Sync
-        var pathExtension:String{ switch self{
-        case .Track: return "app/track/"
-        case .Report: return "app/report/"
-        case .Refresh: return "app/refresh/"
-        case .Sync: return "telemetry/sync/"
-            }
-        }
     }
     
     /// Send an array of actions to the DopamineAPI's `/track` path
@@ -38,23 +42,21 @@ public class DopamineAPI : NSObject{
     ///     - actions: An array of actions to send.
     ///     - completion: A closure to handle the JSON formatted response.
     ///
-    static func track(actions: [SQLTrackedAction], completion: ([String:AnyObject]) -> ()){
+    internal static func track(_ actions: [DopeAction], completion: @escaping ([String:AnyObject]) -> ()){
         // create dict with credentials
         var payload = sharedInstance.configurationData
         
         // get JSON formatted actions
         var trackedActionsJSONArray = Array<AnyObject>()
         for action in actions{
-            trackedActionsJSONArray.append(SQLTrackedActionDataHelper.decodeJSONForItem(action))
+            trackedActionsJSONArray.append(action.toJSONType() as AnyObject)
         }
         
-        payload["actions"] = trackedActionsJSONArray
-        payload["utc"] = 1000*NSDate().timeIntervalSince1970
-        payload["timezoneOffset"] = 1000*NSTimeZone.defaultTimeZone().secondsFromGMT
+        payload["actions"] = trackedActionsJSONArray as AnyObject
+        payload["utc"] = NSNumber(value: Int64(Date().timeIntervalSince1970) * 1000) as AnyObject
+        payload["timezoneOffset"] = NSNumber(value: Int64(NSTimeZone.default.secondsFromGMT()) * 1000) as AnyObject
         
-        sharedInstance.send(.Track, payload: payload, completion: {response in
-            completion(response)
-        })
+        sharedInstance.send(call: .track, with: payload, completion: completion)
     }
 
     /// Send an array of actions to the DopamineAPI's `/report` path
@@ -63,21 +65,19 @@ public class DopamineAPI : NSObject{
     ///     - actions: An array of actions to send.
     ///     - completion: A closure to handle the JSON formatted response.
     ///
-    static func report(actions: [SQLReportedAction], completion: ([String:AnyObject]) -> ()){
+    internal static func report(_ actions: [DopeAction], completion: @escaping ([String:AnyObject]) -> ()){
         var payload = sharedInstance.configurationData
         
         var reinforcedActionsArray = Array<AnyObject>()
         for action in actions{
-            reinforcedActionsArray.append(SQLReportedActionDataHelper.decodeJSONForItem(action))
+            reinforcedActionsArray.append(action.toJSONType() as AnyObject)
         }
         
-        payload["actions"] = reinforcedActionsArray
-        payload["utc"] = 1000*NSDate().timeIntervalSince1970
-        payload["timezoneOffset"] = 1000*NSTimeZone.defaultTimeZone().secondsFromGMT
+        payload["actions"] = reinforcedActionsArray as AnyObject
+        payload["utc"] = NSNumber(value: Int64(Date().timeIntervalSince1970) * 1000) as AnyObject
+        payload["timezoneOffset"] = NSNumber(value: Int64(NSTimeZone.default.secondsFromGMT()) * 1000) as AnyObject
         
-        sharedInstance.send(.Report, payload: payload, completion: {response in
-            completion(response)
-        })
+        sharedInstance.send(call: .report, with: payload, completion: completion)
     }
     
     /// Send an actionID to the DopamineAPI's `/refresh` path to generate a new cartridge of reinforcement decisions
@@ -86,50 +86,46 @@ public class DopamineAPI : NSObject{
     ///     - actionID: The actionID that needs reinforcement decisions.
     ///     - completion: A closure to handle the JSON formatted response.
     ///
-    static func refresh(actionID: String, completion: ([String:AnyObject]) -> ()){
+    internal static func refresh(_ actionID: String, completion: @escaping ([String:AnyObject]) -> ()){
         var payload = sharedInstance.configurationData
         
-        payload["actionID"] = actionID
-        payload["utc"] = 1000*NSDate().timeIntervalSince1970
-        payload["timezoneOffset"] = 1000*NSTimeZone.defaultTimeZone().secondsFromGMT
+        payload["actionID"] = actionID as AnyObject
+        payload["utc"] = NSNumber(value: Int64(Date().timeIntervalSince1970) * 1000) as AnyObject
+        payload["timezoneOffset"] = NSNumber(value: Int64(NSTimeZone.default.secondsFromGMT()) * 1000) as AnyObject
         
-        DopamineKit.DebugLog("Refreshing \(actionID)...")
-        sharedInstance.send(.Refresh, payload: payload, completion:  { response in
-            completion(response)
-        })
+        DopamineKit.debugLog("Refreshing \(actionID)...")
+        sharedInstance.send(call: .refresh, with: payload, completion: completion)
     }
     
     /// Send sync overviews and raised exceptions to the DopamineAPI's `/sync` path to increase service quality
-
     ///
     /// - parameters:
     ///     - syncOverviews: The array of SyncOverviews to send
     ///     - exceptions: The array of DopeExceptions to send
     ///     - completion: A closure to handle the JSON formatted response.
     ///
-    static func sync(syncOverviews: [SQLSyncOverview], dopeExceptions: [SQLDopeException], completion: ([String:AnyObject]) -> ()){
+    internal static func sync( syncOverviews: [SyncOverview], dopeExceptions: [DopeException], completion: @escaping ([String:AnyObject]) -> ()){
         var payload = sharedInstance.configurationData
         
-        var syncOverviewsArray = Array<AnyObject>()
-        var dopeExceptionsArray = Array<AnyObject>()
-        for syncOverview in syncOverviews{
-            syncOverviewsArray.append(SQLSyncOverviewDataHelper.decodeJSONForItem(syncOverview))
-        }
-        for dopeException in dopeExceptions {
-            dopeExceptionsArray.append(SQLDopeExceptionDataHelper.decodeJSONForItem(dopeException))
+        var syncOverviewJSONArray: [AnyObject] = []
+        for syncOverview in syncOverviews {
+            syncOverviewJSONArray.append(syncOverview.toJSONType() as AnyObject)
         }
         
-        payload["syncOverviews"] = syncOverviewsArray
-        payload["exceptions"] = dopeExceptionsArray
-        payload["utc"] = 1000*NSDate().timeIntervalSince1970
-        payload["timezoneOffset"] = 1000*NSTimeZone.defaultTimeZone().secondsFromGMT
+        var exceptionsJSONArray: [AnyObject] = []
+        for exception in dopeExceptions {
+            exceptionsJSONArray.append(exception.toJSONType() as AnyObject)
+        }
         
-        sharedInstance.send(.Sync, payload: payload, completion: {response in
-            completion(response)
-        })
+        payload["syncOverviews"] = syncOverviewJSONArray as AnyObject
+        payload["exceptions"] = exceptionsJSONArray as AnyObject
+        payload["utc"] = NSNumber(value: Int64(Date().timeIntervalSince1970) * 1000) as AnyObject
+        payload["timezoneOffset"] = NSNumber(value: Int64(NSTimeZone.default.secondsFromGMT()) * 1000) as AnyObject
+        
+        sharedInstance.send(call: .sync, with: payload, completion: completion)
     }
     
-    private lazy var session = NSURLSession.sharedSession()
+    private lazy var session = URLSession.shared
     
     /// This function sends a request to the DopamineAPI
     ///
@@ -139,42 +135,41 @@ public class DopamineAPI : NSObject{
     ///     - timeout: A timeout, in seconds, for the request. Defaults to 3 seconds.
     ///     - completion: A closure with a JSON formatted dictionary.
     ///
-    private func send(type: CallType, payload: [String:AnyObject], timeout:NSTimeInterval = 3, completion: [String: AnyObject] -> Void) {
-        let baseURL = NSURL(string: DopamineAPI.dopamineAPIURL)!
-        guard let url = NSURL(string: type.pathExtension, relativeToURL: baseURL) else {
-            DopamineKit.DebugLog("Could not construct url:() with path ()")
+    private func send(call type: CallType, with payload: [String:AnyObject], timeout:TimeInterval = 3.0, completion: @escaping ([String: AnyObject]) -> Void) {
+        let baseURL = URL(string: DopamineAPI.dopamineAPIURL)!
+        guard let url = URL(string: type.pathExtenstion, relativeTo: baseURL) else {
+            DopamineKit.debugLog("Could not construct for \(type.pathExtenstion)")
             return
         }
         
-        DopamineKit.DebugLog("Preparing \(type.pathExtension) api call to \(url.absoluteString)...")
+        DopamineKit.debugLog("Preparing \(type.pathExtenstion) api call to \(url.absoluteString)...")
         do {
-            let request = NSMutableURLRequest(URL: url)
+            var request = URLRequest(url: url)
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.HTTPMethod = "POST"
+            request.httpMethod = "POST"
             request.timeoutInterval = timeout
-            let jsonPayload = try NSJSONSerialization.dataWithJSONObject(payload, options: NSJSONWritingOptions())
-//            DopamineKit.DebugLog("sending raw payload:\(jsonPayload.debugDescription)")   // hex 16 chars
-            request.HTTPBody = jsonPayload
+            let jsonPayload = try JSONSerialization.data(withJSONObject: payload, options: JSONSerialization.WritingOptions())
+//            DopamineKit.debugLog("sending raw payload:\(jsonPayload.debugDescription)")   // hex 16 chars
+            request.httpBody = jsonPayload
             
-            // request handler
-            let callStartTime = Int64( NSDate().timeIntervalSince1970 )*1000
-            let task = session.dataTaskWithRequest(request) { responseData, responseURL, error in
+            let callStartTime = Int64( 1000*NSDate().timeIntervalSince1970 )
+            let task = session.dataTask(with: request, completionHandler: { responseData, responseURL, error in
                 var responseDict: [String : AnyObject] = [:]
                 defer { completion(responseDict) }
                 
                 if responseURL == nil {
-                    DopamineKit.DebugLog("❌ invalid response:\(error?.localizedDescription)")
-                    responseDict["error"] = error?.localizedDescription
+                    DopamineKit.debugLog("❌ invalid response:\(error?.localizedDescription)")
+                    responseDict["error"] = error?.localizedDescription as AnyObject
                     switch type {
-                    case .Track:
+                    case .track:
                         Telemetry.setResponseForTrackSync(-1, error: error?.localizedDescription, whichStartedAt: callStartTime)
-                    case .Report:
+                    case .report:
                         Telemetry.setResponseForReportSync(-1, error: error?.localizedDescription, whichStartedAt: callStartTime)
-                    case .Refresh:
+                    case .refresh:
                         if let actionID = payload["actionID"] as? String {
                             Telemetry.setResponseForCartridgeSync(forAction: actionID, -1, error: error?.localizedDescription, whichStartedAt: callStartTime)
                         }
-                    case .Sync:
+                    case .sync:
                         break
                     }
                     return
@@ -182,43 +177,42 @@ public class DopamineAPI : NSObject{
                 
                 do {
                     // turn the response into a json object
-                    responseDict = try NSJSONSerialization.JSONObjectWithData(responseData!, options: NSJSONReadingOptions()) as! [String: AnyObject]
-                    DopamineKit.DebugLog("✅\(type.pathExtension) call got response:\(responseDict.debugDescription)")
-                    
-                    var status = -2
-                    if let taskStatus = responseDict["status"] as? Int {
-                        status = taskStatus
+                    responseDict = try JSONSerialization.jsonObject(with: responseData!, options: JSONSerialization.ReadingOptions()) as! [String: AnyObject]
+                    DopamineKit.debugLog("✅\(type.pathExtenstion) call got response:\(responseDict.debugDescription)")
+                    var statusCode: Int = -2
+                    if let responseStatusCode = responseDict["status"] as? Int {
+                        statusCode = responseStatusCode
                     }
                     switch type {
-                    case .Track:
-                        Telemetry.setResponseForTrackSync(status, error: error?.localizedDescription, whichStartedAt: callStartTime)
-                    case .Report:
-                        Telemetry.setResponseForReportSync(status, error: error?.localizedDescription, whichStartedAt: callStartTime)
-                    case .Refresh:
+                    case .track:
+                        Telemetry.setResponseForTrackSync(statusCode, error: error?.localizedDescription, whichStartedAt: callStartTime)
+                    case .report:
+                        Telemetry.setResponseForReportSync(statusCode, error: error?.localizedDescription, whichStartedAt: callStartTime)
+                    case .refresh:
                         if let actionID = payload["actionID"] as? String {
-                            Telemetry.setResponseForCartridgeSync(forAction: actionID, status, error: error?.localizedDescription, whichStartedAt: callStartTime)
+                            Telemetry.setResponseForCartridgeSync(forAction: actionID, statusCode, error: error?.localizedDescription, whichStartedAt: callStartTime)
                         }
-                    case .Sync:
+                    case .sync:
                         break
                     }
-
+                    
                 } catch {
-                    let message = "❌ Error reading \(type.pathExtension) response data: \(responseData.debugDescription)"
-                    DopamineKit.DebugLog(message)
-                    DopeException.store(exceptionClassName: "JSONSerialization", message: message)
+                    let message = "❌ Error reading \(type.pathExtenstion) response data: \(responseData.debugDescription)"
+                    DopamineKit.debugLog(message)
+                    Telemetry.storeException(className: "JSONSerialization", message: message)
                     return
                 }
                 
-            }
+            })
             
             // send request
-            DopamineKit.DebugLog("Sending \(type.pathExtension) api call with payload: \(payload.description)")
+            DopamineKit.debugLog("Sending \(type.pathExtenstion) api call with payload: \(payload.description)")
             task.resume()
             
         } catch {
-            let message = "Error sending \(type.pathExtension) api call with payload:(\(payload.description))"
-            DopamineKit.DebugLog(message)
-            DopeException.store(exceptionClassName: "JSONSerialization", message: message)
+            let message = "Error sending \(type.pathExtenstion) api call with payload:(\(payload.description))"
+            DopamineKit.debugLog(message)
+            Telemetry.storeException(className: "JSONSerialization", message: message)
         }
     }
     
@@ -232,12 +226,12 @@ public class DopamineAPI : NSObject{
     ///
     private lazy var configurationData: [String: AnyObject] = {
         
-        var dict: [String: AnyObject] = [ "clientOS": "iOS",
-                                          "clientOSVersion": clientOSVersion,
-                                          "clientSDKVersion": clientSDKVersion,
+        var dict: [String: AnyObject] = [ "clientOS": "iOS" as AnyObject,
+                                          "clientOSVersion": clientOSVersion as AnyObject,
+                                          "clientSDKVersion": clientSDKVersion as AnyObject,
                                           ]
         // add an identity key
-        dict["primaryIdentity"] = self.primaryIdentity
+        dict["primaryIdentity"] = self.primaryIdentity as AnyObject?
         
         // create a credentials dict from .plist
         let credentialsFilename = "DopamineProperties"
@@ -245,46 +239,46 @@ public class DopamineAPI : NSObject{
         if let testPath = testCredentialPath {
             path = testPath
         } else {
-            guard let credentialsPath = NSBundle.mainBundle().pathForResource(credentialsFilename, ofType: "plist") else{
-                DopamineKit.DebugLog("[DopamineKit]: Error - cannot find credentials in (\(credentialsFilename))")
+            guard let credentialsPath = Bundle.main.path(forResource: credentialsFilename, ofType: "plist") else{
+                DopamineKit.debugLog("[DopamineKit]: Error - cannot find credentials in (\(credentialsFilename))")
                 return dict
             }
             path = credentialsPath
         }
         
         guard let credentialsPlist = NSDictionary(contentsOfFile: path) as? [String: AnyObject] else{
-            DopamineKit.DebugLog("[DopamineKit]: Error - (\(credentialsFilename)) is in the wrong format")
+            DopamineKit.debugLog("[DopamineKit]: Error - (\(credentialsFilename)) is in the wrong format")
             return dict
         }
         
         guard let appID = credentialsPlist["appID"] as? String else{
-            DopamineKit.DebugLog("[DopamineKit]: Error no appID - (\(credentialsFilename)) is in the wrong format")
+            DopamineKit.debugLog("[DopamineKit]: Error no appID - (\(credentialsFilename)) is in the wrong format")
             return dict
         }
-        dict["appID"] = appID
+        dict["appID"] = appID as AnyObject?
         
         guard let versionID = credentialsPlist["versionID"] as? String else{
-            DopamineKit.DebugLog("[DopamineKit]: Error no versionID - (\(credentialsFilename)) is in the wrong format")
+            DopamineKit.debugLog("[DopamineKit]: Error no versionID - (\(credentialsFilename)) is in the wrong format")
             return dict
         }
-        dict["versionID"] = versionID
+        dict["versionID"] = versionID as AnyObject?
         
         if let inProduction = credentialsPlist["inProduction"] as? Bool{
             if(inProduction){
                 guard let productionSecret = credentialsPlist["productionSecret"] as? String else{
-                    DopamineKit.DebugLog("[DopamineKit]: Error no productionSecret - (\(credentialsFilename)) is in the wrong format")
+                    DopamineKit.debugLog("[DopamineKit]: Error no productionSecret - (\(credentialsFilename)) is in the wrong format")
                     return dict
                 }
-                dict["secret"] = productionSecret
+                dict["secret"] = productionSecret as AnyObject?
             } else{
                 guard let developmentSecret = credentialsPlist["developmentSecret"] as? String else{
-                    DopamineKit.DebugLog("[DopamineKit]: Error no developmentSecret - (\(credentialsFilename)) is in the wrong format")
+                    DopamineKit.debugLog("[DopamineKit]: Error no developmentSecret - (\(credentialsFilename)) is in the wrong format")
                     return dict
                 }
-                dict["secret"] = developmentSecret
+                dict["secret"] = developmentSecret as AnyObject?
             }
         } else{
-            DopamineKit.DebugLog("[DopamineKit]: Error no inProduction - (\(credentialsFilename)) is in the wrong format")
+            DopamineKit.debugLog("[DopamineKit]: Error no inProduction - (\(credentialsFilename)) is in the wrong format")
             return dict
         }
         
@@ -297,12 +291,12 @@ public class DopamineAPI : NSObject{
     ///
     private lazy var primaryIdentity:String = {
         let key = "DopaminePrimaryIdentity"
-        let defaults = NSUserDefaults.standardUserDefaults()
-        if let identity = defaults.valueForKey(key) as? String {
-            DopamineKit.DebugLog("primaryIdentity:(\(identity))")
+        let defaults = UserDefaults.standard
+        if let identity = defaults.value(forKey: key) as? String {
+            DopamineKit.debugLog("primaryIdentity:(\(identity))")
             return identity
         } else {
-            let defaultIdentity = UIDevice.currentDevice().identifierForVendor!.UUIDString
+            let defaultIdentity = UIDevice.current.identifierForVendor!.uuidString
             defaults.setValue(defaultIdentity, forKey: key)
             return defaultIdentity
         }

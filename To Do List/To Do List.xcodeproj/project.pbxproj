@@ -188,13 +188,13 @@
 				TargetAttributes = {
 					84B7B99C1D078EA1008BF664 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 367K5HG48M;
-						LastSwiftMigration = 0800;
+						DevelopmentTeam = A4K9NYBV99;
+						LastSwiftMigration = 0810;
 					};
 					84B7B9B21D078EA1008BF664 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 367K5HG48M;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 						TestTargetID = 84B7B99C1D078EA1008BF664;
 					};
 				};
@@ -430,13 +430,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = A4K9NYBV99;
 				INFOPLIST_FILE = "To Do List/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.usedopamine.ios.Dope-To-Do-List";
+				PRODUCT_BUNDLE_IDENTIFIER = com.usedopamine.app.opaque;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -446,13 +447,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = A4K9NYBV99;
 				INFOPLIST_FILE = "To Do List/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.usedopamine.ios.Dope-To-Do-List";
+				PRODUCT_BUNDLE_IDENTIFIER = com.usedopamine.app.opaque;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -464,7 +466,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.usedopamine.ios.Dope-To-Do-ListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To Do List.app/To Do List";
 			};
 			name = Debug;
@@ -477,7 +479,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.usedopamine.ios.Dope-To-Do-ListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To Do List.app/To Do List";
 			};
 			name = Release;

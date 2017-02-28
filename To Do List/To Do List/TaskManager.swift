@@ -14,7 +14,7 @@ class TaskManager: NSObject {
     
     var tasks = Array<Task>()
     
-    func addTask(name:String, additionalText:String){
+    func addTask(_ name:String, additionalText:String){
         tasks.append(Task(name: name, additionalText: additionalText))
     }
     

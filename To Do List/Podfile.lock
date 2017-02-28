@@ -1,18 +1,15 @@
 PODS:
-  - CandyBar (1.0.0)
-  - DopamineKit (4.0.2):
-    - SQLite.swift
-  - SQLite.swift (0.10.1)
+  - BasalGifglia (1.0.1)
+  - DopamineKit (4.1.4)
 
 DEPENDENCIES:
-  - CandyBar (~> 1.0.0)
-  - DopamineKit (~> 4.0.2)
+  - BasalGifglia (~> 1.0.1)
+  - DopamineKit (~> 4.1.4)
 
 SPEC CHECKSUMS:
-  CandyBar: eca36e2568dd5d67ff5c665643f2db480ef5cc99
-  DopamineKit: 865cd6f74b19f3787e945279532b0b79df35b9fa
-  SQLite.swift: 6a6e4b034efc317ce4e203b6af2d3024fee2b570
+  BasalGifglia: 46524600c88d7ef4c44f334ee24d83ca7bcb3332
+  DopamineKit: 6f7f89b5af2778ad20db65603067a3dc0a2185c7
 
-PODFILE CHECKSUM: 2d9a3d103d37fb8145a991695d63e4eb58c001d9
+PODFILE CHECKSUM: dedc2a31f86bee7baf6183958581c7970c3d2b74
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.2.0

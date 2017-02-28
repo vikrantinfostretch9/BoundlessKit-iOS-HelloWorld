@@ -7,50 +7,51 @@
 //
 
 import Foundation
-import UIKit
-import SQLite
 
 @objc
-public class DopamineKit : NSObject {
+open class DopamineKit : NSObject {
     
     public static let sharedInstance: DopamineKit = DopamineKit()
+    public static let syncCoordinator = SyncCoordinator.sharedInstance
     
-    public let dataStore = SQLiteDataStore.sharedInstance
-    public let syncCoordinator = SyncCoordinator.sharedInstance
+    private override init() {
+        super.init()
+    }
     
-    /// This function sends an asynchronous tracking call for the specified actionID
+    /// This function sends an asynchronous tracking call for the specified action
     ///
     /// - parameters:
     ///     - actionID: Descriptive name for the action.
-    ///     - metaData?: Action details i.e. calories or streak_count. 
+    ///     - metaData: Action details i.e. calories or streak_count.
     ///                  Must be JSON formattable (Number, String, Bool, Array, Object).
     ///                  Defaults to `nil`.
     ///
-    public static func track(actionID: String, metaData: [String: AnyObject]? = nil) {
+    open static func track(_ actionID: String, metaData: [String: AnyObject]? = nil) {
         // store the action to be synced
         let action = DopeAction(actionID: actionID, metaData:metaData)
-        sharedInstance.syncCoordinator.storeTrackedAction(action)
+        syncCoordinator.store(trackedAction: action)
     }
 
-    /// This function sends an asynchronous reinforcement call for the specified actionID
+    /// This function intelligently chooses whether to reinforce a user action. The reinforcement function, passed as the completion, is run asynchronously on the queue.
     ///
     /// - parameters:
     ///     - actionID: Action name configured on the Dopamine Dashboard
-    ///     - metaData?: Action details i.e. calories or streak_count.
+    ///     - metaData: Action details i.e. calories or streak_count.
     ///                  Must be JSON formattable (Number, String, Bool, Array, Object).
     ///                  Defaults to `nil`.
+    ///     - queue: The queue to run the completion closure. Defaults to `DispatchQueue.main`.
     ///     - completion: A closure with the reinforcement decision passed as a `String`.
     ///
-    public static func reinforce(actionID: String, metaData: [String: AnyObject]? = nil, completion: (String) -> ()) {
-        var action = DopeAction(actionID: actionID, metaData: metaData)
-        action.reinforcementDecision =  sharedInstance.syncCoordinator.retrieveReinforcementDecisionFor(actionID)
+    open static func reinforce(_ actionID: String, metaData: [String: AnyObject]? = nil, queue: DispatchQueue = DispatchQueue.main, completion: @escaping (String) -> ()) {
+        let action = DopeAction(actionID: actionID, metaData: metaData)
+        action.reinforcementDecision = syncCoordinator.retrieveReinforcementDecisionFor(actionID: action.actionID)
         
-        dispatch_async(dispatch_get_main_queue(), {
+        queue.async(execute: {
             completion(action.reinforcementDecision!)
         })
         
         // store the action to be synced
-        sharedInstance.syncCoordinator.storeReportedAction(action)
+        syncCoordinator.store(reportedAction: action)
     }
     
     
@@ -58,17 +59,17 @@ public class DopamineKit : NSObject {
     ///
     /// - parameters:
     ///     - message: The debug message.
-    ///     - filename?: Used to get filename of bug. Do not use this parameter. Defaults to #file.
-    ///     - function?: Used to get function name of bug. Do not use this parameter. Defaults to #function.
-    ///     - line?: Used to get the line of bug. Do not use this parameter. Defaults to #line.
+    ///     - filePath: Used to get filename of bug. Do not use this parameter. Defaults to #file.
+    ///     - function: Used to get function name of bug. Do not use this parameter. Defaults to #function.
+    ///     - line: Used to get the line of bug. Do not use this parameter. Defaults to #line.
     ///
-    internal static func DebugLog(message: String,  filePath: String = #file, function: String =  #function, line: Int = #line) {
+    internal static func debugLog(_ message: String,  filePath: String = #file, function: String =  #function, line: Int = #line) {
         #if DEBUG
             var functionSignature:String = function
-            if let parameterNames = functionSignature.rangeOfString("\\((.*?)\\)", options: .RegularExpressionSearch){
-                functionSignature.replaceRange(parameterNames, with: "()")
+            if let parameterNames = functionSignature.range(of: "\\((.*?)\\)", options: .regularExpression) {
+                functionSignature.replaceSubrange(parameterNames, with: "()")
             }
-            let fileName = NSString(string: filePath).lastPathComponent.componentsSeparatedByString(".")[0]
+            let fileName = NSString(string: filePath).lastPathComponent
             NSLog("[\(fileName):\(line):\(functionSignature)] - \(message)")
         #endif
     }

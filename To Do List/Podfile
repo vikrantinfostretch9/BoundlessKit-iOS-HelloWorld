@@ -1,6 +1,6 @@
 use_frameworks!
 
 target 'To Do List' do
-  pod 'DopamineKit', '~> 4.0.2'
-  pod 'CandyBar', '~> 1.0.0'
+  pod 'DopamineKit', '~> 4.1.4'
+  pod 'BasalGifglia', '~> 1.0.1'
 end

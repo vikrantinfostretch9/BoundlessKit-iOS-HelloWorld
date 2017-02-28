@@ -22,13 +22,13 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
      // UITextFieldDelegate
      //
      */ ////////////////////////////
-    internal func textFieldShouldReturn(textField: UITextField) -> Bool{
+    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         // dismisses keyboard
         textField.resignFirstResponder()
         return true
     }
     
-    @IBAction func  btnAddTask_click(sender: UIButton){
+    @IBAction func  btnAddTask_click(_ sender: UIButton){
         taskManager.addTask(textTask.text!, additionalText: textDescription.text!)
         self.view.endEditing(true)
         textTask.text = ""
@@ -37,7 +37,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         tabBarController?.selectedIndex = 0
     }
     
-    @IBAction func btnAddDemo_click(sender: UIButton){
+    @IBAction func btnAddDemo_click(_ sender: UIButton){
         taskManager.addDemo()
         
         tabBarController?.selectedIndex = 0
@@ -45,7 +45,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     
     // touch out to exit editing
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
 

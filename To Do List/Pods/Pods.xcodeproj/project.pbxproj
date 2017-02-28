@@ -7,270 +7,221 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02D8AB45013A3BD6469B9967075536EC /* Pods-To Do List-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD32FFA695456A8E2A1C7D792F6AAB0E /* Pods-To Do List-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		074A02D683DF5B0C35B9B2FA36807FB7 /* CandyBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5E4FE78FA26F009E2EC689BFF31CCC /* CandyBar.swift */; };
-		1034921E9074CF1DF8C23816282B2B11 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A53621B4F0256708DC07857054609C9 /* Statement.swift */; };
-		19D51F11B518F8F852FFA2F45D4D9534 /* SQLite-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = 11E63B3BA7B2B9DC121BC5A91FA713E1 /* SQLite-Bridging.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		19E9C10B7DE1336DEE5FF71E4B561D71 /* DopeException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159ACF2DDF28EFF2C53161AA32083FDD /* DopeException.swift */; };
-		1A22BB8FF177C829DCD367C9DAF39F81 /* DopamineKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2076147438A3D2ED6BFD7A812C6CF6 /* DopamineKit-dummy.m */; };
-		1C3067C68D4B796C32A47EE9FCE67104 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FFDCB9BCF9AAD205DB7F56D4DEEA62 /* Helpers.swift */; };
-		1E4E994230C70062DFAEEBE849476535 /* SyncOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610A2A1B1A5CF97E4E97AF5A504CD9B4 /* SyncOverview.swift */; };
-		1FA4A16448A3755505DA96112B82CD41 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6708027BDB90CEFFCA7F487786701E85 /* Schema.swift */; };
-		208A76A4325AF5FA9CA6BD64E69EA24E /* Cartridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2221D53B8A3C364299F200C9621AA367 /* Cartridge.swift */; };
-		2E729BB7F253A4ACCFA3BB7A8A460C6D /* CandyIcons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9B60836756E373989C694687A97D7CC3 /* CandyIcons.bundle */; };
-		3063FDF88A1A8FABCE54B9178110A2CE /* DopamineKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69864D6C027E080F77CB1840E8383B28 /* DopamineKit.swift */; };
-		319203B2DC5781513B9DBC10C439719C /* Telemetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0C806F2528D7607CDE487AD190F2F /* Telemetry.swift */; };
-		39D598C3835F5467C6AE2E96A8E90450 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E7815F88576C9437438BE64F8C3EE6 /* Foundation.framework */; };
-		3A5EB8EC1CBBAA63AC09B145624D07FF /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D0BBD50EC63146420A9FFCD0E0C804 /* FTS4.swift */; };
-		3C42BEB398DB2C68D8FAF4B3387D498A /* DopeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC16F4A010B11A52C29E81148F4BC47F /* DopeAction.swift */; };
-		3F21606EA678035824A64E8272A91DEF /* SQLTrackedActionDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB20A2BCF870E9AE659079D600F4902 /* SQLTrackedActionDataHelper.swift */; };
-		3FEBC6310D825B1D82BF45E76977DC41 /* SQLiteDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B47092657D8A2018239771F460924 /* SQLiteDataStore.swift */; };
-		42440A3B8FC39AE78A91B183795CBCE4 /* R*Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F1722463D56AD993985C5A74D46DF4 /* R*Tree.swift */; };
-		594D266DD91FF7EE76F509D23D13AE86 /* CandyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D527AAD85C6E14430AD9AD7DA22B871 /* CandyIcon.swift */; };
-		5B4A5FE013A68F70AE8904BC655223EE /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = B6F0A04E6A8F4DAE36DC9040DABAC623 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		600A7E0F3CFD1BDD7322F4A758514C78 /* DopamineAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E50DD89D15B579423DC65A3C6E60EB /* DopamineAPI.swift */; };
-		6DE434AC2DD7219B43583FA76599B445 /* SQLDataHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A51AAF1FBB9D4C1F9CF43ABC9959B8 /* SQLDataHelperProtocol.swift */; };
-		6E12D0D77ED7BE868D69A950BAB7D2A6 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B105C132FD291E4AE238A693BC92FC /* Setter.swift */; };
-		6EB85B30ED3181A1BE84F3472E6BD0C9 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB44F0C85553660857F351B59660E399 /* SQLite.framework */; };
-		7180E8C8E8090DAA31BE90F58DA8E884 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B55C1D5764D951047C957A624AB37B4 /* Blob.swift */; };
-		71E962063FF04CACB8363F656A246C15 /* DopamineKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 921EB3AA343D8B21936832B7E791C8D2 /* DopamineKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72F19E01C9DE7F3F06D118A232621717 /* CandyBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53ABE37496EA612476A541BA8B79AC25 /* CandyBar-dummy.m */; };
-		771DE48CC0115D996E00988BCBE049FD /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC21E97F30F6F8C528D2665E26FB3C42 /* Connection.swift */; };
-		775913A7404DBCE722CC2D16BA6F6B48 /* SQLDopeExceptionDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8705066F8F4417B7CCD1F09F0DF581 /* SQLDopeExceptionDataHelper.swift */; };
-		79583B1C4FB80A8C50DA92997F7BF218 /* CandyBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D6FBC9DEF633F1F2696D41160607BCA /* CandyBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		796FE4F6D71BFD734B3565E6755E6118 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE84FA9DE894873464F8B57BC18E9C5 /* Report.swift */; };
-		7F006520649A3094825FAED5182E9FA1 /* SQLite-Bridging.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F1B96392E7840DD1280390C679A05B /* SQLite-Bridging.m */; };
-		8C98CD4CDEFC0ACEEB2BD12812D4B0B7 /* SQLite.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F97676766376D1D4D04F6805A69ABBF /* SQLite.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		947AF8706AC643227B193E589E614DE9 /* Pods-To Do List-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7437B35919438F2D46D165E4032AD45 /* Pods-To Do List-dummy.m */; };
-		972B2240F2AA3EED78E82D34B40E1D0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E7815F88576C9437438BE64F8C3EE6 /* Foundation.framework */; };
-		A25D83774A4F5124296E82BA2E175F1E /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D57A0B39F9AAE3DF4E4FDFBD1ADA16 /* Operators.swift */; };
-		AEE907161DF285D034D86F117AE5C01E /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971E3A72D70BB2226F7878B733C72421 /* AggregateFunctions.swift */; };
-		B607234FA7CAB8B90C8FE4E54646FE2C /* CandyIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F91B11D40B31E5DE6EAC8B8C99BF2FA7 /* CandyIcons.xcassets */; };
-		C1D54A9B33B03FCDC10DFAAB1214333A /* SQLSyncOverviewDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4720602BA5A59C9DCABD151898E9A238 /* SQLSyncOverviewDataHelper.swift */; };
-		C7E811EFDE452DF0804AF0CDC8E946B1 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 734C9C10B9C371F259EFC8549E82479D /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA7346A2F0D85486D70E3451FCD21C5C /* SQLReportedActionDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3467198AF4CAB5CD40B1B64F6C6AF72C /* SQLReportedActionDataHelper.swift */; };
-		CF7FC02A21AAC8B9EAE42BE99346D8F1 /* SQLCartridgeDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F137805149534C96654EC31828C13D /* SQLCartridgeDataHelper.swift */; };
-		D3317B4ACC1149159C7D9042B86C2EE4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = D274561C5E48F352A14C9F393BD730A9 /* Query.swift */; };
-		D568DB7ECB879C178FB4B4E4BD1B32A6 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3487CA8BF6E2400CB6EFD50A4AE185A9 /* CustomFunctions.swift */; };
-		D70BE8451CB59E037E9CD4F0B7BD1444 /* DopamineKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCFFCC06E7241D921422C38CA39CDE2F /* DopamineKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E601C7353C5E20228260E80CDA0FC134 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E7815F88576C9437438BE64F8C3EE6 /* Foundation.framework */; };
-		E8B8567C3F7DAE249E255D37D9A0443A /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F110EB8CC56813953F0906A17ED61E0A /* Foundation.swift */; };
-		ECA79DD6CE1AE11C00E0658C224BF8D6 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3063DAD5AAC31888840B29B616534C12 /* Track.swift */; };
-		F6E89DDA6355645F53A1585C3ADF73AE /* SyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF24A3DF47D0D1BF80F8F82890E169 /* SyncCoordinator.swift */; };
-		F90E59C3AC31CED10C750AC2CE583769 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E3D90AB7A3DDA68EC5B7F2F781F093 /* Expression.swift */; };
-		F915EAB6D188FDC254C62C5D29BC2212 /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F4CC0946B6D0B8250EECF3656C991C /* Collation.swift */; };
-		FAE3E807CEFBAE410D0457E65A396A21 /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F329310ED6766161DD32DA58BEF78D61 /* CoreFunctions.swift */; };
-		FD402A39E061F7A70DDF13DD5F446CDF /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43079EBB580F36C4CB804A091AACD0F /* Value.swift */; };
-		FD442DD91EFF3E9858D4AFAF3966D755 /* SQLite.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A8B093B3B1B2405A8C4F8312015EB7 /* SQLite.swift-dummy.m */; };
-		FFAEE6852F841A3C74555161CB2BCCE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E7815F88576C9437438BE64F8C3EE6 /* Foundation.framework */; };
+		07CA45A98C1190BB99573E48BCB0B9A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		09D0A10D38DB61CAAEF303E58BC04E4F /* Gifglia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E963617D019BBA99FE26F5504C654CFB /* Gifglia.swift */; };
+		0CAB98336581568C55A7EDFF12A53CA4 /* UIGifgliaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68475259ED28B448AD141517ACAE1A12 /* UIGifgliaViewController.swift */; };
+		0ED42BA32A0BB9E9182788FCAE13E998 /* frolicking jerry.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5751EC358EFB665E93864CEDA480545B /* frolicking jerry.gif */; };
+		18CAD6DB8A2DEEDD8A5CFA645BC823D9 /* Pods-To Do List-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD32FFA695456A8E2A1C7D792F6AAB0E /* Pods-To Do List-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23C34A36F0CB337CB4B082AE6170CE81 /* jazzed jonah.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1C32E21F6535A14DA78C1403A96D6655 /* jazzed jonah.gif */; };
+		25ABDC5DC906BF99222964F4F108A302 /* DopamineKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 54786F818E56E088BD00F5DB851ED8D2 /* DopamineKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		274AE6C9B3CF6A986CF37774ABC95351 /* DopeException.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75167095D7E5C0C355556337110120 /* DopeException.swift */; };
+		2CAD486FEA2F7F4626379776F01A820F /* SyncOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0A455CE252208AA59BD3A21FDF54CD /* SyncOverview.swift */; };
+		2F75D85E09938D3E5D29B2A065B13793 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10E6B49E6848683B4D9743C287EF6F /* Report.swift */; };
+		3B90F4CF11F0E52A12F6D13AFC47D23F /* retro rocking.gif in Resources */ = {isa = PBXBuildFile; fileRef = FE2B4A8CB83F9C03C63A2E4291EA257B /* retro rocking.gif */; };
+		40284BF6E0D7F958F7279AEFFFEB08E2 /* UIGifgliaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F48E576DEC848A9A6821DD9CAE69A1 /* UIGifgliaView.swift */; };
+		454BA62BE11136015A6DED0D46ED7AF4 /* good mood minions.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4270B6B9DA3EBA0E1795E28982F060C4 /* good mood minions.gif */; };
+		4AB46740510318CDD09F3474456BC9FF /* BasalGifglia-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7CC01573795782EF7F380A0F6E0F67 /* BasalGifglia-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55EF91C766D33446441DFAD565C00EB2 /* backflip bunny.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5379722B891E6DBDBA7B349D83A2A46 /* backflip bunny.gif */; };
+		5645B5677DBD9929BCA2CC051065862A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		5F7B7365F40C9645D7C1286BDCBCBB45 /* winking robin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D1CF3B6B0BFAB233F9E59587BECA057 /* winking robin.gif */; };
+		6426FF0F87086886E3474577A4AE730F /* community high five.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F3AC336590A40D01FB579BDEAE5D41F /* community high five.gif */; };
+		67BC9BBBB37E0012D0F54EA6E7B2C7AC /* woah.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7CAA148B9454443EF53853AF0B019862 /* woah.gif */; };
+		6863339A153D17781141641599DF3CC9 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52271247AB016629D0D25FE1279C043B /* Track.swift */; };
+		705E02CF7CCD01037D3BBC7AD5CF14B6 /* dancing babies.gif in Resources */ = {isa = PBXBuildFile; fileRef = C48C6227B7C73DF2BF0D89C45EA49506 /* dancing babies.gif */; };
+		74DFCE6CFBFBF51DC65F7B72D0BF126D /* yay bowie.gif in Resources */ = {isa = PBXBuildFile; fileRef = 29EAB5DF5EF0A58CE299FBD9A72B5ACB /* yay bowie.gif */; };
+		77BABE9C90EC0E924986F00ADAF8D919 /* Cartridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E79A8EEC0AC58C9E4F92F8DF24D0E /* Cartridge.swift */; };
+		7D028AFB720F1F83B48DCEC1CDB31B0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		7E7DD75259BC6203C8AED799DD282463 /* DopeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ED9812A0EAA8ECDE995CCB22CFD778 /* DopeAction.swift */; };
+		7E992D22F4D7C1AEB8FF8E89C155D7A5 /* DopamineKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7617BE73F5B8721D37DCAA25ADF228 /* DopamineKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		808776C5B431D3999703CA92BB2C868C /* Pods-To Do List-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7437B35919438F2D46D165E4032AD45 /* Pods-To Do List-dummy.m */; };
+		82A8A9C03969C7F5FC477B1FD56C3C18 /* DopamineAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2A29EA177390B6258B1B5DD572A2B /* DopamineAPI.swift */; };
+		899B46F8B2E4A3DB35B2F43D8D110D59 /* baloo bop.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1E283E2C61C0A695BD9E1A41070028D1 /* baloo bop.gif */; };
+		9899A739C587DED28DA866BADE440431 /* close button.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CF2F154CA43DA7F71B0CD310871EC0 /* close button.png */; };
+		9DC9335AA6BF839D380AC2FC9BA23A12 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */; };
+		A37C4F629C683E0F7A2DA44E294B1788 /* ecstatic austrian.gif in Resources */ = {isa = PBXBuildFile; fileRef = FDEB68B8542801077232712AD28E5CE0 /* ecstatic austrian.gif */; };
+		A42AB5F929AD4F5934145B0D06183671 /* upbeat barney.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1CD0272B33E1A67C06E949EA92D66134 /* upbeat barney.gif */; };
+		A4886946F2A1FFF2C88D6A237ED562CF /* cheerful cub.gif in Resources */ = {isa = PBXBuildFile; fileRef = 35EA0F884BF61C6662F80ECD8B0BBC72 /* cheerful cub.gif */; };
+		AB70B206517A301192EF09DCB74ECCF1 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D93D59D6DE5A33064ABFF2C0CC5515 /* UIImage+Gif.swift */; };
+		ABC78F0EA7F230F9DDB4829C6FF041E1 /* shaq and kitty shimmy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6CA2CF82DACA6C90FF7DE1120C973A6E /* shaq and kitty shimmy.gif */; };
+		B3C8518AF01FCD194D538447E8EDA8BC /* BasalGifglia-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A49D4A951F6566977266A8D6E594206 /* BasalGifglia-dummy.m */; };
+		B865A3336C91FACFD106DCECA025ADAC /* Telemetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE456F361BC288D4BDD06FA83191980 /* Telemetry.swift */; };
+		C7397D0803427C41C9B3D07AE3D2C7A9 /* fist pumping pitt.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70EBE2D1F9C830B83C61CEE96CAD9747 /* fist pumping pitt.gif */; };
+		C841C90EFE3D1215134B253B33B05A94 /* SyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF92747F2DAEF71F7FEECC4C50C2742 /* SyncCoordinator.swift */; };
+		D986D5EF6948D41AC4B588E4629AE89C /* patrick the patron.gif in Resources */ = {isa = PBXBuildFile; fileRef = 076BD871830F8628BA32F52D83BEBDBF /* patrick the patron.gif */; };
+		DEC5AA1B910868CCF23E1EFCB085E74B /* BasalGifglia.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 55B794B657366A2C356C9AEC97E62993 /* BasalGifglia.bundle */; };
+		E2714CE871A61B30632174AB87800301 /* carlton dance.gif in Resources */ = {isa = PBXBuildFile; fileRef = B6C699AAAC29CB1963E08FACB87ED102 /* carlton dance.gif */; };
+		E2C77FDCDF9EFB3F34CD144B87DC45AB /* DopamineKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB091292A3A80FAF15777746090104 /* DopamineKit.swift */; };
+		EBED7180E4AA3FA2B007C6C8CBEA3F4E /* DopamineKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EED1BC5B2630A03A6562A8A332C8189E /* DopamineKit-dummy.m */; };
+		EEAAF501DCA2BF93BCC07BAA3AD858C1 /* pug belly rub.gif in Resources */ = {isa = PBXBuildFile; fileRef = F60D127E347253981FB5EF9AD7E163BB /* pug belly rub.gif */; };
+		F49A19F4B452DD226D904110FE36BF4F /* krazy kermit.gif in Resources */ = {isa = PBXBuildFile; fileRef = AE0E31B956029B7CDE6BB3DADFF68716 /* krazy kermit.gif */; };
+		F866D041125CA9326059B09309AA2189 /* picard slow clap.gif in Resources */ = {isa = PBXBuildFile; fileRef = AA63E3F54B6597F1612F6965E4681F7F /* picard slow clap.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		41E95C353039AB7D14B8A101F46DB84A /* PBXContainerItemProxy */ = {
+		39C8463F511259117DBA84DBA690174C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AEBCD381129F95534952C42F4922CAA2;
-			remoteInfo = SQLite.swift;
-		};
-		4F12F74D12D3930565ED842CD292D15B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F129946BD4471C44AB58D02DB551553A;
-			remoteInfo = CandyBar;
-		};
-		754B58ABAF7E2D370551F342D8D07C76 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AEBCD381129F95534952C42F4922CAA2;
-			remoteInfo = SQLite.swift;
-		};
-		CD485D498905F8961B1167E63B37C5CD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 507B9832DB81C37C00FD25C6DCB44E61;
-			remoteInfo = "CandyBar-CandyIcons";
-		};
-		FCEF69578515770AC6C766BE592BB656 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0F8606CD974037B3F00E13B75CA46A90;
+			remoteGlobalIDString = 52EF694F44AAA86F61F5CEB0F37B0AF4;
 			remoteInfo = DopamineKit;
+		};
+		517AF09F43DBB96565BCDE6866BC0AA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C15CEC2342FD902A6FCAC1D3F055EE44;
+			remoteInfo = "BasalGifglia-BasalGifglia";
+		};
+		E6E5895FB31F425235932188F0969DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA1267442E2AFCD55F290AE104A0782F;
+			remoteInfo = BasalGifglia;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02477907A4167D9164DD79626DD9C757 /* SQLite.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLite.swift.xcconfig; sourceTree = "<group>"; };
-		02AEF4B7688A387A340382A6472C78E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09B105C132FD291E4AE238A693BC92FC /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = SQLite/Typed/Setter.swift; sourceTree = "<group>"; };
-		10A51AAF1FBB9D4C1F9CF43ABC9959B8 /* SQLDataHelperProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLDataHelperProtocol.swift; path = Sources/DataStore/SQLDataHelperProtocol.swift; sourceTree = "<group>"; };
-		11E63B3BA7B2B9DC121BC5A91FA713E1 /* SQLite-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite-Bridging.h"; path = "SQLite/Core/SQLite-Bridging.h"; sourceTree = "<group>"; };
-		159ACF2DDF28EFF2C53161AA32083FDD /* DopeException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopeException.swift; path = Sources/Synchronization/DopeException.swift; sourceTree = "<group>"; };
-		19F4CC0946B6D0B8250EECF3656C991C /* Collation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = SQLite/Typed/Collation.swift; sourceTree = "<group>"; };
-		1D5E4FE78FA26F009E2EC689BFF31CCC /* CandyBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandyBar.swift; path = Sources/CandyBar.swift; sourceTree = "<group>"; };
-		1E029B1F73B207ADAA3206A8EFCC0B16 /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
-		1FA720843C95DFBB6B4B4D3D160CFE00 /* CandyBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CandyBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2221D53B8A3C364299F200C9621AA367 /* Cartridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cartridge.swift; path = Sources/Synchronization/Cartridge.swift; sourceTree = "<group>"; };
-		24A8B093B3B1B2405A8C4F8312015EB7 /* SQLite.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLite.swift-dummy.m"; sourceTree = "<group>"; };
-		2CF00C16BBC304B9C28F0A07BFA6A901 /* DopamineKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DopamineKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F97676766376D1D4D04F6805A69ABBF /* SQLite.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-umbrella.h"; sourceTree = "<group>"; };
-		3063DAD5AAC31888840B29B616534C12 /* Track.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Track.swift; path = Sources/Synchronization/Track.swift; sourceTree = "<group>"; };
+		076BD871830F8628BA32F52D83BEBDBF /* patrick the patron.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "patrick the patron.gif"; path = "BasalGifglia/Assets/patrick the patron.gif"; sourceTree = "<group>"; };
+		1C32E21F6535A14DA78C1403A96D6655 /* jazzed jonah.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "jazzed jonah.gif"; path = "BasalGifglia/Assets/jazzed jonah.gif"; sourceTree = "<group>"; };
+		1CD0272B33E1A67C06E949EA92D66134 /* upbeat barney.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "upbeat barney.gif"; path = "BasalGifglia/Assets/upbeat barney.gif"; sourceTree = "<group>"; };
+		1E283E2C61C0A695BD9E1A41070028D1 /* baloo bop.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "baloo bop.gif"; path = "BasalGifglia/Assets/baloo bop.gif"; sourceTree = "<group>"; };
+		21F48E576DEC848A9A6821DD9CAE69A1 /* UIGifgliaView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIGifgliaView.swift; path = BasalGifglia/Classes/UIGifgliaView.swift; sourceTree = "<group>"; };
+		29EAB5DF5EF0A58CE299FBD9A72B5ACB /* yay bowie.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "yay bowie.gif"; path = "BasalGifglia/Assets/yay bowie.gif"; sourceTree = "<group>"; };
+		2F3AC336590A40D01FB579BDEAE5D41F /* community high five.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "community high five.gif"; path = "BasalGifglia/Assets/community high five.gif"; sourceTree = "<group>"; };
+		2F7617BE73F5B8721D37DCAA25ADF228 /* DopamineKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DopamineKit-umbrella.h"; sourceTree = "<group>"; };
 		33F75703557DCE1C1BF6BFCC5873165A /* Pods-To Do List-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-To Do List-acknowledgements.plist"; sourceTree = "<group>"; };
-		3467198AF4CAB5CD40B1B64F6C6AF72C /* SQLReportedActionDataHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLReportedActionDataHelper.swift; path = Sources/DataStore/SQLReportedActionDataHelper.swift; sourceTree = "<group>"; };
-		3487CA8BF6E2400CB6EFD50A4AE185A9 /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
-		3622A42225042AC082279678AC1936A9 /* ResourceBundle-CandyIcons-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CandyIcons-Info.plist"; sourceTree = "<group>"; };
-		3A53621B4F0256708DC07857054609C9 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = SQLite/Core/Statement.swift; sourceTree = "<group>"; };
-		4125C287C5F4E3E0F453B8E882323AE1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41FE4FB5D6DCDE4E95BB711445D002AC /* CandyBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CandyBar.modulemap; sourceTree = "<group>"; };
-		45FFDCB9BCF9AAD205DB7F56D4DEEA62 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = SQLite/Helpers.swift; sourceTree = "<group>"; };
-		4720602BA5A59C9DCABD151898E9A238 /* SQLSyncOverviewDataHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLSyncOverviewDataHelper.swift; path = Sources/DataStore/SQLSyncOverviewDataHelper.swift; sourceTree = "<group>"; };
+		35EA0F884BF61C6662F80ECD8B0BBC72 /* cheerful cub.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "cheerful cub.gif"; path = "BasalGifglia/Assets/cheerful cub.gif"; sourceTree = "<group>"; };
+		3DF92747F2DAEF71F7FEECC4C50C2742 /* SyncCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SyncCoordinator.swift; path = Sources/Synchronization/SyncCoordinator.swift; sourceTree = "<group>"; };
+		4270B6B9DA3EBA0E1795E28982F060C4 /* good mood minions.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "good mood minions.gif"; path = "BasalGifglia/Assets/good mood minions.gif"; sourceTree = "<group>"; };
+		45F4967D0C20E4E383472459F3A57781 /* BasalGifglia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BasalGifglia.xcconfig; sourceTree = "<group>"; };
+		46E9DF84258F4AE08E488B89E25A8F63 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		472BE35A55494269667AFF09FBCBC5AA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50E7815F88576C9437438BE64F8C3EE6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4CCB091292A3A80FAF15777746090104 /* DopamineKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopamineKit.swift; path = Sources/DopamineKit.swift; sourceTree = "<group>"; };
+		52271247AB016629D0D25FE1279C043B /* Track.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Track.swift; path = Sources/Synchronization/Track.swift; sourceTree = "<group>"; };
 		52FB6866EEB4EA3CA17DF6A1EF451225 /* Pods-To Do List-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To Do List-resources.sh"; sourceTree = "<group>"; };
-		53ABE37496EA612476A541BA8B79AC25 /* CandyBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CandyBar-dummy.m"; sourceTree = "<group>"; };
-		610A2A1B1A5CF97E4E97AF5A504CD9B4 /* SyncOverview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SyncOverview.swift; path = Sources/Synchronization/SyncOverview.swift; sourceTree = "<group>"; };
-		6708027BDB90CEFFCA7F487786701E85 /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = SQLite/Typed/Schema.swift; sourceTree = "<group>"; };
-		68F1722463D56AD993985C5A74D46DF4 /* R*Tree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "R*Tree.swift"; path = "SQLite/Extensions/R*Tree.swift"; sourceTree = "<group>"; };
-		69864D6C027E080F77CB1840E8383B28 /* DopamineKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopamineKit.swift; path = Sources/DopamineKit.swift; sourceTree = "<group>"; };
-		6D527AAD85C6E14430AD9AD7DA22B871 /* CandyIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CandyIcon.swift; path = Sources/CandyIcon.swift; sourceTree = "<group>"; };
+		54786F818E56E088BD00F5DB851ED8D2 /* DopamineKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DopamineKit.h; path = Sources/DopamineKit.h; sourceTree = "<group>"; };
+		55B794B657366A2C356C9AEC97E62993 /* BasalGifglia.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BasalGifglia.bundle; path = BasalGifglia.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5751EC358EFB665E93864CEDA480545B /* frolicking jerry.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "frolicking jerry.gif"; path = "BasalGifglia/Assets/frolicking jerry.gif"; sourceTree = "<group>"; };
+		5E7CC01573795782EF7F380A0F6E0F67 /* BasalGifglia-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BasalGifglia-umbrella.h"; sourceTree = "<group>"; };
+		5FE2A29EA177390B6258B1B5DD572A2B /* DopamineAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopamineAPI.swift; path = Sources/RESTfulAPI/DopamineAPI.swift; sourceTree = "<group>"; };
+		675B3998812FC344802FAEACAE2A7B3E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68475259ED28B448AD141517ACAE1A12 /* UIGifgliaViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIGifgliaViewController.swift; path = BasalGifglia/Classes/UIGifgliaViewController.swift; sourceTree = "<group>"; };
+		68ED9812A0EAA8ECDE995CCB22CFD778 /* DopeAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopeAction.swift; path = Sources/Synchronization/DopeAction.swift; sourceTree = "<group>"; };
+		6A47F0858AE97A1664851A18EC6287C0 /* DopamineKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DopamineKit.modulemap; sourceTree = "<group>"; };
+		6A49D4A951F6566977266A8D6E594206 /* BasalGifglia-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BasalGifglia-dummy.m"; sourceTree = "<group>"; };
+		6CA2CF82DACA6C90FF7DE1120C973A6E /* shaq and kitty shimmy.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "shaq and kitty shimmy.gif"; path = "BasalGifglia/Assets/shaq and kitty shimmy.gif"; sourceTree = "<group>"; };
+		6D1CF3B6B0BFAB233F9E59587BECA057 /* winking robin.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "winking robin.gif"; path = "BasalGifglia/Assets/winking robin.gif"; sourceTree = "<group>"; };
 		6FEB1D5BECE81E587DEF6408541B1F97 /* Pods-To Do List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To Do List.release.xcconfig"; sourceTree = "<group>"; };
-		72E3D90AB7A3DDA68EC5B7F2F781F093 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = SQLite/Typed/Expression.swift; sourceTree = "<group>"; };
+		70EBE2D1F9C830B83C61CEE96CAD9747 /* fist pumping pitt.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "fist pumping pitt.gif"; path = "BasalGifglia/Assets/fist pumping pitt.gif"; sourceTree = "<group>"; };
 		72FE740230D4164611C79828636B7207 /* Pods-To Do List-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To Do List-frameworks.sh"; sourceTree = "<group>"; };
-		734C9C10B9C371F259EFC8549E82479D /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = SQLite/SQLite.h; sourceTree = "<group>"; };
-		79BBE8065BF2833506ADE81FD03AB176 /* CandyBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CandyBar.xcconfig; sourceTree = "<group>"; };
-		7A176E4DBF200CD5462035BCDFA3FE98 /* DopamineKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DopamineKit-prefix.pch"; sourceTree = "<group>"; };
+		7CAA148B9454443EF53853AF0B019862 /* woah.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = woah.gif; path = BasalGifglia/Assets/woah.gif; sourceTree = "<group>"; };
 		7E213872995BAA2DE9389AE2020480AC /* Pods-To Do List-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-To Do List-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7F89DC6EC1C7AEC03E788F36402534F5 /* SQLite.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-prefix.pch"; sourceTree = "<group>"; };
-		88A0C806F2528D7607CDE487AD190F2F /* Telemetry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Telemetry.swift; path = Sources/Synchronization/Telemetry.swift; sourceTree = "<group>"; };
-		8AFC8E6DE37FE092EAB9576166D75465 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D1B47092657D8A2018239771F460924 /* SQLiteDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLiteDataStore.swift; path = Sources/DataStore/SQLiteDataStore.swift; sourceTree = "<group>"; };
-		921EB3AA343D8B21936832B7E791C8D2 /* DopamineKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DopamineKit.h; path = Sources/DopamineKit.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		971E3A72D70BB2226F7878B733C72421 /* AggregateFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = SQLite/Typed/AggregateFunctions.swift; sourceTree = "<group>"; };
-		97D0BBD50EC63146420A9FFCD0E0C804 /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = SQLite/Extensions/FTS4.swift; sourceTree = "<group>"; };
-		99F137805149534C96654EC31828C13D /* SQLCartridgeDataHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLCartridgeDataHelper.swift; path = Sources/DataStore/SQLCartridgeDataHelper.swift; sourceTree = "<group>"; };
-		9B55C1D5764D951047C957A624AB37B4 /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = SQLite/Core/Blob.swift; sourceTree = "<group>"; };
-		9B60836756E373989C694687A97D7CC3 /* CandyIcons.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandyIcons.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D6FBC9DEF633F1F2696D41160607BCA /* CandyBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CandyBar-umbrella.h"; sourceTree = "<group>"; };
+		7F10E6B49E6848683B4D9743C287EF6F /* Report.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Report.swift; path = Sources/Synchronization/Report.swift; sourceTree = "<group>"; };
+		84CF2F154CA43DA7F71B0CD310871EC0 /* close button.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "close button.png"; path = "BasalGifglia/Assets/close button.png"; sourceTree = "<group>"; };
+		8C0A455CE252208AA59BD3A21FDF54CD /* SyncOverview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SyncOverview.swift; path = Sources/Synchronization/SyncOverview.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FE456F361BC288D4BDD06FA83191980 /* Telemetry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Telemetry.swift; path = Sources/Synchronization/Telemetry.swift; sourceTree = "<group>"; };
+		A5379722B891E6DBDBA7B349D83A2A46 /* backflip bunny.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "backflip bunny.gif"; path = "BasalGifglia/Assets/backflip bunny.gif"; sourceTree = "<group>"; };
 		A7437B35919438F2D46D165E4032AD45 /* Pods-To Do List-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-To Do List-dummy.m"; sourceTree = "<group>"; };
-		AA8705066F8F4417B7CCD1F09F0DF581 /* SQLDopeExceptionDataHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLDopeExceptionDataHelper.swift; path = Sources/DataStore/SQLDopeExceptionDataHelper.swift; sourceTree = "<group>"; };
-		AEC658A24B2F2A50707F1D46C082F43A /* DopamineKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DopamineKit.modulemap; sourceTree = "<group>"; };
-		B6F0A04E6A8F4DAE36DC9040DABAC623 /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = SQLite/Core/fts3_tokenizer.h; sourceTree = "<group>"; };
-		B8F1B96392E7840DD1280390C679A05B /* SQLite-Bridging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SQLite-Bridging.m"; path = "SQLite/Core/SQLite-Bridging.m"; sourceTree = "<group>"; };
-		BC16F4A010B11A52C29E81148F4BC47F /* DopeAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopeAction.swift; path = Sources/DopeAction.swift; sourceTree = "<group>"; };
+		AA63E3F54B6597F1612F6965E4681F7F /* picard slow clap.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "picard slow clap.gif"; path = "BasalGifglia/Assets/picard slow clap.gif"; sourceTree = "<group>"; };
+		AE0E31B956029B7CDE6BB3DADFF68716 /* krazy kermit.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "krazy kermit.gif"; path = "BasalGifglia/Assets/krazy kermit.gif"; sourceTree = "<group>"; };
+		B6C699AAAC29CB1963E08FACB87ED102 /* carlton dance.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "carlton dance.gif"; path = "BasalGifglia/Assets/carlton dance.gif"; sourceTree = "<group>"; };
 		BD32FFA695456A8E2A1C7D792F6AAB0E /* Pods-To Do List-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-To Do List-umbrella.h"; sourceTree = "<group>"; };
-		BFBF24A3DF47D0D1BF80F8F82890E169 /* SyncCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SyncCoordinator.swift; path = Sources/Synchronization/SyncCoordinator.swift; sourceTree = "<group>"; };
-		C7E50DD89D15B579423DC65A3C6E60EB /* DopamineAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopamineAPI.swift; path = Sources/RESTfulAPI/DopamineAPI.swift; sourceTree = "<group>"; };
-		C81A83D62B2FA8C2FAF15DCD37920294 /* CandyBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CandyBar-prefix.pch"; sourceTree = "<group>"; };
-		D274561C5E48F352A14C9F393BD730A9 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = SQLite/Typed/Query.swift; sourceTree = "<group>"; };
-		D43079EBB580F36C4CB804A091AACD0F /* Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Value.swift; path = SQLite/Core/Value.swift; sourceTree = "<group>"; };
-		D494947C1B9E59E6AEAD2FF720B01AD2 /* Pods-To Do List.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-To Do List.modulemap"; sourceTree = "<group>"; };
-		D9D57A0B39F9AAE3DF4E4FDFBD1ADA16 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = SQLite/Typed/Operators.swift; sourceTree = "<group>"; };
-		DB2076147438A3D2ED6BFD7A812C6CF6 /* DopamineKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DopamineKit-dummy.m"; sourceTree = "<group>"; };
-		DB44F0C85553660857F351B59660E399 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCFFCC06E7241D921422C38CA39CDE2F /* DopamineKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DopamineKit-umbrella.h"; sourceTree = "<group>"; };
-		DDE84FA9DE894873464F8B57BC18E9C5 /* Report.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Report.swift; path = Sources/Synchronization/Report.swift; sourceTree = "<group>"; };
-		E008FDB47FBD5DF75D3F9A2064D72BE7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5024A30C984B9731FDBDB17033E0BCE /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB4AE06935B67A2DF587D5B662398F75 /* DopamineKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DopamineKit.xcconfig; sourceTree = "<group>"; };
+		C48C6227B7C73DF2BF0D89C45EA49506 /* dancing babies.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "dancing babies.gif"; path = "BasalGifglia/Assets/dancing babies.gif"; sourceTree = "<group>"; };
+		C8C951FDD94D222104559EC8F221895F /* DopamineKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DopamineKit.framework; path = DopamineKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD919FC2849C106086A86BF9F740190A /* DopamineKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DopamineKit.xcconfig; sourceTree = "<group>"; };
+		D494947C1B9E59E6AEAD2FF720B01AD2 /* Pods-To Do List.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-To Do List.modulemap"; sourceTree = "<group>"; };
+		D9D7E3E3CFADB3919584986FCE7E6B69 /* DopamineKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DopamineKit-prefix.pch"; sourceTree = "<group>"; };
+		DB92976D313256E46417A4A7641542C1 /* ResourceBundle-BasalGifglia-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BasalGifglia-Info.plist"; sourceTree = "<group>"; };
+		DC2E79A8EEC0AC58C9E4F92F8DF24D0E /* Cartridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cartridge.swift; path = Sources/Synchronization/Cartridge.swift; sourceTree = "<group>"; };
+		DCD974D668005078F21317C13889034F /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_To_Do_List.framework; path = "Pods-To Do List.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0D93D59D6DE5A33064ABFF2C0CC5515 /* UIImage+Gif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "BasalGifglia/Classes/UIImage+Gif.swift"; sourceTree = "<group>"; };
+		E5118F8D8BE96438154E021A6944E5DC /* BasalGifglia.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BasalGifglia.modulemap; sourceTree = "<group>"; };
+		E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		E914A8DDAC64F991ADD97B36F8EE3DEF /* BasalGifglia-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BasalGifglia-prefix.pch"; sourceTree = "<group>"; };
+		E963617D019BBA99FE26F5504C654CFB /* Gifglia.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gifglia.swift; path = BasalGifglia/Classes/Gifglia.swift; sourceTree = "<group>"; };
+		EC9C87CB3462CA91CC3B760BB93434AC /* BasalGifglia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BasalGifglia.framework; path = BasalGifglia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC275C701D700D63B0A2788F10674F6 /* Pods-To Do List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To Do List.debug.xcconfig"; sourceTree = "<group>"; };
-		F110EB8CC56813953F0906A17ED61E0A /* Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = SQLite/Foundation.swift; sourceTree = "<group>"; };
-		F329310ED6766161DD32DA58BEF78D61 /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = SQLite/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
-		F91B11D40B31E5DE6EAC8B8C99BF2FA7 /* CandyIcons.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = CandyIcons.xcassets; path = Resources/CandyIcons.xcassets; sourceTree = "<group>"; };
-		FAB20A2BCF870E9AE659079D600F4902 /* SQLTrackedActionDataHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLTrackedActionDataHelper.swift; path = Sources/DataStore/SQLTrackedActionDataHelper.swift; sourceTree = "<group>"; };
-		FC21E97F30F6F8C528D2665E26FB3C42 /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = SQLite/Core/Connection.swift; sourceTree = "<group>"; };
+		EED1BC5B2630A03A6562A8A332C8189E /* DopamineKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DopamineKit-dummy.m"; sourceTree = "<group>"; };
+		EF75167095D7E5C0C355556337110120 /* DopeException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopeException.swift; path = Sources/Synchronization/DopeException.swift; sourceTree = "<group>"; };
+		F60D127E347253981FB5EF9AD7E163BB /* pug belly rub.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "pug belly rub.gif"; path = "BasalGifglia/Assets/pug belly rub.gif"; sourceTree = "<group>"; };
+		FDEB68B8542801077232712AD28E5CE0 /* ecstatic austrian.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "ecstatic austrian.gif"; path = "BasalGifglia/Assets/ecstatic austrian.gif"; sourceTree = "<group>"; };
+		FE2B4A8CB83F9C03C63A2E4291EA257B /* retro rocking.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "retro rocking.gif"; path = "BasalGifglia/Assets/retro rocking.gif"; sourceTree = "<group>"; };
+		FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		798206BEC1D058379690C4736F153F85 /* Frameworks */ = {
+		2D14DCF67D4FA5A4C6FF1AE069372C9E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFAEE6852F841A3C74555161CB2BCCE0 /* Foundation.framework in Frameworks */,
+				07CA45A98C1190BB99573E48BCB0B9A1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		83776E39B4A8309868589D2138ADE103 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				39D598C3835F5467C6AE2E96A8E90450 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		97E9A911B26634C5A5DF334992A4D61C /* Frameworks */ = {
+		3D624EF6EAB9F79A9B9F5818AC1A227A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A4EEB96F83720C7294212931C0D34647 /* Frameworks */ = {
+		929656F0CB0FDB388DF6CFDD0A6C8E09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				972B2240F2AA3EED78E82D34B40E1D0E /* Foundation.framework in Frameworks */,
-				6EB85B30ED3181A1BE84F3472E6BD0C9 /* SQLite.framework in Frameworks */,
+				7D028AFB720F1F83B48DCEC1CDB31B0C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEE64E54BA33D21DCCF71E9AA0918957 /* Frameworks */ = {
+		E7A546660E17A51AFE99BF981F806830 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E601C7353C5E20228260E80CDA0FC134 /* Foundation.framework in Frameworks */,
+				9DC9335AA6BF839D380AC2FC9BA23A12 /* CoreData.framework in Frameworks */,
+				5645B5677DBD9929BCA2CC051065862A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0DE872FA3176E4731B145A6100F19242 /* Pods */ = {
+		18C31505F53BCD0CB0F85AB659963013 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				33A1279302F012186BB9A6844FA84DFD /* CandyBar */,
-				A62D3F352A49BB8B5F30323F5AF1F43D /* DopamineKit */,
-				B5E825A02A17D1FCE7ECD2195BC2154D /* SQLite.swift */,
+				E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */,
+				FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		2DBDB333CDD2C479DEC1674316A0851C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55B794B657366A2C356C9AEC97E62993 /* BasalGifglia.bundle */,
+				EC9C87CB3462CA91CC3B760BB93434AC /* BasalGifglia.framework */,
+				C8C951FDD94D222104559EC8F221895F /* DopamineKit.framework */,
+				DCD974D668005078F21317C13889034F /* Pods_To_Do_List.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E96CFF0B90FD2CF390DE0AF0213015F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A8773858DAF2A07F0A5533F5B37AC1C /* BasalGifglia */,
+				56BBD1D9C290C5989FFDF54ED385B61B /* DopamineKit */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		0E9CC0217CE03B66912982F024F7C64D /* Frameworks */ = {
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DB44F0C85553660857F351B59660E399 /* SQLite.framework */,
-				6A4CECB51B6C85045C3E9B9DD42537FD /* iOS */,
+				18C31505F53BCD0CB0F85AB659963013 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2A9E66782FA5089B4A5A74E27A55F4A4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4125C287C5F4E3E0F453B8E882323AE1 /* Info.plist */,
-				1E029B1F73B207ADAA3206A8EFCC0B16 /* SQLite.swift.modulemap */,
-				02477907A4167D9164DD79626DD9C757 /* SQLite.swift.xcconfig */,
-				24A8B093B3B1B2405A8C4F8312015EB7 /* SQLite.swift-dummy.m */,
-				7F89DC6EC1C7AEC03E788F36402534F5 /* SQLite.swift-prefix.pch */,
-				2F97676766376D1D4D04F6805A69ABBF /* SQLite.swift-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SQLite.swift";
-			sourceTree = "<group>";
-		};
-		33A1279302F012186BB9A6844FA84DFD /* CandyBar */ = {
-			isa = PBXGroup;
-			children = (
-				1D5E4FE78FA26F009E2EC689BFF31CCC /* CandyBar.swift */,
-				6D527AAD85C6E14430AD9AD7DA22B871 /* CandyIcon.swift */,
-				DB23F43127D10C427B709119C0BF1613 /* Resources */,
-				DB565E045EA84A16CCAE23CBBD952FF8 /* Support Files */,
-			);
-			path = CandyBar;
 			sourceTree = "<group>";
 		};
 		458E7B870134D05FD30E08634BCCD653 /* Pods-To Do List */ = {
@@ -291,6 +242,40 @@
 			path = "Target Support Files/Pods-To Do List";
 			sourceTree = "<group>";
 		};
+		4A8773858DAF2A07F0A5533F5B37AC1C /* BasalGifglia */ = {
+			isa = PBXGroup;
+			children = (
+				E963617D019BBA99FE26F5504C654CFB /* Gifglia.swift */,
+				21F48E576DEC848A9A6821DD9CAE69A1 /* UIGifgliaView.swift */,
+				68475259ED28B448AD141517ACAE1A12 /* UIGifgliaViewController.swift */,
+				E0D93D59D6DE5A33064ABFF2C0CC5515 /* UIImage+Gif.swift */,
+				C681DBD46770B01F4F005463AE8ACCFD /* Resources */,
+				BCA9810AC8AF85569771D2D18DC05E9A /* Support Files */,
+			);
+			name = BasalGifglia;
+			path = BasalGifglia;
+			sourceTree = "<group>";
+		};
+		56BBD1D9C290C5989FFDF54ED385B61B /* DopamineKit */ = {
+			isa = PBXGroup;
+			children = (
+				DC2E79A8EEC0AC58C9E4F92F8DF24D0E /* Cartridge.swift */,
+				5FE2A29EA177390B6258B1B5DD572A2B /* DopamineAPI.swift */,
+				54786F818E56E088BD00F5DB851ED8D2 /* DopamineKit.h */,
+				4CCB091292A3A80FAF15777746090104 /* DopamineKit.swift */,
+				68ED9812A0EAA8ECDE995CCB22CFD778 /* DopeAction.swift */,
+				EF75167095D7E5C0C355556337110120 /* DopeException.swift */,
+				7F10E6B49E6848683B4D9743C287EF6F /* Report.swift */,
+				3DF92747F2DAEF71F7FEECC4C50C2742 /* SyncCoordinator.swift */,
+				8C0A455CE252208AA59BD3A21FDF54CD /* SyncOverview.swift */,
+				9FE456F361BC288D4BDD06FA83191980 /* Telemetry.swift */,
+				52271247AB016629D0D25FE1279C043B /* Track.swift */,
+				BD5083DC54C7C942CF5BABBBE855F466 /* Support Files */,
+			);
+			name = DopamineKit;
+			path = DopamineKit;
+			sourceTree = "<group>";
+		};
 		6486498A44D92FC460538EB44F978172 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,260 +284,176 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		6A4CECB51B6C85045C3E9B9DD42537FD /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				50E7815F88576C9437438BE64F8C3EE6 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				0E9CC0217CE03B66912982F024F7C64D /* Frameworks */,
-				0DE872FA3176E4731B145A6100F19242 /* Pods */,
-				FF36437A2A63C395B25CDB00985D3A32 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				3E96CFF0B90FD2CF390DE0AF0213015F /* Pods */,
+				2DBDB333CDD2C479DEC1674316A0851C /* Products */,
 				6486498A44D92FC460538EB44F978172 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A62D3F352A49BB8B5F30323F5AF1F43D /* DopamineKit */ = {
+		BCA9810AC8AF85569771D2D18DC05E9A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2221D53B8A3C364299F200C9621AA367 /* Cartridge.swift */,
-				C7E50DD89D15B579423DC65A3C6E60EB /* DopamineAPI.swift */,
-				921EB3AA343D8B21936832B7E791C8D2 /* DopamineKit.h */,
-				69864D6C027E080F77CB1840E8383B28 /* DopamineKit.swift */,
-				BC16F4A010B11A52C29E81148F4BC47F /* DopeAction.swift */,
-				159ACF2DDF28EFF2C53161AA32083FDD /* DopeException.swift */,
-				DDE84FA9DE894873464F8B57BC18E9C5 /* Report.swift */,
-				99F137805149534C96654EC31828C13D /* SQLCartridgeDataHelper.swift */,
-				10A51AAF1FBB9D4C1F9CF43ABC9959B8 /* SQLDataHelperProtocol.swift */,
-				AA8705066F8F4417B7CCD1F09F0DF581 /* SQLDopeExceptionDataHelper.swift */,
-				8D1B47092657D8A2018239771F460924 /* SQLiteDataStore.swift */,
-				3467198AF4CAB5CD40B1B64F6C6AF72C /* SQLReportedActionDataHelper.swift */,
-				4720602BA5A59C9DCABD151898E9A238 /* SQLSyncOverviewDataHelper.swift */,
-				FAB20A2BCF870E9AE659079D600F4902 /* SQLTrackedActionDataHelper.swift */,
-				BFBF24A3DF47D0D1BF80F8F82890E169 /* SyncCoordinator.swift */,
-				610A2A1B1A5CF97E4E97AF5A504CD9B4 /* SyncOverview.swift */,
-				88A0C806F2528D7607CDE487AD190F2F /* Telemetry.swift */,
-				3063DAD5AAC31888840B29B616534C12 /* Track.swift */,
-				B6A2805B7106A4009151DE97645F4E16 /* Support Files */,
+				E5118F8D8BE96438154E021A6944E5DC /* BasalGifglia.modulemap */,
+				45F4967D0C20E4E383472459F3A57781 /* BasalGifglia.xcconfig */,
+				6A49D4A951F6566977266A8D6E594206 /* BasalGifglia-dummy.m */,
+				E914A8DDAC64F991ADD97B36F8EE3DEF /* BasalGifglia-prefix.pch */,
+				5E7CC01573795782EF7F380A0F6E0F67 /* BasalGifglia-umbrella.h */,
+				46E9DF84258F4AE08E488B89E25A8F63 /* Info.plist */,
+				DB92976D313256E46417A4A7641542C1 /* ResourceBundle-BasalGifglia-Info.plist */,
 			);
-			path = DopamineKit;
+			name = "Support Files";
+			path = "../Target Support Files/BasalGifglia";
 			sourceTree = "<group>";
 		};
-		B5E825A02A17D1FCE7ECD2195BC2154D /* SQLite.swift */ = {
+		BD5083DC54C7C942CF5BABBBE855F466 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				971E3A72D70BB2226F7878B733C72421 /* AggregateFunctions.swift */,
-				9B55C1D5764D951047C957A624AB37B4 /* Blob.swift */,
-				19F4CC0946B6D0B8250EECF3656C991C /* Collation.swift */,
-				FC21E97F30F6F8C528D2665E26FB3C42 /* Connection.swift */,
-				F329310ED6766161DD32DA58BEF78D61 /* CoreFunctions.swift */,
-				3487CA8BF6E2400CB6EFD50A4AE185A9 /* CustomFunctions.swift */,
-				72E3D90AB7A3DDA68EC5B7F2F781F093 /* Expression.swift */,
-				F110EB8CC56813953F0906A17ED61E0A /* Foundation.swift */,
-				B6F0A04E6A8F4DAE36DC9040DABAC623 /* fts3_tokenizer.h */,
-				97D0BBD50EC63146420A9FFCD0E0C804 /* FTS4.swift */,
-				45FFDCB9BCF9AAD205DB7F56D4DEEA62 /* Helpers.swift */,
-				D9D57A0B39F9AAE3DF4E4FDFBD1ADA16 /* Operators.swift */,
-				D274561C5E48F352A14C9F393BD730A9 /* Query.swift */,
-				68F1722463D56AD993985C5A74D46DF4 /* R*Tree.swift */,
-				6708027BDB90CEFFCA7F487786701E85 /* Schema.swift */,
-				09B105C132FD291E4AE238A693BC92FC /* Setter.swift */,
-				734C9C10B9C371F259EFC8549E82479D /* SQLite.h */,
-				11E63B3BA7B2B9DC121BC5A91FA713E1 /* SQLite-Bridging.h */,
-				B8F1B96392E7840DD1280390C679A05B /* SQLite-Bridging.m */,
-				3A53621B4F0256708DC07857054609C9 /* Statement.swift */,
-				D43079EBB580F36C4CB804A091AACD0F /* Value.swift */,
-				2A9E66782FA5089B4A5A74E27A55F4A4 /* Support Files */,
-			);
-			path = SQLite.swift;
-			sourceTree = "<group>";
-		};
-		B6A2805B7106A4009151DE97645F4E16 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AEC658A24B2F2A50707F1D46C082F43A /* DopamineKit.modulemap */,
-				EB4AE06935B67A2DF587D5B662398F75 /* DopamineKit.xcconfig */,
-				DB2076147438A3D2ED6BFD7A812C6CF6 /* DopamineKit-dummy.m */,
-				7A176E4DBF200CD5462035BCDFA3FE98 /* DopamineKit-prefix.pch */,
-				DCFFCC06E7241D921422C38CA39CDE2F /* DopamineKit-umbrella.h */,
-				02AEF4B7688A387A340382A6472C78E0 /* Info.plist */,
+				6A47F0858AE97A1664851A18EC6287C0 /* DopamineKit.modulemap */,
+				CD919FC2849C106086A86BF9F740190A /* DopamineKit.xcconfig */,
+				EED1BC5B2630A03A6562A8A332C8189E /* DopamineKit-dummy.m */,
+				D9D7E3E3CFADB3919584986FCE7E6B69 /* DopamineKit-prefix.pch */,
+				2F7617BE73F5B8721D37DCAA25ADF228 /* DopamineKit-umbrella.h */,
+				675B3998812FC344802FAEACAE2A7B3E /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/DopamineKit";
 			sourceTree = "<group>";
 		};
-		DB23F43127D10C427B709119C0BF1613 /* Resources */ = {
+		C681DBD46770B01F4F005463AE8ACCFD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F91B11D40B31E5DE6EAC8B8C99BF2FA7 /* CandyIcons.xcassets */,
+				A5379722B891E6DBDBA7B349D83A2A46 /* backflip bunny.gif */,
+				1E283E2C61C0A695BD9E1A41070028D1 /* baloo bop.gif */,
+				B6C699AAAC29CB1963E08FACB87ED102 /* carlton dance.gif */,
+				35EA0F884BF61C6662F80ECD8B0BBC72 /* cheerful cub.gif */,
+				84CF2F154CA43DA7F71B0CD310871EC0 /* close button.png */,
+				2F3AC336590A40D01FB579BDEAE5D41F /* community high five.gif */,
+				C48C6227B7C73DF2BF0D89C45EA49506 /* dancing babies.gif */,
+				FDEB68B8542801077232712AD28E5CE0 /* ecstatic austrian.gif */,
+				70EBE2D1F9C830B83C61CEE96CAD9747 /* fist pumping pitt.gif */,
+				5751EC358EFB665E93864CEDA480545B /* frolicking jerry.gif */,
+				4270B6B9DA3EBA0E1795E28982F060C4 /* good mood minions.gif */,
+				1C32E21F6535A14DA78C1403A96D6655 /* jazzed jonah.gif */,
+				AE0E31B956029B7CDE6BB3DADFF68716 /* krazy kermit.gif */,
+				076BD871830F8628BA32F52D83BEBDBF /* patrick the patron.gif */,
+				AA63E3F54B6597F1612F6965E4681F7F /* picard slow clap.gif */,
+				F60D127E347253981FB5EF9AD7E163BB /* pug belly rub.gif */,
+				FE2B4A8CB83F9C03C63A2E4291EA257B /* retro rocking.gif */,
+				6CA2CF82DACA6C90FF7DE1120C973A6E /* shaq and kitty shimmy.gif */,
+				1CD0272B33E1A67C06E949EA92D66134 /* upbeat barney.gif */,
+				6D1CF3B6B0BFAB233F9E59587BECA057 /* winking robin.gif */,
+				7CAA148B9454443EF53853AF0B019862 /* woah.gif */,
+				29EAB5DF5EF0A58CE299FBD9A72B5ACB /* yay bowie.gif */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		DB565E045EA84A16CCAE23CBBD952FF8 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				41FE4FB5D6DCDE4E95BB711445D002AC /* CandyBar.modulemap */,
-				79BBE8065BF2833506ADE81FD03AB176 /* CandyBar.xcconfig */,
-				53ABE37496EA612476A541BA8B79AC25 /* CandyBar-dummy.m */,
-				C81A83D62B2FA8C2FAF15DCD37920294 /* CandyBar-prefix.pch */,
-				9D6FBC9DEF633F1F2696D41160607BCA /* CandyBar-umbrella.h */,
-				E008FDB47FBD5DF75D3F9A2064D72BE7 /* Info.plist */,
-				3622A42225042AC082279678AC1936A9 /* ResourceBundle-CandyIcons-Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CandyBar";
-			sourceTree = "<group>";
-		};
-		FF36437A2A63C395B25CDB00985D3A32 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1FA720843C95DFBB6B4B4D3D160CFE00 /* CandyBar.framework */,
-				9B60836756E373989C694687A97D7CC3 /* CandyIcons.bundle */,
-				2CF00C16BBC304B9C28F0A07BFA6A901 /* DopamineKit.framework */,
-				E5024A30C984B9731FDBDB17033E0BCE /* Pods_To_Do_List.framework */,
-				8AFC8E6DE37FE092EAB9576166D75465 /* SQLite.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		294EBE8780EA2C958FFB88A76E4B07E5 /* Headers */ = {
+		570A310CA8AF85BD778AFF39E9078444 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D70BE8451CB59E037E9CD4F0B7BD1444 /* DopamineKit-umbrella.h in Headers */,
-				71E962063FF04CACB8363F656A246C15 /* DopamineKit.h in Headers */,
+				7E992D22F4D7C1AEB8FF8E89C155D7A5 /* DopamineKit-umbrella.h in Headers */,
+				25ABDC5DC906BF99222964F4F108A302 /* DopamineKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF908584117279AE321A6BB2B9DCADE3 /* Headers */ = {
+		8F7939D27F55E8430CEF6E2F6C6BCDCB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B4A5FE013A68F70AE8904BC655223EE /* fts3_tokenizer.h in Headers */,
-				19D51F11B518F8F852FFA2F45D4D9534 /* SQLite-Bridging.h in Headers */,
-				C7E811EFDE452DF0804AF0CDC8E946B1 /* SQLite.h in Headers */,
-				8C98CD4CDEFC0ACEEB2BD12812D4B0B7 /* SQLite.swift-umbrella.h in Headers */,
+				4AB46740510318CDD09F3474456BC9FF /* BasalGifglia-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B13D65BC6FB23A643354626680795D31 /* Headers */ = {
+		DA277623DE53DE5D3AADD4EE624A6621 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02D8AB45013A3BD6469B9967075536EC /* Pods-To Do List-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F69A5432DFA78D1C0286E10BBC7732A8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				79583B1C4FB80A8C50DA92997F7BF218 /* CandyBar-umbrella.h in Headers */,
+				18CAD6DB8A2DEEDD8A5CFA645BC823D9 /* Pods-To Do List-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		00C55681757097B54B1CCEF40ACAA5F6 /* Pods-To Do List */ = {
+		52EF694F44AAA86F61F5CEB0F37B0AF4 /* DopamineKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5D9ECCB43FC8BFFE45132D10355068B /* Build configuration list for PBXNativeTarget "Pods-To Do List" */;
+			buildConfigurationList = 7DA2D0D6C1A9E7A641B0C28FF926689D /* Build configuration list for PBXNativeTarget "DopamineKit" */;
 			buildPhases = (
-				83FF3F56220DAE1022974FB6C7AE2383 /* Sources */,
-				AEE64E54BA33D21DCCF71E9AA0918957 /* Frameworks */,
-				B13D65BC6FB23A643354626680795D31 /* Headers */,
+				0406E14488A542D311DDF012F36170BD /* Sources */,
+				E7A546660E17A51AFE99BF981F806830 /* Frameworks */,
+				570A310CA8AF85BD778AFF39E9078444 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A5F290D9C5BA44670B37C69B0F60A533 /* PBXTargetDependency */,
-				A551E9CF0F10F81304B5CFD844ACD512 /* PBXTargetDependency */,
-				08A35A678A1ED40E4772FE99D4C38EB3 /* PBXTargetDependency */,
-			);
-			name = "Pods-To Do List";
-			productName = "Pods-To Do List";
-			productReference = E5024A30C984B9731FDBDB17033E0BCE /* Pods_To_Do_List.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		0F8606CD974037B3F00E13B75CA46A90 /* DopamineKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 45BEC6C6C2AA412356FC72ED4AC38B93 /* Build configuration list for PBXNativeTarget "DopamineKit" */;
-			buildPhases = (
-				1CA13DE81E3399A6366ACAF201A86E05 /* Sources */,
-				A4EEB96F83720C7294212931C0D34647 /* Frameworks */,
-				294EBE8780EA2C958FFB88A76E4B07E5 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				84E8EDE084CD45E709AF4E408FEDDB40 /* PBXTargetDependency */,
 			);
 			name = DopamineKit;
 			productName = DopamineKit;
-			productReference = 2CF00C16BBC304B9C28F0A07BFA6A901 /* DopamineKit.framework */;
+			productReference = C8C951FDD94D222104559EC8F221895F /* DopamineKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		507B9832DB81C37C00FD25C6DCB44E61 /* CandyBar-CandyIcons */ = {
+		66CE43EFC8BF061AEBC82F4DE624A220 /* Pods-To Do List */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6373D2E94606647FFA7F38CBDE334A3 /* Build configuration list for PBXNativeTarget "CandyBar-CandyIcons" */;
+			buildConfigurationList = 78F399EE37B76C9164DDC74050AF84F6 /* Build configuration list for PBXNativeTarget "Pods-To Do List" */;
 			buildPhases = (
-				83F72CC9F68874B53927CC28E38809AD /* Sources */,
-				97E9A911B26634C5A5DF334992A4D61C /* Frameworks */,
-				3B52383C1655CC83688693325CE75780 /* Resources */,
+				8C92B7B7B205A1024094308421DE1EF4 /* Sources */,
+				2D14DCF67D4FA5A4C6FF1AE069372C9E /* Frameworks */,
+				DA277623DE53DE5D3AADD4EE624A6621 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F823FDD7762D2B7D14735A933BB9A599 /* PBXTargetDependency */,
+				5DC7BF5C7EA7C6BEA967C0BD1452F74C /* PBXTargetDependency */,
+			);
+			name = "Pods-To Do List";
+			productName = "Pods-To Do List";
+			productReference = DCD974D668005078F21317C13889034F /* Pods_To_Do_List.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C15CEC2342FD902A6FCAC1D3F055EE44 /* BasalGifglia-BasalGifglia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3ECD4FE87D2EE3902F611C359366AE0 /* Build configuration list for PBXNativeTarget "BasalGifglia-BasalGifglia" */;
+			buildPhases = (
+				3B5C4D31859F3FB30C9E5E69B83CA92B /* Sources */,
+				3D624EF6EAB9F79A9B9F5818AC1A227A /* Frameworks */,
+				EA701BF72E676617E00C1DC1A662B1B8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "CandyBar-CandyIcons";
-			productName = "CandyBar-CandyIcons";
-			productReference = 9B60836756E373989C694687A97D7CC3 /* CandyIcons.bundle */;
+			name = "BasalGifglia-BasalGifglia";
+			productName = "BasalGifglia-BasalGifglia";
+			productReference = 55B794B657366A2C356C9AEC97E62993 /* BasalGifglia.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		AEBCD381129F95534952C42F4922CAA2 /* SQLite.swift */ = {
+		FA1267442E2AFCD55F290AE104A0782F /* BasalGifglia */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A553506339FD4C1380A41B4525375536 /* Build configuration list for PBXNativeTarget "SQLite.swift" */;
+			buildConfigurationList = 8004DBB6695D1DCAFC0855202E5A74C7 /* Build configuration list for PBXNativeTarget "BasalGifglia" */;
 			buildPhases = (
-				7AE2C2F54AD0FD72FFD9B9FC23E8F6A0 /* Sources */,
-				798206BEC1D058379690C4736F153F85 /* Frameworks */,
-				AF908584117279AE321A6BB2B9DCADE3 /* Headers */,
+				49BE384F6E183E418A85D9D63AECA606 /* Sources */,
+				929656F0CB0FDB388DF6CFDD0A6C8E09 /* Frameworks */,
+				5593C573AA6A103D4A6D63A934D40D95 /* Resources */,
+				8F7939D27F55E8430CEF6E2F6C6BCDCB /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8BB596AA1C746FC79DF28427A5CE4A48 /* PBXTargetDependency */,
 			);
-			name = SQLite.swift;
-			productName = SQLite.swift;
-			productReference = 8AFC8E6DE37FE092EAB9576166D75465 /* SQLite.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F129946BD4471C44AB58D02DB551553A /* CandyBar */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 11D9E59E464868E361D1BFA94C601B4B /* Build configuration list for PBXNativeTarget "CandyBar" */;
-			buildPhases = (
-				C14D8257B6C75CF3B0E7311687ECA8C5 /* Sources */,
-				83776E39B4A8309868589D2138ADE103 /* Frameworks */,
-				CAA08693966F3D280535BE91D1C3281A /* Resources */,
-				F69A5432DFA78D1C0286E10BBC7732A8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				13DDA86306613F338090C6F58AD27127 /* PBXTargetDependency */,
-			);
-			name = CandyBar;
-			productName = CandyBar;
-			productReference = 1FA720843C95DFBB6B4B4D3D160CFE00 /* CandyBar.framework */;
+			name = BasalGifglia;
+			productName = BasalGifglia;
+			productReference = EC9C87CB3462CA91CC3B760BB93434AC /* BasalGifglia.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -572,154 +473,131 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = FF36437A2A63C395B25CDB00985D3A32 /* Products */;
+			productRefGroup = 2DBDB333CDD2C479DEC1674316A0851C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F129946BD4471C44AB58D02DB551553A /* CandyBar */,
-				507B9832DB81C37C00FD25C6DCB44E61 /* CandyBar-CandyIcons */,
-				0F8606CD974037B3F00E13B75CA46A90 /* DopamineKit */,
-				00C55681757097B54B1CCEF40ACAA5F6 /* Pods-To Do List */,
-				AEBCD381129F95534952C42F4922CAA2 /* SQLite.swift */,
+				FA1267442E2AFCD55F290AE104A0782F /* BasalGifglia */,
+				C15CEC2342FD902A6FCAC1D3F055EE44 /* BasalGifglia-BasalGifglia */,
+				52EF694F44AAA86F61F5CEB0F37B0AF4 /* DopamineKit */,
+				66CE43EFC8BF061AEBC82F4DE624A220 /* Pods-To Do List */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3B52383C1655CC83688693325CE75780 /* Resources */ = {
+		5593C573AA6A103D4A6D63A934D40D95 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B607234FA7CAB8B90C8FE4E54646FE2C /* CandyIcons.xcassets in Resources */,
+				DEC5AA1B910868CCF23E1EFCB085E74B /* BasalGifglia.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAA08693966F3D280535BE91D1C3281A /* Resources */ = {
+		EA701BF72E676617E00C1DC1A662B1B8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E729BB7F253A4ACCFA3BB7A8A460C6D /* CandyIcons.bundle in Resources */,
+				55EF91C766D33446441DFAD565C00EB2 /* backflip bunny.gif in Resources */,
+				899B46F8B2E4A3DB35B2F43D8D110D59 /* baloo bop.gif in Resources */,
+				E2714CE871A61B30632174AB87800301 /* carlton dance.gif in Resources */,
+				A4886946F2A1FFF2C88D6A237ED562CF /* cheerful cub.gif in Resources */,
+				9899A739C587DED28DA866BADE440431 /* close button.png in Resources */,
+				6426FF0F87086886E3474577A4AE730F /* community high five.gif in Resources */,
+				705E02CF7CCD01037D3BBC7AD5CF14B6 /* dancing babies.gif in Resources */,
+				A37C4F629C683E0F7A2DA44E294B1788 /* ecstatic austrian.gif in Resources */,
+				C7397D0803427C41C9B3D07AE3D2C7A9 /* fist pumping pitt.gif in Resources */,
+				0ED42BA32A0BB9E9182788FCAE13E998 /* frolicking jerry.gif in Resources */,
+				454BA62BE11136015A6DED0D46ED7AF4 /* good mood minions.gif in Resources */,
+				23C34A36F0CB337CB4B082AE6170CE81 /* jazzed jonah.gif in Resources */,
+				F49A19F4B452DD226D904110FE36BF4F /* krazy kermit.gif in Resources */,
+				D986D5EF6948D41AC4B588E4629AE89C /* patrick the patron.gif in Resources */,
+				F866D041125CA9326059B09309AA2189 /* picard slow clap.gif in Resources */,
+				EEAAF501DCA2BF93BCC07BAA3AD858C1 /* pug belly rub.gif in Resources */,
+				3B90F4CF11F0E52A12F6D13AFC47D23F /* retro rocking.gif in Resources */,
+				ABC78F0EA7F230F9DDB4829C6FF041E1 /* shaq and kitty shimmy.gif in Resources */,
+				A42AB5F929AD4F5934145B0D06183671 /* upbeat barney.gif in Resources */,
+				5F7B7365F40C9645D7C1286BDCBCBB45 /* winking robin.gif in Resources */,
+				67BC9BBBB37E0012D0F54EA6E7B2C7AC /* woah.gif in Resources */,
+				74DFCE6CFBFBF51DC65F7B72D0BF126D /* yay bowie.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1CA13DE81E3399A6366ACAF201A86E05 /* Sources */ = {
+		0406E14488A542D311DDF012F36170BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				208A76A4325AF5FA9CA6BD64E69EA24E /* Cartridge.swift in Sources */,
-				600A7E0F3CFD1BDD7322F4A758514C78 /* DopamineAPI.swift in Sources */,
-				1A22BB8FF177C829DCD367C9DAF39F81 /* DopamineKit-dummy.m in Sources */,
-				3063FDF88A1A8FABCE54B9178110A2CE /* DopamineKit.swift in Sources */,
-				3C42BEB398DB2C68D8FAF4B3387D498A /* DopeAction.swift in Sources */,
-				19E9C10B7DE1336DEE5FF71E4B561D71 /* DopeException.swift in Sources */,
-				796FE4F6D71BFD734B3565E6755E6118 /* Report.swift in Sources */,
-				CF7FC02A21AAC8B9EAE42BE99346D8F1 /* SQLCartridgeDataHelper.swift in Sources */,
-				6DE434AC2DD7219B43583FA76599B445 /* SQLDataHelperProtocol.swift in Sources */,
-				775913A7404DBCE722CC2D16BA6F6B48 /* SQLDopeExceptionDataHelper.swift in Sources */,
-				3FEBC6310D825B1D82BF45E76977DC41 /* SQLiteDataStore.swift in Sources */,
-				CA7346A2F0D85486D70E3451FCD21C5C /* SQLReportedActionDataHelper.swift in Sources */,
-				C1D54A9B33B03FCDC10DFAAB1214333A /* SQLSyncOverviewDataHelper.swift in Sources */,
-				3F21606EA678035824A64E8272A91DEF /* SQLTrackedActionDataHelper.swift in Sources */,
-				F6E89DDA6355645F53A1585C3ADF73AE /* SyncCoordinator.swift in Sources */,
-				1E4E994230C70062DFAEEBE849476535 /* SyncOverview.swift in Sources */,
-				319203B2DC5781513B9DBC10C439719C /* Telemetry.swift in Sources */,
-				ECA79DD6CE1AE11C00E0658C224BF8D6 /* Track.swift in Sources */,
+				77BABE9C90EC0E924986F00ADAF8D919 /* Cartridge.swift in Sources */,
+				82A8A9C03969C7F5FC477B1FD56C3C18 /* DopamineAPI.swift in Sources */,
+				EBED7180E4AA3FA2B007C6C8CBEA3F4E /* DopamineKit-dummy.m in Sources */,
+				E2C77FDCDF9EFB3F34CD144B87DC45AB /* DopamineKit.swift in Sources */,
+				7E7DD75259BC6203C8AED799DD282463 /* DopeAction.swift in Sources */,
+				274AE6C9B3CF6A986CF37774ABC95351 /* DopeException.swift in Sources */,
+				2F75D85E09938D3E5D29B2A065B13793 /* Report.swift in Sources */,
+				C841C90EFE3D1215134B253B33B05A94 /* SyncCoordinator.swift in Sources */,
+				2CAD486FEA2F7F4626379776F01A820F /* SyncOverview.swift in Sources */,
+				B865A3336C91FACFD106DCECA025ADAC /* Telemetry.swift in Sources */,
+				6863339A153D17781141641599DF3CC9 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7AE2C2F54AD0FD72FFD9B9FC23E8F6A0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AEE907161DF285D034D86F117AE5C01E /* AggregateFunctions.swift in Sources */,
-				7180E8C8E8090DAA31BE90F58DA8E884 /* Blob.swift in Sources */,
-				F915EAB6D188FDC254C62C5D29BC2212 /* Collation.swift in Sources */,
-				771DE48CC0115D996E00988BCBE049FD /* Connection.swift in Sources */,
-				FAE3E807CEFBAE410D0457E65A396A21 /* CoreFunctions.swift in Sources */,
-				D568DB7ECB879C178FB4B4E4BD1B32A6 /* CustomFunctions.swift in Sources */,
-				F90E59C3AC31CED10C750AC2CE583769 /* Expression.swift in Sources */,
-				E8B8567C3F7DAE249E255D37D9A0443A /* Foundation.swift in Sources */,
-				3A5EB8EC1CBBAA63AC09B145624D07FF /* FTS4.swift in Sources */,
-				1C3067C68D4B796C32A47EE9FCE67104 /* Helpers.swift in Sources */,
-				A25D83774A4F5124296E82BA2E175F1E /* Operators.swift in Sources */,
-				D3317B4ACC1149159C7D9042B86C2EE4 /* Query.swift in Sources */,
-				42440A3B8FC39AE78A91B183795CBCE4 /* R*Tree.swift in Sources */,
-				1FA4A16448A3755505DA96112B82CD41 /* Schema.swift in Sources */,
-				6E12D0D77ED7BE868D69A950BAB7D2A6 /* Setter.swift in Sources */,
-				7F006520649A3094825FAED5182E9FA1 /* SQLite-Bridging.m in Sources */,
-				FD442DD91EFF3E9858D4AFAF3966D755 /* SQLite.swift-dummy.m in Sources */,
-				1034921E9074CF1DF8C23816282B2B11 /* Statement.swift in Sources */,
-				FD402A39E061F7A70DDF13DD5F446CDF /* Value.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83F72CC9F68874B53927CC28E38809AD /* Sources */ = {
+		3B5C4D31859F3FB30C9E5E69B83CA92B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		83FF3F56220DAE1022974FB6C7AE2383 /* Sources */ = {
+		49BE384F6E183E418A85D9D63AECA606 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				947AF8706AC643227B193E589E614DE9 /* Pods-To Do List-dummy.m in Sources */,
+				B3C8518AF01FCD194D538447E8EDA8BC /* BasalGifglia-dummy.m in Sources */,
+				09D0A10D38DB61CAAEF303E58BC04E4F /* Gifglia.swift in Sources */,
+				40284BF6E0D7F958F7279AEFFFEB08E2 /* UIGifgliaView.swift in Sources */,
+				0CAB98336581568C55A7EDFF12A53CA4 /* UIGifgliaViewController.swift in Sources */,
+				AB70B206517A301192EF09DCB74ECCF1 /* UIImage+Gif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C14D8257B6C75CF3B0E7311687ECA8C5 /* Sources */ = {
+		8C92B7B7B205A1024094308421DE1EF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72F19E01C9DE7F3F06D118A232621717 /* CandyBar-dummy.m in Sources */,
-				074A02D683DF5B0C35B9B2FA36807FB7 /* CandyBar.swift in Sources */,
-				594D266DD91FF7EE76F509D23D13AE86 /* CandyIcon.swift in Sources */,
+				808776C5B431D3999703CA92BB2C868C /* Pods-To Do List-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		08A35A678A1ED40E4772FE99D4C38EB3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SQLite.swift;
-			target = AEBCD381129F95534952C42F4922CAA2 /* SQLite.swift */;
-			targetProxy = 754B58ABAF7E2D370551F342D8D07C76 /* PBXContainerItemProxy */;
-		};
-		13DDA86306613F338090C6F58AD27127 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CandyBar-CandyIcons";
-			target = 507B9832DB81C37C00FD25C6DCB44E61 /* CandyBar-CandyIcons */;
-			targetProxy = CD485D498905F8961B1167E63B37C5CD /* PBXContainerItemProxy */;
-		};
-		84E8EDE084CD45E709AF4E408FEDDB40 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SQLite.swift;
-			target = AEBCD381129F95534952C42F4922CAA2 /* SQLite.swift */;
-			targetProxy = 41E95C353039AB7D14B8A101F46DB84A /* PBXContainerItemProxy */;
-		};
-		A551E9CF0F10F81304B5CFD844ACD512 /* PBXTargetDependency */ = {
+		5DC7BF5C7EA7C6BEA967C0BD1452F74C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DopamineKit;
-			target = 0F8606CD974037B3F00E13B75CA46A90 /* DopamineKit */;
-			targetProxy = FCEF69578515770AC6C766BE592BB656 /* PBXContainerItemProxy */;
+			target = 52EF694F44AAA86F61F5CEB0F37B0AF4 /* DopamineKit */;
+			targetProxy = 39C8463F511259117DBA84DBA690174C /* PBXContainerItemProxy */;
 		};
-		A5F290D9C5BA44670B37C69B0F60A533 /* PBXTargetDependency */ = {
+		8BB596AA1C746FC79DF28427A5CE4A48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = CandyBar;
-			target = F129946BD4471C44AB58D02DB551553A /* CandyBar */;
-			targetProxy = 4F12F74D12D3930565ED842CD292D15B /* PBXContainerItemProxy */;
+			name = "BasalGifglia-BasalGifglia";
+			target = C15CEC2342FD902A6FCAC1D3F055EE44 /* BasalGifglia-BasalGifglia */;
+			targetProxy = 517AF09F43DBB96565BCDE6866BC0AA9 /* PBXContainerItemProxy */;
+		};
+		F823FDD7762D2B7D14735A933BB9A599 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BasalGifglia;
+			target = FA1267442E2AFCD55F290AE104A0782F /* BasalGifglia */;
+			targetProxy = E6E5895FB31F425235932188F0969DAD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		200D809FF856AE273E66C082D885DFF7 /* Release */ = {
+		223D6D9F6784982CCFC5B7B4B69E822E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79BBE8065BF2833506ADE81FD03AB176 /* CandyBar.xcconfig */;
+			baseConfigurationReference = 6FEB1D5BECE81E587DEF6408541B1F97 /* Pods-To Do List.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -732,43 +610,143 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CandyBar/CandyBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CandyBar/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-To Do List/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CandyBar/CandyBar.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-To Do List/Pods-To Do List.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = CandyBar;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_To_Do_List;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		2F5CC49777A2784100B9CDAC075FC48D /* Debug */ = {
+		2BCF0F20440031C82A7D66F7C237D0CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79BBE8065BF2833506ADE81FD03AB176 /* CandyBar.xcconfig */;
+			baseConfigurationReference = 45F4967D0C20E4E383472459F3A57781 /* BasalGifglia.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CandyBar";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BasalGifglia";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/CandyBar/ResourceBundle-CandyIcons-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/BasalGifglia/ResourceBundle-BasalGifglia-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = CandyIcons;
+				PRODUCT_NAME = BasalGifglia;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
+			name = Release;
+		};
+		6701A9E7F4AEA975BCB1EDC5DCA8DB7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45F4967D0C20E4E383472459F3A57781 /* BasalGifglia.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BasalGifglia/BasalGifglia-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BasalGifglia/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BasalGifglia/BasalGifglia.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BasalGifglia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6C30209F51A7DDFFC77404BC35702BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD919FC2849C106086A86BF9F740190A /* DopamineKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DopamineKit/DopamineKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DopamineKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DopamineKit/DopamineKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DopamineKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		88CB0E4BE52B8547CB484A9FE132B2C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45F4967D0C20E4E383472459F3A57781 /* BasalGifglia.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BasalGifglia/BasalGifglia-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BasalGifglia/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BasalGifglia/BasalGifglia.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BasalGifglia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
 			name = Debug;
 		};
-		2F6DA703ED80AB6CD9754B728D549EAB /* Debug */ = {
+		941BE8ACC415197CD4FB13E16A7D7E83 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB4AE06935B67A2DF587D5B662398F75 /* DopamineKit.xcconfig */;
+			baseConfigurationReference = CD919FC2849C106086A86BF9F740190A /* DopamineKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -792,92 +770,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		61193096D8FF315BD47F02D052C405B0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79BBE8065BF2833506ADE81FD03AB176 /* CandyBar.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CandyBar";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/CandyBar/ResourceBundle-CandyIcons-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = CandyIcons;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		63680E2F97683553B1D04C61F628CAC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02477907A4167D9164DD79626DD9C757 /* SQLite.swift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SQLite.swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SQLite;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7C55DEB57E13D6DCBD6CB54C73DFD48A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECC275C701D700D63B0A2788F10674F6 /* Pods-To Do List.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-To Do List/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-To Do List/Pods-To Do List.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_To_Do_List;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -968,80 +861,32 @@
 			};
 			name = Debug;
 		};
-		C6987D8D887EACDB41D945004C9317B9 /* Debug */ = {
+		BCFB3F085A01107B8C882C8DBD6E920F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02477907A4167D9164DD79626DD9C757 /* SQLite.swift.xcconfig */;
+			baseConfigurationReference = 45F4967D0C20E4E383472459F3A57781 /* BasalGifglia.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BasalGifglia";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/BasalGifglia/ResourceBundle-BasalGifglia-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = BasalGifglia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		F64D3EF88F91B86E54A00E835A5348CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECC275C701D700D63B0A2788F10674F6 /* Pods-To Do List.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SQLite.swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SQLite;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C88ACBB3B22FA38099CE9752BB455268 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB4AE06935B67A2DF587D5B662398F75 /* DopamineKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DopamineKit/DopamineKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DopamineKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DopamineKit/DopamineKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = DopamineKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CC8DD713B6D2E7539F370A1C108B7DAE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FEB1D5BECE81E587DEF6408541B1F97 /* Pods-To Do List.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1054,7 +899,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-To Do List/Pods-To Do List.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1062,39 +907,7 @@
 				PRODUCT_NAME = Pods_To_Do_List;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FE03579586DD714A4730D1520B32A242 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79BBE8065BF2833506ADE81FD03AB176 /* CandyBar.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CandyBar/CandyBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CandyBar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CandyBar/CandyBar.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = CandyBar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1104,15 +917,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11D9E59E464868E361D1BFA94C601B4B /* Build configuration list for PBXNativeTarget "CandyBar" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FE03579586DD714A4730D1520B32A242 /* Debug */,
-				200D809FF856AE273E66C082D885DFF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1122,38 +926,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45BEC6C6C2AA412356FC72ED4AC38B93 /* Build configuration list for PBXNativeTarget "DopamineKit" */ = {
+		78F399EE37B76C9164DDC74050AF84F6 /* Build configuration list for PBXNativeTarget "Pods-To Do List" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F6DA703ED80AB6CD9754B728D549EAB /* Debug */,
-				C88ACBB3B22FA38099CE9752BB455268 /* Release */,
+				F64D3EF88F91B86E54A00E835A5348CC /* Debug */,
+				223D6D9F6784982CCFC5B7B4B69E822E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A553506339FD4C1380A41B4525375536 /* Build configuration list for PBXNativeTarget "SQLite.swift" */ = {
+		7DA2D0D6C1A9E7A641B0C28FF926689D /* Build configuration list for PBXNativeTarget "DopamineKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C6987D8D887EACDB41D945004C9317B9 /* Debug */,
-				63680E2F97683553B1D04C61F628CAC4 /* Release */,
+				941BE8ACC415197CD4FB13E16A7D7E83 /* Debug */,
+				6C30209F51A7DDFFC77404BC35702BED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5D9ECCB43FC8BFFE45132D10355068B /* Build configuration list for PBXNativeTarget "Pods-To Do List" */ = {
+		8004DBB6695D1DCAFC0855202E5A74C7 /* Build configuration list for PBXNativeTarget "BasalGifglia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7C55DEB57E13D6DCBD6CB54C73DFD48A /* Debug */,
-				CC8DD713B6D2E7539F370A1C108B7DAE /* Release */,
+				88CB0E4BE52B8547CB484A9FE132B2C0 /* Debug */,
+				6701A9E7F4AEA975BCB1EDC5DCA8DB7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6373D2E94606647FFA7F38CBDE334A3 /* Build configuration list for PBXNativeTarget "CandyBar-CandyIcons" */ = {
+		C3ECD4FE87D2EE3902F611C359366AE0 /* Build configuration list for PBXNativeTarget "BasalGifglia-BasalGifglia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F5CC49777A2784100B9CDAC075FC48D /* Debug */,
-				61193096D8FF315BD47F02D052C405B0 /* Release */,
+				BCFB3F085A01107B8C882C8DBD6E920F /* Debug */,
+				2BCF0F20440031C82A7D66F7C237D0CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
