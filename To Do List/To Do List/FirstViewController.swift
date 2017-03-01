@@ -21,6 +21,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        
+        if (tableView.numberOfRows(inSection: 0) == 0) {
+            taskManager.addDemo()
+        }
     }
     
     
@@ -33,12 +37,18 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func taskItemDeleted(_ taskItem: Task) {
         if let index = taskManager.tasks.index(of: taskItem){
-            taskManager.tasks.remove(at: index)
+            taskManager.removeTask(at: index)
             
             tableView.beginUpdates()
             let indexPathForRow = IndexPath(item: index, section: 0)
             tableView.deleteRows(at: [indexPathForRow], with: .left)
             tableView.endUpdates()
+            if (taskManager.tasks.count == 0) {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
+                    taskManager.addDemo()
+                    self.tableView.reloadData()
+                }
+            }
         }
     }
     
