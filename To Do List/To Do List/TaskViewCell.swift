@@ -95,10 +95,10 @@ class TaskViewCell: UITableViewCell {
             let translation = recognizer.translation(in: self)
             center = CGPoint(x: originalCenter.x + translation.x, y: originalCenter.y)
             // has the user dragged the item far enough to initiate a delete/complete?
-            deleteOnDragRelease = frame.origin.x < -frame.size.width / 2.0
+            deleteOnDragRelease = frame.origin.x < -frame.size.width / 4.0
             
             // fade context cues
-            let cueAlpha = fabs(frame.origin.x) / (frame.size.width / 2.0)
+            let cueAlpha = fabs(frame.origin.x) / (frame.size.width / 4.0)
             tickLabel.alpha = cueAlpha
             if(deleteOnDragRelease){
                 tickLabel.textColor = dopeGreen
@@ -131,18 +131,17 @@ class TaskViewCell: UITableViewCell {
                             
                             switch(reinforcement){
                             case "thumbsUp" :
-                                self.delegate?.presentReward()
-                                
+                                fallthrough
                             case "stars" :
-                                self.delegate?.presentReward()
-                                
+                                fallthrough
                             case "medalStar" :
                                 self.delegate?.presentReward()
-                                
+                                NSLog("DopamineKit - Show reward!")
                             case "neutralResponse" :
                                 fallthrough
                             default:
                                 // Show nothing! This is called a neutral response, and builds up the good feelings for the next surprise!
+                                NSLog("DopamineKit - No reward this time.")
                                 return
                             }
                         })
