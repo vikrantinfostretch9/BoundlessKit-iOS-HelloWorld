@@ -7,136 +7,454 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F55CBBE7DD36DB986C1B1B254A275C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		45F07B92669C5099962E99678B9FCFA1 /* Pods-To Do List-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC05E0C7E3935D87F1C2FFC91896232B /* Pods-To Do List-dummy.m */; };
+		07CA45A98C1190BB99573E48BCB0B9A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		09D0A10D38DB61CAAEF303E58BC04E4F /* Gifglia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E963617D019BBA99FE26F5504C654CFB /* Gifglia.swift */; };
+		0CAB98336581568C55A7EDFF12A53CA4 /* UIGifgliaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68475259ED28B448AD141517ACAE1A12 /* UIGifgliaViewController.swift */; };
+		0ED42BA32A0BB9E9182788FCAE13E998 /* frolicking jerry.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5751EC358EFB665E93864CEDA480545B /* frolicking jerry.gif */; };
+		18CAD6DB8A2DEEDD8A5CFA645BC823D9 /* Pods-To Do List-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD32FFA695456A8E2A1C7D792F6AAB0E /* Pods-To Do List-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23C34A36F0CB337CB4B082AE6170CE81 /* jazzed jonah.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1C32E21F6535A14DA78C1403A96D6655 /* jazzed jonah.gif */; };
+		25ABDC5DC906BF99222964F4F108A302 /* DopamineKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 54786F818E56E088BD00F5DB851ED8D2 /* DopamineKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		274AE6C9B3CF6A986CF37774ABC95351 /* DopeException.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF75167095D7E5C0C355556337110120 /* DopeException.swift */; };
+		2CAD486FEA2F7F4626379776F01A820F /* SyncOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0A455CE252208AA59BD3A21FDF54CD /* SyncOverview.swift */; };
+		2F75D85E09938D3E5D29B2A065B13793 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10E6B49E6848683B4D9743C287EF6F /* Report.swift */; };
+		3B90F4CF11F0E52A12F6D13AFC47D23F /* retro rocking.gif in Resources */ = {isa = PBXBuildFile; fileRef = FE2B4A8CB83F9C03C63A2E4291EA257B /* retro rocking.gif */; };
+		40284BF6E0D7F958F7279AEFFFEB08E2 /* UIGifgliaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F48E576DEC848A9A6821DD9CAE69A1 /* UIGifgliaView.swift */; };
+		454BA62BE11136015A6DED0D46ED7AF4 /* good mood minions.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4270B6B9DA3EBA0E1795E28982F060C4 /* good mood minions.gif */; };
+		4AB46740510318CDD09F3474456BC9FF /* BasalGifglia-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7CC01573795782EF7F380A0F6E0F67 /* BasalGifglia-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55EF91C766D33446441DFAD565C00EB2 /* backflip bunny.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5379722B891E6DBDBA7B349D83A2A46 /* backflip bunny.gif */; };
+		5645B5677DBD9929BCA2CC051065862A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		5F7B7365F40C9645D7C1286BDCBCBB45 /* winking robin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D1CF3B6B0BFAB233F9E59587BECA057 /* winking robin.gif */; };
+		6426FF0F87086886E3474577A4AE730F /* community high five.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F3AC336590A40D01FB579BDEAE5D41F /* community high five.gif */; };
+		67BC9BBBB37E0012D0F54EA6E7B2C7AC /* woah.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7CAA148B9454443EF53853AF0B019862 /* woah.gif */; };
+		6863339A153D17781141641599DF3CC9 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52271247AB016629D0D25FE1279C043B /* Track.swift */; };
+		705E02CF7CCD01037D3BBC7AD5CF14B6 /* dancing babies.gif in Resources */ = {isa = PBXBuildFile; fileRef = C48C6227B7C73DF2BF0D89C45EA49506 /* dancing babies.gif */; };
+		74DFCE6CFBFBF51DC65F7B72D0BF126D /* yay bowie.gif in Resources */ = {isa = PBXBuildFile; fileRef = 29EAB5DF5EF0A58CE299FBD9A72B5ACB /* yay bowie.gif */; };
+		77BABE9C90EC0E924986F00ADAF8D919 /* Cartridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2E79A8EEC0AC58C9E4F92F8DF24D0E /* Cartridge.swift */; };
+		7D028AFB720F1F83B48DCEC1CDB31B0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		7E7DD75259BC6203C8AED799DD282463 /* DopeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ED9812A0EAA8ECDE995CCB22CFD778 /* DopeAction.swift */; };
+		7E992D22F4D7C1AEB8FF8E89C155D7A5 /* DopamineKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7617BE73F5B8721D37DCAA25ADF228 /* DopamineKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		808776C5B431D3999703CA92BB2C868C /* Pods-To Do List-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7437B35919438F2D46D165E4032AD45 /* Pods-To Do List-dummy.m */; };
+		82A8A9C03969C7F5FC477B1FD56C3C18 /* DopamineAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2A29EA177390B6258B1B5DD572A2B /* DopamineAPI.swift */; };
+		899B46F8B2E4A3DB35B2F43D8D110D59 /* baloo bop.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1E283E2C61C0A695BD9E1A41070028D1 /* baloo bop.gif */; };
+		9899A739C587DED28DA866BADE440431 /* close button.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CF2F154CA43DA7F71B0CD310871EC0 /* close button.png */; };
+		9DC9335AA6BF839D380AC2FC9BA23A12 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */; };
+		A37C4F629C683E0F7A2DA44E294B1788 /* ecstatic austrian.gif in Resources */ = {isa = PBXBuildFile; fileRef = FDEB68B8542801077232712AD28E5CE0 /* ecstatic austrian.gif */; };
+		A42AB5F929AD4F5934145B0D06183671 /* upbeat barney.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1CD0272B33E1A67C06E949EA92D66134 /* upbeat barney.gif */; };
+		A4886946F2A1FFF2C88D6A237ED562CF /* cheerful cub.gif in Resources */ = {isa = PBXBuildFile; fileRef = 35EA0F884BF61C6662F80ECD8B0BBC72 /* cheerful cub.gif */; };
+		AB70B206517A301192EF09DCB74ECCF1 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D93D59D6DE5A33064ABFF2C0CC5515 /* UIImage+Gif.swift */; };
+		ABC78F0EA7F230F9DDB4829C6FF041E1 /* shaq and kitty shimmy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6CA2CF82DACA6C90FF7DE1120C973A6E /* shaq and kitty shimmy.gif */; };
+		B3C8518AF01FCD194D538447E8EDA8BC /* BasalGifglia-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A49D4A951F6566977266A8D6E594206 /* BasalGifglia-dummy.m */; };
+		B865A3336C91FACFD106DCECA025ADAC /* Telemetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE456F361BC288D4BDD06FA83191980 /* Telemetry.swift */; };
+		C7397D0803427C41C9B3D07AE3D2C7A9 /* fist pumping pitt.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70EBE2D1F9C830B83C61CEE96CAD9747 /* fist pumping pitt.gif */; };
+		C841C90EFE3D1215134B253B33B05A94 /* SyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF92747F2DAEF71F7FEECC4C50C2742 /* SyncCoordinator.swift */; };
+		D986D5EF6948D41AC4B588E4629AE89C /* patrick the patron.gif in Resources */ = {isa = PBXBuildFile; fileRef = 076BD871830F8628BA32F52D83BEBDBF /* patrick the patron.gif */; };
+		DEC5AA1B910868CCF23E1EFCB085E74B /* BasalGifglia.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 55B794B657366A2C356C9AEC97E62993 /* BasalGifglia.bundle */; };
+		E2714CE871A61B30632174AB87800301 /* carlton dance.gif in Resources */ = {isa = PBXBuildFile; fileRef = B6C699AAAC29CB1963E08FACB87ED102 /* carlton dance.gif */; };
+		E2C77FDCDF9EFB3F34CD144B87DC45AB /* DopamineKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB091292A3A80FAF15777746090104 /* DopamineKit.swift */; };
+		EBED7180E4AA3FA2B007C6C8CBEA3F4E /* DopamineKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EED1BC5B2630A03A6562A8A332C8189E /* DopamineKit-dummy.m */; };
+		EEAAF501DCA2BF93BCC07BAA3AD858C1 /* pug belly rub.gif in Resources */ = {isa = PBXBuildFile; fileRef = F60D127E347253981FB5EF9AD7E163BB /* pug belly rub.gif */; };
+		F49A19F4B452DD226D904110FE36BF4F /* krazy kermit.gif in Resources */ = {isa = PBXBuildFile; fileRef = AE0E31B956029B7CDE6BB3DADFF68716 /* krazy kermit.gif */; };
+		F866D041125CA9326059B09309AA2189 /* picard slow clap.gif in Resources */ = {isa = PBXBuildFile; fileRef = AA63E3F54B6597F1612F6965E4681F7F /* picard slow clap.gif */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		39C8463F511259117DBA84DBA690174C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52EF694F44AAA86F61F5CEB0F37B0AF4;
+			remoteInfo = DopamineKit;
+		};
+		517AF09F43DBB96565BCDE6866BC0AA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C15CEC2342FD902A6FCAC1D3F055EE44;
+			remoteInfo = "BasalGifglia-BasalGifglia";
+		};
+		E6E5895FB31F425235932188F0969DAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA1267442E2AFCD55F290AE104A0782F;
+			remoteInfo = BasalGifglia;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		3A174ED7C713B6EB17ACA4623609D3D0 /* DopamineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DopamineKit.framework; path = DopamineKit/Frameworks/DopamineKit.framework; sourceTree = "<group>"; };
-		74F2C25C7FC8959F0F5ED3C1D63AD96C /* Pods-To Do List-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To Do List-resources.sh"; sourceTree = "<group>"; };
-		88B4016C1BA4C604F0469DCE174199AF /* Pods-To Do List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To Do List.debug.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B44ED7A83F702EE9F62C8AB677DBBFA0 /* Pods-To Do List-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-To Do List-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D1876DAEA2912253B8AD3183E49A901A /* Pods-To Do List-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-To Do List-acknowledgements.plist"; sourceTree = "<group>"; };
-		D4D81BD164BF3F33D059F515A18DE00E /* libPods-To Do List.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-To Do List.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC05E0C7E3935D87F1C2FFC91896232B /* Pods-To Do List-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-To Do List-dummy.m"; sourceTree = "<group>"; };
-		EFC4353A6FEFF06A6896CC9CA62BD3CF /* Pods-To Do List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To Do List.release.xcconfig"; sourceTree = "<group>"; };
-		FFC3B63411566BDE4168F6427065740B /* Pods-To Do List-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To Do List-frameworks.sh"; sourceTree = "<group>"; };
+		076BD871830F8628BA32F52D83BEBDBF /* patrick the patron.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "patrick the patron.gif"; path = "BasalGifglia/Assets/patrick the patron.gif"; sourceTree = "<group>"; };
+		1C32E21F6535A14DA78C1403A96D6655 /* jazzed jonah.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "jazzed jonah.gif"; path = "BasalGifglia/Assets/jazzed jonah.gif"; sourceTree = "<group>"; };
+		1CD0272B33E1A67C06E949EA92D66134 /* upbeat barney.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "upbeat barney.gif"; path = "BasalGifglia/Assets/upbeat barney.gif"; sourceTree = "<group>"; };
+		1E283E2C61C0A695BD9E1A41070028D1 /* baloo bop.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "baloo bop.gif"; path = "BasalGifglia/Assets/baloo bop.gif"; sourceTree = "<group>"; };
+		21F48E576DEC848A9A6821DD9CAE69A1 /* UIGifgliaView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIGifgliaView.swift; path = BasalGifglia/Classes/UIGifgliaView.swift; sourceTree = "<group>"; };
+		29EAB5DF5EF0A58CE299FBD9A72B5ACB /* yay bowie.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "yay bowie.gif"; path = "BasalGifglia/Assets/yay bowie.gif"; sourceTree = "<group>"; };
+		2F3AC336590A40D01FB579BDEAE5D41F /* community high five.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "community high five.gif"; path = "BasalGifglia/Assets/community high five.gif"; sourceTree = "<group>"; };
+		2F7617BE73F5B8721D37DCAA25ADF228 /* DopamineKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DopamineKit-umbrella.h"; sourceTree = "<group>"; };
+		33F75703557DCE1C1BF6BFCC5873165A /* Pods-To Do List-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-To Do List-acknowledgements.plist"; sourceTree = "<group>"; };
+		35EA0F884BF61C6662F80ECD8B0BBC72 /* cheerful cub.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "cheerful cub.gif"; path = "BasalGifglia/Assets/cheerful cub.gif"; sourceTree = "<group>"; };
+		3DF92747F2DAEF71F7FEECC4C50C2742 /* SyncCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SyncCoordinator.swift; path = Sources/Synchronization/SyncCoordinator.swift; sourceTree = "<group>"; };
+		4270B6B9DA3EBA0E1795E28982F060C4 /* good mood minions.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "good mood minions.gif"; path = "BasalGifglia/Assets/good mood minions.gif"; sourceTree = "<group>"; };
+		45F4967D0C20E4E383472459F3A57781 /* BasalGifglia.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BasalGifglia.xcconfig; sourceTree = "<group>"; };
+		46E9DF84258F4AE08E488B89E25A8F63 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		472BE35A55494269667AFF09FBCBC5AA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CCB091292A3A80FAF15777746090104 /* DopamineKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopamineKit.swift; path = Sources/DopamineKit.swift; sourceTree = "<group>"; };
+		52271247AB016629D0D25FE1279C043B /* Track.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Track.swift; path = Sources/Synchronization/Track.swift; sourceTree = "<group>"; };
+		52FB6866EEB4EA3CA17DF6A1EF451225 /* Pods-To Do List-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To Do List-resources.sh"; sourceTree = "<group>"; };
+		54786F818E56E088BD00F5DB851ED8D2 /* DopamineKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DopamineKit.h; path = Sources/DopamineKit.h; sourceTree = "<group>"; };
+		55B794B657366A2C356C9AEC97E62993 /* BasalGifglia.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BasalGifglia.bundle; path = BasalGifglia.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5751EC358EFB665E93864CEDA480545B /* frolicking jerry.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "frolicking jerry.gif"; path = "BasalGifglia/Assets/frolicking jerry.gif"; sourceTree = "<group>"; };
+		5E7CC01573795782EF7F380A0F6E0F67 /* BasalGifglia-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BasalGifglia-umbrella.h"; sourceTree = "<group>"; };
+		5FE2A29EA177390B6258B1B5DD572A2B /* DopamineAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopamineAPI.swift; path = Sources/RESTfulAPI/DopamineAPI.swift; sourceTree = "<group>"; };
+		675B3998812FC344802FAEACAE2A7B3E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68475259ED28B448AD141517ACAE1A12 /* UIGifgliaViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIGifgliaViewController.swift; path = BasalGifglia/Classes/UIGifgliaViewController.swift; sourceTree = "<group>"; };
+		68ED9812A0EAA8ECDE995CCB22CFD778 /* DopeAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopeAction.swift; path = Sources/Synchronization/DopeAction.swift; sourceTree = "<group>"; };
+		6A47F0858AE97A1664851A18EC6287C0 /* DopamineKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DopamineKit.modulemap; sourceTree = "<group>"; };
+		6A49D4A951F6566977266A8D6E594206 /* BasalGifglia-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BasalGifglia-dummy.m"; sourceTree = "<group>"; };
+		6CA2CF82DACA6C90FF7DE1120C973A6E /* shaq and kitty shimmy.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "shaq and kitty shimmy.gif"; path = "BasalGifglia/Assets/shaq and kitty shimmy.gif"; sourceTree = "<group>"; };
+		6D1CF3B6B0BFAB233F9E59587BECA057 /* winking robin.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "winking robin.gif"; path = "BasalGifglia/Assets/winking robin.gif"; sourceTree = "<group>"; };
+		6FEB1D5BECE81E587DEF6408541B1F97 /* Pods-To Do List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To Do List.release.xcconfig"; sourceTree = "<group>"; };
+		70EBE2D1F9C830B83C61CEE96CAD9747 /* fist pumping pitt.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "fist pumping pitt.gif"; path = "BasalGifglia/Assets/fist pumping pitt.gif"; sourceTree = "<group>"; };
+		72FE740230D4164611C79828636B7207 /* Pods-To Do List-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-To Do List-frameworks.sh"; sourceTree = "<group>"; };
+		7CAA148B9454443EF53853AF0B019862 /* woah.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = woah.gif; path = BasalGifglia/Assets/woah.gif; sourceTree = "<group>"; };
+		7E213872995BAA2DE9389AE2020480AC /* Pods-To Do List-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-To Do List-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7F10E6B49E6848683B4D9743C287EF6F /* Report.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Report.swift; path = Sources/Synchronization/Report.swift; sourceTree = "<group>"; };
+		84CF2F154CA43DA7F71B0CD310871EC0 /* close button.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "close button.png"; path = "BasalGifglia/Assets/close button.png"; sourceTree = "<group>"; };
+		8C0A455CE252208AA59BD3A21FDF54CD /* SyncOverview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SyncOverview.swift; path = Sources/Synchronization/SyncOverview.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FE456F361BC288D4BDD06FA83191980 /* Telemetry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Telemetry.swift; path = Sources/Synchronization/Telemetry.swift; sourceTree = "<group>"; };
+		A5379722B891E6DBDBA7B349D83A2A46 /* backflip bunny.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "backflip bunny.gif"; path = "BasalGifglia/Assets/backflip bunny.gif"; sourceTree = "<group>"; };
+		A7437B35919438F2D46D165E4032AD45 /* Pods-To Do List-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-To Do List-dummy.m"; sourceTree = "<group>"; };
+		AA63E3F54B6597F1612F6965E4681F7F /* picard slow clap.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "picard slow clap.gif"; path = "BasalGifglia/Assets/picard slow clap.gif"; sourceTree = "<group>"; };
+		AE0E31B956029B7CDE6BB3DADFF68716 /* krazy kermit.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "krazy kermit.gif"; path = "BasalGifglia/Assets/krazy kermit.gif"; sourceTree = "<group>"; };
+		B6C699AAAC29CB1963E08FACB87ED102 /* carlton dance.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "carlton dance.gif"; path = "BasalGifglia/Assets/carlton dance.gif"; sourceTree = "<group>"; };
+		BD32FFA695456A8E2A1C7D792F6AAB0E /* Pods-To Do List-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-To Do List-umbrella.h"; sourceTree = "<group>"; };
+		C48C6227B7C73DF2BF0D89C45EA49506 /* dancing babies.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "dancing babies.gif"; path = "BasalGifglia/Assets/dancing babies.gif"; sourceTree = "<group>"; };
+		C8C951FDD94D222104559EC8F221895F /* DopamineKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DopamineKit.framework; path = DopamineKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD919FC2849C106086A86BF9F740190A /* DopamineKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DopamineKit.xcconfig; sourceTree = "<group>"; };
+		D494947C1B9E59E6AEAD2FF720B01AD2 /* Pods-To Do List.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-To Do List.modulemap"; sourceTree = "<group>"; };
+		D9D7E3E3CFADB3919584986FCE7E6B69 /* DopamineKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DopamineKit-prefix.pch"; sourceTree = "<group>"; };
+		DB92976D313256E46417A4A7641542C1 /* ResourceBundle-BasalGifglia-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BasalGifglia-Info.plist"; sourceTree = "<group>"; };
+		DC2E79A8EEC0AC58C9E4F92F8DF24D0E /* Cartridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cartridge.swift; path = Sources/Synchronization/Cartridge.swift; sourceTree = "<group>"; };
+		DCD974D668005078F21317C13889034F /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_To_Do_List.framework; path = "Pods-To Do List.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0D93D59D6DE5A33064ABFF2C0CC5515 /* UIImage+Gif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "BasalGifglia/Classes/UIImage+Gif.swift"; sourceTree = "<group>"; };
+		E5118F8D8BE96438154E021A6944E5DC /* BasalGifglia.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BasalGifglia.modulemap; sourceTree = "<group>"; };
+		E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		E914A8DDAC64F991ADD97B36F8EE3DEF /* BasalGifglia-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BasalGifglia-prefix.pch"; sourceTree = "<group>"; };
+		E963617D019BBA99FE26F5504C654CFB /* Gifglia.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gifglia.swift; path = BasalGifglia/Classes/Gifglia.swift; sourceTree = "<group>"; };
+		EC9C87CB3462CA91CC3B760BB93434AC /* BasalGifglia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BasalGifglia.framework; path = BasalGifglia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC275C701D700D63B0A2788F10674F6 /* Pods-To Do List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-To Do List.debug.xcconfig"; sourceTree = "<group>"; };
+		EED1BC5B2630A03A6562A8A332C8189E /* DopamineKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DopamineKit-dummy.m"; sourceTree = "<group>"; };
+		EF75167095D7E5C0C355556337110120 /* DopeException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DopeException.swift; path = Sources/Synchronization/DopeException.swift; sourceTree = "<group>"; };
+		F60D127E347253981FB5EF9AD7E163BB /* pug belly rub.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "pug belly rub.gif"; path = "BasalGifglia/Assets/pug belly rub.gif"; sourceTree = "<group>"; };
+		FDEB68B8542801077232712AD28E5CE0 /* ecstatic austrian.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "ecstatic austrian.gif"; path = "BasalGifglia/Assets/ecstatic austrian.gif"; sourceTree = "<group>"; };
+		FE2B4A8CB83F9C03C63A2E4291EA257B /* retro rocking.gif */ = {isa = PBXFileReference; includeInIndex = 1; name = "retro rocking.gif"; path = "BasalGifglia/Assets/retro rocking.gif"; sourceTree = "<group>"; };
+		FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		885F191D60861D671D83060C413FE9C4 /* Frameworks */ = {
+		2D14DCF67D4FA5A4C6FF1AE069372C9E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F55CBBE7DD36DB986C1B1B254A275C1 /* Foundation.framework in Frameworks */,
+				07CA45A98C1190BB99573E48BCB0B9A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D624EF6EAB9F79A9B9F5818AC1A227A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		929656F0CB0FDB388DF6CFDD0A6C8E09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D028AFB720F1F83B48DCEC1CDB31B0C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A546660E17A51AFE99BF981F806830 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DC9335AA6BF839D380AC2FC9BA23A12 /* CoreData.framework in Frameworks */,
+				5645B5677DBD9929BCA2CC051065862A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+		18C31505F53BCD0CB0F85AB659963013 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+				E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */,
+				FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		3FAF79FE75B246C86AD985C9E3777A1F /* Targets Support Files */ = {
+		2DBDB333CDD2C479DEC1674316A0851C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFD96E6C48294509507D905D61007C48 /* Pods-To Do List */,
+				55B794B657366A2C356C9AEC97E62993 /* BasalGifglia.bundle */,
+				EC9C87CB3462CA91CC3B760BB93434AC /* BasalGifglia.framework */,
+				C8C951FDD94D222104559EC8F221895F /* DopamineKit.framework */,
+				DCD974D668005078F21317C13889034F /* Pods_To_Do_List.framework */,
 			);
-			name = "Targets Support Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		6EFDC418EB399E3C18921961167E0A09 /* Pods */ = {
+		3E96CFF0B90FD2CF390DE0AF0213015F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E235C8C98A386483832DA566757205EF /* DopamineKit */,
+				4A8773858DAF2A07F0A5533F5B37AC1C /* BasalGifglia */,
+				56BBD1D9C290C5989FFDF54ED385B61B /* DopamineKit */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18C31505F53BCD0CB0F85AB659963013 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		458E7B870134D05FD30E08634BCCD653 /* Pods-To Do List */ = {
+			isa = PBXGroup;
+			children = (
+				472BE35A55494269667AFF09FBCBC5AA /* Info.plist */,
+				D494947C1B9E59E6AEAD2FF720B01AD2 /* Pods-To Do List.modulemap */,
+				7E213872995BAA2DE9389AE2020480AC /* Pods-To Do List-acknowledgements.markdown */,
+				33F75703557DCE1C1BF6BFCC5873165A /* Pods-To Do List-acknowledgements.plist */,
+				A7437B35919438F2D46D165E4032AD45 /* Pods-To Do List-dummy.m */,
+				72FE740230D4164611C79828636B7207 /* Pods-To Do List-frameworks.sh */,
+				52FB6866EEB4EA3CA17DF6A1EF451225 /* Pods-To Do List-resources.sh */,
+				BD32FFA695456A8E2A1C7D792F6AAB0E /* Pods-To Do List-umbrella.h */,
+				ECC275C701D700D63B0A2788F10674F6 /* Pods-To Do List.debug.xcconfig */,
+				6FEB1D5BECE81E587DEF6408541B1F97 /* Pods-To Do List.release.xcconfig */,
+			);
+			name = "Pods-To Do List";
+			path = "Target Support Files/Pods-To Do List";
+			sourceTree = "<group>";
+		};
+		4A8773858DAF2A07F0A5533F5B37AC1C /* BasalGifglia */ = {
+			isa = PBXGroup;
+			children = (
+				E963617D019BBA99FE26F5504C654CFB /* Gifglia.swift */,
+				21F48E576DEC848A9A6821DD9CAE69A1 /* UIGifgliaView.swift */,
+				68475259ED28B448AD141517ACAE1A12 /* UIGifgliaViewController.swift */,
+				E0D93D59D6DE5A33064ABFF2C0CC5515 /* UIImage+Gif.swift */,
+				C681DBD46770B01F4F005463AE8ACCFD /* Resources */,
+				BCA9810AC8AF85569771D2D18DC05E9A /* Support Files */,
+			);
+			name = BasalGifglia;
+			path = BasalGifglia;
+			sourceTree = "<group>";
+		};
+		56BBD1D9C290C5989FFDF54ED385B61B /* DopamineKit */ = {
+			isa = PBXGroup;
+			children = (
+				DC2E79A8EEC0AC58C9E4F92F8DF24D0E /* Cartridge.swift */,
+				5FE2A29EA177390B6258B1B5DD572A2B /* DopamineAPI.swift */,
+				54786F818E56E088BD00F5DB851ED8D2 /* DopamineKit.h */,
+				4CCB091292A3A80FAF15777746090104 /* DopamineKit.swift */,
+				68ED9812A0EAA8ECDE995CCB22CFD778 /* DopeAction.swift */,
+				EF75167095D7E5C0C355556337110120 /* DopeException.swift */,
+				7F10E6B49E6848683B4D9743C287EF6F /* Report.swift */,
+				3DF92747F2DAEF71F7FEECC4C50C2742 /* SyncCoordinator.swift */,
+				8C0A455CE252208AA59BD3A21FDF54CD /* SyncOverview.swift */,
+				9FE456F361BC288D4BDD06FA83191980 /* Telemetry.swift */,
+				52271247AB016629D0D25FE1279C043B /* Track.swift */,
+				BD5083DC54C7C942CF5BABBBE855F466 /* Support Files */,
+			);
+			name = DopamineKit;
+			path = DopamineKit;
+			sourceTree = "<group>";
+		};
+		6486498A44D92FC460538EB44F978172 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				458E7B870134D05FD30E08634BCCD653 /* Pods-To Do List */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6EFDC418EB399E3C18921961167E0A09 /* Pods */,
-				E9C73BFFE1F46200792F2AB13D6A0E47 /* Products */,
-				3FAF79FE75B246C86AD985C9E3777A1F /* Targets Support Files */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				3E96CFF0B90FD2CF390DE0AF0213015F /* Pods */,
+				2DBDB333CDD2C479DEC1674316A0851C /* Products */,
+				6486498A44D92FC460538EB44F978172 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		BCA9810AC8AF85569771D2D18DC05E9A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				E5118F8D8BE96438154E021A6944E5DC /* BasalGifglia.modulemap */,
+				45F4967D0C20E4E383472459F3A57781 /* BasalGifglia.xcconfig */,
+				6A49D4A951F6566977266A8D6E594206 /* BasalGifglia-dummy.m */,
+				E914A8DDAC64F991ADD97B36F8EE3DEF /* BasalGifglia-prefix.pch */,
+				5E7CC01573795782EF7F380A0F6E0F67 /* BasalGifglia-umbrella.h */,
+				46E9DF84258F4AE08E488B89E25A8F63 /* Info.plist */,
+				DB92976D313256E46417A4A7641542C1 /* ResourceBundle-BasalGifglia-Info.plist */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/BasalGifglia";
 			sourceTree = "<group>";
 		};
-		CFFF4A8D2C01ED2892FCBDC65506E0EF /* Frameworks */ = {
+		BD5083DC54C7C942CF5BABBBE855F466 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3A174ED7C713B6EB17ACA4623609D3D0 /* DopamineKit.framework */,
+				6A47F0858AE97A1664851A18EC6287C0 /* DopamineKit.modulemap */,
+				CD919FC2849C106086A86BF9F740190A /* DopamineKit.xcconfig */,
+				EED1BC5B2630A03A6562A8A332C8189E /* DopamineKit-dummy.m */,
+				D9D7E3E3CFADB3919584986FCE7E6B69 /* DopamineKit-prefix.pch */,
+				2F7617BE73F5B8721D37DCAA25ADF228 /* DopamineKit-umbrella.h */,
+				675B3998812FC344802FAEACAE2A7B3E /* Info.plist */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/DopamineKit";
 			sourceTree = "<group>";
 		};
-		DFD96E6C48294509507D905D61007C48 /* Pods-To Do List */ = {
+		C681DBD46770B01F4F005463AE8ACCFD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B44ED7A83F702EE9F62C8AB677DBBFA0 /* Pods-To Do List-acknowledgements.markdown */,
-				D1876DAEA2912253B8AD3183E49A901A /* Pods-To Do List-acknowledgements.plist */,
-				EC05E0C7E3935D87F1C2FFC91896232B /* Pods-To Do List-dummy.m */,
-				FFC3B63411566BDE4168F6427065740B /* Pods-To Do List-frameworks.sh */,
-				74F2C25C7FC8959F0F5ED3C1D63AD96C /* Pods-To Do List-resources.sh */,
-				88B4016C1BA4C604F0469DCE174199AF /* Pods-To Do List.debug.xcconfig */,
-				EFC4353A6FEFF06A6896CC9CA62BD3CF /* Pods-To Do List.release.xcconfig */,
+				A5379722B891E6DBDBA7B349D83A2A46 /* backflip bunny.gif */,
+				1E283E2C61C0A695BD9E1A41070028D1 /* baloo bop.gif */,
+				B6C699AAAC29CB1963E08FACB87ED102 /* carlton dance.gif */,
+				35EA0F884BF61C6662F80ECD8B0BBC72 /* cheerful cub.gif */,
+				84CF2F154CA43DA7F71B0CD310871EC0 /* close button.png */,
+				2F3AC336590A40D01FB579BDEAE5D41F /* community high five.gif */,
+				C48C6227B7C73DF2BF0D89C45EA49506 /* dancing babies.gif */,
+				FDEB68B8542801077232712AD28E5CE0 /* ecstatic austrian.gif */,
+				70EBE2D1F9C830B83C61CEE96CAD9747 /* fist pumping pitt.gif */,
+				5751EC358EFB665E93864CEDA480545B /* frolicking jerry.gif */,
+				4270B6B9DA3EBA0E1795E28982F060C4 /* good mood minions.gif */,
+				1C32E21F6535A14DA78C1403A96D6655 /* jazzed jonah.gif */,
+				AE0E31B956029B7CDE6BB3DADFF68716 /* krazy kermit.gif */,
+				076BD871830F8628BA32F52D83BEBDBF /* patrick the patron.gif */,
+				AA63E3F54B6597F1612F6965E4681F7F /* picard slow clap.gif */,
+				F60D127E347253981FB5EF9AD7E163BB /* pug belly rub.gif */,
+				FE2B4A8CB83F9C03C63A2E4291EA257B /* retro rocking.gif */,
+				6CA2CF82DACA6C90FF7DE1120C973A6E /* shaq and kitty shimmy.gif */,
+				1CD0272B33E1A67C06E949EA92D66134 /* upbeat barney.gif */,
+				6D1CF3B6B0BFAB233F9E59587BECA057 /* winking robin.gif */,
+				7CAA148B9454443EF53853AF0B019862 /* woah.gif */,
+				29EAB5DF5EF0A58CE299FBD9A72B5ACB /* yay bowie.gif */,
 			);
-			name = "Pods-To Do List";
-			path = "Target Support Files/Pods-To Do List";
-			sourceTree = "<group>";
-		};
-		E235C8C98A386483832DA566757205EF /* DopamineKit */ = {
-			isa = PBXGroup;
-			children = (
-				CFFF4A8D2C01ED2892FCBDC65506E0EF /* Frameworks */,
-			);
-			path = DopamineKit;
-			sourceTree = "<group>";
-		};
-		E9C73BFFE1F46200792F2AB13D6A0E47 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D4D81BD164BF3F33D059F515A18DE00E /* libPods-To Do List.a */,
-			);
-			name = Products;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		570A310CA8AF85BD778AFF39E9078444 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E992D22F4D7C1AEB8FF8E89C155D7A5 /* DopamineKit-umbrella.h in Headers */,
+				25ABDC5DC906BF99222964F4F108A302 /* DopamineKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F7939D27F55E8430CEF6E2F6C6BCDCB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AB46740510318CDD09F3474456BC9FF /* BasalGifglia-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA277623DE53DE5D3AADD4EE624A6621 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18CAD6DB8A2DEEDD8A5CFA645BC823D9 /* Pods-To Do List-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		9B1D572F585C270EB347DB190E367B79 /* Pods-To Do List */ = {
+		52EF694F44AAA86F61F5CEB0F37B0AF4 /* DopamineKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA1F5A940C322A5BA8580024D090DA9F /* Build configuration list for PBXNativeTarget "Pods-To Do List" */;
+			buildConfigurationList = 7DA2D0D6C1A9E7A641B0C28FF926689D /* Build configuration list for PBXNativeTarget "DopamineKit" */;
 			buildPhases = (
-				04F42ED128671E376BAF6DB9F290F9EC /* Sources */,
-				885F191D60861D671D83060C413FE9C4 /* Frameworks */,
+				0406E14488A542D311DDF012F36170BD /* Sources */,
+				E7A546660E17A51AFE99BF981F806830 /* Frameworks */,
+				570A310CA8AF85BD778AFF39E9078444 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = DopamineKit;
+			productName = DopamineKit;
+			productReference = C8C951FDD94D222104559EC8F221895F /* DopamineKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		66CE43EFC8BF061AEBC82F4DE624A220 /* Pods-To Do List */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78F399EE37B76C9164DDC74050AF84F6 /* Build configuration list for PBXNativeTarget "Pods-To Do List" */;
+			buildPhases = (
+				8C92B7B7B205A1024094308421DE1EF4 /* Sources */,
+				2D14DCF67D4FA5A4C6FF1AE069372C9E /* Frameworks */,
+				DA277623DE53DE5D3AADD4EE624A6621 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F823FDD7762D2B7D14735A933BB9A599 /* PBXTargetDependency */,
+				5DC7BF5C7EA7C6BEA967C0BD1452F74C /* PBXTargetDependency */,
+			);
 			name = "Pods-To Do List";
 			productName = "Pods-To Do List";
-			productReference = D4D81BD164BF3F33D059F515A18DE00E /* libPods-To Do List.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = DCD974D668005078F21317C13889034F /* Pods_To_Do_List.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C15CEC2342FD902A6FCAC1D3F055EE44 /* BasalGifglia-BasalGifglia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3ECD4FE87D2EE3902F611C359366AE0 /* Build configuration list for PBXNativeTarget "BasalGifglia-BasalGifglia" */;
+			buildPhases = (
+				3B5C4D31859F3FB30C9E5E69B83CA92B /* Sources */,
+				3D624EF6EAB9F79A9B9F5818AC1A227A /* Frameworks */,
+				EA701BF72E676617E00C1DC1A662B1B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BasalGifglia-BasalGifglia";
+			productName = "BasalGifglia-BasalGifglia";
+			productReference = 55B794B657366A2C356C9AEC97E62993 /* BasalGifglia.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		FA1267442E2AFCD55F290AE104A0782F /* BasalGifglia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8004DBB6695D1DCAFC0855202E5A74C7 /* Build configuration list for PBXNativeTarget "BasalGifglia" */;
+			buildPhases = (
+				49BE384F6E183E418A85D9D63AECA606 /* Sources */,
+				929656F0CB0FDB388DF6CFDD0A6C8E09 /* Frameworks */,
+				5593C573AA6A103D4A6D63A934D40D95 /* Resources */,
+				8F7939D27F55E8430CEF6E2F6C6BCDCB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BB596AA1C746FC79DF28427A5CE4A48 /* PBXTargetDependency */,
+			);
+			name = BasalGifglia;
+			productName = BasalGifglia;
+			productReference = EC9C87CB3462CA91CC3B760BB93434AC /* BasalGifglia.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -155,49 +473,311 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = E9C73BFFE1F46200792F2AB13D6A0E47 /* Products */;
+			productRefGroup = 2DBDB333CDD2C479DEC1674316A0851C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B1D572F585C270EB347DB190E367B79 /* Pods-To Do List */,
+				FA1267442E2AFCD55F290AE104A0782F /* BasalGifglia */,
+				C15CEC2342FD902A6FCAC1D3F055EE44 /* BasalGifglia-BasalGifglia */,
+				52EF694F44AAA86F61F5CEB0F37B0AF4 /* DopamineKit */,
+				66CE43EFC8BF061AEBC82F4DE624A220 /* Pods-To Do List */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		5593C573AA6A103D4A6D63A934D40D95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC5AA1B910868CCF23E1EFCB085E74B /* BasalGifglia.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA701BF72E676617E00C1DC1A662B1B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55EF91C766D33446441DFAD565C00EB2 /* backflip bunny.gif in Resources */,
+				899B46F8B2E4A3DB35B2F43D8D110D59 /* baloo bop.gif in Resources */,
+				E2714CE871A61B30632174AB87800301 /* carlton dance.gif in Resources */,
+				A4886946F2A1FFF2C88D6A237ED562CF /* cheerful cub.gif in Resources */,
+				9899A739C587DED28DA866BADE440431 /* close button.png in Resources */,
+				6426FF0F87086886E3474577A4AE730F /* community high five.gif in Resources */,
+				705E02CF7CCD01037D3BBC7AD5CF14B6 /* dancing babies.gif in Resources */,
+				A37C4F629C683E0F7A2DA44E294B1788 /* ecstatic austrian.gif in Resources */,
+				C7397D0803427C41C9B3D07AE3D2C7A9 /* fist pumping pitt.gif in Resources */,
+				0ED42BA32A0BB9E9182788FCAE13E998 /* frolicking jerry.gif in Resources */,
+				454BA62BE11136015A6DED0D46ED7AF4 /* good mood minions.gif in Resources */,
+				23C34A36F0CB337CB4B082AE6170CE81 /* jazzed jonah.gif in Resources */,
+				F49A19F4B452DD226D904110FE36BF4F /* krazy kermit.gif in Resources */,
+				D986D5EF6948D41AC4B588E4629AE89C /* patrick the patron.gif in Resources */,
+				F866D041125CA9326059B09309AA2189 /* picard slow clap.gif in Resources */,
+				EEAAF501DCA2BF93BCC07BAA3AD858C1 /* pug belly rub.gif in Resources */,
+				3B90F4CF11F0E52A12F6D13AFC47D23F /* retro rocking.gif in Resources */,
+				ABC78F0EA7F230F9DDB4829C6FF041E1 /* shaq and kitty shimmy.gif in Resources */,
+				A42AB5F929AD4F5934145B0D06183671 /* upbeat barney.gif in Resources */,
+				5F7B7365F40C9645D7C1286BDCBCBB45 /* winking robin.gif in Resources */,
+				67BC9BBBB37E0012D0F54EA6E7B2C7AC /* woah.gif in Resources */,
+				74DFCE6CFBFBF51DC65F7B72D0BF126D /* yay bowie.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		04F42ED128671E376BAF6DB9F290F9EC /* Sources */ = {
+		0406E14488A542D311DDF012F36170BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F07B92669C5099962E99678B9FCFA1 /* Pods-To Do List-dummy.m in Sources */,
+				77BABE9C90EC0E924986F00ADAF8D919 /* Cartridge.swift in Sources */,
+				82A8A9C03969C7F5FC477B1FD56C3C18 /* DopamineAPI.swift in Sources */,
+				EBED7180E4AA3FA2B007C6C8CBEA3F4E /* DopamineKit-dummy.m in Sources */,
+				E2C77FDCDF9EFB3F34CD144B87DC45AB /* DopamineKit.swift in Sources */,
+				7E7DD75259BC6203C8AED799DD282463 /* DopeAction.swift in Sources */,
+				274AE6C9B3CF6A986CF37774ABC95351 /* DopeException.swift in Sources */,
+				2F75D85E09938D3E5D29B2A065B13793 /* Report.swift in Sources */,
+				C841C90EFE3D1215134B253B33B05A94 /* SyncCoordinator.swift in Sources */,
+				2CAD486FEA2F7F4626379776F01A820F /* SyncOverview.swift in Sources */,
+				B865A3336C91FACFD106DCECA025ADAC /* Telemetry.swift in Sources */,
+				6863339A153D17781141641599DF3CC9 /* Track.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B5C4D31859F3FB30C9E5E69B83CA92B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49BE384F6E183E418A85D9D63AECA606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C8518AF01FCD194D538447E8EDA8BC /* BasalGifglia-dummy.m in Sources */,
+				09D0A10D38DB61CAAEF303E58BC04E4F /* Gifglia.swift in Sources */,
+				40284BF6E0D7F958F7279AEFFFEB08E2 /* UIGifgliaView.swift in Sources */,
+				0CAB98336581568C55A7EDFF12A53CA4 /* UIGifgliaViewController.swift in Sources */,
+				AB70B206517A301192EF09DCB74ECCF1 /* UIImage+Gif.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C92B7B7B205A1024094308421DE1EF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808776C5B431D3999703CA92BB2C868C /* Pods-To Do List-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5DC7BF5C7EA7C6BEA967C0BD1452F74C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DopamineKit;
+			target = 52EF694F44AAA86F61F5CEB0F37B0AF4 /* DopamineKit */;
+			targetProxy = 39C8463F511259117DBA84DBA690174C /* PBXContainerItemProxy */;
+		};
+		8BB596AA1C746FC79DF28427A5CE4A48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BasalGifglia-BasalGifglia";
+			target = C15CEC2342FD902A6FCAC1D3F055EE44 /* BasalGifglia-BasalGifglia */;
+			targetProxy = 517AF09F43DBB96565BCDE6866BC0AA9 /* PBXContainerItemProxy */;
+		};
+		F823FDD7762D2B7D14735A933BB9A599 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BasalGifglia;
+			target = FA1267442E2AFCD55F290AE104A0782F /* BasalGifglia */;
+			targetProxy = E6E5895FB31F425235932188F0969DAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		38C9B01EABD8C62B8D36F7CF222A1201 /* Debug */ = {
+		223D6D9F6784982CCFC5B7B4B69E822E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88B4016C1BA4C604F0469DCE174199AF /* Pods-To Do List.debug.xcconfig */;
+			baseConfigurationReference = 6FEB1D5BECE81E587DEF6408541B1F97 /* Pods-To Do List.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				INFOPLIST_FILE = "Target Support Files/Pods-To Do List/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MODULEMAP_FILE = "Target Support Files/Pods-To Do List/Pods-To Do List.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_To_Do_List;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2BCF0F20440031C82A7D66F7C237D0CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45F4967D0C20E4E383472459F3A57781 /* BasalGifglia.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BasalGifglia";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/BasalGifglia/ResourceBundle-BasalGifglia-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = BasalGifglia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		6701A9E7F4AEA975BCB1EDC5DCA8DB7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45F4967D0C20E4E383472459F3A57781 /* BasalGifglia.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BasalGifglia/BasalGifglia-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BasalGifglia/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BasalGifglia/BasalGifglia.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BasalGifglia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6C30209F51A7DDFFC77404BC35702BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD919FC2849C106086A86BF9F740190A /* DopamineKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DopamineKit/DopamineKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DopamineKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DopamineKit/DopamineKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DopamineKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		88CB0E4BE52B8547CB484A9FE132B2C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45F4967D0C20E4E383472459F3A57781 /* BasalGifglia.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BasalGifglia/BasalGifglia-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BasalGifglia/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BasalGifglia/BasalGifglia.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BasalGifglia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
+		941BE8ACC415197CD4FB13E16A7D7E83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD919FC2849C106086A86BF9F740190A /* DopamineKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DopamineKit/DopamineKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DopamineKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DopamineKit/DopamineKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DopamineKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AADB9822762AD81BBAE83335B2AB1EB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,6 +795,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -228,14 +809,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
+		B1B5EB0850F98CB5AECDB015B690777F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -253,6 +835,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -270,33 +853,66 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		E3F2F87AD2E4611E9CCE31E6293ECC83 /* Release */ = {
+		BCFB3F085A01107B8C882C8DBD6E920F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFC4353A6FEFF06A6896CC9CA62BD3CF /* Pods-To Do List.release.xcconfig */;
+			baseConfigurationReference = 45F4967D0C20E4E383472459F3A57781 /* BasalGifglia.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BasalGifglia";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				INFOPLIST_FILE = "Target Support Files/BasalGifglia/ResourceBundle-BasalGifglia-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = BasalGifglia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		F64D3EF88F91B86E54A00E835A5348CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECC275C701D700D63B0A2788F10674F6 /* Pods-To Do List.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-To Do List/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MODULEMAP_FILE = "Target Support Files/Pods-To Do List/Pods-To Do List.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_To_Do_List;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -304,17 +920,44 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */,
-				3FA451D268613890FA8A5A03801E11D5 /* Release */,
+				B1B5EB0850F98CB5AECDB015B690777F /* Debug */,
+				AADB9822762AD81BBAE83335B2AB1EB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA1F5A940C322A5BA8580024D090DA9F /* Build configuration list for PBXNativeTarget "Pods-To Do List" */ = {
+		78F399EE37B76C9164DDC74050AF84F6 /* Build configuration list for PBXNativeTarget "Pods-To Do List" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38C9B01EABD8C62B8D36F7CF222A1201 /* Debug */,
-				E3F2F87AD2E4611E9CCE31E6293ECC83 /* Release */,
+				F64D3EF88F91B86E54A00E835A5348CC /* Debug */,
+				223D6D9F6784982CCFC5B7B4B69E822E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DA2D0D6C1A9E7A641B0C28FF926689D /* Build configuration list for PBXNativeTarget "DopamineKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				941BE8ACC415197CD4FB13E16A7D7E83 /* Debug */,
+				6C30209F51A7DDFFC77404BC35702BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8004DBB6695D1DCAFC0855202E5A74C7 /* Build configuration list for PBXNativeTarget "BasalGifglia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88CB0E4BE52B8547CB484A9FE132B2C0 /* Debug */,
+				6701A9E7F4AEA975BCB1EDC5DCA8DB7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3ECD4FE87D2EE3902F611C359366AE0 /* Build configuration list for PBXNativeTarget "BasalGifglia-BasalGifglia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCFB3F085A01107B8C882C8DBD6E920F /* Debug */,
+				2BCF0F20440031C82A7D66F7C237D0CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

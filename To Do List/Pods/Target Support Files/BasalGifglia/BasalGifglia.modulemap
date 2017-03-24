@@ -1,0 +1,6 @@
+framework module BasalGifglia {
+  umbrella header "BasalGifglia-umbrella.h"
+
+  export *
+  module * { export * }
+}

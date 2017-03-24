@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BasalGifglia
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TaskViewCellDelegate {
 
@@ -15,11 +16,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.registerClass(TaskViewCell.self, forCellReuseIdentifier: "task")
+        tableView.register(TaskViewCell.self, forCellReuseIdentifier: "task")
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        
+        if (tableView.numberOfRows(inSection: 0) == 0) {
+            taskManager.addDemo()
+        }
     }
     
     
@@ -30,15 +35,25 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
      //
      */ ////////////////////////////
     
-    func taskItemDeleted(taskItem: Task) {
-        if let index = taskManager.tasks.indexOf(taskItem){
-            taskManager.tasks.removeAtIndex(index)
+    func taskItemDeleted(_ taskItem: Task) {
+        if let index = taskManager.tasks.index(of: taskItem){
+            taskManager.removeTask(at: index)
             
             tableView.beginUpdates()
-            let indexPathForRow = NSIndexPath(forItem: index, inSection: 0)
-            tableView.deleteRowsAtIndexPaths([indexPathForRow], withRowAnimation: .Left)
+            let indexPathForRow = IndexPath(item: index, section: 0)
+            tableView.deleteRows(at: [indexPathForRow], with: .left)
             tableView.endUpdates()
+            if (taskManager.tasks.count == 0) {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
+                    taskManager.addDemo()
+                    self.tableView.reloadData()
+                }
+            }
         }
+    }
+    
+    func presentReward() {
+        self.present(UIGifgliaViewController(), animated: true, completion: nil)
     }
     
     
@@ -48,15 +63,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
      //
      */ ////////////////////////////
     
-    func colorForIndex(index: Int) -> UIColor{
+    func colorForIndex(_ index: Int) -> UIColor{
         let itemCount = taskManager.tasks.count - 1
         let val = (CGFloat (index) / CGFloat(itemCount)) * (204/255.0)
         return UIColor.init(red: 1.0, green: val, blue: 0.0, alpha: 1.0)
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = colorForIndex(indexPath.row)
     }
+    
     
      /* ////////////////////////////
      //
@@ -64,16 +80,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
      //
      */ ////////////////////////////
     
-    internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return taskManager.tasks.count
     }
 
-    internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        let cell = TaskViewCell.init(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "task")
+        let cell = TaskViewCell.init(style: UITableViewCellStyle.subtitle, reuseIdentifier: "task")
         cell.task = taskManager.tasks[indexPath.row]
         cell.delegate = self
-        cell.selectionStyle = .None
+        cell.selectionStyle = .none
         
         cell.textLabel?.text = cell.task?.name
         cell.detailTextLabel?.text = cell.task?.additionalText

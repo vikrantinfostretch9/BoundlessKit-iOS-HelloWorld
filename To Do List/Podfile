@@ -1,3 +1,6 @@
+use_frameworks!
+
 target 'To Do List' do
-  pod 'DopamineKit', '~> 3.0.3'
+  pod 'DopamineKit', '~> 4.1.4'
+  pod 'BasalGifglia', '~> 1.0.1'
 end

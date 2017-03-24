@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BasalGifglia-BasalGifglia.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>BasalGifglia.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DopamineKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-To Do List.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -12,7 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9B1D572F585C270EB347DB190E367B79</key>
+		<key>52EF694F44AAA86F61F5CEB0F37B0AF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66CE43EFC8BF061AEBC82F4DE624A220</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C15CEC2342FD902A6FCAC1D3F055EE44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA1267442E2AFCD55F290AE104A0782F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -11,7 +11,8 @@ import DopamineKit
 
 // A protocol that the TaskViewCell uses to inform its delegate of state change
 protocol TaskViewCellDelegate {
-    func taskItemDeleted(taskItem: Task)
+    func taskItemDeleted(_ taskItem: Task)
+    func presentReward()
 }
 
 class TaskViewCell: UITableViewCell {
@@ -30,19 +31,19 @@ class TaskViewCell: UITableViewCell {
         // tick label for context cue
         tickLabel = TaskViewCell.createCueLabel()
         tickLabel.text = "\u{2713}"
-        tickLabel.textAlignment = .Left
+        tickLabel.textAlignment = .left
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         // Gradient effect
         gradientLayer.frame = bounds
-        let colorGradient = [UIColor.init(white: 1.0, alpha: 0.2).CGColor as CGColorRef,
-                             UIColor.init(white: 1.0, alpha: 0.1).CGColor as CGColorRef,
-                             UIColor.clearColor().CGColor as CGColorRef,
-                             UIColor.init(white: 0.0, alpha: 0.1).CGColor as CGColorRef]
+        let colorGradient = [UIColor.init(white: 1.0, alpha: 0.2).cgColor as CGColor,
+                             UIColor.init(white: 1.0, alpha: 0.1).cgColor as CGColor,
+                             UIColor.clear.cgColor as CGColor,
+                             UIColor.init(white: 0.0, alpha: 0.1).cgColor as CGColor]
         gradientLayer.colors = colorGradient
         gradientLayer.locations = [0.0, 0.01, 0.95, 1.0]
-        layer.insertSublayer(gradientLayer, atIndex: 0)
+        layer.insertSublayer(gradientLayer, at: 0)
         
         // pan recognizer
         let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(TaskViewCell.handlePan(_:)))
@@ -70,9 +71,9 @@ class TaskViewCell: UITableViewCell {
     // utility method for creating the contextual cues
     static func createCueLabel() -> UILabel {
         let label = UILabel(frame: CGRect.zero)
-        label.textColor = UIColor.whiteColor()
-        label.font = UIFont.boldSystemFontOfSize(48.0)
-        label.backgroundColor = UIColor.greenColor()
+        label.textColor = UIColor.white
+        label.font = UIFont.boldSystemFont(ofSize: 48.0)
+        label.backgroundColor = UIColor.green
         return label
     }
     
@@ -83,39 +84,39 @@ class TaskViewCell: UITableViewCell {
     let dopeYellow = UIColor.init(red: 255/255.0, green: 204/255.0, blue: 0, alpha: 0.9)
     
     //MARK: - horizontal pan gesture methods
-    func handlePan(recognizer: UIPanGestureRecognizer) {
+    func handlePan(_ recognizer: UIPanGestureRecognizer) {
         // 1
-        if recognizer.state == .Began {
+        if recognizer.state == .began {
             // when the gesture begins, record the current center location
             originalCenter = center
         }
         // 2
-        if recognizer.state == .Changed {
-            let translation = recognizer.translationInView(self)
-            center = CGPointMake(originalCenter.x + translation.x, originalCenter.y)
+        if recognizer.state == .changed {
+            let translation = recognizer.translation(in: self)
+            center = CGPoint(x: originalCenter.x + translation.x, y: originalCenter.y)
             // has the user dragged the item far enough to initiate a delete/complete?
-            deleteOnDragRelease = frame.origin.x < -frame.size.width / 2.0
+            deleteOnDragRelease = frame.origin.x < -frame.size.width / 4.0
             
             // fade context cues
-            let cueAlpha = fabs(frame.origin.x) / (frame.size.width / 2.0)
+            let cueAlpha = fabs(frame.origin.x) / (frame.size.width / 4.0)
             tickLabel.alpha = cueAlpha
             if(deleteOnDragRelease){
                 tickLabel.textColor = dopeGreen
-                tickLabel.backgroundColor = UIColor.clearColor()
+                tickLabel.backgroundColor = UIColor.clear
             } else{
-                tickLabel.textColor = UIColor.clearColor()
+                tickLabel.textColor = UIColor.clear
                 tickLabel.backgroundColor = dopeGreen
             }
         
         }
         // 3
-        if recognizer.state == .Ended {
+        if recognizer.state == .ended {
             // the frame this cell had before user dragged it
             let originalFrame = CGRect(x: 0, y: frame.origin.y,
                                        width: bounds.size.width, height: bounds.size.height)
             if !deleteOnDragRelease {
                 // if the item is not being deleted, snap back to the original location
-                UIView.animateWithDuration(0.2, animations: {self.frame = originalFrame})
+                UIView.animate(withDuration: 0.2, animations: {self.frame = originalFrame})
             } else {
                 if delegate != nil && task != nil {
                     
@@ -124,44 +125,25 @@ class TaskViewCell: UITableViewCell {
                     
                     // The completed task has been deleted
                     // Let's give em some positive reinforcement!
-                    DopamineKit.reinforce("action1", callback: {reinforcement in
+                    DopamineKit.reinforce("action1", completion: {reinforcement in
                         // So we don't run on the main thread
-                        dispatch_async(dispatch_get_main_queue(), {
-                            var title:String = "title"
-                            var subtitle:String? = "subtitle"
-                            var icon:Candy = Candy.None
-                            var color:UIColor = self.dopeRed
+                        DispatchQueue.main.async(execute: {
                             
                             switch(reinforcement){
                             case "thumbsUp" :
-                                title = "Great job!!"
-                                subtitle = nil
-                                icon = Candy.ThumbsUp
-                                
+                                fallthrough
                             case "stars" :
-                                title = "You're a super star!"
-                                icon = Candy.Stars
-                                color = self.dopeYellow
-                                
+                                fallthrough
                             case "medalStar" :
-                                title = "How does achieving something feel?"
-                                icon = Candy.MedalStar
-                                color = self.dopeYellow
-                                
+                                self.delegate?.presentReward()
+                                NSLog("DopamineKit - Show reward!")
                             case "neutralResponse" :
                                 fallthrough
                             default:
                                 // Show nothing! This is called a neutral response, and builds up the good feelings for the next surprise!
+                                NSLog("DopamineKit - No reward this time.")
                                 return
-                                
                             }
-                            
-                            // Show some candy and make them feel good!
-                            let candyBar = CandyBar.init(title: title, subtitle: subtitle, icon: icon, backgroundColor: color)
-                            candyBar.position = .Bottom
-                            candyBar.show(duration: 1.2)
-                            
-                            return
                         })
                     })
                 }
@@ -169,9 +151,9 @@ class TaskViewCell: UITableViewCell {
         }
     }
     
-    override func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if let panGestureRecognizer = gestureRecognizer as? UIPanGestureRecognizer {
-            let translation = panGestureRecognizer.translationInView(superview!)
+            let translation = panGestureRecognizer.translation(in: superview!)
             if fabs(translation.x) > fabs(translation.y) {
                 return true
             }

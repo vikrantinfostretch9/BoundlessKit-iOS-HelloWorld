@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A9591C4354B07B1FAEAA155 /* Pods_To_Do_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30ACFD24D8F89B3A9FD15426 /* Pods_To_Do_List.framework */; };
 		8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */; };
 		8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFE1D08F5BC003BB094 /* Task.swift */; };
 		8497238A1D07FFB60014E975 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849723891D07FFB60014E975 /* DopamineProperties.plist */; };
@@ -18,7 +19,6 @@
 		84B7B9AD1D078EA1008BF664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B7B9AB1D078EA1008BF664 /* LaunchScreen.storyboard */; };
 		84B7B9B81D078EA1008BF664 /* To_Do_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9B71D078EA1008BF664 /* To_Do_ListTests.swift */; };
 		84B7B9C31D078EE5008BF664 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9C21D078EE5008BF664 /* TaskManager.swift */; };
-		D9339186AE6D6C9D7BCD960A /* libPods-To Do List.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBDA1D6C68964AAFDDBBEB0 /* libPods-To Do List.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2DBDA1D6C68964AAFDDBBEB0 /* libPods-To Do List.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-To Do List.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30ACFD24D8F89B3A9FD15426 /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AD5ADDC249C20266ADA7DE /* Pods-To Do List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do List.release.xcconfig"; path = "Pods/Target Support Files/Pods-To Do List/Pods-To Do List.release.xcconfig"; sourceTree = "<group>"; };
 		8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
 		8426EEFE1D08F5BC003BB094 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9339186AE6D6C9D7BCD960A /* libPods-To Do List.a in Frameworks */,
+				7A9591C4354B07B1FAEAA155 /* Pods_To_Do_List.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 		79BB31C4F0768AD66D8AE906 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2DBDA1D6C68964AAFDDBBEB0 /* libPods-To Do List.a */,
+				30ACFD24D8F89B3A9FD15426 /* Pods_To_Do_List.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,11 +188,13 @@
 				TargetAttributes = {
 					84B7B99C1D078EA1008BF664 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 367K5HG48M;
+						DevelopmentTeam = A4K9NYBV99;
+						LastSwiftMigration = 0810;
 					};
 					84B7B9B21D078EA1008BF664 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 367K5HG48M;
+						LastSwiftMigration = 0810;
 						TestTargetID = 84B7B99C1D078EA1008BF664;
 					};
 				};
@@ -265,7 +267,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E1A00E9708140874E884ADC7 /* [CP] Embed Pods Frameworks */ = {
@@ -377,6 +379,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -415,6 +418,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -425,10 +429,15 @@
 			baseConfigurationReference = BD2846C46C8532ED1FD4073C /* Pods-To Do List.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = A4K9NYBV99;
 				INFOPLIST_FILE = "To Do List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.To-Do-List";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.usedopamine.app.opaque;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -437,10 +446,15 @@
 			baseConfigurationReference = 69AD5ADDC249C20266ADA7DE /* Pods-To Do List.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = A4K9NYBV99;
 				INFOPLIST_FILE = "To Do List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.To-Do-List";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.usedopamine.app.opaque;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -450,8 +464,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "To Do ListTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.To-Do-ListTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.usedopamine.ios.Dope-To-Do-ListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To Do List.app/To Do List";
 			};
 			name = Debug;
@@ -462,8 +477,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "To Do ListTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DopamineLabs.To-Do-ListTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.usedopamine.ios.Dope-To-Do-ListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To Do List.app/To Do List";
 			};
 			name = Release;

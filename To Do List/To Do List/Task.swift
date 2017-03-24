@@ -8,13 +8,24 @@
 
 import UIKit
 
-class Task: NSObject {
-    var name = "unnamed"
-    var additionalText = "no descrioption"
+@objc(Task)
+class Task: NSObject, NSCoding {
+    var name: String
+    var additionalText: String
     
     required init(name:String, additionalText:String){
         self.name = name
         self.additionalText = additionalText
     }
-
+    
+    required convenience init(coder aDecoder: NSCoder) {
+        let n = aDecoder.decodeObject(forKey: "name") as! String
+        let at = aDecoder.decodeObject(forKey: "additionalText") as! String
+        self.init(name: n, additionalText: at)
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(additionalText, forKey: "additionalText")
+    }
 }
