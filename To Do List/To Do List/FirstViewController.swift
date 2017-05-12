@@ -8,6 +8,7 @@
 
 import UIKit
 import BasalGifglia
+import CandyBar
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TaskViewCellDelegate {
 
@@ -53,7 +54,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func presentReward() {
-        self.present(UIGifgliaViewController(), animated: true, completion: nil)
+        if UserDefaults.standard.integer(forKey: "RewardType") == 0 {
+            self.present(UIGifgliaViewController(), animated: true, completion: nil)
+        } else {
+            CandyBar(title: "Got em!",
+                     subtitle: "beep boop bop good job",
+                     icon: .thumbsUp,
+                     position: .bottom,
+                     backgroundColor: CandyBar.hexStringToUIColor("#4286f4"))
+                .show(2.5)
+        }
     }
     
     

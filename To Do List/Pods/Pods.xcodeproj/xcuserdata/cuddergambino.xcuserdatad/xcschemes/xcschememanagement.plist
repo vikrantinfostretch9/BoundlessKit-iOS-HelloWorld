@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CandyBar-CandyIcons.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CandyBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DopamineKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +37,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3AFBDCFBEF198455CC54B25EFCC877CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>52EF694F44AAA86F61F5CEB0F37B0AF4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>66CE43EFC8BF061AEBC82F4DE624A220</key>
+		<key>7BEDE3540CF58AD9F638647C76F06211</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B6DF1DE6F051233498E4EABB8A902DB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,15 +1,18 @@
 PODS:
-  - BasalGifglia (1.0.1)
+  - BasalGifglia (1.0.2)
+  - CandyBar (1.1.0)
   - DopamineKit (4.1.4)
 
 DEPENDENCIES:
-  - BasalGifglia (~> 1.0.1)
+  - BasalGifglia (~> 1.0.2)
+  - CandyBar (~> 1.1.0)
   - DopamineKit (~> 4.1.4)
 
 SPEC CHECKSUMS:
-  BasalGifglia: 46524600c88d7ef4c44f334ee24d83ca7bcb3332
+  BasalGifglia: a2ec672e384e69ee53a13106bf92a38adddd0014
+  CandyBar: ebbc7fc4bb68e87c7cd03f5e2fb3b921843ca5b0
   DopamineKit: 6f7f89b5af2778ad20db65603067a3dc0a2185c7
 
-PODFILE CHECKSUM: dedc2a31f86bee7baf6183958581c7970c3d2b74
+PODFILE CHECKSUM: 926992c92612556892665faf10222038d22794de
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

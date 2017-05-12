@@ -12,9 +12,14 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var textTask: UITextField!
     @IBOutlet var textDescription: UITextField!
+    @IBOutlet weak var rewardLabel: UILabel!
+    @IBOutlet weak var rewardPicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        rewardPicker.dataSource = self
+        rewardPicker.delegate = self
+        rewardPicker.selectRow(UserDefaults.standard.integer(forKey: "RewardType"), inComponent: 0, animated: false)
     }
 
     /* ////////////////////////////
@@ -52,3 +57,30 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
 
 }
 
+extension SecondViewController : UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 2
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return row==0 ? "BasalGifglia" : "CandyBar"
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let label = view as? UILabel ?? UILabel()
+        label.font = UIFont(name: "Montserrat", size: 6)
+        label.textAlignment = .center
+        label.text = self.pickerView(rewardPicker, titleForRow: row, forComponent: component)
+        label.backgroundColor = UIColor.lightGray
+        
+        return label
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        UserDefaults.standard.set(row, forKey: "RewardType")
+    }
+}
