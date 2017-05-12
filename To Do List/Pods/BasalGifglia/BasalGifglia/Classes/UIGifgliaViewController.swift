@@ -10,6 +10,26 @@ import Foundation
 
 open class UIGifgliaViewController: UIViewController {
     
+    /// Whether the view controller should dismiss itself after `autoDismissTimeout` seconds
+    open var autoDismiss = true
+    
+    /// The time, in seconds, until the view controller should dismiss itself. The time must be >= 0.1 seconds
+    open var autoDismissTimeout = 2.5
+    
+    /// Convenience method to disable auto closing
+    ///
+    public convenience init(autoDismissEnabled: Bool = true) {
+        self.init()
+        self.autoDismiss = autoDismissEnabled
+    }
+    
+    /// Convenience method to set auto close timeout
+    ///
+    public convenience init(autoDismissTimeout: Double = 2.5) {
+        self.init()
+        self.autoDismissTimeout = autoDismissTimeout
+    }
+    
     /// The view controller is required to be displayed over the full screen
     /// for the dimming effect
     ///
@@ -62,12 +82,15 @@ open class UIGifgliaViewController: UIViewController {
         gifViewController.view.addSubview(closeButton)
     }
     
-    /// Dispatches a task to automatically dismiss itself after a few seconds
+    /// Modally presents a gif and also
+    /// dispatches a task to automatically dismiss itself after `autoDismissTimeout` seconds if `autoDismiss` is true
     ///
     override open func viewDidAppear(_ animated: Bool) {
         showGifView()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.5) {
-            self.closeGifView()
+        if (autoDismiss && autoDismissTimeout >= 0.1) {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + autoDismissTimeout) {
+                self.closeGifView()
+            }
         }
     }
     
@@ -83,15 +106,20 @@ open class UIGifgliaViewController: UIViewController {
     /// Dismisses both the gifViewController and the UIGifgliaViewController
     ///
     func closeGifView() {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
+        DispatchQueue.main.async() {
             self.gifViewController.modalTransitionStyle = .crossDissolve
             self.dismiss(animated: true, completion: nil)
             self.dim(.out, speed: 0.25)
             self.presentingViewController?.dismiss(animated: true, completion: nil)
         }
-
     }
     
+    /// Manually dismiss the UIGifgliaViewController.
+    /// Use this method if `autoDismiss` is disabled
+    ///
+    open func dismissSelf() {
+        closeGifView()
+    }
     
 }
 

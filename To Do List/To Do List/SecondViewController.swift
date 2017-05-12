@@ -12,9 +12,13 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var textTask: UITextField!
     @IBOutlet var textDescription: UITextField!
+    @IBOutlet weak var rewardLabel: UILabel!
+    @IBOutlet weak var rewardPicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        rewardPicker.dataSource = self
+        rewardPicker.delegate = self
     }
 
     /* ////////////////////////////
@@ -52,3 +56,16 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
 
 }
 
+extension SecondViewController : UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 2
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return row.description
+    }
+}
