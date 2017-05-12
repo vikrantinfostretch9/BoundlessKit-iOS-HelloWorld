@@ -54,13 +54,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func presentReward() {
-//        self.present(UIGifgliaViewController(), animated: true, completion: nil)
-        CandyBar(title: "Got em!",
-                 subtitle: "beep boop bop good job",
-                 icon: .thumbsUp,
-                 position: .bottom,
-                 backgroundColor: CandyBar.hexStringToUIColor("#4286f4"))
-            .show(2.5)
+        if UserDefaults.standard.integer(forKey: "RewardType") == 0 {
+            self.present(UIGifgliaViewController(), animated: true, completion: nil)
+        } else {
+            CandyBar(title: "Got em!",
+                     subtitle: "beep boop bop good job",
+                     icon: .thumbsUp,
+                     position: .bottom,
+                     backgroundColor: CandyBar.hexStringToUIColor("#4286f4"))
+                .show(2.5)
+        }
     }
     
     
