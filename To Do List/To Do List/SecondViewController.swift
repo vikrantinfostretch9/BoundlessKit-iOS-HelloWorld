@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITextFieldDelegate {
+class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet var textTask: UITextField!
     @IBOutlet var textDescription: UITextField!
@@ -20,7 +20,19 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         rewardPicker.dataSource = self
         rewardPicker.delegate = self
         rewardPicker.selectRow(UserDefaults.standard.integer(forKey: "RewardType"), inComponent: 0, animated: false)
+        let tapRecoginzer = UITapGestureRecognizer.init(target: self, action: #selector(test))
+        tapRecoginzer.delegate = self
+        tapRecoginzer.numberOfTapsRequired = 1
+        view.addGestureRecognizer(tapRecoginzer)
     }
+    
+    func test(sender: UITapGestureRecognizer? = nil) {
+        NSLog("Tap at:\(sender?.location(in: view).debugDescription)")
+        if let tap = sender {
+            CAEmitterLayer.tapToStars(view: view, tap: tap)
+        }
+    }
+    
 
     /* ////////////////////////////
      //
@@ -56,6 +68,40 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
 
 
 }
+
+extension CAEmitterLayer {
+    static func tapToStars(view: UIView, tap: UITapGestureRecognizer) {
+        let emitterLayer = CAEmitterLayer()
+        emitterLayer.emitterPosition = tap.location(in: view)
+        
+        let cell = CAEmitterCell()
+        cell.name = "starEmitter"
+        cell.birthRate = 30
+        cell.lifetime = 0.3
+        cell.spin = CGFloat.pi * 2.0
+        cell.spinRange = CGFloat.pi
+        cell.velocity = 400
+        cell.scale = 0.01
+        cell.scaleSpeed = 0.1
+        cell.scaleRange = 0.1
+        cell.emissionRange = CGFloat.pi * 2.0
+        cell.contents = UIImage(named: "star")!.cgImage
+        
+        emitterLayer.emitterCells = [cell]
+        view.layer.addSublayer(emitterLayer)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            emitterLayer.birthRate = 0
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                emitterLayer.removeFromSuperlayer()
+            }
+        }
+    }
+    
+    static func rand(max: UInt32) -> Int {
+        return Int(arc4random_uniform(max)+1)
+    }
+}
+
 
 extension SecondViewController : UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
