@@ -15,6 +15,9 @@ enum RewardType : Int {
     static var count: Int { get { return 3 } }
     
     static func get() -> RewardType {
+        guard UserDefaults.standard.value(forKey: "RewardType") != nil else {
+            return .starBurst
+        }
         return RewardType(rawValue: UserDefaults.standard.integer(forKey: "RewardType")) ?? .basalGifglia
     }
     
