@@ -128,20 +128,20 @@ class TaskViewCell: UITableViewCell {
                     DopamineKit.reinforce("action1", completion: {reinforcement in
                         // So we don't run on the main thread
                         DispatchQueue.main.async(execute: {
-                            
+                            // NOTE: rearranged cases to have rewards show more often for demonstration
                             switch(reinforcement){
                             case "thumbsUp" :
-                                fallthrough
+//                                fallthrough
+                                return;
                             case "stars" :
                                 fallthrough
                             case "medalStar" :
+                                fallthrough
+                            case "neutralResponse" :
                                 self.delegate?.presentReward(view: self.superview!, gesture: recognizer)
                                 NSLog("DopamineKit - Show reward!")
-                            case "neutralResponse" :
-                                fallthrough
                             default:
-                                // Show nothing! This is called a neutral response, and builds up the good feelings for the next surprise!
-                                NSLog("DopamineKit - No reward this time.")
+                                NSLog("wtf is this:\(reinforcement)")
                                 return
                             }
                         })
