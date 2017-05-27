@@ -34,13 +34,14 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureReco
         return true
     }
     
-    @IBAction func  btnAddTask_click(_ sender: UIButton){
+    @IBAction func  btnAddTask_click(_ sender: UIButton, event: UIEvent){
         taskManager.addTask(textTask.text!, additionalText: textDescription.text!)
         self.view.endEditing(true)
         textTask.text = ""
         textDescription.text = ""
         
-        tabBarController?.selectedIndex = 0
+//        tabBarController?.selectedIndex = 0
+        Helper.addStarsFor(button: sender, event: event)
     }
     
     @IBAction func btnAddDemo_click(_ sender: UIButton){

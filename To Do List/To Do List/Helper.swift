@@ -27,15 +27,24 @@ enum RewardType : Int {
 }
 
 class Helper {
+    
+    static func addStarsFor(view: UIView, location: CGPoint) {
+        CAEmitterLayer.tapToStars(view: view, location: location)
+    }
     static func addStarsFor(view: UIView, tap: UIGestureRecognizer) {
-        CAEmitterLayer.tapToStars(view: view, tap: tap)
+        addStarsFor(view: view, location: tap.location(in: view))
+    }
+    static func addStarsFor(button: UIButton, event: UIEvent) {
+        if let tap = event.touches(for: button)?.first {
+            addStarsFor(view: button, location: tap.location(in: button))
+        }
     }
 }
 
 fileprivate extension CAEmitterLayer {
-    static func tapToStars(view: UIView, tap: UIGestureRecognizer) {
+    static func tapToStars(view: UIView, location: CGPoint) {
         let emitterLayer = CAEmitterLayer()
-        emitterLayer.emitterPosition = tap.location(in: view)
+        emitterLayer.emitterPosition = location
         
         let cell = CAEmitterCell()
         cell.name = "starEmitter"

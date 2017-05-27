@@ -95,10 +95,10 @@ class TaskViewCell: UITableViewCell {
             let translation = recognizer.translation(in: self)
             center = CGPoint(x: originalCenter.x + translation.x, y: originalCenter.y)
             // has the user dragged the item far enough to initiate a delete/complete?
-            deleteOnDragRelease = frame.origin.x < -frame.size.width / 4.0
+            deleteOnDragRelease = frame.origin.x < -frame.size.width / 8.0
             
             // fade context cues
-            let cueAlpha = fabs(frame.origin.x) / (frame.size.width / 4.0)
+            let cueAlpha = fabs(frame.origin.x) / (frame.size.width / 8.0)
             tickLabel.alpha = cueAlpha
             if(deleteOnDragRelease){
                 tickLabel.textColor = dopeGreen
