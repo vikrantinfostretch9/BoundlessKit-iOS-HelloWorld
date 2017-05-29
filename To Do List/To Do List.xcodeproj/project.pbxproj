@@ -11,6 +11,7 @@
 		840E07721EDBD7DF00332A6C /* StarburstTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07711EDBD7DF00332A6C /* StarburstTouch.swift */; };
 		840E07741EDBE30E00332A6C /* RewardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07731EDBE30E00332A6C /* RewardType.swift */; };
 		840E07761EDBE60100332A6C /* DLBalloons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07751EDBE60100332A6C /* DLBalloons.swift */; };
+		840E07781EDBF2C800332A6C /* DLCoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07771EDBF2C800332A6C /* DLCoins.swift */; };
 		8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */; };
 		8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFE1D08F5BC003BB094 /* Task.swift */; };
 		8497238A1D07FFB60014E975 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849723891D07FFB60014E975 /* DopamineProperties.plist */; };
@@ -41,6 +42,7 @@
 		840E07711EDBD7DF00332A6C /* StarburstTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarburstTouch.swift; sourceTree = "<group>"; };
 		840E07731EDBE30E00332A6C /* RewardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardType.swift; sourceTree = "<group>"; };
 		840E07751EDBE60100332A6C /* DLBalloons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLBalloons.swift; sourceTree = "<group>"; };
+		840E07771EDBF2C800332A6C /* DLCoins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLCoins.swift; sourceTree = "<group>"; };
 		8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
 		8426EEFE1D08F5BC003BB094 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		849723891D07FFB60014E975 /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				840E07711EDBD7DF00332A6C /* StarburstTouch.swift */,
 				840E07751EDBE60100332A6C /* DLBalloons.swift */,
+				840E07771EDBF2C800332A6C /* DLCoins.swift */,
 			);
 			name = PreMades;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				840E07721EDBD7DF00332A6C /* StarburstTouch.swift in Sources */,
 				84B7B9C31D078EE5008BF664 /* TaskManager.swift in Sources */,
 				8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */,
+				840E07781EDBF2C800332A6C /* DLCoins.swift in Sources */,
 				84B7B9A31D078EA1008BF664 /* FirstViewController.swift in Sources */,
 				840E07741EDBE30E00332A6C /* RewardType.swift in Sources */,
 				840E07761EDBE60100332A6C /* DLBalloons.swift in Sources */,

@@ -9,9 +9,9 @@
 import Foundation
 
 enum RewardType : Int {
-    case basalGifglia, candyBar, starBurst, balloons
+    case basalGifglia, candyBar, starBurst, balloons, coins
     
-    static var count: Int { get { return 4 } }
+    static var count: Int { get { return 5 } }
     
     static func get() -> RewardType {
         guard UserDefaults.standard.value(forKey: "RewardType") != nil else {

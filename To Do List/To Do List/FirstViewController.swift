@@ -67,10 +67,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                      backgroundColor: CandyBar.hexStringToUIColor("#4286f4"))
                 .show(2.5)
         case .starBurst:
-            self.view.showStarburst(at: gesture.location(in: view))
+            self.tableView.showStarburst(at: gesture.location(in: tableView))
             
         case .balloons:
-            view.showBalloons()
+            self.tableView.showBalloons()
+            
+        case .coins:
+            self.tableView.showCoins(at: gesture.location(in: tableView))
         }
         
     }

@@ -22,7 +22,7 @@ extension UIView {
     }
 }
 
-class UIButtonWithStarburst : UIButton {
+class UIButtonWithStarburstOnClick : UIButton {
     var enableStarburst = true
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if enableStarburst, isTouchInside,
