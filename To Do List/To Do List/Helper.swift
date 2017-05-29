@@ -9,24 +9,9 @@
 import Foundation
 import UIKit
 
-enum RewardType : Int {
-    case basalGifglia, candyBar, starBurst
-    
-    static var count: Int { get { return 3 } }
-    
-    static func get() -> RewardType {
-        guard UserDefaults.standard.value(forKey: "RewardType") != nil else {
-            return .starBurst
-        }
-        return RewardType(rawValue: UserDefaults.standard.integer(forKey: "RewardType")) ?? .basalGifglia
-    }
-    
-    static func set(rawValue: Int) {
-        UserDefaults.standard.set(rawValue, forKey: "RewardType")
-    }
-}
-
 class Helper {
-    
+    static func rand(max: UInt32) -> Int {
+        return Int(arc4random_uniform(max)+1)
+    }
 }
 

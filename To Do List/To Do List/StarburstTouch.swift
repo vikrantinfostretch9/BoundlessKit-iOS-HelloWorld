@@ -53,8 +53,4 @@ extension CAEmitterLayer {
         
         emitterCells = [cell]
     }
-    
-//    static func rand(max: UInt32) -> Int {
-//        return Int(arc4random_uniform(max)+1)
-//    }
 }

@@ -55,8 +55,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func presentReward(view: UIView, gesture: UIGestureRecognizer) {
         switch RewardType.get() {
+            
         case .basalGifglia:
             self.present(UIGifgliaViewController(), animated: true, completion: nil)
+            
         case .candyBar:
             CandyBar(title: "Got em!",
                      subtitle: "beep boop bop good job",
@@ -66,7 +68,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 .show(2.5)
         case .starBurst:
             self.view.showStarburst(at: gesture.location(in: view))
+            
+        case .balloons:
+            view.showBalloons()
         }
+        
     }
     
     
