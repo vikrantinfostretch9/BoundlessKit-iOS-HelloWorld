@@ -65,7 +65,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                      backgroundColor: CandyBar.hexStringToUIColor("#4286f4"))
                 .show(2.5)
         case .starBurst:
-            Helper.addStarsFor(view: view, tap: gesture)
+            self.view.showStarburst(at: gesture.location(in: view))
         }
     }
     

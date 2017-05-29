@@ -41,7 +41,6 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureReco
         textDescription.text = ""
         
 //        tabBarController?.selectedIndex = 0
-        Helper.addStarsFor(button: sender, event: event)
     }
     
     @IBAction func btnAddDemo_click(_ sender: UIButton){
