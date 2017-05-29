@@ -9,6 +9,19 @@
 import Foundation
 import UIKit
 
+class BalloonAnimationDelegate : NSObject, CAAnimationDelegate {
+
+    let balloonView: UIView
+    
+    init(balloonView: UIView) {
+        self.balloonView = balloonView
+    }
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        balloonView.removeFromSuperview()
+    }
+}
+
 extension UIView {
     fileprivate func showBalloon(width: CGFloat, height: CGFloat) {
         let animation = CAKeyframeAnimation(keyPath: "position")
@@ -16,12 +29,12 @@ extension UIView {
         let balloonImage = UIImage(named: "three-balloon")!
         let balloonView = UIImageView(image: balloonImage)
         
-        let xStart = CGFloat(Helper.rand(max: UInt32(self.frame.maxX)))
+        let xStart = CGFloat(randomWithMax: self.frame.maxX)
         let yStart = self.frame.maxY
-        let xEnd = Helper.rand(max: UInt32(self.frame.maxX))
-        let yEnd = 0
+        let xEnd = CGFloat(randomWithMax: self.frame.maxX)
+        let yEnd = CGFloat(0)
         let xMid = xEnd / 2
-        let yMid = Helper.rand(max: UInt32(self.frame.maxY))
+        let yMid = CGFloat(randomWithMax: self.frame.maxY)
         
         balloonView.frame = CGRect(x: xStart, y: yStart, width: width, height: height)
         self.addSubview(balloonView)
@@ -31,8 +44,11 @@ extension UIView {
         
         animation.path = path.cgPath
         animation.repeatCount = 0
-        animation.duration = 5.0 - 0.5 * Double(Helper.rand(max: 3))
+        animation.duration = 5.0 - 0.5 * NSNumber.random(withMax: 3).doubleValue
         animation.fillMode = kCAFillModeRemoved
+        animation.isRemovedOnCompletion = true
+        let balloonDelegate = BalloonAnimationDelegate(balloonView: balloonView)
+        animation.delegate = balloonDelegate
         balloonView.layer.add(animation, forKey: "random upward path")
     }
     
@@ -42,5 +58,17 @@ extension UIView {
         for size in balloonSizes {
             showBalloon(width: size, height: size)
         }
+    }
+}
+
+extension CGFloat {
+    init(randomWithMax max:CGFloat) {
+        self.init(arc4random_uniform(UInt32(max))+1)
+    }
+}
+
+extension NSNumber {
+    static func random(withMax max: NSNumber) -> NSNumber {
+        return arc4random_uniform(UInt32(max)+1) as NSNumber
     }
 }

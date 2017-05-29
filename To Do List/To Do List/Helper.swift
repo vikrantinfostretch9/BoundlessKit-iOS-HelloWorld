@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class Helper {
-    static func rand(max: UInt32) -> Int {
-        return Int(arc4random_uniform(max)+1)
-    }
+//    static func rand(max: UInt32) -> Int {
+//        return Int(arc4random_uniform(max)+1)
+//    }
 }
 
