@@ -87,6 +87,8 @@ extension SecondViewController : UIPickerViewDelegate, UIPickerViewDataSource {
             return "Balloons"
         case .coins:
             return "Coins"
+        case .starSingle:
+            return "StarSingle"
         }
     }
     

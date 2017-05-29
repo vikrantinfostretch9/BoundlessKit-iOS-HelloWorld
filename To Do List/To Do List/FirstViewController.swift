@@ -74,6 +74,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
         case .coins:
             self.tableView.showCoins(at: gesture.location(in: tableView))
+            
+        case .starSingle:
+            self.tableView.showSolidStar()
         }
         
     }
