@@ -8,15 +8,17 @@
 
 import Foundation
 import UIKit
+import AudioToolbox
 
 class DLCoins {
     
 }
 
 extension UIView {
-    func showCoins(at location:CGPoint) {
+    func showCoins(at location:CGPoint, vibration:Bool = true) {
         let coins = CAEmitterLayer(coinLayerAt: location)
         layer.addSublayer(coins)
+        if vibration { AudioServicesPlaySystemSound(kSystemSoundID_Vibrate) }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
             coins.birthRate = 0
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
