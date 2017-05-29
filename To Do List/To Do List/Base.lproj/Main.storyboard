@@ -90,7 +90,7 @@
                                     <action selector="btnAddDemo_click:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Kw7-y9-q7x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Div-3x-Fzr" customClass="UIButtonWithStarburstOnClick" customModule="To_Do_List" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Div-3x-Fzr">
                                 <rect key="frame" x="226" y="199" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <state key="normal" title="Add Task"/>

@@ -41,6 +41,14 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureReco
         textDescription.text = ""
         
 //        tabBarController?.selectedIndex = 0
+        if let touch = event.touches(for: sender)?.first {
+            switch RewardType.get() {
+            case .coins:
+                sender.showCoins(at: touch.location(in: sender))
+            default:
+                sender.showStarburst(at: touch.location(in: sender))
+            }
+        }
     }
     
     @IBAction func btnAddDemo_click(_ sender: UIButton){
