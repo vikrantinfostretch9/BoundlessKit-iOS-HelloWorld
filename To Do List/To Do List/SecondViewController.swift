@@ -81,14 +81,14 @@ extension SecondViewController : UIPickerViewDelegate, UIPickerViewDataSource {
             return "BasalGifglia"
         case .candyBar:
             return "CandyBar"
-        case .starBurst:
-            return "StarBurst"
         case .balloons:
             return "Balloons"
-        case .coins:
-            return "Coins"
         case .starSingle:
             return "StarSingle"
+        case .starBurst:
+            return "StarBurst"
+        case .coins:
+            return "Coins"
         }
     }
     
