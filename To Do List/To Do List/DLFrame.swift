@@ -26,6 +26,8 @@ extension UIView {
         
         frameView.alpha = 0
         addSubview(frameView)
+        Helper.playPhotoSound()
+        
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 2.0, options: .curveEaseIn, animations: {
             frameView.alpha = 1
             glassView.alpha = 1
