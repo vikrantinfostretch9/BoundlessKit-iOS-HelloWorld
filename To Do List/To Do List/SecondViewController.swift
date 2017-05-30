@@ -86,11 +86,11 @@ extension SecondViewController : UIPickerViewDelegate, UIPickerViewDataSource {
         case .starSingle:
             return "📲\t\t Sticker Pack"
         case .goldenFrame:
-            return "📲🖼\t DopeMemory™"
+            return "📲📣🖼 DopeMemory™"
         case .starBurst:
-            return "👆\t\t Star Touch"
+            return "👆📣\t Star Touch"
         case .coins:
-            return "👆📳\t Golden Touch"
+            return "👆📣📳 Golden Touch"
         }
     }
     
