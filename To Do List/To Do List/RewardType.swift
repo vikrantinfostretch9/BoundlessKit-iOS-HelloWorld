@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 enum RewardType : Int {
-    case basalGifglia, candyBar, balloons, starSingle, starBurst, coins
+    case basalGifglia, candyBar, balloons, starSingle, goldenFrame, starBurst, coins
     
-    static var count: Int { get { return 6 } }
+    static var count: Int { get { return 7 } }
     
     static func get() -> RewardType {
         guard UserDefaults.standard.value(forKey: "RewardType") != nil else {
@@ -22,5 +23,10 @@ enum RewardType : Int {
     
     static func set(rawValue: Int) {
         UserDefaults.standard.set(rawValue, forKey: "RewardType")
+    }
+    
+    static func colorForIndex(index: Int) -> UIColor{
+        let val = CGFloat(index) / CGFloat(RewardType.count - 1) * (182.0/255.0)
+        return UIColor(red: val, green: 66.0/255.0, blue: 244.0/255.0, alpha: 0.7)
     }
 }

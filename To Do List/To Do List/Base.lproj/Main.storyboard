@@ -106,7 +106,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" misplaced="YES" showsSelectionIndicator="NO" id="6Lo-PL-PPF">
-                                <rect key="frame" x="176" y="296" width="143" height="75"/>
+                                <rect key="frame" x="80" y="357" width="239" height="172"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                         </subviews>

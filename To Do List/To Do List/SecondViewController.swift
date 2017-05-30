@@ -78,26 +78,28 @@ extension SecondViewController : UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch RewardType(rawValue: row)! {
         case .basalGifglia:
-            return "📲BasalGifglia"
+            return "📲\t\t BasalGifglia"
         case .candyBar:
-            return "📲CandyBar"
+            return "📲\t\t CandyBar"
         case .balloons:
-            return "📲Balloons"
+            return "📲\t\t Balloons"
         case .starSingle:
-            return "📲StarSingle"
+            return "📲\t\t StarSingle"
+        case .goldenFrame:
+            return "📲🖼\t GoldenFrame+Memory"
         case .starBurst:
-            return "👆StarBurst"
+            return "👆\t\t StarBurst"
         case .coins:
-            return "👆📳Coins"
+            return "👆📳\t Coins"
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = view as? UILabel ?? UILabel()
-        label.font = UIFont(name: "Montserrat", size: 6)
+        label.font = UIFont(name: "Montserrat", size: UIFont.systemFontSize)
         label.textAlignment = .left
         label.text = self.pickerView(rewardPicker, titleForRow: row, forComponent: component)
-        label.backgroundColor = UIColor.lightGray
+        label.backgroundColor = RewardType.colorForIndex(index: row)
         
         return label
     }

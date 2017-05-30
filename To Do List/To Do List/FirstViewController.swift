@@ -73,6 +73,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         case .starSingle:
             self.tableView.showSolidStar()
             
+        case .goldenFrame:
+            self.tableView.showGoldenFrame()
+            
         case .starBurst:
             self.tableView.showStarburst(at: gesture.location(in: tableView))
             
@@ -89,7 +92,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
      //
      */ ////////////////////////////
     
-    func colorForIndex(_ index: Int) -> UIColor{
+    private func colorForIndex(_ index: Int) -> UIColor{
         let itemCount = taskManager.tasks.count - 1
         let val = (CGFloat (index) / CGFloat(itemCount)) * (204/255.0)
         return UIColor.init(red: 1.0, green: val, blue: 0.0, alpha: 1.0)
