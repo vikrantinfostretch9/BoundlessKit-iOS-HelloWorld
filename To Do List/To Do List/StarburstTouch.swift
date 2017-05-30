@@ -8,11 +8,14 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 extension UIView {
     func showStarburst(at location:CGPoint) {
         let stars = CAEmitterLayer(starburstLayerAt: location)
         layer.addSublayer(stars)
+        Helper.playStarSound()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             stars.birthRate = 0
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {

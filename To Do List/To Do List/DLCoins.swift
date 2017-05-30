@@ -19,6 +19,7 @@ extension UIView {
         let coins = CAEmitterLayer(coinLayerAt: location)
         layer.addSublayer(coins)
         if vibration { AudioServicesPlaySystemSound(kSystemSoundID_Vibrate) }
+        Helper.playCoinSound()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
             coins.birthRate = 0
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {

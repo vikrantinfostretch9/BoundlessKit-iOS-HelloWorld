@@ -15,6 +15,9 @@
 		840E077A1EDBFF4200332A6C /* DLScreenStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07791EDBFF4200332A6C /* DLScreenStar.swift */; };
 		84156F891EDC41A800DEF989 /* DLElectricShock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84156F881EDC41A800DEF989 /* DLElectricShock.swift */; };
 		84156F8B1EDCF2A800DEF989 /* DLFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84156F8A1EDCF2A800DEF989 /* DLFrame.swift */; };
+		84156F901EDD173200DEF989 /* star-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F8F1EDD173200DEF989 /* star-sound.wav */; };
+		84156F921EDD1CB300DEF989 /* coin-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F911EDD1CB300DEF989 /* coin-sound.wav */; };
+		84156F941EDD1E3A00DEF989 /* shoot-and-roll.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F931EDD1E3A00DEF989 /* shoot-and-roll.wav */; };
 		8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */; };
 		8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFE1D08F5BC003BB094 /* Task.swift */; };
 		8497238A1D07FFB60014E975 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849723891D07FFB60014E975 /* DopamineProperties.plist */; };
@@ -49,6 +52,9 @@
 		840E07791EDBFF4200332A6C /* DLScreenStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLScreenStar.swift; sourceTree = "<group>"; };
 		84156F881EDC41A800DEF989 /* DLElectricShock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLElectricShock.swift; sourceTree = "<group>"; };
 		84156F8A1EDCF2A800DEF989 /* DLFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLFrame.swift; sourceTree = "<group>"; };
+		84156F8F1EDD173200DEF989 /* star-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "star-sound.wav"; sourceTree = "<group>"; };
+		84156F911EDD1CB300DEF989 /* coin-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "coin-sound.wav"; sourceTree = "<group>"; };
+		84156F931EDD1E3A00DEF989 /* shoot-and-roll.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "shoot-and-roll.wav"; sourceTree = "<group>"; };
 		8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
 		8426EEFE1D08F5BC003BB094 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		849723891D07FFB60014E975 /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
@@ -117,6 +123,16 @@
 			name = PreMades;
 			sourceTree = "<group>";
 		};
+		84156F8E1EDD173200DEF989 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				84156F931EDD1E3A00DEF989 /* shoot-and-roll.wav */,
+				84156F911EDD1CB300DEF989 /* coin-sound.wav */,
+				84156F8F1EDD173200DEF989 /* star-sound.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		84B7B9941D078EA1008BF664 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +169,7 @@
 				84B7B9A91D078EA1008BF664 /* Assets.xcassets */,
 				84B7B9AB1D078EA1008BF664 /* LaunchScreen.storyboard */,
 				849723891D07FFB60014E975 /* DopamineProperties.plist */,
+				84156F8E1EDD173200DEF989 /* Sounds */,
 				84B7B9AE1D078EA1008BF664 /* Info.plist */,
 			);
 			path = "To Do List";
@@ -256,8 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8497238A1D07FFB60014E975 /* DopamineProperties.plist in Resources */,
+				84156F901EDD173200DEF989 /* star-sound.wav in Resources */,
 				84B7B9AD1D078EA1008BF664 /* LaunchScreen.storyboard in Resources */,
+				84156F921EDD1CB300DEF989 /* coin-sound.wav in Resources */,
 				84B7B9AA1D078EA1008BF664 /* Assets.xcassets in Resources */,
+				84156F941EDD1E3A00DEF989 /* shoot-and-roll.wav in Resources */,
 				84B7B9A81D078EA1008BF664 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
