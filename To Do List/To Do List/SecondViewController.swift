@@ -78,19 +78,19 @@ extension SecondViewController : UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch RewardType(rawValue: row)! {
         case .basalGifglia:
-            return "📲\t\t BasalGifglia"
+            return "📲\t\t Themed Memes"
         case .candyBar:
-            return "📲\t\t CandyBar"
+            return "📲\t\t In-app Motivation"
         case .balloons:
             return "📲\t\t Balloons"
         case .starSingle:
-            return "📲\t\t StarSticker"
+            return "📲\t\t Sticker Pack"
         case .goldenFrame:
             return "📲🖼\t DopeMemory™"
         case .starBurst:
-            return "👆\t\t StarBurst"
+            return "👆\t\t Star Touch"
         case .coins:
-            return "👆📳\t Coins"
+            return "👆📳\t Golden Touch"
         }
     }
     
