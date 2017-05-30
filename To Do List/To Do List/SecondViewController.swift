@@ -84,9 +84,9 @@ extension SecondViewController : UIPickerViewDelegate, UIPickerViewDataSource {
         case .balloons:
             return "📲\t\t Balloons"
         case .starSingle:
-            return "📲\t\t StarSingle"
+            return "📲\t\t StarSticker"
         case .goldenFrame:
-            return "📲🖼\t GoldenFrame+Memory"
+            return "📲🖼\t DopeMemory™"
         case .starBurst:
             return "👆\t\t StarBurst"
         case .coins:

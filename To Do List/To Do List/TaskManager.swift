@@ -31,10 +31,10 @@ class TaskManager: NSObject {
     }
     
     func addDemo(){
-        tasks.append(Task(name: "Laundry", additionalText: "laundormat closes at 9pm"))
+        tasks.append(Task(name: "Laundry", additionalText: "laundormat closes never"))
         tasks.append(Task(name: "Cover sheet", additionalText: "Follow TPS guidlines"))
-        tasks.append(Task(name: "Feed Mr. Whiskers", additionalText: "kibble bits for days"))
-        tasks.append(Task(name: "Run at the rec center", additionalText: "2 miles"))
+        tasks.append(Task(name: "Feed Mr. Whiskers", additionalText: "where did mr. snek go?"))
+        tasks.append(Task(name: "Run at the rec center", additionalText: "2 meters"))
         tasks.append(Task(name: "Push-ups", additionalText: "25"))
         tasks.append(Task(name: "Take over the world", additionalText: "tomorrow"))
         tasks.append(Task(name: "Make dinner", additionalText: "meatloaf"))
