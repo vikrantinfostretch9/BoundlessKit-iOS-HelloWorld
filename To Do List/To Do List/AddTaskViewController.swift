@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  AddTaskViewController.swift
 //  To Do List
 //
 //  Created by Akash Desai on 6/7/16.
@@ -8,12 +8,16 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
+class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet var textTask: UITextField!
     @IBOutlet var textDescription: UITextField!
     @IBOutlet weak var rewardLabel: UILabel!
     @IBOutlet weak var rewardPicker: UIPickerView!
+    
+    static func instance() -> AddTaskViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddTaskViewController") as! AddTaskViewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +70,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureReco
 
 }
 
-extension SecondViewController : UIPickerViewDelegate, UIPickerViewDataSource {
+extension AddTaskViewController : UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

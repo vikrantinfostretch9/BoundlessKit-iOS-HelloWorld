@@ -22,13 +22,15 @@
 		8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFE1D08F5BC003BB094 /* Task.swift */; };
 		8497238A1D07FFB60014E975 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849723891D07FFB60014E975 /* DopamineProperties.plist */; };
 		84B7B9A11D078EA1008BF664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A01D078EA1008BF664 /* AppDelegate.swift */; };
-		84B7B9A31D078EA1008BF664 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A21D078EA1008BF664 /* FirstViewController.swift */; };
-		84B7B9A51D078EA1008BF664 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A41D078EA1008BF664 /* SecondViewController.swift */; };
+		84B7B9A31D078EA1008BF664 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A21D078EA1008BF664 /* ToDoListViewController.swift */; };
+		84B7B9A51D078EA1008BF664 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A41D078EA1008BF664 /* AddTaskViewController.swift */; };
 		84B7B9A81D078EA1008BF664 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B7B9A61D078EA1008BF664 /* Main.storyboard */; };
 		84B7B9AA1D078EA1008BF664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B7B9A91D078EA1008BF664 /* Assets.xcassets */; };
 		84B7B9AD1D078EA1008BF664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B7B9AB1D078EA1008BF664 /* LaunchScreen.storyboard */; };
 		84B7B9B81D078EA1008BF664 /* To_Do_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9B71D078EA1008BF664 /* To_Do_ListTests.swift */; };
 		84B7B9C31D078EE5008BF664 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9C21D078EE5008BF664 /* TaskManager.swift */; };
+		84DE05531EEB803500777AD9 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE05521EEB803500777AD9 /* ContainerViewController.swift */; };
+		84DE05551EEB813300777AD9 /* DrawerViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE05541EEB813300777AD9 /* DrawerViewControllerDelegate.swift */; };
 		84FF05DF1ED8D26E00C0F9DE /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF05DE1ED8D26E00C0F9DE /* Helper.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +62,8 @@
 		849723891D07FFB60014E975 /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
 		84B7B99D1D078EA1008BF664 /* To Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B7B9A01D078EA1008BF664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84B7B9A21D078EA1008BF664 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		84B7B9A41D078EA1008BF664 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		84B7B9A21D078EA1008BF664 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
+		84B7B9A41D078EA1008BF664 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		84B7B9A71D078EA1008BF664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84B7B9A91D078EA1008BF664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B7B9AC1D078EA1008BF664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,6 +72,8 @@
 		84B7B9B71D078EA1008BF664 /* To_Do_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_ListTests.swift; sourceTree = "<group>"; };
 		84B7B9B91D078EA1008BF664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84B7B9C21D078EE5008BF664 /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		84DE05521EEB803500777AD9 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		84DE05541EEB813300777AD9 /* DrawerViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewControllerDelegate.swift; sourceTree = "<group>"; };
 		84FF05DE1ED8D26E00C0F9DE /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		BD2846C46C8532ED1FD4073C /* Pods-To Do List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do List.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To Do List/Pods-To Do List.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,8 +161,10 @@
 			isa = PBXGroup;
 			children = (
 				84B7B9A01D078EA1008BF664 /* AppDelegate.swift */,
-				84B7B9A21D078EA1008BF664 /* FirstViewController.swift */,
-				84B7B9A41D078EA1008BF664 /* SecondViewController.swift */,
+				84B7B9A21D078EA1008BF664 /* ToDoListViewController.swift */,
+				84B7B9A41D078EA1008BF664 /* AddTaskViewController.swift */,
+				84DE05521EEB803500777AD9 /* ContainerViewController.swift */,
+				84DE05541EEB813300777AD9 /* DrawerViewControllerDelegate.swift */,
 				84FF05DE1ED8D26E00C0F9DE /* Helper.swift */,
 				840E07731EDBE30E00332A6C /* RewardType.swift */,
 				8426EEFE1D08F5BC003BB094 /* Task.swift */,
@@ -344,19 +350,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B7B9A51D078EA1008BF664 /* SecondViewController.swift in Sources */,
+				84B7B9A51D078EA1008BF664 /* AddTaskViewController.swift in Sources */,
 				84FF05DF1ED8D26E00C0F9DE /* Helper.swift in Sources */,
 				84B7B9A11D078EA1008BF664 /* AppDelegate.swift in Sources */,
 				840E077A1EDBFF4200332A6C /* DLScreenStar.swift in Sources */,
 				84156F891EDC41A800DEF989 /* DLElectricShock.swift in Sources */,
+				84DE05551EEB813300777AD9 /* DrawerViewControllerDelegate.swift in Sources */,
 				8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */,
 				840E07721EDBD7DF00332A6C /* StarburstTouch.swift in Sources */,
 				84B7B9C31D078EE5008BF664 /* TaskManager.swift in Sources */,
 				8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */,
 				84156F8B1EDCF2A800DEF989 /* DLFrame.swift in Sources */,
 				840E07781EDBF2C800332A6C /* DLCoins.swift in Sources */,
-				84B7B9A31D078EA1008BF664 /* FirstViewController.swift in Sources */,
+				84B7B9A31D078EA1008BF664 /* ToDoListViewController.swift in Sources */,
 				840E07741EDBE30E00332A6C /* RewardType.swift in Sources */,
+				84DE05531EEB803500777AD9 /* ContainerViewController.swift in Sources */,
 				840E07761EDBE60100332A6C /* DLBalloons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

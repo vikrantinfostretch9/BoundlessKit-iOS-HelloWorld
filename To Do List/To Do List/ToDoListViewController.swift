@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  ToDoListViewController.swift
 //  To Do List
 //
 //  Created by Akash Desai on 6/7/16.
@@ -10,8 +10,12 @@ import UIKit
 import BasalGifglia
 import CandyBar
 
-class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TaskViewCellDelegate {
+class ToDoListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TaskViewCellDelegate {
 
+    static func instance() -> ToDoListViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ToDoListViewController") as! ToDoListViewController
+    }
+    
     @IBOutlet var tableView:UITableView!
     
     override func viewDidLoad() {
