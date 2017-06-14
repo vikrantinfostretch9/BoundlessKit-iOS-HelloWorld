@@ -29,37 +29,50 @@ class DrawerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.reloadData()
         tableView.isScrollEnabled = false
-//        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
     }
 }
 
 class DrawerItemCell: UITableViewCell {
+    
+    static let newTaskRewardPickerDelegate = RewardPickerDelegate(type: .newTask)
+    static let doneTaskRewardPickerDelegate = RewardPickerDelegate(type: .doneTask)
+    static let allDoneTaskRewardPickerDelegate = RewardPickerDelegate(type: .allDoneTask)
     
     var delegate: DrawerViewControllerDelegate?
     
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var picker: UIPickerView!
     
-    static let itemCount: Int = 1
+    static let itemCount: Int = 3
     static var maximumWidth: CGFloat = 280
     
-    func configureItem(titleText: String, rewardType: RewardType) {
-        title.text = titleText
-        let doneTaskPicker = DoneTaskRewardPicker()
-        picker.dataSource = doneTaskPicker
-        picker.delegate = doneTaskPicker
-    }
-    
     func configureItem(index: Int) {
-        configureItem(titleText: "Done Task Reward", rewardType: .doneTask)
-        
-//        
-//        let oldFrame = title.frame
-//        title.sizeToFit()
-//        DrawerItemCell.maximumWidth = max(DrawerItemCell.maximumWidth, title.frame.maxX)
-//        title.frame = oldFrame
+        switch index {
+        case 0:
+            title.text = "Adding Task"
+            picker.dataSource = DrawerItemCell.newTaskRewardPickerDelegate
+            picker.delegate = DrawerItemCell.newTaskRewardPickerDelegate
+            picker.selectRow(Reward.getActiveIndex(for: .newTask), inComponent: 0, animated: false)
+        case 1:
+            title.text = "Finishing Task"
+            picker.dataSource = DrawerItemCell.doneTaskRewardPickerDelegate
+            picker.delegate = DrawerItemCell.doneTaskRewardPickerDelegate
+            picker.selectRow(Reward.getActiveIndex(for: .doneTask), inComponent: 0, animated: false)
+        case 2:
+            title.text = "Finishing All Tasks"
+            picker.dataSource = DrawerItemCell.allDoneTaskRewardPickerDelegate
+            picker.delegate = DrawerItemCell.allDoneTaskRewardPickerDelegate
+            picker.selectRow(Reward.getActiveIndex(for: .allDoneTask), inComponent: 0, animated: false)
+        default:
+            fatalError("Unconfigured Reward Selector")
+        }
     }
     
 }
@@ -77,15 +90,10 @@ extension DrawerViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DrawerItemCell", for: indexPath) as! DrawerItemCell
-        let oldMaxWidth = DrawerItemCell.maximumWidth
+        
         cell.delegate = delegate
         cell.configureItem(index: indexPath.row)
         
-//        if (oldMaxWidth != DrawerItemCell.maximumWidth) {
-//            var tvFrame = tableView.frame
-//            tvFrame.size.width = DrawerItemCell.maximumWidth + tableView.layoutMargins.left + tableView.layoutMargins.right
-//            tableView.frame = tvFrame
-//        }
         return cell
     }
     

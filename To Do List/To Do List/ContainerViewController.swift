@@ -55,9 +55,6 @@ class ContainerViewController: UIViewController {
         centerViewController = ToDoListViewController.instance()
 //        centerViewController?.containerDelegate = self
         
-        addLeftPanelViewController()
-        addRightPanelViewController()
-        
         centerNavigationController = UINavigationController(rootViewController: centerViewController!)
         centerNavigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
         centerNavigationController.navigationBar.shadowImage = UIImage()

@@ -13,29 +13,76 @@ enum RewardType : String {
     case newTask, doneTask, allDoneTask
 }
 
+//        case .basalGifglia:
+//            return "📲\t\t Themed Memes"
+//        case .candyBar:
+//            return "📲\t\t In-app Motivation"
+//        case .balloons:
+//            return "📲\t\t Balloons"
+//        case .starSingle:
+//            return "📲\t\t Sticker Pack"
+//        case .goldenFrame:
+//            return "📲📣🖼 DopeMemory™"
+//        case .starBurst:
+//            return "👆📣\t Star Touch"
+//        case .coins:
+//            return "👆📣📳 Golden Touch"
+//        }
+
+
 enum Reward : String {
     case basalGifglia, candyBar, balloons, starSingle, goldenFrame, starBurst, coins
+
+    static func rewardsFor(type: RewardType) -> [Reward]! {
+        switch type {
+        case .newTask:
+            return newTaskRewards
+        case .doneTask:
+            return doneTaskRewards
+        case .allDoneTask:
+            return allDoneTaskRewards
+        }
+    }
     
-    static var newTaskRewards = [Reward.starBurst]
-    static var doneTaskRewards = [Reward.candyBar,
-                                  Reward.balloons,
-                                  Reward.starSingle,
-                                  Reward.starBurst
-                                  ]
-    static var allDoneTaskRewards = [Reward.goldenFrame]
+    static let newTaskRewards = [
+        Reward.starBurst
+    ]
+    static let doneTaskRewards = [
+        Reward.candyBar,
+        Reward.balloons,
+        Reward.starSingle,
+        Reward.starBurst,
+    ]
+    static let allDoneTaskRewards = [
+        Reward.goldenFrame
+    ]
+    static let activeRewardsDefaults = [
+        RewardType.newTask.rawValue : Reward.coins.rawValue,
+        RewardType.doneTask.rawValue : Reward.balloons.rawValue,
+        RewardType.allDoneTask.rawValue : Reward.goldenFrame.rawValue,
+        ]
     
     static func getActive(for type: RewardType) -> Reward {
         if let activeRewards = UserDefaults.standard.dictionary(forKey: "ActiveRewards"),
-            let activeReward = activeRewards[type.rawValue]
-             {
-                return activeReward as! Reward
+            let activeRewardString = activeRewards[type.rawValue] as? String,
+            let activeReward = Reward(rawValue: activeRewardString)
+        {
+            return activeReward
         } else {
-            let activeRewardsDefaults = [RewardType.newTask.rawValue : Reward.coins,
-                                         RewardType.doneTask.rawValue : Reward.balloons,
-                                         RewardType.allDoneTask.rawValue : Reward.goldenFrame
-            ]
             UserDefaults.standard.set(activeRewardsDefaults, forKey: "ActiveRewards")
-            return activeRewardsDefaults[type.rawValue]! as Reward
+            return Reward(rawValue: activeRewardsDefaults[type.rawValue]!)!
+        }
+    }
+    
+    static func getActiveIndex(for type: RewardType) -> Int {
+        let activeReward = getActive(for: type)
+        switch type {
+        case .newTask:
+            return newTaskRewards.index(of: activeReward) ?? 0
+        case .doneTask:
+            return doneTaskRewards.index(of: activeReward) ?? 0
+        case .allDoneTask:
+            return allDoneTaskRewards.index(of: activeReward) ?? 0
         }
     }
     
@@ -47,8 +94,18 @@ enum Reward : String {
         }
     }
     
-//    static func colorForIndex(index: Int) -> UIColor{
-//        let val = CGFloat(index) / CGFloat(Rewards.count - 1) * (182.0/255.0)
-//        return UIColor(red: val, green: 66.0/255.0, blue: 244.0/255.0, alpha: 0.7)
-//    }
+    static func colorForIndex(for rewardType: RewardType, and index: Int) -> UIColor{
+        let maxIndex: CGFloat
+        switch rewardType {
+        case .newTask:
+            maxIndex = CGFloat(newTaskRewards.count)
+        case .doneTask:
+            maxIndex = CGFloat(doneTaskRewards.count)
+        case .allDoneTask:
+            maxIndex = CGFloat(allDoneTaskRewards.count)
+        }
+        
+        let val = CGFloat(index) / maxIndex * (182.0/255.0)
+        return UIColor(red: val, green: 66.0/255.0, blue: 244.0/255.0, alpha: 0.7)
+    }
 }
