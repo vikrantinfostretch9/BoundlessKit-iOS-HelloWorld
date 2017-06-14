@@ -12,8 +12,6 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
 
     @IBOutlet var textTask: UITextField!
     @IBOutlet var textDescription: UITextField!
-    @IBOutlet weak var rewardLabel: UILabel!
-    @IBOutlet weak var rewardPicker: UIPickerView!
     
     static func instance() -> AddTaskViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddTaskViewController") as! AddTaskViewController
@@ -21,9 +19,6 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rewardPicker.dataSource = self
-        rewardPicker.delegate = self
-        rewardPicker.selectRow(RewardType.get().rawValue, inComponent: 0, animated: false)
     }
     
 
@@ -46,7 +41,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
         
 //        tabBarController?.selectedIndex = 0
         if let touch = event.touches(for: sender)?.first {
-            switch RewardType.get() {
+            switch Reward.getActive(for : .newTask) {
             case .coins:
                 sender.showCoins(at: touch.location(in: sender))
             default:
@@ -68,47 +63,4 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
     }
 
 
-}
-
-extension AddTaskViewController : UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return RewardType.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch RewardType(rawValue: row)! {
-        case .basalGifglia:
-            return "📲\t\t Themed Memes"
-        case .candyBar:
-            return "📲\t\t In-app Motivation"
-        case .balloons:
-            return "📲\t\t Balloons"
-        case .starSingle:
-            return "📲\t\t Sticker Pack"
-        case .goldenFrame:
-            return "📲📣🖼 DopeMemory™"
-        case .starBurst:
-            return "👆📣\t Star Touch"
-        case .coins:
-            return "👆📣📳 Golden Touch"
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        let label = view as? UILabel ?? UILabel()
-        label.font = UIFont(name: "Montserrat", size: UIFont.systemFontSize)
-        label.textAlignment = .left
-        label.text = self.pickerView(rewardPicker, titleForRow: row, forComponent: component)
-        label.backgroundColor = RewardType.colorForIndex(index: row)
-        
-        return label
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        RewardType.set(rawValue: row)
-    }
 }

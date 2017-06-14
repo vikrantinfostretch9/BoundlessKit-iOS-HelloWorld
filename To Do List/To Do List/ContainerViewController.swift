@@ -70,9 +70,8 @@ class ContainerViewController: UIViewController {
         let addTask = UIBarButtonItem.init(image: UIImage(named: "add-task.png")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(openLeftController))
         centerNavigationController.topViewController?.navigationItem.leftBarButtonItem = addTask
         
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture))
-        panGestureRecognizer.cancelsTouchesInView = false
-        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+        let pickReward = UIBarButtonItem.init(image: UIImage(named: "pick-reward.png")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(openRightController))
+        centerNavigationController.topViewController?.navigationItem.rightBarButtonItem = pickReward
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         tapRecognizer.cancelsTouchesInView = false
@@ -162,8 +161,8 @@ extension ContainerViewController: CenterViewControllerDelegate {
     func animateRightPanel(shouldExpand: Bool) {
         if (shouldExpand) {
             currentState = .RightPanelExpanded
-            addLeftPanelViewController()
-            animateCenterPanelXPosition(targetPosition: sidePanelWidth)
+            addRightPanelViewController()
+            animateCenterPanelXPosition(targetPosition: 0 - sidePanelWidth)
         } else {
             animateCenterPanelXPosition(targetPosition: 0) { finished in
                 self.currentState = .Collapsed
@@ -276,32 +275,6 @@ extension ContainerViewController : MFMailComposeViewControllerDelegate {
 // MARK: Gesture recognizer
 
 extension ContainerViewController: UIGestureRecognizerDelegate {
-    
-    func handlePanGesture(recognizer: UIPanGestureRecognizer) {
-        let gestureIsDraggingFromLeftToRight = (recognizer.velocity(in: view).x > 0)
-        
-        switch(recognizer.state) {
-        case .began:
-            if (currentState == .Collapsed) {
-                if (gestureIsDraggingFromLeftToRight) {
-                    addLeftPanelViewController()
-                }
-                
-                showShadowForCenterViewController(shouldShowShadow: true)
-            }
-        case .changed:
-            recognizer.view!.center.x = max(view.bounds.midX, recognizer.view!.center.x  + recognizer.translation(in: view).x)
-            recognizer.setTranslation(CGPoint.zero, in: view)
-        case .ended:
-            if (leftViewController != nil) {
-                let hasRevealedGreaterThanHalf = recognizer.view!.center.x > view.bounds.midX + (sidePanelWidth / 2.0)
-                animateLeftPanel(shouldExpand: hasRevealedGreaterThanHalf)
-            }
-        default:
-            break
-        }
-    }
-    
     func handleTap() {
         if (currentState != .Collapsed) {
             collapseSidePanels()

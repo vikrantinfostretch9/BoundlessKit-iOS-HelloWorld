@@ -58,7 +58,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func presentReward(view: UIView, gesture: UIGestureRecognizer) {
-        switch RewardType.get() {
+        switch Reward.getActive(for: .doneTask) {
             
         case .basalGifglia:
             self.present(UIGifgliaViewController(), animated: true, completion: nil)

@@ -31,17 +31,7 @@ class DrawerViewController: UIViewController {
         super.viewDidLoad()
         tableView.reloadData()
         tableView.isScrollEnabled = false
-        tableView.separatorStyle = .none
-        
-        let screenRect = CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: UIScreen.main.bounds.size)
-        let imageViewBackground = UIImageView(frame: screenRect)
-        let overlay = UIView.init(frame: screenRect)
-        overlay.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.3)
-        imageViewBackground.image = UIImage(named: "purple-nebula")
-        imageViewBackground.contentMode = UIViewContentMode.scaleAspectFill
-        imageViewBackground.addSubview(overlay)
-        view.addSubview(imageViewBackground)
-        view.sendSubview(toBack: imageViewBackground)
+//        tableView.separatorStyle = .none
     }
 }
 
@@ -49,56 +39,22 @@ class DrawerItemCell: UITableViewCell {
     
     var delegate: DrawerViewControllerDelegate?
     
-    @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var picker: UIPickerView!
     
-    static let itemCount: Int = 6
-    static var maximumWidth: CGFloat = 160
+    static let itemCount: Int = 1
+    static var maximumWidth: CGFloat = 280
     
-    func configureItem(titleText: String, iconImage: UIImage) {
+    func configureItem(titleText: String, rewardType: RewardType) {
         title.text = titleText
-        icon.image = iconImage
+        let doneTaskPicker = DoneTaskRewardPicker()
+        picker.dataSource = doneTaskPicker
+        picker.delegate = doneTaskPicker
     }
     
     func configureItem(index: Int) {
+        configureItem(titleText: "Done Task Reward", rewardType: .doneTask)
         
-//        var singleTap: UITapGestureRecognizer?
-//        
-//        switch index {
-//        case 0:
-//            self.configureItem(titleText: "Home", iconImage: UIImage(named: "icon-home")!)
-//            singleTap = UITapGestureRecognizer(target: delegate, action: #selector(DrawerViewControllerDelegate.presentChickletListViewController))
-//            
-//        case 1:
-//            self.configureItem(titleText: "Breathe Now", iconImage: UIImage(named: "icon-breathe")!)
-//            singleTap = UITapGestureRecognizer(target: delegate, action: #selector(DrawerViewControllerDelegate.presentBreatheNowViewController))
-//        
-//        case 2:
-//            self.configureItem(titleText: "Tutorial", iconImage: UIImage(named: "icon-tutorial")!)
-//            singleTap = UITapGestureRecognizer(target: delegate, action: #selector(DrawerViewControllerDelegate.presentTutorialViewController))
-//        
-//        case 3:
-//            self.configureItem(titleText: "Send Feedback", iconImage: UIImage(named: "icon-feedback")!)
-//            singleTap = UITapGestureRecognizer(target: delegate, action: #selector(DrawerViewControllerDelegate.presentFeedbackEmail))
-//            
-//        case 4:
-//            self.configureItem(titleText: "About Us", iconImage: UIImage(named: "icon-about-us")!)
-//            icon.tintColor = UIColor.white
-//            singleTap = UITapGestureRecognizer(target: delegate, action: #selector(DrawerViewControllerDelegate.presentAboutViewController))
-//            
-//        case 5:
-//            self.configureItem(titleText: "Share Space", iconImage: UIImage(named: "icon-share")!)
-//            singleTap = UITapGestureRecognizer(target: delegate, action: #selector(DrawerViewControllerDelegate.presentShareActivity))
-//            
-//        default:
-//            break
-//        }
-//        
-//        if let singleTap = singleTap {
-//            singleTap.numberOfTapsRequired = 1
-//            self.isUserInteractionEnabled = true
-//            self.addGestureRecognizer(singleTap)
-//        }
 //        
 //        let oldFrame = title.frame
 //        title.sizeToFit()
@@ -115,16 +71,6 @@ extension DrawerViewController: UITableViewDataSource {
         return DrawerItemCell.itemCount
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        if let image = UIImage(named: "brain-with-space") {
-//            let imageView = UIImageView(image: image)
-//            imageView.contentMode = .scaleAspectFit
-//            return imageView
-//        } else {
-            return UIView()
-//        }
-    }
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 100
     }
@@ -135,11 +81,11 @@ extension DrawerViewController: UITableViewDataSource {
         cell.delegate = delegate
         cell.configureItem(index: indexPath.row)
         
-        if (oldMaxWidth != DrawerItemCell.maximumWidth) {
-            var tvFrame = tableView.frame
-            tvFrame.size.width = DrawerItemCell.maximumWidth + tableView.layoutMargins.left + tableView.layoutMargins.right
-            tableView.frame = tvFrame
-        }
+//        if (oldMaxWidth != DrawerItemCell.maximumWidth) {
+//            var tvFrame = tableView.frame
+//            tvFrame.size.width = DrawerItemCell.maximumWidth + tableView.layoutMargins.left + tableView.layoutMargins.right
+//            tableView.frame = tvFrame
+//        }
         return cell
     }
     
