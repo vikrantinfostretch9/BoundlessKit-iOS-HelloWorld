@@ -9,9 +9,13 @@
 import UIKit
 
 class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
-
+    
+    var container: ContainerViewController? = nil
+    
     @IBOutlet var textTask: UITextField!
     @IBOutlet var textDescription: UITextField!
+    @IBOutlet weak var addTaskButton: UIButton!
+    @IBOutlet weak var addDemoTasksButton: UIButton!
     
     static func instance() -> AddTaskViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddTaskViewController") as! AddTaskViewController
@@ -19,23 +23,14 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-
-    /* ////////////////////////////
-     //
-     // UITextFieldDelegate
-     //
-     */ ////////////////////////////
-    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool{
-        // dismisses keyboard
-        textField.resignFirstResponder()
-        return true
+        
+        addTaskButton.stylizeButton()
+        addDemoTasksButton.stylizeButton()
     }
     
     @IBAction func  btnAddTask_click(_ sender: UIButton, event: UIEvent){
         taskManager.addTask(textTask.text!, additionalText: textDescription.text!)
-        self.view.endEditing(true)
+//        self.view.endEditing(true)
         textTask.text = ""
         textDescription.text = ""
         
@@ -52,10 +47,19 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
     
     @IBAction func btnAddDemo_click(_ sender: UIButton){
         taskManager.addDemo()
-        
-        tabBarController?.selectedIndex = 0
+        container?.collapseSidePanels()
     }
     
+    /* ////////////////////////////
+     //
+     // UITextFieldDelegate
+     //
+     */ ////////////////////////////
+    //    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+    //        // dismisses keyboard
+    //        textField.resignFirstResponder()
+    //        return true
+    //    }
     
     // touch out to exit editing
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -63,4 +67,14 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
     }
 
 
+}
+
+extension UIButton {
+    func stylizeButton(borderColor: CGColor = UIColor.white.cgColor, borderWidth: CGFloat = 1.0, cornerRadius: CGFloat = 10.0) {
+        self.layer.borderWidth = borderWidth
+        self.layer.cornerRadius = cornerRadius
+        self.layer.borderColor = borderColor
+//        self.backgroundColor = taskManager.colorForIndex(taskManager.tasks.count/2)
+        self.backgroundColor = Helper.dopeGreen.withAlphaComponent(0.2) // UIColor.lightGray.withAlphaComponent(0.2)
+    }
 }

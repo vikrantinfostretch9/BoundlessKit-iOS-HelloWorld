@@ -22,8 +22,28 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         
         tableView.register(TaskViewCell.self, forCellReuseIdentifier: "task")
+        taskManager.delegate = self
+        
+        let deleteAllTasksButton = UIButton(type: .system)
+        deleteAllTasksButton.backgroundColor = Helper.dopeGreen
+        deleteAllTasksButton.setTitleColor(UIColor.white, for: .normal)
+        deleteAllTasksButton.setTitle(" Complete All ", for: .normal)
+        deleteAllTasksButton.sizeToFit()
+        deleteAllTasksButton.addTarget(self, action: #selector(deleteAllTasks), for: .touchUpInside)
+        let deleteAllTasksButtonView = UIView(frame: CGRect(x: 0, y: tableView.frame.minY - deleteAllTasksButton.frame.height, width: tableView.frame.width, height: deleteAllTasksButton.frame.height))
+        deleteAllTasksButtonView.backgroundColor = Helper.dopeRed
+        view.addSubview(deleteAllTasksButtonView)
+//        deleteAllTasksButton.frame = CGRect(x: deleteAllTasksButtonView.frame.size.width - deleteAllTasksButton.frame.size.width, y: deleteAllTasksButton.frame.minY, width: deleteAllTasksButton.frame.width, height: deleteAllTasksButton.frame.height)
+        deleteAllTasksButtonView.addSubview(deleteAllTasksButton)
+        
+        deleteAllTasksButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        let c1 = NSLayoutConstraint(item: deleteAllTasksButton, attribute: .trailing, relatedBy: .equal, toItem: deleteAllTasksButtonView, attribute: .trailing, multiplier: 1, constant: 0)
+        let c2 = NSLayoutConstraint(item: deleteAllTasksButton, attribute: .centerY, relatedBy: .equal, toItem: deleteAllTasksButtonView, attribute: .centerY, multiplier: 1, constant: 0)
+        view.addConstraints([c1, c2,])
+        
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -33,7 +53,31 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    
+    func deleteAllTasks() {
+        let alert = UIAlertController(title: "Complete All Tasks?", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in
+            let row = self.tableView.numberOfRows(inSection: 0) - 1
+            guard row >= 0 else {
+                return
+            }
+            DispatchQueue.global().async {
+                var row = row
+                while (row >= 0) {
+                    self.tableView.isUserInteractionEnabled = false
+                    DispatchQueue.main.async {
+                        taskManager.removeTask(at: row)
+                        self.tableView.deleteRows(at: [IndexPath(item: row, section: 0)], with: .left)
+                    }
+                    Thread.sleep(forTimeInterval: 0.2)
+                    
+                    row = row - 1
+                }
+                self.tableView.isUserInteractionEnabled = true
+            }
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
+    }
     
     /* ////////////////////////////
      //
@@ -97,14 +141,8 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
      //
      */ ////////////////////////////
     
-    private func colorForIndex(_ index: Int) -> UIColor{
-        let itemCount = taskManager.tasks.count - 1
-        let val = (CGFloat (index) / CGFloat(itemCount)) * (204/255.0)
-        return UIColor.init(red: 1.0, green: val, blue: 0.0, alpha: 1.0)
-    }
-    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = colorForIndex(indexPath.row)
+        cell.backgroundColor = taskManager.colorForIndex(indexPath.row)
     }
     
     
@@ -131,5 +169,8 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
 
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
+    }
 }
 

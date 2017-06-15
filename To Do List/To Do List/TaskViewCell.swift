@@ -77,12 +77,6 @@ class TaskViewCell: UITableViewCell {
         return label
     }
     
-    
-    let dopeGreen = UIColor.init(red: 51/255.0, green: 153/255.0, blue: 51/255.0, alpha: 0.9)
-    let dopeRed = UIColor.init(red: 204/255.0, green: 51/255.0, blue: 51/255.0, alpha: 0.9)
-    let dopeBlue = UIColor.init(red: 51/255.0, green: 102/255.0, blue: 153/255.0, alpha: 0.9)
-    let dopeYellow = UIColor.init(red: 255/255.0, green: 204/255.0, blue: 0, alpha: 0.9)
-    
     //MARK: - horizontal pan gesture methods
     func handlePan(_ recognizer: UIPanGestureRecognizer) {
         // 1
@@ -101,11 +95,11 @@ class TaskViewCell: UITableViewCell {
             let cueAlpha = fabs(frame.origin.x) / (frame.size.width / 8.0)
             tickLabel.alpha = cueAlpha
             if(deleteOnDragRelease){
-                tickLabel.textColor = dopeGreen
+                tickLabel.textColor = Helper.dopeGreen
                 tickLabel.backgroundColor = UIColor.clear
             } else{
                 tickLabel.textColor = UIColor.clear
-                tickLabel.backgroundColor = dopeGreen
+                tickLabel.backgroundColor = Helper.dopeGreen
             }
         
         }

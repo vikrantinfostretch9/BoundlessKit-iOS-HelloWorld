@@ -32,7 +32,7 @@ class RewardPickerDelegate: NSObject, UIPickerViewDelegate, UIPickerViewDataSour
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = view as? UILabel ?? UILabel()
         label.font = UIFont(name: "Montserrat", size: UIFont.systemFontSize)
-        //        label.textAlignment = .left
+        label.textAlignment = .center
         label.text = self.pickerView(pickerView, titleForRow: row, forComponent: component)
         label.backgroundColor = Reward.colorForIndex(for: rewardType, and: row)
         

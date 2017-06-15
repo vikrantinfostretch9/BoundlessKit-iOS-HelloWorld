@@ -108,6 +108,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
         if (rightViewController == nil) {
             let drawerViewController = DrawerViewController.instance()
             drawerViewController.delegate = self
+            drawerViewController.container = self
             view.insertSubview(drawerViewController.view, at: 0)
             
             addChildViewController(drawerViewController)
@@ -120,6 +121,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
         if (leftViewController == nil) {
             let addTaskViewController = AddTaskViewController.instance()
 //            addTaskViewController.delegate = self
+            addTaskViewController.container = self
             view.insertSubview(addTaskViewController.view, at: 0)
             
             addChildViewController(addTaskViewController)

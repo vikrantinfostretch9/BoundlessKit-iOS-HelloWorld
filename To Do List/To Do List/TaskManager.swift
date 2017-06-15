@@ -14,6 +14,7 @@ class TaskManager: NSObject {
     
     private let defaults = UserDefaults.standard
     var tasks: [Task] = []
+    var delegate: ToDoListViewController? = nil
     
     override init() {
         super.init()
@@ -23,6 +24,7 @@ class TaskManager: NSObject {
     func addTask(_ name:String, additionalText:String){
         tasks.append(Task(name: name, additionalText: additionalText))
         saveTasks()
+        delegate?.tableView.reloadData()
     }
     
     func removeTask(at index: Int) {
@@ -40,6 +42,7 @@ class TaskManager: NSObject {
         tasks.append(Task(name: "Make dinner", additionalText: "meatloaf"))
         tasks.append(Task(name: "Go to sleep", additionalText: "11:00pm"))
         saveTasks()
+        delegate?.tableView.reloadData()
     }
     
     func saveTasks() {
@@ -57,4 +60,9 @@ class TaskManager: NSObject {
         }
     }
     
+    func colorForIndex(_ index: Int) -> UIColor{
+        let itemCount = tasks.count - 1
+        let val = (CGFloat (index) / CGFloat(itemCount)) * (204/255.0)
+        return UIColor.init(red: 1.0, green: val, blue: 0.0, alpha: 1.0)
+    }
 }
