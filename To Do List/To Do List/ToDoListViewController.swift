@@ -84,7 +84,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
                                     self.container!.addRightPanelViewController()
                                     self.container!.rightViewController?.showTutorial(tableViewController: self, completion: {
                                         
-                                        self.presentTutorialAlert(title: "Demo App", message: "Enjoy!\n\nhttps://usedopamine.com", nextButtonText: "Finish")
+                                        self.presentTutorialAlert(title: "Demo App", message: "Enjoy!\n\nusedopamine.com", nextButtonText: "Finish")
                                     })
                                 }
                             })
@@ -161,13 +161,13 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
      //
      */ ////////////////////////////
     
-    func taskItemDeleted(_ taskItem: Task) {
+    func taskItemDeleted(_ taskItem: Task, animation: UITableViewRowAnimation = .left) {
         if let index = taskManager.tasks.index(of: taskItem){
             taskManager.removeTask(at: index)
             
             tableView.beginUpdates()
             let indexPathForRow = IndexPath(item: index, section: 0)
-            tableView.deleteRows(at: [indexPathForRow], with: .left)
+            tableView.deleteRows(at: [indexPathForRow], with: animation)
             tableView.endUpdates()
             if (taskManager.tasks.count == 0) {
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {

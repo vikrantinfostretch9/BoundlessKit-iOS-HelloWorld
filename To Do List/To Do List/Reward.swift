@@ -31,7 +31,14 @@ enum RewardType : String {
 
 
 enum Reward : String {
-    case basalGifglia, candyBar, balloons, starSingle, goldenFrame, starBurst, coins
+    case
+    basalGifglia = "📲\t\t Basal Gifglia",
+    candyBar = "📲\t\tCandy Bar",
+    balloons = "📲\t\t Balloons",
+    starSingle = "📲\t\t Stickers",
+    goldenFrame = "📲📣🖼 Framed Memory",
+    starBurst = "👆📣\t Star Bursts",
+    coins = "👆📣📳 Golden Touch"
 
     static func rewardsFor(type: RewardType) -> [Reward]! {
         switch type {

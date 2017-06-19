@@ -114,6 +114,7 @@ extension UIButton {
         self.layer.cornerRadius = cornerRadius
         self.layer.borderColor = borderColor
 //        self.backgroundColor = taskManager.colorForIndex(taskManager.tasks.count/2)
-        self.backgroundColor = Helper.dopeGreen.withAlphaComponent(0.2) // UIColor.lightGray.withAlphaComponent(0.2)
+        self.backgroundColor = Helper.dopeGreen.withAlphaComponent(0.85) // UIColor.lightGray.withAlphaComponent(0.2)
+        self.setTitleColor(UIColor.white, for: .normal)
     }
 }

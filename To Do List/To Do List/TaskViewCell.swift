@@ -11,7 +11,7 @@ import DopamineKit
 
 // A protocol that the TaskViewCell uses to inform its delegate of state change
 protocol TaskViewCellDelegate {
-    func taskItemDeleted(_ taskItem: Task)
+    func taskItemDeleted(_ taskItem: Task, animation: UITableViewRowAnimation)
     func presentTaskDoneReward(view: UIView, gesture: UIGestureRecognizer)
 }
 
@@ -22,6 +22,8 @@ class TaskViewCell: UITableViewCell {
     var deleteOnDragRelease = false
     
     var tickLabel: UILabel
+    var tickLabelLeft: UILabel
+    var swipingRight = false
     
     var delegate: TaskViewCellDelegate?
     // The item that this cell renders.
@@ -32,6 +34,9 @@ class TaskViewCell: UITableViewCell {
         tickLabel = TaskViewCell.createCueLabel()
         tickLabel.text = "\u{2713}"
         tickLabel.textAlignment = .left
+        tickLabelLeft = TaskViewCell.createCueLabel()
+        tickLabelLeft.text = "\u{2713}"
+        tickLabelLeft.textAlignment = .right
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -52,7 +57,7 @@ class TaskViewCell: UITableViewCell {
         
         
         addSubview(tickLabel)
-        
+        addSubview(tickLabelLeft)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -66,6 +71,7 @@ class TaskViewCell: UITableViewCell {
         super.layoutSubviews()
         gradientLayer.frame = bounds
         tickLabel.frame = CGRect(x: bounds.size.width+kUICuesMargin, y: 0, width: bounds.size.width-kUICuesMargin, height: bounds.size.height)
+        tickLabelLeft.frame = CGRect(x: 0-bounds.size.width-kUICuesMargin, y: 0, width: bounds.size.width-kUICuesMargin, height: bounds.size.height)
     }
     
     // utility method for creating the contextual cues
@@ -89,17 +95,22 @@ class TaskViewCell: UITableViewCell {
             let translation = recognizer.translation(in: self)
             center = CGPoint(x: originalCenter.x + translation.x, y: originalCenter.y)
             // has the user dragged the item far enough to initiate a delete/complete?
-            deleteOnDragRelease = frame.origin.x < -frame.size.width / 8.0
+            deleteOnDragRelease = (frame.origin.x < -frame.size.width / 8.0) || (frame.origin.x > frame.size.width / 8.0)
+            swipingRight = frame.origin.x > 0
             
             // fade context cues
-            let cueAlpha = fabs(frame.origin.x) / (frame.size.width / 8.0)
-            tickLabel.alpha = cueAlpha
+            tickLabel.alpha = fabs(frame.origin.x) / (frame.size.width / 8.0)
+            tickLabelLeft.alpha = fabs(tickLabelLeft.frame.origin.x) / (frame.size.width / 8.0)
             if(deleteOnDragRelease){
                 tickLabel.textColor = Helper.dopeGreen
                 tickLabel.backgroundColor = UIColor.clear
+                tickLabelLeft.textColor = Helper.dopeGreen
+                tickLabelLeft.backgroundColor = UIColor.clear
             } else{
                 tickLabel.textColor = UIColor.clear
                 tickLabel.backgroundColor = Helper.dopeGreen
+                tickLabelLeft.textColor = UIColor.clear
+                tickLabelLeft.backgroundColor = Helper.dopeGreen
             }
         
         }
@@ -115,7 +126,7 @@ class TaskViewCell: UITableViewCell {
                 if delegate != nil && task != nil {
                     
                     // notify the delegate that this item should be deleted
-                    delegate!.taskItemDeleted(task!)
+                    delegate!.taskItemDeleted(task!, animation: swipingRight ? .right : .left)
                     
                     // The completed task has been deleted
                     // Let's give em some positive reinforcement!

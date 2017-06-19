@@ -91,7 +91,7 @@ extension DrawerViewController: UITableViewDataSource, UITableViewDelegate {
                 self.container?.animateRightPanel(shouldExpand: true)
             }) { success in
                 // Message
-                tableViewController.presentTutorialAlert(title: "Experiment with Reward Selection", message: "Because this is a demo, we’ve added a way to modify rewards inside the app. This type of functionality is for demonstration purposes only.") {
+                tableViewController.presentTutorialAlert(title: "Experiment with Reward Selection", message: "Because this is a demo, we’ve added a way to modify rewards inside the app.\n\nIn reality, rewards can be anything that gives a little joy to your users, here are just a few examples! Note: some rewards also have sound") {
                     // Breakdown
                     UIView.animate(withDuration: 2.2, delay: 1.5, options: .curveEaseIn, animations: {
                         self.container?.animateRightPanel(shouldExpand: false)
