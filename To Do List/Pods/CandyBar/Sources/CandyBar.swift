@@ -10,6 +10,10 @@ import UIKit
 public enum CandyIcon : Int{
     case none = 0, certificate, crown, crown2, medalStar, ribbonStar, stars, stopwatch, thumbsUp, trophyHand, trophyStar, wreathStar
     
+    public static func randomIcon() -> CandyIcon {
+        return CandyIcon(rawValue: Int(arc4random_uniform(11))+1)!
+    }
+    
     /// The filename for the icon image from the CandyBar framework
     ///
     internal var filename: String{

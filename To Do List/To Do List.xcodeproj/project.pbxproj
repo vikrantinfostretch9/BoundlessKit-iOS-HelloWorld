@@ -13,7 +13,6 @@
 		840E07761EDBE60100332A6C /* DLBalloons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07751EDBE60100332A6C /* DLBalloons.swift */; };
 		840E07781EDBF2C800332A6C /* DLCoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07771EDBF2C800332A6C /* DLCoins.swift */; };
 		840E077A1EDBFF4200332A6C /* DLScreenStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07791EDBFF4200332A6C /* DLScreenStar.swift */; };
-		84156F891EDC41A800DEF989 /* DLElectricShock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84156F881EDC41A800DEF989 /* DLElectricShock.swift */; };
 		84156F8B1EDCF2A800DEF989 /* DLFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84156F8A1EDCF2A800DEF989 /* DLFrame.swift */; };
 		84156F901EDD173200DEF989 /* star-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F8F1EDD173200DEF989 /* star-sound.wav */; };
 		84156F921EDD1CB300DEF989 /* coin-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F911EDD1CB300DEF989 /* coin-sound.wav */; };
@@ -53,7 +52,6 @@
 		840E07751EDBE60100332A6C /* DLBalloons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLBalloons.swift; sourceTree = "<group>"; };
 		840E07771EDBF2C800332A6C /* DLCoins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLCoins.swift; sourceTree = "<group>"; };
 		840E07791EDBFF4200332A6C /* DLScreenStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLScreenStar.swift; sourceTree = "<group>"; };
-		84156F881EDC41A800DEF989 /* DLElectricShock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLElectricShock.swift; sourceTree = "<group>"; };
 		84156F8A1EDCF2A800DEF989 /* DLFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLFrame.swift; sourceTree = "<group>"; };
 		84156F8F1EDD173200DEF989 /* star-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "star-sound.wav"; sourceTree = "<group>"; };
 		84156F911EDD1CB300DEF989 /* coin-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "coin-sound.wav"; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				840E07711EDBD7DF00332A6C /* StarburstTouch.swift */,
 				840E07751EDBE60100332A6C /* DLBalloons.swift */,
 				84156F8A1EDCF2A800DEF989 /* DLFrame.swift */,
-				84156F881EDC41A800DEF989 /* DLElectricShock.swift */,
 				840E07791EDBFF4200332A6C /* DLScreenStar.swift */,
 				840E07771EDBF2C800332A6C /* DLCoins.swift */,
 			);
@@ -365,7 +362,6 @@
 				84FF05DF1ED8D26E00C0F9DE /* Helper.swift in Sources */,
 				84B7B9A11D078EA1008BF664 /* AppDelegate.swift in Sources */,
 				840E077A1EDBFF4200332A6C /* DLScreenStar.swift in Sources */,
-				84156F891EDC41A800DEF989 /* DLElectricShock.swift in Sources */,
 				84DE05551EEB813300777AD9 /* DrawerViewController.swift in Sources */,
 				8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */,
 				840E07721EDBD7DF00332A6C /* StarburstTouch.swift in Sources */,

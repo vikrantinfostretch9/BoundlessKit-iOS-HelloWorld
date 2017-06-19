@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DopamineKit
 
 class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
     
@@ -36,13 +37,31 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
         
 //        tabBarController?.selectedIndex = 0
         if let touch = event.touches(for: sender)?.first {
-            switch Reward.getActive(for : .newTask) {
-            case .coins:
-                sender.showCoins(at: touch.location(in: sender))
-            default:
-                sender.showStarburst(at: touch.location(in: sender))
-            }
+            reinforceAddTaskAction(view: sender, point: touch.location(in: sender))
         }
+    }
+    
+    func reinforceAddTaskAction(view: UIView, point: CGPoint) {
+        DopamineKit.reinforce("action1", completion: {reinforcement in
+            DispatchQueue.main.async(execute: {
+                // NOTE: rearranged cases to have rewards show more often for demonstration
+                switch(reinforcement){
+                case "stars" :
+                    fallthrough
+                case "thumbsUp" :
+                    return
+                default:
+                    switch (Reward.getActive(for: .newTask)) {
+                    case .starBurst:
+                        view.showStarburst(at: point)
+                    case .coins:
+                        view.showCoins(at: point)
+                    default:
+                        return
+                    }
+                }
+            })
+        })
     }
     
     @IBAction func btnAddDemo_click(_ sender: UIButton){

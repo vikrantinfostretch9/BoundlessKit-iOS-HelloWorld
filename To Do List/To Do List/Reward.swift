@@ -45,16 +45,20 @@ enum Reward : String {
     }
     
     static let newTaskRewards = [
-        Reward.starBurst
+        Reward.starBurst,
+        Reward.coins,
     ]
     static let doneTaskRewards = [
+        Reward.basalGifglia,
         Reward.candyBar,
         Reward.balloons,
         Reward.starSingle,
         Reward.starBurst,
+        Reward.coins,
     ]
     static let allDoneTaskRewards = [
-        Reward.goldenFrame
+        Reward.goldenFrame,
+        Reward.balloons,
     ]
     static let activeRewardsDefaults = [
         RewardType.newTask.rawValue : Reward.coins.rawValue,

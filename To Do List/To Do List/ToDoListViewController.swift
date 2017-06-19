@@ -8,6 +8,7 @@
 
 import UIKit
 import BasalGifglia
+import DopamineKit
 import CandyBar
 
 class ToDoListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TaskViewCellDelegate {
@@ -54,6 +55,12 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func deleteAllTasks() {
+        guard tableView.numberOfRows(inSection: 0) > 0 else {
+            let alert = UIAlertController(title: "Add Tasks", message: "First add some tasks", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(alert, animated: true)
+            return
+        }
         let alert = UIAlertController(title: "Complete All Tasks?", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in
             let row = self.tableView.numberOfRows(inSection: 0) - 1
@@ -61,6 +68,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
                 return
             }
             DispatchQueue.global().async {
+                self.reinforceTaskAllDoneAction()
                 var row = row
                 while (row >= 0) {
                     self.tableView.isUserInteractionEnabled = false
@@ -102,7 +110,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func presentReward(view: UIView, gesture: UIGestureRecognizer) {
+    func presentTaskDoneReward(view: UIView, gesture: UIGestureRecognizer) {
         switch Reward.getActive(for: .doneTask) {
             
         case .basalGifglia:
@@ -111,8 +119,8 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         case .candyBar:
             CandyBar(title: "Got em!",
                      subtitle: "beep boop bop good job",
-                     icon: .thumbsUp,
-                     position: .bottom,
+                     icon: CandyIcon.randomIcon(),
+                     position: arc4random() % 2 == 0 ? .top : .bottom,
                      backgroundColor: CandyBar.hexStringToUIColor("#4286f4"))
                 .show(2.5)
             
@@ -132,6 +140,27 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
             self.tableView.showCoins(at: gesture.location(in: tableView))
         }
         
+    }
+    
+    func reinforceTaskAllDoneAction() {
+        DopamineKit.reinforce("action1", completion: {reinforcement in
+            DispatchQueue.main.async(execute: {
+                // NOTE: rearranged cases to have rewards show more often for demonstration
+                switch(reinforcement){
+                case "thumbsUp" :
+                    return
+                default:
+                    switch (Reward.getActive(for: .allDoneTask)) {
+                    case .goldenFrame:
+                        self.tableView.showGoldenFrame()
+                    case .balloons:
+                        self.tableView.showBalloons()
+                    default:
+                        return
+                    }
+                }
+            })
+        })
     }
     
     

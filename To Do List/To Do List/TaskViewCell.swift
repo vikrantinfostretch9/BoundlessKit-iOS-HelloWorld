@@ -12,7 +12,7 @@ import DopamineKit
 // A protocol that the TaskViewCell uses to inform its delegate of state change
 protocol TaskViewCellDelegate {
     func taskItemDeleted(_ taskItem: Task)
-    func presentReward(view: UIView, gesture: UIGestureRecognizer)
+    func presentTaskDoneReward(view: UIView, gesture: UIGestureRecognizer)
 }
 
 class TaskViewCell: UITableViewCell {
@@ -132,7 +132,7 @@ class TaskViewCell: UITableViewCell {
                             case "medalStar" :
                                 fallthrough
                             case "neutralResponse" :
-                                self.delegate?.presentReward(view: self.superview!, gesture: recognizer)
+                                self.delegate?.presentTaskDoneReward(view: self.superview!, gesture: recognizer)
                                 NSLog("DopamineKit - Show reward!")
                             default:
                                 NSLog("wtf is this:\(reinforcement)")
