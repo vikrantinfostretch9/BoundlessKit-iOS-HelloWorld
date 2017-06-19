@@ -17,7 +17,12 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ToDoListViewController") as! ToDoListViewController
     }
     
+    
+    var container: ContainerViewController? = nil
+    
     @IBOutlet var tableView:UITableView!
+    var deleteAllTasksButton: UIButton? = nil
+    var deleteAllTasksView: UIView? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,23 +30,27 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.register(TaskViewCell.self, forCellReuseIdentifier: "task")
         taskManager.delegate = self
         
-        let deleteAllTasksButton = UIButton(type: .system)
-        deleteAllTasksButton.backgroundColor = Helper.dopeGreen
-        deleteAllTasksButton.setTitleColor(UIColor.white, for: .normal)
-        deleteAllTasksButton.setTitle(" Complete All ", for: .normal)
-        deleteAllTasksButton.sizeToFit()
-        deleteAllTasksButton.addTarget(self, action: #selector(deleteAllTasks), for: .touchUpInside)
-        let deleteAllTasksButtonView = UIView(frame: CGRect(x: 0, y: tableView.frame.minY - deleteAllTasksButton.frame.height, width: tableView.frame.width, height: deleteAllTasksButton.frame.height))
-        deleteAllTasksButtonView.backgroundColor = Helper.dopeRed
-        view.addSubview(deleteAllTasksButtonView)
-//        deleteAllTasksButton.frame = CGRect(x: deleteAllTasksButtonView.frame.size.width - deleteAllTasksButton.frame.size.width, y: deleteAllTasksButton.frame.minY, width: deleteAllTasksButton.frame.width, height: deleteAllTasksButton.frame.height)
-        deleteAllTasksButtonView.addSubview(deleteAllTasksButton)
-        
-        deleteAllTasksButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        let c1 = NSLayoutConstraint(item: deleteAllTasksButton, attribute: .trailing, relatedBy: .equal, toItem: deleteAllTasksButtonView, attribute: .trailing, multiplier: 1, constant: 0)
-        let c2 = NSLayoutConstraint(item: deleteAllTasksButton, attribute: .centerY, relatedBy: .equal, toItem: deleteAllTasksButtonView, attribute: .centerY, multiplier: 1, constant: 0)
-        view.addConstraints([c1, c2,])
+        if deleteAllTasksButton == nil {
+            let deleteAllTasksButton = UIButton(type: .system)
+            deleteAllTasksButton.backgroundColor = Helper.dopeGreen
+            deleteAllTasksButton.setTitleColor(UIColor.white, for: .normal)
+            deleteAllTasksButton.setTitle(" Complete All ", for: .normal)
+            deleteAllTasksButton.sizeToFit()
+            deleteAllTasksButton.addTarget(self, action: #selector(deleteAllTasks), for: .touchUpInside)
+            let deleteAllTasksView = UIView(frame: CGRect(x: 0, y: tableView.frame.minY - deleteAllTasksButton.frame.height, width: tableView.frame.width, height: deleteAllTasksButton.frame.height))
+            deleteAllTasksView.backgroundColor = Helper.dopeRed
+            view.addSubview(deleteAllTasksView)
+            //        deleteAllTasksButton.frame = CGRect(x: deleteAllTasksButtonView.frame.size.width - deleteAllTasksButton.frame.size.width, y: deleteAllTasksButton.frame.minY, width: deleteAllTasksButton.frame.width, height: deleteAllTasksButton.frame.height)
+            deleteAllTasksView.addSubview(deleteAllTasksButton)
+            
+            deleteAllTasksButton.translatesAutoresizingMaskIntoConstraints = false
+            
+            let c1 = NSLayoutConstraint(item: deleteAllTasksButton, attribute: .trailing, relatedBy: .equal, toItem: deleteAllTasksView, attribute: .trailing, multiplier: 1, constant: 0)
+            let c2 = NSLayoutConstraint(item: deleteAllTasksButton, attribute: .centerY, relatedBy: .equal, toItem: deleteAllTasksView, attribute: .centerY, multiplier: 1, constant: 0)
+            view.addConstraints([c1, c2,])
+            self.deleteAllTasksButton = deleteAllTasksButton
+            self.deleteAllTasksView = deleteAllTasksView
+        }
         
     }
     
@@ -51,6 +60,65 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         
         if (tableView.numberOfRows(inSection: 0) == 0) {
             taskManager.addDemo()
+        }
+        
+        self.showTutorial()
+    }
+    
+    func showTutorial() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.presentTutorialAlert(title: "Demo App", message: "DopamineLabs© 2017\n\nThis demonstration app uses positive reinforcement to build a productive task-completing habit!\n\nThere are 3 actions reinforced with DopamineKit.\n\nLet's take a look around...", skipButton: true) {
+                
+                // Show complete-task-action
+                (self.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! TaskViewCell).showTutorial(tableViewController: self, completion: {
+                    
+                    // Show complete-all-task-action
+                    self.showCompeleteAllTutorial( completion: {
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            // Show add-task-action
+                            self.container!.addLeftPanelViewController()
+                            self.container!.leftViewController!.showTutorial(tableViewController: self, completion: {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                    // Show reward-selection
+                                    self.container!.addRightPanelViewController()
+                                    self.container!.rightViewController?.showTutorial(tableViewController: self, completion: {
+                                        
+                                        self.presentTutorialAlert(title: "Demo App", message: "Enjoy!\n\nhttps://usedopamine.com", nextButtonText: "Finish")
+                                    })
+                                }
+                            })
+                        }
+                    })
+                    
+                })
+            }
+        }
+    }
+    
+    func showCompeleteAllTutorial(completion: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            // Setup
+            let frame = self.deleteAllTasksView?.frame
+            frame?.offsetBy(dx: (self.deleteAllTasksView?.frame.width)! - (self.deleteAllTasksButton?.frame.width)!, dy: 0)
+            let overlay = TAOverlayView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,
+                                                      height: UIScreen.main.bounds.height), subtractedPaths: [
+                                                        TARectangularSubtractionPath(frame: frame!)
+                ])
+            overlay.alpha = 0
+            self.view.addSubview(overlay)
+            // Animate
+            UIView.animate(withDuration: 0.5, animations: {overlay.alpha = TAOverlayView.defaultAlpha}, completion: { success in
+                // Message
+                self.presentTutorialAlert(title: "Reinforced Action (2/3)", message: "Press to complete all tasks!\n\nReceiving rewards is determined by layers of machine learning.") {
+                    // Breakdown
+                    UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveLinear, animations: {overlay.alpha = 0}, completion: { _ in
+                        overlay.removeFromSuperview()
+                        completion()
+                    })
+                }
+                
+            })
         }
     }
     

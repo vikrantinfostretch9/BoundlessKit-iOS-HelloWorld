@@ -49,3 +49,15 @@ class Helper {
     }
 }
 
+extension UIViewController {
+    func presentTutorialAlert(title: String, message: String, nextButtonText: String = "Next", skipButton: Bool = false, completion: @escaping () -> Void = {}) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            if skipButton {alert.addAction(UIAlertAction(title: "Skip", style: .cancel))}
+            alert.addAction(UIAlertAction(title: nextButtonText, style: .default) { _ in
+                completion()
+            })
+            self.present(alert, animated: true)
+        }
+    }
+}

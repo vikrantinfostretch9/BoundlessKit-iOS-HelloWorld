@@ -86,6 +86,26 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
     }
 
 
+    func showTutorial(tableViewController: ToDoListViewController, completion: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            // Setup
+            self.container?.addLeftPanelViewController()
+            // Animate
+            UIView.animate(withDuration: 2.2, delay: 0.5, options: .curveEaseOut, animations: {
+                self.container?.animateLeftPanel(shouldExpand: true)
+            }) { success in
+                // Message
+                tableViewController.presentTutorialAlert(title: "Reinforced Action (3/3)", message: "Add a new task here!\n\nDopamineKit can be used to reinforce any habit-forming action.") {
+                    // Breakdown
+                    UIView.animate(withDuration: 2.2, delay: 1.5, options: .curveEaseIn, animations: {
+                        self.container?.animateLeftPanel(shouldExpand: false)
+                    }, completion: {success in
+                        completion()
+                    })
+                }
+            }
+        }
+    }
 }
 
 extension UIButton {

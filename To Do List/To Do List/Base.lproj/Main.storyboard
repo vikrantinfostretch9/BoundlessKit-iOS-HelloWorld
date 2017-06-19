@@ -42,7 +42,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Tasks" image="first" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="tableView" destination="8WP-sW-TIn" id="Sva-Su-nME"/>
+                        <outlet property="tableView" destination="8WP-sW-TIn" id="5ln-AL-tjb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -83,7 +83,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Div-3x-Fzr">
-                                <rect key="frame" x="115" y="199" width="135" height="30"/>
+                                <rect key="frame" x="31" y="199" width="219" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <state key="normal" title=" Add Task "/>
                                 <connections>
@@ -91,7 +91,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aJB-cV-ldJ">
-                                <rect key="frame" x="115" y="237" width="135" height="30"/>
+                                <rect key="frame" x="31" y="237" width="219" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <state key="normal" title=" Add Demo Tasks "/>
                                 <connections>
@@ -112,6 +112,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1148.5" y="378.5"/>
+        </scene>
+        <!--Tutorial Controller-->
+        <scene sceneID="lQz-Qx-QEi">
+            <objects>
+                <viewController storyboardIdentifier="TutorialController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g9P-3X-Wdk" customClass="TutorialController" customModule="To_Do_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dfx-ZE-Gz7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1o-h8-fnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743" y="-1361"/>
         </scene>
         <!--Container View Controller-->
         <scene sceneID="ab8-Gg-oeH">

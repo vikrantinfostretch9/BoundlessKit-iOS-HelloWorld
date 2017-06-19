@@ -53,7 +53,7 @@ class ContainerViewController: UIViewController {
         super.viewDidLoad()
         
         centerViewController = ToDoListViewController.instance()
-//        centerViewController?.containerDelegate = self
+        centerViewController?.container = self
         
         centerNavigationController = UINavigationController(rootViewController: centerViewController!)
         centerNavigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -73,12 +73,8 @@ class ContainerViewController: UIViewController {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         tapRecognizer.cancelsTouchesInView = false
         centerNavigationController.view.addGestureRecognizer(tapRecognizer)
+        
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
 }
 
 // MARK: CenterViewController delegate

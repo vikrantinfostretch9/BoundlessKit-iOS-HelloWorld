@@ -37,15 +37,10 @@ class DrawerViewController: UIViewController {
         
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: DrawerItemCell.maximumWidth, height: 100))
         label.text =
-            "Opaque is meant for demonstration only.\n\n" +
-            "Welcome! The checklist auto-populates. You clear items from the checklist by swiping them to the left.\n\n" +
-        "Sometimes when you clear an item, you get a reward. Since the app is designed to show off rewards, it's tuned to show a lot more rewards than a customer app would.\n\n\n" +
-        "Below is a handy selection for different rewards. This handy selection view is not meant to be used in customer apps, but to illustrate different reward designs in customer apps.\n\n"
+            "Opaque is meant for demonstration only.\n\n"
         label.numberOfLines = 0
         
         tableView.tableHeaderView = label
-        label.sizeToFit()
-
     }
 }
 
@@ -64,11 +59,11 @@ extension DrawerViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Adding Task"
+            return "Adding New Task Reward"
         case 1:
-            return  "Finishing Task"
+            return  "Completing Task Reward"
         case 2:
-            return  "Finishing All Tasks"
+            return  "Completing All Tasks Reward"
         default:
             fatalError("Unconfigured Reward Selector")
         }
@@ -85,6 +80,27 @@ extension DrawerViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func showTutorial(tableViewController: ToDoListViewController, completion: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            // Setup
+            self.container?.addRightPanelViewController()
+            // Animate
+            UIView.animate(withDuration: 2.2, delay: 1.0, options: .curveEaseOut, animations: {
+                self.container?.animateRightPanel(shouldExpand: true)
+            }) { success in
+                // Message
+                tableViewController.presentTutorialAlert(title: "Experiment with Reward Selection", message: "Because this is a demo, we’ve added a way to modify rewards inside the app. This type of functionality is for demonstration purposes only.") {
+                    // Breakdown
+                    UIView.animate(withDuration: 2.2, delay: 1.5, options: .curveEaseIn, animations: {
+                        self.container?.animateRightPanel(shouldExpand: false)
+                    }, completion: {success in
+                        completion()
+                    })
+                }
+            }
+        }
     }
 }
 

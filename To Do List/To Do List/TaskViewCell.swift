@@ -155,5 +155,41 @@ class TaskViewCell: UITableViewCell {
         }
         return false
     }
-
+    
+    func showTutorial(tableViewController: ToDoListViewController, completion: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            // Setup
+            let overlay = TAOverlayView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,
+                                                      height: UIScreen.main.bounds.height), subtractedPaths: [
+                                                        TARectangularSubtractionPath(frame: tableViewController.tableView.frame,
+                                                                                     horizontalPadding: 0, verticalPadding: 0)
+                ])
+            overlay.alpha = 0.0
+            tableViewController.view.addSubview(overlay)
+            
+            // Animate
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {overlay.alpha = TAOverlayView.defaultAlpha}) { _ in
+                UIView.animate(withDuration: 0.8, delay: 0, options: .curveEaseInOut, animations: {
+                    self.center = CGPoint(x: self.center.x - self.frame.size.width / 8.0, y: self.center.y)
+                    
+                    self.tickLabel.textColor = UIColor.white
+                    self.tickLabel.backgroundColor = Helper.dopeGreen
+                }) { success in
+                    // Message
+                    tableViewController.presentTutorialAlert(title: "Reinforced Action (1/3)", message: "Swipe to complete a task!\n\nMaybe you'll receive a reward, maybe you won't.") {
+                        // Breakdown
+                        UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseIn, animations: {
+                            self.frame = CGRect(x: 0, y: self.frame.origin.y, width: self.bounds.size.width, height: self.bounds.size.height)
+                            overlay.alpha = 0.0
+                        }, completion: {success in
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                overlay.removeFromSuperview()
+                                completion()
+                            }
+                        })
+                    }
+                }
+            }
+        }
+    }
 }
