@@ -19,6 +19,7 @@
 		84156F941EDD1E3A00DEF989 /* shoot-and-roll.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F931EDD1E3A00DEF989 /* shoot-and-roll.wav */; };
 		8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */; };
 		8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFE1D08F5BC003BB094 /* Task.swift */; };
+		8452A1F41F7C25320089CB25 /* DLConfetti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452A1F31F7C25320089CB25 /* DLConfetti.swift */; };
 		8497238A1D07FFB60014E975 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849723891D07FFB60014E975 /* DopamineProperties.plist */; };
 		84B7B9A11D078EA1008BF664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A01D078EA1008BF664 /* AppDelegate.swift */; };
 		84B7B9A31D078EA1008BF664 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A21D078EA1008BF664 /* ToDoListViewController.swift */; };
@@ -60,6 +61,7 @@
 		84156F931EDD1E3A00DEF989 /* shoot-and-roll.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "shoot-and-roll.wav"; sourceTree = "<group>"; };
 		8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
 		8426EEFE1D08F5BC003BB094 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		8452A1F31F7C25320089CB25 /* DLConfetti.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLConfetti.swift; sourceTree = "<group>"; };
 		849723891D07FFB60014E975 /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
 		84B7B99D1D078EA1008BF664 /* To Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B7B9A01D078EA1008BF664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				84156F8A1EDCF2A800DEF989 /* DLFrame.swift */,
 				840E07791EDBFF4200332A6C /* DLScreenStar.swift */,
 				840E07771EDBF2C800332A6C /* DLCoins.swift */,
+				8452A1F31F7C25320089CB25 /* DLConfetti.swift */,
 			);
 			name = PreMades;
 			sourceTree = "<group>";
@@ -333,13 +336,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-To Do List-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E1A00E9708140874E884ADC7 /* [CP] Embed Pods Frameworks */ = {
@@ -348,9 +354,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-To Do List/Pods-To Do List-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BasalGifglia/BasalGifglia.framework",
+				"${BUILT_PRODUCTS_DIR}/CandyBar/CandyBar.framework",
+				"${BUILT_PRODUCTS_DIR}/DopamineKit/DopamineKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BasalGifglia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CandyBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DopamineKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -371,6 +384,7 @@
 				840E077A1EDBFF4200332A6C /* DLScreenStar.swift in Sources */,
 				84DE05551EEB813300777AD9 /* DrawerViewController.swift in Sources */,
 				8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */,
+				8452A1F41F7C25320089CB25 /* DLConfetti.swift in Sources */,
 				840E07721EDBD7DF00332A6C /* StarburstTouch.swift in Sources */,
 				84B7B9C31D078EE5008BF664 /* TaskManager.swift in Sources */,
 				8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */,
