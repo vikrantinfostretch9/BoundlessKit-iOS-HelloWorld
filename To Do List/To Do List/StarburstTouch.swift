@@ -16,9 +16,9 @@ extension UIView {
         layer.addSublayer(stars)
         Helper.playStarSound()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             stars.birthRate = 0
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 stars.removeFromSuperlayer()
             }
         }
@@ -43,17 +43,33 @@ extension CAEmitterLayer {
         
         let cell = CAEmitterCell()
         cell.name = "starEmitter"
-        cell.birthRate = 30
-        cell.lifetime = 0.3
-        cell.spin = CGFloat.pi * 2.0
-        cell.spinRange = CGFloat.pi
-        cell.velocity = 400
+        cell.birthRate = 20
+        cell.lifetime = 1.0
+        cell.spin = CGFloat.pi
+        cell.spinRange = CGFloat.pi / 2.0
+        cell.velocity = 300
+        cell.velocityRange = 50
         cell.scale = 0.01
         cell.scaleSpeed = 0.1
         cell.scaleRange = 0.1
         cell.emissionRange = CGFloat.pi * 2.0
-        cell.contents = UIImage(named: "star")!.cgImage
+        cell.contents = "🎉".image().cgImage // UIImage(named: "star")!.cgImage
         
         emitterCells = [cell]
     }
+}
+
+extension String {
+    func image() -> UIImage {
+        let size = CGSize(width: 160, height: 160)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0);
+        UIColor.clear.set()
+        let rect = CGRect(origin: CGPoint.zero, size: size)
+        UIRectFill(CGRect(origin: CGPoint.zero, size: size))
+        (self as NSString).draw(in: rect, withAttributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 160)])
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
+    
 }
