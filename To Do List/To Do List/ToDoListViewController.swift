@@ -20,12 +20,15 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     
     var container: ContainerViewController? = nil
     
+    @IBOutlet weak var brainLogo: UIImageView!
     @IBOutlet var tableView:UITableView!
     var deleteAllTasksButton: UIButton? = nil
     var deleteAllTasksView: UIView? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        brainLogo.addGestureRecognizer(UITapGestureRecognizer.init(target: brainLogo, action: #selector(brainLogo.testAnimation)))
         
         tableView.register(TaskViewCell.self, forCellReuseIdentifier: "task")
         taskManager.delegate = self
@@ -198,9 +201,6 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         case .starSingle:
             self.tableView.showSolidStar()
             
-        case .goldenFrame:
-            self.tableView.showGoldenFrame()
-            
         case .starBurst:
             self.tableView.showStarburst(at: gesture.location(in: tableView))
             
@@ -209,6 +209,9 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
             
         case .confetti:
             self.tableView.showConfetti(duration: 2.0)
+            
+        default:
+            break
         }
         
     }

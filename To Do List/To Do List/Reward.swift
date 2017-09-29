@@ -22,11 +22,11 @@ enum RewardType : String {
 //        case .starSingle:
 //            return "📲\t\t Sticker Pack"
 //        case .goldenFrame:
-//            return "📲📣🖼 DopeMemory™"
+//            return "📲🎷🖼 DopeMemory™"
 //        case .starBurst:
-//            return "👆📣\t Star Touch"
+//            return "👆🎷\t Star Touch"
 //        case .coins:
-//            return "👆📣📳 Golden Touch"
+//            return "👆🎷📳 Golden Touch"
 //        }
 
 
@@ -36,10 +36,11 @@ enum Reward : String {
     candyBar = "📲\t\tCandy Bar",
     balloons = "📲\t\t Balloons",
     starSingle = "📲\t\t Stickers",
-    goldenFrame = "📲📣🖼 Framed Memory",
-    starBurst = "👆📣\t Star Bursts",
-    coins = "👆📣📳 Golden Touch",
-    confetti = "📲🎊\t Confetti"
+    goldenFrame = "📲🎷🖼 Framed Memory",
+    starBurst = "👆🎷\t Star Bursts",
+    coins = "👆🎷📳 Golden Touch",
+    confetti = "📲🎊\tConfetti",
+    shake = "👆\t\tShake"
 
     static func rewardsFor(type: RewardType) -> [Reward]! {
         switch type {
@@ -55,6 +56,7 @@ enum Reward : String {
     static let newTaskRewards = [
         Reward.starBurst,
         Reward.coins,
+        Reward.shake
     ]
     static let doneTaskRewards = [
         Reward.basalGifglia,
@@ -71,7 +73,7 @@ enum Reward : String {
     ]
     static let activeRewardsDefaults = [
         RewardType.newTask.rawValue : Reward.coins.rawValue,
-        RewardType.doneTask.rawValue : Reward.balloons.rawValue,
+        RewardType.doneTask.rawValue : Reward.confetti.rawValue,
         RewardType.allDoneTask.rawValue : Reward.goldenFrame.rawValue,
         ]
     

@@ -56,6 +56,8 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
                         view.showStarburst(at: point)
                     case .coins:
                         view.showCoins(at: point)
+                    case .shake:
+                        view.shake()
                     default:
                         return
                     }
