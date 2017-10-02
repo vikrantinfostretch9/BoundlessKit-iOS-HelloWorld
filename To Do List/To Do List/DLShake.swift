@@ -41,90 +41,60 @@ fileprivate class CoreAnimationDelegate : NSObject, CAAnimationDelegate {
 
 public extension UIView {
     
-    func testHeartbeat() {
-        let duration: TimeInterval = 0.86
-        let scale: CGFloat = 2.0
-//        zoomInWithEasing(duration: duration, easingOffset: zoom) {
-//            self.zoomInWithEasing(duration: duration, easingOffset: zoom)
-//        }
-        
-        zoom(duration: duration, scale: scale, count: 1, inflection: {completion in completion()})
-        
-    }
-    
-//    func testTaunt() {
-//        zoomInWithEasing(duration: 1.0, easingOffset: 0.5, inflection: {inflectionCompletion in
-//            self.shake(for: 0.3) {
-//                inflectionCompletion()
-//            }
-//        })
-//    }
-    
     func testAnimation() {
-        testHeartbeat()
+        testRotate()
     }
     
-    func shake(count:Float = 2, for duration:TimeInterval = 0.5, withTanslation translation:Float = -5, completion: @escaping ()->Void = {}) {
+    
+    func testHeartbeat() {
+        pulse()
+    }
+    
+    func testRotate() {
+        rotate360Degrees(completion: {
+            self.pulse(count: 1, duration: 0.42)
+        })
+    }
+    
+    func testShake() {
+        shake()
+    }
+}
+
+extension UIView {
+    
+    func shake(count:Float = 2, duration:TimeInterval = 0.5, translation:Float = -10, speed:Float = 3, completion: @escaping ()->Void = {}) {
         let animation : CABasicAnimation = CABasicAnimation(keyPath: "transform.translation.x")
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        
         animation.repeatCount = count
         animation.duration = duration/TimeInterval(animation.repeatCount)
-        animation.autoreverses = true
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         animation.byValue = translation
+        animation.speed = speed
+        animation.autoreverses = true
         
-//        let _ = CoreAnimationDelegate(willStart: {startAnimation in
-//            print("will start")
-//            startAnimation()
-//        }, didStart: {print("didstart")}, didStop: {print("didstop")})
-//        
+        CoreAnimationDelegate(didStop: completion).start(view: self, animation: animation)
     }
-}
-
-extension UIView {
-    func rotate360Degrees(duration: CFTimeInterval = 1.0, completionDelegate: CAAnimationDelegate? = nil) {
+    
+    func rotate360Degrees(count: Float = 2, duration: CFTimeInterval = 1.0, completion: @escaping ()->Void = {}) {
         let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        rotateAnimation.repeatCount = count
+        rotateAnimation.duration = duration/TimeInterval(rotateAnimation.repeatCount)
         rotateAnimation.fromValue = 0.0
         rotateAnimation.toValue = 2.0 * CGFloat.pi
-        rotateAnimation.duration = duration
         
-        if let delegate = completionDelegate {
-            rotateAnimation.delegate = delegate
-        }
-        self.layer.add(rotateAnimation, forKey: nil)
-    }
-}
-
-extension UIView {
-    
-    func zoom(duration: TimeInterval = 0.2, scale: CGFloat = 2.0, count: Int = 1, inflection: @escaping (@escaping ()->Void)->Void = {inflectionCompletion in inflectionCompletion()}, completion: @escaping ()->Void = {}) {
-        
-        let spring = CASpringAnimation(keyPath: "transform.scale")
-//        spring.duration = duration
-//        spring.fromValue = 0.5
-        spring.toValue = scale
-//        spring.autoreverses = true
-        spring.initialVelocity = 5.0
-//        spring.damping = 1.0
-//        spring.mass = 0.1
-        
-        let animationDelegate = CoreAnimationDelegate(willStart: {startAnimation in
-            print("will start")
-            startAnimation()
-        }, didStart: {print("didstart")}, didStop: {
-            print("didstop")
-//            let springBack = spring
-//            let temp = springBack.fromValue
-//            springBack.fromValue = springBack.toValue
-//            springBack.toValue = temp
-//            let reverseAnimationDelegate = CoreAnimationDelegate()
-//            reverseAnimationDelegate.start(view: self, animation: springBack)
-        })
-        
-//        self.layer.add(spring, forKey: "spring")
-        
-        print("SHould've added")
-        animationDelegate.start(view: self, animation: spring)
+        CoreAnimationDelegate(didStop: completion).start(view: self, animation: rotateAnimation)
     }
     
+    func pulse(count: Float = 2, duration: TimeInterval = 0.86, scale: CGFloat = 1.4, velocity: CGFloat = 5.0, damping: CGFloat = 2.0, completion: @escaping ()->Void = {}) {
+        
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.repeatCount = count
+        pulse.duration = duration/TimeInterval(pulse.repeatCount)
+        pulse.toValue = scale
+        pulse.autoreverses = true
+        pulse.initialVelocity = velocity
+        pulse.damping = damping
+        
+        CoreAnimationDelegate(didStop: completion).start(view: self, animation: pulse)
+    }
 }
