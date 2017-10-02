@@ -65,7 +65,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
             taskManager.addDemo()
         }
         
-        self.showTutorial()
+//        self.showTutorial()
     }
     
     func showTutorial() {

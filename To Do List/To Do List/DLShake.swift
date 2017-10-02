@@ -9,14 +9,32 @@
 import Foundation
 import UIKit
 
-fileprivate class ShakeAnimationDelegate : NSObject, CAAnimationDelegate {
-    let completionHandler: ()->Void
-    init(completion: @escaping ()->Void) {
-        completionHandler = completion
+fileprivate class CoreAnimationDelegate : NSObject, CAAnimationDelegate {
+    
+    let willStart: (()->Void)->Void
+    let didStart: ()->Void
+    let didStop: ()->Void
+    
+    init(willStart: @escaping (()->Void)->Void = {startAnimation in startAnimation()}, didStart: @escaping ()->Void = {}, didStop: @escaping ()->Void = {}) {
+        self.willStart = willStart
+        self.didStart = didStart
+        self.didStop = didStop
     }
+    
+    func start(view: UIView, animation:CAAnimation) {
+        willStart() {
+            animation.delegate = self
+            view.layer.add(animation, forKey: nil)
+        }
+    }
+    
+    func animationDidStart(_ anim: CAAnimation) {
+        didStart()
+    }
+    
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if flag {
-            completionHandler()
+            didStop()
         }
     }
 }
@@ -25,19 +43,22 @@ public extension UIView {
     
     func testHeartbeat() {
         let duration: TimeInterval = 0.86
-        let zoom: CGFloat = 1.0
-        zoomInWithEasing(duration: duration, easingOffset: zoom) {
-            self.zoomInWithEasing(duration: duration, easingOffset: zoom)
-        }
+        let scale: CGFloat = 2.0
+//        zoomInWithEasing(duration: duration, easingOffset: zoom) {
+//            self.zoomInWithEasing(duration: duration, easingOffset: zoom)
+//        }
+        
+        zoom(duration: duration, scale: scale, count: 1, inflection: {completion in completion()})
+        
     }
     
-    func testTaunt() {
-        zoomInWithEasing(duration: 1.0, easingOffset: 0.5, inflection: {inflectionCompletion in
-            self.shake(for: 0.3) {
-                inflectionCompletion()
-            }
-        })
-    }
+//    func testTaunt() {
+//        zoomInWithEasing(duration: 1.0, easingOffset: 0.5, inflection: {inflectionCompletion in
+//            self.shake(for: 0.3) {
+//                inflectionCompletion()
+//            }
+//        })
+//    }
     
     func testAnimation() {
         testHeartbeat()
@@ -51,13 +72,15 @@ public extension UIView {
         animation.duration = duration/TimeInterval(animation.repeatCount)
         animation.autoreverses = true
         animation.byValue = translation
-        animation.delegate = ShakeAnimationDelegate(completion: completion)
         
-        layer.add(animation, forKey: "shake")
+//        let _ = CoreAnimationDelegate(willStart: {startAnimation in
+//            print("will start")
+//            startAnimation()
+//        }, didStart: {print("didstart")}, didStop: {print("didstop")})
+//        
     }
 }
 
-//rotate: https://www.andrewcbancroft.com/2014/10/15/rotate-animation-in-swift/
 extension UIView {
     func rotate360Degrees(duration: CFTimeInterval = 1.0, completionDelegate: CAAnimationDelegate? = nil) {
         let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
@@ -72,88 +95,36 @@ extension UIView {
     }
 }
 
-//zoom http://stackoverflow.com/questions/31320819/scale-uibutton-animation-swift
 extension UIView {
     
-    /**
-     Simply zooming in of a view: set view scale to 0 and zoom to Identity on 'duration' time interval.
-     - parameter duration: animation duration
-     */
-    func zoomIn(duration: TimeInterval = 0.2) {
-        self.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
-        UIView.animate(withDuration: duration, delay: 0.0, options: [.curveLinear], animations: { () -> Void in
-            self.transform = CGAffineTransform.identity
-        }) { (animationCompleted: Bool) -> Void in
-        }
-    }
-    
-    /**
-     Simply zooming out of a view: set view scale to Identity and zoom out to 0 on 'duration' time interval.
-     - parameter duration: animation duration
-     */
-    func zoomOut(duration: TimeInterval = 0.2) {
-        self.transform = CGAffineTransform.identity
-        UIView.animate(withDuration: duration, delay: 0.0, options: [.curveLinear], animations: { () -> Void in
-            self.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
-        }) { (animationCompleted: Bool) -> Void in
-        }
-    }
-    
-    /**
-     Zoom in any view with specified offset magnification.
-     - parameter duration:     animation duration.
-     - parameter easingOffset: easing offset.
-     */
-    func zoomInWithEasing(duration: TimeInterval = 0.2, easingOffset: CGFloat = 0.2, inflection: @escaping (@escaping ()->Void)->Void = {inflectionCompletion in inflectionCompletion()}, completion: @escaping ()->Void = {}) {
-//        let oldShadowColor = self.layer.shadowColor
-//        let oldShadowOpacity = self.layer.shadowOpacity
-//        let oldShadowOffset = self.layer.shadowOffset
-//        let oldShadowRadius = self.layer.shadowRadius
+    func zoom(duration: TimeInterval = 0.2, scale: CGFloat = 2.0, count: Int = 1, inflection: @escaping (@escaping ()->Void)->Void = {inflectionCompletion in inflectionCompletion()}, completion: @escaping ()->Void = {}) {
         
-        let easeScale = 1.0 + easingOffset
-        let easingDuration = TimeInterval(easingOffset) * duration / TimeInterval(easeScale)
-        let scalingDuration = duration - easingDuration
-        print("duration:\(duration) \neasingOffset:\(easingOffset) \neaseScale:\(easeScale) \neasingDuration:\(easingDuration) \nscalingDuration:\(scalingDuration)")
-        UIView.animate(withDuration: scalingDuration, delay: 0.0, options: .curveEaseIn, animations: {
-            self.transform = CGAffineTransform(scaleX: easeScale, y: easeScale)
-//            
-//            self.layer.shadowColor = UIColor.darkGray.cgColor
-//            self.layer.shadowOpacity = 0.8
-//            self.layer.shadowOffset = CGSize(width: 10, height: 10)
-//            self.layer.shadowRadius = 2
-        }, completion: { completed in
-            inflection() {
-                UIView.animate(withDuration: easingDuration, delay: 0.0, options: .curveEaseOut, animations: {
-                    self.transform = CGAffineTransform.identity
-//                    
-//                    self.layer.shadowColor = oldShadowColor
-//                    self.layer.shadowOpacity = oldShadowOpacity
-//                    self.layer.shadowOffset = oldShadowOffset
-//                    self.layer.shadowRadius = oldShadowRadius
-                }, completion: { completed in
-                    completion()
-                })
-            }
+        let spring = CASpringAnimation(keyPath: "transform.scale")
+//        spring.duration = duration
+//        spring.fromValue = 0.5
+        spring.toValue = scale
+//        spring.autoreverses = true
+        spring.initialVelocity = 5.0
+//        spring.damping = 1.0
+//        spring.mass = 0.1
+        
+        let animationDelegate = CoreAnimationDelegate(willStart: {startAnimation in
+            print("will start")
+            startAnimation()
+        }, didStart: {print("didstart")}, didStop: {
+            print("didstop")
+//            let springBack = spring
+//            let temp = springBack.fromValue
+//            springBack.fromValue = springBack.toValue
+//            springBack.toValue = temp
+//            let reverseAnimationDelegate = CoreAnimationDelegate()
+//            reverseAnimationDelegate.start(view: self, animation: springBack)
         })
-    }
-    
-    /**
-     Zoom out any view with specified offset magnification.
-     - parameter duration:     animation duration.
-     - parameter easingOffset: easing offset.
-     */
-    func zoomOutWithEasing(duration: TimeInterval = 0.2, easingOffset: CGFloat = 0.2) {
-        let easeScale = 1.0 + easingOffset
-        let easingDuration = TimeInterval(easingOffset) * duration / TimeInterval(easeScale)
-        let scalingDuration = duration - easingDuration
-        UIView.animate(withDuration: easingDuration, delay: 0.0, options: .curveEaseOut, animations: {
-            self.transform = CGAffineTransform(scaleX: easeScale, y: easeScale)
-        }, completion: { completed in
-            UIView.animate(withDuration: scalingDuration, delay: 0.0, options: .curveEaseOut, animations: { () -> Void in
-                self.transform = CGAffineTransform.identity
-            }, completion: { completed in
-            })
-        })
+        
+//        self.layer.add(spring, forKey: "spring")
+        
+        print("SHould've added")
+        animationDelegate.start(view: self, animation: spring)
     }
     
 }
