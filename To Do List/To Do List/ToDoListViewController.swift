@@ -208,7 +208,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
             self.tableView.showCoins(at: gesture.location(in: tableView))
             
         case .confetti:
-            self.tableView.showConfetti(duration: 2.0)
+            self.tableView.showConfetti()
             
         default:
             break
