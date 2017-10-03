@@ -26,8 +26,8 @@ extension UIView {
      */
     func showConfetti(duration:Double = 2.0,
                       size:CGSize = CGSize(width: 15, height: 10),
-                      shapes:[ConfettiShape] = [.rectangle, .circle, .spiral],
-                      colors:[UIColor] = [UIColor.blue, UIColor.green, UIColor.yellow, UIColor.red, UIColor.red] ) {
+                      shapes:[ConfettiShape] = [.rectangle, .rectangle, .rectangle, .circle, .circle, .spiral, .spiral, .spiral],
+                      colors:[UIColor] = [UIColor.blue, UIColor.green, UIColor.yellow, UIColor.red] ) {
         
         let confettiEmitter = CAEmitterLayer(emitterWidth: self.frame.width, confettiSize: size, confettiShapes: shapes, confettiColors: colors)
         self.layer.addSublayer(confettiEmitter)
@@ -50,8 +50,19 @@ fileprivate extension CAEmitterLayer {
         self.emitterSize = CGSize(width: emitterWidth, height: 1)
         
         var cells:[CAEmitterCell] = []
-        if confettiShapes.count > 0 {
-            for color in confettiColors {
+        
+        if confettiColors.count > 0 {
+            for shape in confettiShapes {
+                let selectedColor = confettiColors[Int(arc4random_uniform(UInt32(confettiColors.count)))]
+                let confettiImage: UIImage
+                switch shape {
+                case .rectangle:
+                    confettiImage = rectangleConfetti(size: confettiSize, color: selectedColor)
+                case .circle:
+                    confettiImage = circleConfetti(size: confettiSize, color: selectedColor)
+                case .spiral:
+                    confettiImage = spiralConfetti(size: confettiSize, color: selectedColor)
+                }
                 let cell = CAEmitterCell()
                 
                 cell.birthRate = 2
@@ -65,26 +76,13 @@ fileprivate extension CAEmitterLayer {
                 cell.spinRange = 3
                 cell.scaleRange = 0.5
                 cell.scaleSpeed = -0.05
-                cell.contents = makeRandomConfetti(size: confettiSize, color: color, shapes: confettiShapes).cgImage!
+                cell.contents = confettiImage.cgImage!
                 
                 cells.append(cell)
             }
         }
         
         self.emitterCells = cells
-    }
-    
-    fileprivate func makeRandomConfetti(size:CGSize, color: UIColor, shapes:[ConfettiShape]) -> UIImage {
-        let randomIndex: Int = Int(arc4random_uniform(UInt32(shapes.count)))
-        
-        switch shapes[randomIndex] {
-        case .rectangle:
-            return rectangleConfetti(size: size, color: color)
-        case .circle:
-            return circleConfetti(size: size, color: color)
-        case .spiral:
-            return spiralConfetti(size: size, color: color)
-        }
     }
     
     fileprivate func rectangleConfetti(size: CGSize, color: UIColor) -> UIImage {
@@ -112,7 +110,6 @@ fileprivate extension CAEmitterLayer {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()!
         
-        /// S-Shape
         color.set()
         let lineWidth:CGFloat = size.width / 8.0
         let halfLineWidth = lineWidth / 2.0
