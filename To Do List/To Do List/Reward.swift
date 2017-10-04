@@ -41,7 +41,8 @@ enum Reward : String {
     coins = "👆🎷📳 Golden Touch",
     confetti = "📲🎊\tConfetti",
     shake = "👆\t\tShake",
-    sheen = "\t\t\tSheen"
+    sheen = "\t\tSheen",
+    glow = "\t\tGlow"
 
     static func rewardsFor(type: RewardType) -> [Reward]! {
         switch type {
@@ -58,7 +59,8 @@ enum Reward : String {
         Reward.starBurst,
         Reward.coins,
         Reward.shake,
-        Reward.sheen
+        Reward.sheen,
+        Reward.glow
     ]
     static let doneTaskRewards = [
         Reward.basalGifglia,

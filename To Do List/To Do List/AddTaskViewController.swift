@@ -59,6 +59,8 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
                     view.shake()
                 case .sheen:
                     view.showSheen()
+                case .glow:
+                    view.showGlow()
                 default:
                     return
                 }

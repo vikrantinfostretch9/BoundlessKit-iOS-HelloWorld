@@ -62,7 +62,5 @@ extension UIView {
                 imageView.removeFromSuperview()
         }
             ).start(view: imageView, animation: animation)
-        
-        DopamineKit.debugLog("Here")
     }
 }
