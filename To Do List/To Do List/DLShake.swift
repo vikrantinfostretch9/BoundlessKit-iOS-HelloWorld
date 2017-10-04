@@ -51,9 +51,7 @@ public extension UIView {
     }
     
     func testRotate() {
-        rotate360Degrees(completion: {
-            self.pulse(count: 1, duration: 0.42)
-        })
+        rotate360Degrees()
     }
     
     func testShake() {

@@ -28,7 +28,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        brainLogo.addGestureRecognizer(UITapGestureRecognizer.init(target: brainLogo, action: #selector(brainLogo.testAnimation)))
+        brainLogo.addGestureRecognizer(UITapGestureRecognizer.init(target: brainLogo, action: #selector(brainLogo.showSheen)))
         
         tableView.register(TaskViewCell.self, forCellReuseIdentifier: "task")
         taskManager.delegate = self

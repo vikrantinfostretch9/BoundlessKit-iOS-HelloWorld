@@ -13,16 +13,15 @@ enum ConfettiShape : Int {
     case rectangle, circle, spiral
 }
 
-
 extension UIView {
     /**
      Creates a CAEmitterLayer that drops celebration confetti from the top of the view
      
      - parameters:
-     - duration: How long celebration confetti should last
-     - size: Size of individual confetti pieces
-     - shapes: This directly affects the quantity of confetti. For example, [.circle] will show half as much confetti as [.circle, .circle]
-     - colors: Confetti colors are randomly selected from this array. Repeated colors increase that color's likelihood
+        - duration: How long celebration confetti should last
+        - size: Size of individual confetti pieces
+        - shapes: This directly affects the quantity of confetti. For example, [.circle] will show half as much confetti as [.circle, .circle]
+        - colors: Confetti colors are randomly selected from this array. Repeated colors increase that color's likelihood
      */
     func showConfetti(duration:Double = 2.0,
                       size:CGSize = CGSize(width: 15, height: 10),

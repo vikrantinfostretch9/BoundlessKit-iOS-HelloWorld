@@ -40,7 +40,8 @@ enum Reward : String {
     starBurst = "👆🎷\t Star Bursts",
     coins = "👆🎷📳 Golden Touch",
     confetti = "📲🎊\tConfetti",
-    shake = "👆\t\tShake"
+    shake = "👆\t\tShake",
+    sheen = "\t\t\tSheen"
 
     static func rewardsFor(type: RewardType) -> [Reward]! {
         switch type {
@@ -56,7 +57,8 @@ enum Reward : String {
     static let newTaskRewards = [
         Reward.starBurst,
         Reward.coins,
-        Reward.shake
+        Reward.shake,
+        Reward.sheen
     ]
     static let doneTaskRewards = [
         Reward.basalGifglia,
@@ -72,7 +74,7 @@ enum Reward : String {
         Reward.balloons,
     ]
     static let activeRewardsDefaults = [
-        RewardType.newTask.rawValue : Reward.coins.rawValue,
+        RewardType.newTask.rawValue : Reward.sheen.rawValue,
         RewardType.doneTask.rawValue : Reward.confetti.rawValue,
         RewardType.allDoneTask.rawValue : Reward.goldenFrame.rawValue,
         ]

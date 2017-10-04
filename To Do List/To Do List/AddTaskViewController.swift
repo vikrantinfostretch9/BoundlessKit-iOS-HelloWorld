@@ -43,26 +43,26 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
     
     func reinforceAddTaskAction(view: UIView, point: CGPoint) {
         DopamineKit.reinforce("action1", completion: {reinforcement in
-            DispatchQueue.main.async(execute: {
-                // NOTE: rearranged cases to have rewards show more often for demonstration
-                switch(reinforcement){
-                case "stars" :
-                    fallthrough
-                case "thumbsUp" :
-                    return
+            // NOTE: rearranged cases to have rewards show more often for demonstration
+            switch(reinforcement){
+            case "stars" :
+                fallthrough
+            case "thumbsUp" :
+                return
+            default:
+                switch (Reward.getActive(for: .newTask)) {
+                case .starBurst:
+                    view.showStarburst(at: point)
+                case .coins:
+                    view.showCoins(at: point)
+                case .shake:
+                    view.shake()
+                case .sheen:
+                    view.showSheen()
                 default:
-                    switch (Reward.getActive(for: .newTask)) {
-                    case .starBurst:
-                        view.showStarburst(at: point)
-                    case .coins:
-                        view.showCoins(at: point)
-                    case .shake:
-                        view.shake()
-                    default:
-                        return
-                    }
+                    return
                 }
-            })
+            }
         })
     }
     
