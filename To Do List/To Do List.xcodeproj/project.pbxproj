@@ -8,21 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7A9591C4354B07B1FAEAA155 /* Pods_To_Do_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30ACFD24D8F89B3A9FD15426 /* Pods_To_Do_List.framework */; };
-		840E07721EDBD7DF00332A6C /* StarburstTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07711EDBD7DF00332A6C /* StarburstTouch.swift */; };
 		840E07741EDBE30E00332A6C /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07731EDBE30E00332A6C /* Reward.swift */; };
-		840E07761EDBE60100332A6C /* DLBalloons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07751EDBE60100332A6C /* DLBalloons.swift */; };
-		840E07781EDBF2C800332A6C /* DLCoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07771EDBF2C800332A6C /* DLCoins.swift */; };
-		840E077A1EDBFF4200332A6C /* DLScreenStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07791EDBFF4200332A6C /* DLScreenStar.swift */; };
-		84156F8B1EDCF2A800DEF989 /* DLFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84156F8A1EDCF2A800DEF989 /* DLFrame.swift */; };
 		84156F901EDD173200DEF989 /* star-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F8F1EDD173200DEF989 /* star-sound.wav */; };
 		84156F921EDD1CB300DEF989 /* coin-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F911EDD1CB300DEF989 /* coin-sound.wav */; };
 		84156F941EDD1E3A00DEF989 /* shoot-and-roll.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F931EDD1E3A00DEF989 /* shoot-and-roll.wav */; };
 		8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */; };
 		8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFE1D08F5BC003BB094 /* Task.swift */; };
-		8452A1F41F7C25320089CB25 /* DLConfetti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452A1F31F7C25320089CB25 /* DLConfetti.swift */; };
-		8479DEA61F7D7AF200A433FB /* DLShake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479DEA51F7D7AF200A433FB /* DLShake.swift */; };
-		8485F79C1F844FC600CC0F07 /* DLSheen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485F79B1F844FC600CC0F07 /* DLSheen.swift */; };
-		8485F79E1F84606700CC0F07 /* DLGlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485F79D1F84606700CC0F07 /* DLGlow.swift */; };
 		8497238A1D07FFB60014E975 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849723891D07FFB60014E975 /* DopamineProperties.plist */; };
 		84B7B9A11D078EA1008BF664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A01D078EA1008BF664 /* AppDelegate.swift */; };
 		84B7B9A31D078EA1008BF664 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A21D078EA1008BF664 /* ToDoListViewController.swift */; };
@@ -53,21 +44,12 @@
 /* Begin PBXFileReference section */
 		30ACFD24D8F89B3A9FD15426 /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AD5ADDC249C20266ADA7DE /* Pods-To Do List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do List.release.xcconfig"; path = "Pods/Target Support Files/Pods-To Do List/Pods-To Do List.release.xcconfig"; sourceTree = "<group>"; };
-		840E07711EDBD7DF00332A6C /* StarburstTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarburstTouch.swift; sourceTree = "<group>"; };
 		840E07731EDBE30E00332A6C /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
-		840E07751EDBE60100332A6C /* DLBalloons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLBalloons.swift; sourceTree = "<group>"; };
-		840E07771EDBF2C800332A6C /* DLCoins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLCoins.swift; sourceTree = "<group>"; };
-		840E07791EDBFF4200332A6C /* DLScreenStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLScreenStar.swift; sourceTree = "<group>"; };
-		84156F8A1EDCF2A800DEF989 /* DLFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLFrame.swift; sourceTree = "<group>"; };
 		84156F8F1EDD173200DEF989 /* star-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "star-sound.wav"; sourceTree = "<group>"; };
 		84156F911EDD1CB300DEF989 /* coin-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "coin-sound.wav"; sourceTree = "<group>"; };
 		84156F931EDD1E3A00DEF989 /* shoot-and-roll.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "shoot-and-roll.wav"; sourceTree = "<group>"; };
 		8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
 		8426EEFE1D08F5BC003BB094 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		8452A1F31F7C25320089CB25 /* DLConfetti.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLConfetti.swift; sourceTree = "<group>"; };
-		8479DEA51F7D7AF200A433FB /* DLShake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLShake.swift; sourceTree = "<group>"; };
-		8485F79B1F844FC600CC0F07 /* DLSheen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSheen.swift; sourceTree = "<group>"; };
-		8485F79D1F84606700CC0F07 /* DLGlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLGlow.swift; sourceTree = "<group>"; };
 		849723891D07FFB60014E975 /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
 		84B7B99D1D078EA1008BF664 /* To Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B7B9A01D078EA1008BF664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,22 +108,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		840E07701EDBD77E00332A6C /* PreMades */ = {
-			isa = PBXGroup;
-			children = (
-				840E07711EDBD7DF00332A6C /* StarburstTouch.swift */,
-				840E07751EDBE60100332A6C /* DLBalloons.swift */,
-				8485F79B1F844FC600CC0F07 /* DLSheen.swift */,
-				8485F79D1F84606700CC0F07 /* DLGlow.swift */,
-				84156F8A1EDCF2A800DEF989 /* DLFrame.swift */,
-				8479DEA51F7D7AF200A433FB /* DLShake.swift */,
-				840E07791EDBFF4200332A6C /* DLScreenStar.swift */,
-				840E07771EDBF2C800332A6C /* DLCoins.swift */,
-				8452A1F31F7C25320089CB25 /* DLConfetti.swift */,
-			);
-			name = PreMades;
-			sourceTree = "<group>";
-		};
 		84156F8E1EDD173200DEF989 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,7 +152,6 @@
 				84FF05DE1ED8D26E00C0F9DE /* Helper.swift */,
 				840E07731EDBE30E00332A6C /* Reward.swift */,
 				8426EEFE1D08F5BC003BB094 /* Task.swift */,
-				840E07701EDBD77E00332A6C /* PreMades */,
 				84B7B9C21D078EE5008BF664 /* TaskManager.swift */,
 				8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */,
 				84B7B9A61D078EA1008BF664 /* Main.storyboard */,
@@ -390,23 +355,14 @@
 				84FF05DF1ED8D26E00C0F9DE /* Helper.swift in Sources */,
 				84B7B9A11D078EA1008BF664 /* AppDelegate.swift in Sources */,
 				84B8606F1EF8024800509596 /* TutorialSubtractionPath.swift in Sources */,
-				840E077A1EDBFF4200332A6C /* DLScreenStar.swift in Sources */,
 				84DE05551EEB813300777AD9 /* DrawerViewController.swift in Sources */,
-				8485F79E1F84606700CC0F07 /* DLGlow.swift in Sources */,
 				8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */,
-				8452A1F41F7C25320089CB25 /* DLConfetti.swift in Sources */,
-				840E07721EDBD7DF00332A6C /* StarburstTouch.swift in Sources */,
 				84B7B9C31D078EE5008BF664 /* TaskManager.swift in Sources */,
 				8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */,
-				84156F8B1EDCF2A800DEF989 /* DLFrame.swift in Sources */,
-				8479DEA61F7D7AF200A433FB /* DLShake.swift in Sources */,
-				8485F79C1F844FC600CC0F07 /* DLSheen.swift in Sources */,
-				840E07781EDBF2C800332A6C /* DLCoins.swift in Sources */,
 				84B7B9A31D078EA1008BF664 /* ToDoListViewController.swift in Sources */,
 				84B8606E1EF8024800509596 /* TutorialOverlayView.swift in Sources */,
 				840E07741EDBE30E00332A6C /* Reward.swift in Sources */,
 				84DE05531EEB803500777AD9 /* ContainerViewController.swift in Sources */,
-				840E07761EDBE60100332A6C /* DLBalloons.swift in Sources */,
 				84B85C441EF1ECC200509596 /* RewardPickerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
