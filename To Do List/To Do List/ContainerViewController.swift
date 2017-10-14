@@ -73,7 +73,6 @@ class ContainerViewController: UIViewController {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         tapRecognizer.cancelsTouchesInView = false
         centerNavigationController.view.addGestureRecognizer(tapRecognizer)
-        
     }
 }
 

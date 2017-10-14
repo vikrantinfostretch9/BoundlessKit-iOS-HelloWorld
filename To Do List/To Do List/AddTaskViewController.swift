@@ -36,35 +36,35 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
         textDescription.text = ""
         
 //        tabBarController?.selectedIndex = 0
-        if let touch = event.touches(for: sender)?.first {
-            reinforceAddTaskAction(view: sender, point: touch.location(in: sender))
-        }
+//        if let touch = event.touches(for: sender)?.first {
+//            reinforceAddTaskAction(view: sender, point: touch.location(in: sender))
+//        }
     }
     
     func reinforceAddTaskAction(view: UIView, point: CGPoint) {
         DopamineKit.reinforce("action1", completion: {reinforcement in
             // NOTE: rearranged cases to have rewards show more often for demonstration
-            switch(reinforcement){
-            case "stars" :
-                fallthrough
-            case "thumbsUp" :
-                return
-            default:
-                switch (Reward.getActive(for: .newTask)) {
-                case .starBurst:
-                    view.showStarburst(at: point)
-                case .coins:
-                    view.showCoins(at: point)
-                case .shake:
-                    view.shake()
-                case .sheen:
-                    view.showSheen()
-                case .glow:
-                    view.showGlow()
-                default:
-                    return
-                }
-            }
+//            switch(reinforcement){
+//            case "stars" :
+//                fallthrough
+//            case "thumbsUp" :
+//                return
+//            default:
+////                switch (Reward.getActive(for: .newTask)) {
+////                case .starBurst:
+////                    view.showEmojiSplosion(at: CGPoint.init(x: self.addTaskButton.bounds.width/2, y: self.addTaskButton.bounds.height/2), lifetime: 1.4, fadeout: 2.0, quantity: 2, bursts: 1.5)
+////                case .coins:
+////                    view.showCoins(at: point)
+////                case .shake:
+////                    view.shake()
+////                case .sheen:
+////                    view.showSheen()
+////                case .glow:
+////                    view.showGlow()
+////                default:
+////                    return
+////                }
+//            }
         })
     }
     
@@ -118,7 +118,7 @@ extension UIButton {
         self.layer.cornerRadius = cornerRadius
         self.layer.borderColor = borderColor
 //        self.backgroundColor = taskManager.colorForIndex(taskManager.tasks.count/2)
-        self.backgroundColor = Helper.dopeGreen.withAlphaComponent(0.85) // UIColor.lightGray.withAlphaComponent(0.2)
+        self.backgroundColor = Helper.dopeGreen.withAlphaComponent(1.85) // UIColor.lightGray.withAlphaComponent(0.2)
         self.setTitleColor(UIColor.white, for: .normal)
     }
 }

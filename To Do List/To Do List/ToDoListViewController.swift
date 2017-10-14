@@ -28,8 +28,6 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        brainLogo.addGestureRecognizer(UITapGestureRecognizer.init(target: brainLogo, action: #selector(brainLogo.showGlow)))
-        
         tableView.register(TaskViewCell.self, forCellReuseIdentifier: "task")
         taskManager.delegate = self
         
@@ -202,7 +200,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
             self.tableView.showSolidStar()
             
         case .starBurst:
-            self.tableView.showStarburst(at: gesture.location(in: tableView))
+            self.tableView.showEmojiSplosion(at: gesture.location(in: tableView))
             
         case .coins:
             self.tableView.showCoins(at: gesture.location(in: tableView))
@@ -220,19 +218,20 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         DopamineKit.reinforce("action1", completion: {reinforcement in
             DispatchQueue.main.async(execute: {
                 // NOTE: rearranged cases to have rewards show more often for demonstration
-                switch(reinforcement){
-                case "thumbsUp" :
-                    return
-                default:
-                    switch (Reward.getActive(for: .allDoneTask)) {
-                    case .goldenFrame:
-                        self.tableView.showGoldenFrame()
-                    case .balloons:
-                        self.tableView.showBalloons()
-                    default:
-                        return
-                    }
-                }
+//                switch(reinforcement){
+//                case "thumbsUp" :
+//                    return
+//                default:
+//                    switch (Reward.getActive(for: .allDoneTask)) {
+//                    case .goldenFrame:
+//                        self.tableView.showGoldenFrame()
+//                    case .balloons:
+//                        self.tableView.showBalloons()
+//                    default:
+//                        return
+//                    }
+//                }
+                self.tableView.showSheen(duration: 2.0)
             })
         })
     }
