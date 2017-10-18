@@ -272,7 +272,7 @@ open class CandyBar: UIView {
         var cString:String = hex.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
-            cString = cString.substring(from: cString.characters.index(cString.startIndex, offsetBy: 1))
+            cString.removeFirst()
         }
         
         if ((cString.characters.count) != 6) {
@@ -458,14 +458,14 @@ open class CandyBar: UIView {
         updateConstraintsIfNeeded()
     }
     
-    internal func didTap(_ recognizer: UITapGestureRecognizer) {
+    @objc internal func didTap(_ recognizer: UITapGestureRecognizer) {
         if dismissesOnTap {
             dismiss()
         }
         didTapBlock?()
     }
     
-    internal func didSwipe(_ recognizer: UISwipeGestureRecognizer) {
+    @objc internal func didSwipe(_ recognizer: UISwipeGestureRecognizer) {
         if dismissesOnSwipe {
             dismiss()
         }

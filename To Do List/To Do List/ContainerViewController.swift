@@ -180,12 +180,12 @@ extension ContainerViewController: CenterViewControllerDelegate {
         }
     }
     
-    func openLeftController() {
+    @objc func openLeftController() {
         addLeftPanelViewController()
         animateLeftPanel(shouldExpand: currentState == .Collapsed)
     }
     
-    func openRightController() {
+    @objc func openRightController() {
         addRightPanelViewController()
         animateRightPanel(shouldExpand: currentState == .Collapsed)
     }
@@ -269,7 +269,7 @@ extension ContainerViewController : MFMailComposeViewControllerDelegate {
 // MARK: Gesture recognizer
 
 extension ContainerViewController: UIGestureRecognizerDelegate {
-    func handleTap() {
+    @objc func handleTap() {
         if (currentState != .Collapsed) {
             collapseSidePanels()
         }
