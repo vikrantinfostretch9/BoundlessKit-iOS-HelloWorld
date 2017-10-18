@@ -27,7 +27,9 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.view.showSheen(duration: 2.0)
+        }
         tableView.register(TaskViewCell.self, forCellReuseIdentifier: "task")
         taskManager.delegate = self
         
@@ -39,6 +41,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
             deleteAllTasksButton.sizeToFit()
             deleteAllTasksButton.addTarget(self, action: #selector(deleteAllTasks), for: .touchUpInside)
             let deleteAllTasksView = UIView(frame: CGRect(x: 0, y: tableView.frame.minY - deleteAllTasksButton.frame.height, width: tableView.frame.width, height: deleteAllTasksButton.frame.height))
+            deleteAllTasksView.autoresizingMask = .flexibleWidth
             deleteAllTasksView.backgroundColor = Helper.dopeRed
             view.addSubview(deleteAllTasksView)
             //        deleteAllTasksButton.frame = CGRect(x: deleteAllTasksButtonView.frame.size.width - deleteAllTasksButton.frame.size.width, y: deleteAllTasksButton.frame.minY, width: deleteAllTasksButton.frame.width, height: deleteAllTasksButton.frame.height)
@@ -123,7 +126,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func deleteAllTasks() {
+    @objc func deleteAllTasks() {
         guard tableView.numberOfRows(inSection: 0) > 0 else {
             let alert = UIAlertController(title: "Add Tasks", message: "First add some tasks", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default))
@@ -193,17 +196,17 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
                      backgroundColor: CandyBar.hexStringToUIColor("#4286f4"))
                 .show(2.5)
             
-        case .balloons:
-            self.tableView.showBalloons()
-            
-        case .starSingle:
-            self.tableView.showSolidStar()
-            
-        case .starBurst:
-            self.tableView.showEmojiSplosion(at: gesture.location(in: tableView))
-            
-        case .coins:
-            self.tableView.showCoins(at: gesture.location(in: tableView))
+//        case .balloons:
+//            self.tableView.showBalloons()
+//            
+//        case .starSingle:
+//            self.tableView.showSolidStar()
+//            
+//        case .starBurst:
+//            self.tableView.showEmojiSplosion(at: gesture.location(in: tableView))
+//            
+//        case .coins:
+//            self.tableView.showCoins(at: gesture.location(in: tableView))
             
         case .confetti:
             self.tableView.showConfetti()
