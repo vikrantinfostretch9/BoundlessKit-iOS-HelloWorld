@@ -8,8 +8,8 @@
 
 import UIKit
 import BasalGifglia
-import DopamineKit
-import CandyBar
+//import DopamineKit
+//import CandyBar
 
 class ToDoListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TaskViewCellDelegate {
 
@@ -17,7 +17,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ToDoListViewController") as! ToDoListViewController
     }
     
-    
+    static var shared: ToDoListViewController!
     var container: ContainerViewController? = nil
     
     @IBOutlet weak var brainLogo: UIImageView!
@@ -25,11 +25,20 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     var deleteAllTasksButton: UIButton? = nil
     var deleteAllTasksView: UIView? = nil
     
+    @objc func test() {
+        print("In test()")
+        let vc = UIActivityViewController.init(activityItems: ["testString"], applicationActivities: nil)
+//        let popOver = UIPopoverPresentationController.init(presentedViewController: self, presenting: vc)
+        self.present(vc, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            self.view.showSheen(duration: 2.0)
-        }
+        ToDoListViewController.shared = self
+        
+        brainLogo.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(test))
+        brainLogo.addGestureRecognizer(tapGesture)
+        
         tableView.register(TaskViewCell.self, forCellReuseIdentifier: "task")
         taskManager.delegate = self
         
@@ -183,60 +192,60 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func presentTaskDoneReward(view: UIView, gesture: UIGestureRecognizer) {
-        switch Reward.getActive(for: .doneTask) {
-            
-        case .basalGifglia:
+//        switch Reward.getActive(for: .doneTask) {
+//            
+//        case .basalGifglia:
             self.present(UIGifgliaViewController(), animated: true, completion: nil)
-            
-        case .candyBar:
-            CandyBar(title: "Got em!",
-                     subtitle: "beep boop bop good job",
-                     icon: CandyIcon.randomIcon(),
-                     position: arc4random() % 2 == 0 ? .top : .bottom,
-                     backgroundColor: CandyBar.hexStringToUIColor("#4286f4"))
-                .show(2.5)
-            
-//        case .balloons:
-//            self.tableView.showBalloons()
+//
+//        case .candyBar:
+//            CandyBar(title: "Got em!",
+//                     subtitle: "beep boop bop good job",
+//                     icon: CandyIcon.randomIcon(),
+//                     position: arc4random() % 2 == 0 ? .top : .bottom,
+//                     backgroundColor: CandyBar.hexStringToUIColor("#4286f4"))
+//                .show(2.5)
 //            
-//        case .starSingle:
-//            self.tableView.showSolidStar()
+////        case .balloons:
+////            self.tableView.showBalloons()
+////            
+////        case .starSingle:
+////            self.tableView.showSolidStar()
+////            
+////        case .starBurst:
+////            self.tableView.showEmojiSplosion(at: gesture.location(in: tableView))
+////            
+////        case .coins:
+////            self.tableView.showCoins(at: gesture.location(in: tableView))
 //            
-//        case .starBurst:
-//            self.tableView.showEmojiSplosion(at: gesture.location(in: tableView))
+//        case .confetti:
+//            self.tableView.showConfetti()
 //            
-//        case .coins:
-//            self.tableView.showCoins(at: gesture.location(in: tableView))
-            
-        case .confetti:
-            self.tableView.showConfetti()
-            
-        default:
-            break
-        }
+//        default:
+//            break
+//        }
         
     }
     
     func reinforceTaskAllDoneAction() {
-        DopamineKit.reinforce("action1", completion: {reinforcement in
-            DispatchQueue.main.async(execute: {
-                // NOTE: rearranged cases to have rewards show more often for demonstration
-//                switch(reinforcement){
-//                case "thumbsUp" :
-//                    return
-//                default:
-//                    switch (Reward.getActive(for: .allDoneTask)) {
-//                    case .goldenFrame:
-//                        self.tableView.showGoldenFrame()
-//                    case .balloons:
-//                        self.tableView.showBalloons()
-//                    default:
-//                        return
-//                    }
-//                }
-                self.tableView.showSheen(duration: 2.0)
-            })
-        })
+//        DopamineKit.reinforce("action1", completion: {reinforcement in
+//            DispatchQueue.main.async(execute: {
+//                // NOTE: rearranged cases to have rewards show more often for demonstration
+////                switch(reinforcement){
+////                case "thumbsUp" :
+////                    return
+////                default:
+////                    switch (Reward.getActive(for: .allDoneTask)) {
+////                    case .goldenFrame:
+////                        self.tableView.showGoldenFrame()
+////                    case .balloons:
+////                        self.tableView.showBalloons()
+////                    default:
+////                        return
+////                    }
+////                }
+//                self.tableView.showSheen(duration: 2.0)
+//            })
+//        })
     }
     
     

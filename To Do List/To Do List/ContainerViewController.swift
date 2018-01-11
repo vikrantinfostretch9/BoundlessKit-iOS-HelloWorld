@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 import MessageUI
-import DopamineKit
+//import DopamineKit
 import CoreBluetooth
 
 @objc protocol CenterViewControllerDelegate {

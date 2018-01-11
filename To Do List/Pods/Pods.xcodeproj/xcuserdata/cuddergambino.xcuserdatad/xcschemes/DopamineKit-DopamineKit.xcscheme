@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D8347913A41376B2D61F2EDB30A814D0'
+               BlueprintIdentifier = '180A2B632A42AA5B5B255079112EA5D6'
                BlueprintName = 'DopamineKit-DopamineKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'DopamineKit.bundle'>

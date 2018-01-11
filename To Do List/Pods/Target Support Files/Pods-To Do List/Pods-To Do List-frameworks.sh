@@ -103,12 +103,10 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BasalGifglia/BasalGifglia.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CandyBar/CandyBar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DopamineKit/DopamineKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BasalGifglia/BasalGifglia.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CandyBar/CandyBar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DopamineKit/DopamineKit.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

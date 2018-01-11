@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import DopamineKit
+//import DopamineKit
+import BasalGifglia
 
 // A protocol that the TaskViewCell uses to inform its delegate of state change
 protocol TaskViewCellDelegate {
@@ -83,6 +84,7 @@ class TaskViewCell: UITableViewCell {
         return label
     }
     
+    static var count = 0
     //MARK: - horizontal pan gesture methods
     @objc func handlePan(_ recognizer: UIPanGestureRecognizer) {
         // 1
@@ -115,6 +117,7 @@ class TaskViewCell: UITableViewCell {
         
         }
         // 3
+        
         if recognizer.state == .ended {
             // the frame this cell had before user dragged it
             let originalFrame = CGRect(x: 0, y: frame.origin.y,
@@ -123,6 +126,10 @@ class TaskViewCell: UITableViewCell {
                 // if the item is not being deleted, snap back to the original location
                 UIView.animate(withDuration: 0.2, animations: {self.frame = originalFrame})
             } else {
+                if TaskViewCell.count % 2 == 0 {
+                ToDoListViewController.shared.present(UIGifgliaViewController(), animated: true, completion: nil)
+                }
+                TaskViewCell.count = TaskViewCell.count + 1
                 if delegate != nil && task != nil {
                     
                     // notify the delegate that this item should be deleted
@@ -130,27 +137,27 @@ class TaskViewCell: UITableViewCell {
                     
                     // The completed task has been deleted
                     // Let's give em some positive reinforcement!
-                    DopamineKit.reinforce("action1", completion: {reinforcement in
-                        // So we don't run on the main thread
-                        DispatchQueue.main.async(execute: {
-                            // NOTE: rearranged cases to have rewards show more often for demonstration
-                            switch(reinforcement){
-                            case "thumbsUp" :
+//                    DopamineKit.reinforce("action1", completion: {reinforcement in
+//                        // So we don't run on the main thread
+//                        DispatchQueue.main.async(execute: {
+//                            // NOTE: rearranged cases to have rewards show more often for demonstration
+//                            switch(reinforcement){
+//                            case "thumbsUp" :
+////                                fallthrough
+//                                return;
+//                            case "stars" :
 //                                fallthrough
-                                return;
-                            case "stars" :
-                                fallthrough
-                            case "medalStar" :
-                                fallthrough
-                            case "neutralResponse" :
-                                self.delegate?.presentTaskDoneReward(view: self.superview!, gesture: recognizer)
-                                NSLog("DopamineKit - Show reward!")
-                            default:
-                                NSLog("wtf is this:\(reinforcement)")
-                                return
-                            }
-                        })
-                    })
+//                            case "medalStar" :
+//                                fallthrough
+//                            case "neutralResponse" :
+//                                self.delegate?.presentTaskDoneReward(view: self.superview!, gesture: recognizer)
+//                                NSLog("DopamineKit - Show reward!")
+//                            default:
+//                                NSLog("wtf is this:\(reinforcement)")
+//                                return
+//                            }
+//                        })
+//                    })
                 }
             }
         }

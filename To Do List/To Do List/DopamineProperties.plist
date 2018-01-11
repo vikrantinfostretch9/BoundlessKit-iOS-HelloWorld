@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>appID</key>
-	<string>570ffc491b4c6e9869482fbf</string>
+	<string>5a134d916e905ac73e6aade9</string>
 	<key>developmentSecret</key>
-	<string>d388c7074d8a283bff1f01eb932c1c9e6bec3b10</string>
+	<string>126063f341083c31f36f8b258db5562f8981eaeb</string>
 	<key>productionSecret</key>
-	<string>20af24a85fa00938a5247709fed395c31c89b142</string>
+	<string>70b445cd5b60d957c531312dd0624e2c440da802</string>
 	<key>inProduction</key>
 	<false/>
 	<key>versionID</key>
