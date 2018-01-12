@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import DopamineKit
+import DopamineKit
 
 class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
     
@@ -39,40 +39,31 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate, UIGestureRec
         textTask.text = ""
         textDescription.text = ""
         
-        DispatchQueue.main.async {
-//        sender.showGrow()
+        if let touch = event.touches(for: sender)?.first {
+            let point = touch.location(in: sender)
+            DopamineKit.reinforce("addedTask", completion: {reinforcement in
+                // NOTE: rearranged cases to have rewards show more often for demonstration
+                switch(reinforcement){
+                case "reward1" :
+                    return
+                default:
+                    switch (Reward.getActive(for: .newTask)) {
+                    case .emojiSplosion:
+                        sender.showEmojiSplosion(at: CGPoint.init(x: self.addTaskButton.bounds.width/2, y: self.addTaskButton.bounds.height/2), lifetime: 1.4, fadeout: 1.4, quantity: 2, bursts: 1.5, systemSound: 0)
+                    case .coins:
+                        sender.showCoins(at: point)
+                    case .vibrate:
+                        sender.showVibrate()
+                    case .sheen:
+                        sender.showSheen(hapticFeedback: false, systemSound: 0)
+                    case .glow:
+                        sender.showGlow(duration: 0.3, alpha: 0.9, hapticFeedback: false, systemSound: 0)
+                    default:
+                        return
+                    }
+                }
+            })
         }
-        
-//        if let touch = event.touches(for: sender)?.first {
-//            reinforceAddTaskAction(view: sender, point: touch.location(in: sender))
-//        }
-    }
-    
-    func reinforceAddTaskAction(view: UIView, point: CGPoint) {
-//        DopamineKit.reinforce("action1", completion: {reinforcement in
-//            // NOTE: rearranged cases to have rewards show more often for demonstration
-////            switch(reinforcement){
-////            case "stars" :
-////                fallthrough
-////            case "thumbsUp" :
-////                return
-////            default:
-//////                switch (Reward.getActive(for: .newTask)) {
-//////                case .starBurst:
-//////                    view.showEmojiSplosion(at: CGPoint.init(x: self.addTaskButton.bounds.width/2, y: self.addTaskButton.bounds.height/2), lifetime: 1.4, fadeout: 2.0, quantity: 2, bursts: 1.5)
-//////                case .coins:
-//////                    view.showCoins(at: point)
-//////                case .shake:
-//////                    view.shake()
-//////                case .sheen:
-//////                    view.showSheen()
-//////                case .glow:
-//////                    view.showGlow()
-//////                default:
-//////                    return
-//////                }
-////            }
-//        })
     }
     
     @IBAction func btnAddDemo_click(_ sender: UIButton){

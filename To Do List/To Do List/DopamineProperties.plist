@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>appID</key>
-	<string>5a134d916e905ac73e6aade9</string>
+	<string>5a57e5c5b7f8570100544507</string>
 	<key>developmentSecret</key>
-	<string>126063f341083c31f36f8b258db5562f8981eaeb</string>
+	<string>028ba77526ee51f5a3c2fcaf8bde4d6dcdbd6b55</string>
 	<key>productionSecret</key>
-	<string>70b445cd5b60d957c531312dd0624e2c440da802</string>
+	<string>2df1f06078b9f685bed8c677c9e4c04d11803304</string>
 	<key>inProduction</key>
 	<false/>
 	<key>versionID</key>
-	<string>testing</string>
+	<string>testing2</string>
 </dict>
 </plist>

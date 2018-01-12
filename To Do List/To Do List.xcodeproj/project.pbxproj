@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7A9591C4354B07B1FAEAA155 /* Pods_To_Do_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30ACFD24D8F89B3A9FD15426 /* Pods_To_Do_List.framework */; };
+		840B49A82008229D00D5AB6F /* DLBalloons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B49A72008229C00D5AB6F /* DLBalloons.swift */; };
+		840B49AB200822E900D5AB6F /* DLCoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B49A9200822E900D5AB6F /* DLCoins.swift */; };
+		840B49AC200822E900D5AB6F /* DLFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B49AA200822E900D5AB6F /* DLFrame.swift */; };
+		840B49AE2008242300D5AB6F /* DLScreenStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B49AD2008242300D5AB6F /* DLScreenStar.swift */; };
+		840B49B02008276000D5AB6F /* StarburstTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B49AF2008276000D5AB6F /* StarburstTouch.swift */; };
 		840E07741EDBE30E00332A6C /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07731EDBE30E00332A6C /* Reward.swift */; };
 		84156F901EDD173200DEF989 /* star-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F8F1EDD173200DEF989 /* star-sound.wav */; };
 		84156F921EDD1CB300DEF989 /* coin-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F911EDD1CB300DEF989 /* coin-sound.wav */; };
@@ -44,6 +49,11 @@
 /* Begin PBXFileReference section */
 		30ACFD24D8F89B3A9FD15426 /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AD5ADDC249C20266ADA7DE /* Pods-To Do List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do List.release.xcconfig"; path = "Pods/Target Support Files/Pods-To Do List/Pods-To Do List.release.xcconfig"; sourceTree = "<group>"; };
+		840B49A72008229C00D5AB6F /* DLBalloons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLBalloons.swift; sourceTree = "<group>"; };
+		840B49A9200822E900D5AB6F /* DLCoins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLCoins.swift; sourceTree = "<group>"; };
+		840B49AA200822E900D5AB6F /* DLFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLFrame.swift; sourceTree = "<group>"; };
+		840B49AD2008242300D5AB6F /* DLScreenStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLScreenStar.swift; sourceTree = "<group>"; };
+		840B49AF2008276000D5AB6F /* StarburstTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarburstTouch.swift; sourceTree = "<group>"; };
 		840E07731EDBE30E00332A6C /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		84156F8F1EDD173200DEF989 /* star-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "star-sound.wav"; sourceTree = "<group>"; };
 		84156F911EDD1CB300DEF989 /* coin-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "coin-sound.wav"; sourceTree = "<group>"; };
@@ -176,6 +186,11 @@
 		84DE05561EEC924100777AD9 /* RewardPicker */ = {
 			isa = PBXGroup;
 			children = (
+				840B49A72008229C00D5AB6F /* DLBalloons.swift */,
+				840B49AF2008276000D5AB6F /* StarburstTouch.swift */,
+				840B49AD2008242300D5AB6F /* DLScreenStar.swift */,
+				840B49A9200822E900D5AB6F /* DLCoins.swift */,
+				840B49AA200822E900D5AB6F /* DLFrame.swift */,
 				84B85C431EF1ECC200509596 /* RewardPickerDelegate.swift */,
 			);
 			name = RewardPicker;
@@ -352,8 +367,12 @@
 				84B7B9A51D078EA1008BF664 /* AddTaskViewController.swift in Sources */,
 				84FF05DF1ED8D26E00C0F9DE /* Helper.swift in Sources */,
 				84B7B9A11D078EA1008BF664 /* AppDelegate.swift in Sources */,
+				840B49AC200822E900D5AB6F /* DLFrame.swift in Sources */,
+				840B49AE2008242300D5AB6F /* DLScreenStar.swift in Sources */,
 				84B8606F1EF8024800509596 /* TutorialSubtractionPath.swift in Sources */,
+				840B49B02008276000D5AB6F /* StarburstTouch.swift in Sources */,
 				84DE05551EEB813300777AD9 /* DrawerViewController.swift in Sources */,
+				840B49A82008229D00D5AB6F /* DLBalloons.swift in Sources */,
 				8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */,
 				84B7B9C31D078EE5008BF664 /* TaskManager.swift in Sources */,
 				8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */,
@@ -361,6 +380,7 @@
 				84B8606E1EF8024800509596 /* TutorialOverlayView.swift in Sources */,
 				840E07741EDBE30E00332A6C /* Reward.swift in Sources */,
 				84DE05531EEB803500777AD9 /* ContainerViewController.swift in Sources */,
+				840B49AB200822E900D5AB6F /* DLCoins.swift in Sources */,
 				84B85C441EF1ECC200509596 /* RewardPickerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

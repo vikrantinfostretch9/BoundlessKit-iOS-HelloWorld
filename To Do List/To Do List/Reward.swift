@@ -37,10 +37,11 @@ enum Reward : String {
     balloons = "📲\t\t Balloons",
     starSingle = "📲\t\t Stickers",
     goldenFrame = "📲🎷🖼 Framed Memory",
-    starBurst = "👆🎷\t Star Bursts",
+    emojiSplosion = "👆\t\t Emoji'Splosion",
+    starburst = "👆\t\t Starburst",
     coins = "👆🎷📳 Golden Touch",
     confetti = "📲🎊\tConfetti",
-    shake = "👆\t\tShake",
+    vibrate = "📳🎷\t\tVibrate+Ding",
     sheen = "\t\tSheen",
     glow = "\t\tGlow"
 
@@ -56,9 +57,9 @@ enum Reward : String {
     }
     
     static let newTaskRewards = [
-        Reward.starBurst,
+        Reward.emojiSplosion,
         Reward.coins,
-        Reward.shake,
+        Reward.vibrate,
         Reward.sheen,
         Reward.glow
     ]
@@ -67,7 +68,7 @@ enum Reward : String {
         Reward.candyBar,
         Reward.balloons,
         Reward.starSingle,
-        Reward.starBurst,
+        Reward.starburst,
         Reward.coins,
         Reward.confetti
     ]
@@ -76,9 +77,9 @@ enum Reward : String {
         Reward.balloons,
     ]
     static let activeRewardsDefaults = [
-        RewardType.newTask.rawValue : Reward.sheen.rawValue,
+        RewardType.newTask.rawValue : Reward.vibrate.rawValue,
         RewardType.doneTask.rawValue : Reward.confetti.rawValue,
-        RewardType.allDoneTask.rawValue : Reward.goldenFrame.rawValue,
+        RewardType.allDoneTask.rawValue : Reward.balloons.rawValue,
         ]
     
     static func getActive(for type: RewardType) -> Reward {

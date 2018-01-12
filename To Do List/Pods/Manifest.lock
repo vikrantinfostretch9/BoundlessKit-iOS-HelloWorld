@@ -1,15 +1,15 @@
 PODS:
   - BasalGifglia (1.0.2)
-  - DopamineKit (5.2.0)
+  - DopamineKit (5.2.5)
 
 DEPENDENCIES:
   - BasalGifglia (~> 1.0.2)
-  - DopamineKit
+  - DopamineKit (= 5.2.5)
 
 SPEC CHECKSUMS:
   BasalGifglia: a2ec672e384e69ee53a13106bf92a38adddd0014
-  DopamineKit: 0df4e39148b2a9c0849138b492b4f3f4c93d19d1
+  DopamineKit: 92e25ce71f0692536c4060d4b77c43314995efe7
 
-PODFILE CHECKSUM: 9dee7b40f44a2dbe808a01901f98c796ada8ef21
+PODFILE CHECKSUM: ccc983457c0e788513725d3c9a763b7c46d3279e
 
 COCOAPODS: 1.3.1

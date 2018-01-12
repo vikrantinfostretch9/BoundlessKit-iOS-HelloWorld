@@ -24,11 +24,12 @@ public class DopamineVersion : UserDefaultsSingleton {
     @objc fileprivate var mappings: [String:Any]
     @objc internal fileprivate(set) var visualizerMappings: [String:Any]
     
-    fileprivate let updateQueue = SingleOperationQueue(delay: 1)
+    fileprivate let updateQueue = SingleOperationQueue()
     public func update(visualizer mappings: [String: Any]?) {
         updateQueue.addOperation {
             if let mappings = mappings {
                 self.visualizerMappings = mappings
+                CustomClassMethod.registerVisualizerMethods()
             } else if self.visualizerMappings.count == 0 {
                 return
             } else {
@@ -86,6 +87,9 @@ public class DopamineVersion : UserDefaultsSingleton {
     }
     
     public func codelessReinforcementFor(actionID: String, completion: @escaping([String:Any]) -> Void) {
+        guard DopamineConfiguration.current.integrationMethod == "codeless" else {
+            return
+        }
         if let reinforcementParameters = visualizerMappings[actionID] as? [String: Any] {
             DopeLog.debug("Found visualizer reinforcement for <\(actionID)>")
             if let codeless = reinforcementParameters["codeless"] as? [String: Any],
@@ -127,9 +131,18 @@ public class DopamineVersion : UserDefaultsSingleton {
 
 public extension DopamineVersion {
     public static func convert(from versionDictionary: [String: Any]) -> DopamineVersion? {
-        if let versionID = versionDictionary["versionID"] as? String?,
-            let mappings = versionDictionary["mappings"] as? [String:Any] {
-            return DopamineVersion.init(versionID: versionID, mappings: mappings, visualizerMappings: versionDictionary["visualizerMappings"] as? [String:Any] ?? [:])
-        } else { return nil }
+        guard let versionID = versionDictionary["versionID"] as? String? else { DopeLog.debug("Bad parameter"); return nil }
+        guard let mappings = versionDictionary["mappings"] as? [String:Any] else { DopeLog.debug("Bad parameter"); return nil }
+        
+        return DopamineVersion.init(versionID: versionID, mappings: mappings, visualizerMappings: versionDictionary["visualizerMappings"] as? [String:Any] ?? [:])
     }
+    
+    public var actionIDs: [String] {
+        return Array(mappings.keys)
+    }
+    
+    public var visualizerActionIDs: [String] {
+        return Array(visualizerMappings.keys)
+    }
+    
 }
