@@ -1,8 +1,7 @@
 use_frameworks!
 
 target 'To Do List' do
-  pod 'DopamineKit', '5.2.5'
+  pod 'DopamineKit', '5.2.9'
 #  pod 'DopamineKit', :path => "/Users/cuddergambino/Code/Dopamine/DopamineKit-iOS/repo"
   pod 'BasalGifglia', '~> 1.0.2'
-#  pod 'CandyBar', '~> 1.1.0'
 end

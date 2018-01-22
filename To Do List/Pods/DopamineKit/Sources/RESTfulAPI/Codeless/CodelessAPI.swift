@@ -55,7 +55,7 @@ public class CodelessAPI : NSObject {
     }
     
     @objc
-    public static func boot() {
+    public static func boot(completion: @escaping () -> () = {}) {
         var payload = DopamineProperties.current.apiCredentials
         payload["inProduction"] = DopamineProperties.current.inProduction
         payload["currentVersion"] = DopamineVersion.current.versionID ?? "nil"
@@ -75,9 +75,12 @@ public class CodelessAPI : NSObject {
                 }
             }
             
+            completion()
+            
             if DopamineConfiguration.current.integrationMethod == "codeless" {
                 _ = CustomClassMethod.registerMethods
             }
+            
             promptPairing()
         }
     }
@@ -218,13 +221,44 @@ public class CodelessAPI : NSObject {
     }
     
     @objc
-    public static func submitTapAction(target: Any, action: Selector) {
-        if let tapAction = CustomClassMethod(target: target, action: action) {
+    public static func submitViewControllerDidAppear(vc: UIViewController, target: String, action: String) {
+        if let customClassMethod = CustomClassMethod(swizzleType: .viewControllerDidAppear, targetName: target, actionName: action) {
+            submit { payload in
+                payload["sender"] = customClassMethod.sender
+                payload["target"] = customClassMethod.target
+                payload["selector"] = customClassMethod.action
+                payload["actionID"] = [customClassMethod.sender, customClassMethod.target, customClassMethod.action].joined(separator: "-")
+                payload["senderImage"] = ""
+                payload["utc"] = NSNumber(value: Int64(Date().timeIntervalSince1970) * 1000)
+                payload["timezoneOffset"] = NSNumber(value: Int64(NSTimeZone.default.secondsFromGMT()) * 1000)
+            }
+            customClassMethod.attemptViewControllerReinforcement(vc: vc)
+        }
+    }
+    
+    @objc
+    public static func submitTapAction(target: String, action: String) {
+        if let tapAction = CustomClassMethod(swizzleType: ((action.contains(":")) ? .tapActionWithSender : .noParam), targetName: target, actionName: action) {
             submit { payload in
                 payload["sender"] = tapAction.sender
                 payload["target"] = tapAction.target
                 payload["selector"] = tapAction.action
                 payload["actionID"] = [tapAction.sender, tapAction.target, tapAction.action].joined(separator: "-")
+                payload["senderImage"] = ""
+                payload["utc"] = NSNumber(value: Int64(Date().timeIntervalSince1970) * 1000)
+                payload["timezoneOffset"] = NSNumber(value: Int64(NSTimeZone.default.secondsFromGMT()) * 1000)
+            }
+        }
+    }
+    
+    @objc
+    public static func submitCollectionViewDidSelect(target: String?, action: String?) {
+        if let customClassMethod = CustomClassMethod(swizzleType: .collectionDidSelect, targetName: target, actionName: action) {
+            submit { payload in
+                payload["sender"] = customClassMethod.sender
+                payload["target"] = customClassMethod.target
+                payload["selector"] = customClassMethod.action
+                payload["actionID"] = [customClassMethod.sender, customClassMethod.target, customClassMethod.action].joined(separator: "-")
                 payload["senderImage"] = ""
                 payload["utc"] = NSNumber(value: Int64(Date().timeIntervalSince1970) * 1000)
                 payload["timezoneOffset"] = NSNumber(value: Int64(NSTimeZone.default.secondsFromGMT()) * 1000)

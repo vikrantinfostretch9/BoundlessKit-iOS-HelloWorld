@@ -63,12 +63,12 @@ extension UIView {
 
 extension CGFloat {
     init(randomWithMax max:CGFloat) {
-        self.init(NSNumber.random(withMax: max as NSNumber))
+        self.init(truncating: NSNumber.random(withMax: max as NSNumber))
     }
 }
 
 extension NSNumber {
     static func random(withMax max: NSNumber) -> NSNumber {
-        return arc4random_uniform(UInt32(max)+1) as NSNumber
+        return arc4random_uniform(UInt32(truncating: max)+1) as NSNumber
     }
 }

@@ -220,7 +220,7 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
             self.tableView.showCoins(at: gesture.location(in: tableView))
 
         case .confetti:
-            self.tableView.showConfetti(duration: 1.0)
+            self.tableView.showConfetti(duration: 1.0, hapticFeedback: true, systemSound: 1025)
 
         default:
             break
