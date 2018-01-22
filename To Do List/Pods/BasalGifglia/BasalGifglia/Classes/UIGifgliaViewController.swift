@@ -105,7 +105,7 @@ open class UIGifgliaViewController: UIViewController {
     
     /// Dismisses both the gifViewController and the UIGifgliaViewController
     ///
-    func closeGifView() {
+    @objc func closeGifView() {
         DispatchQueue.main.async() {
             self.gifViewController.modalTransitionStyle = .crossDissolve
             self.dismiss(animated: true, completion: nil)

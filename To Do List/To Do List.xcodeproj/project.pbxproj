@@ -8,17 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		7A9591C4354B07B1FAEAA155 /* Pods_To_Do_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30ACFD24D8F89B3A9FD15426 /* Pods_To_Do_List.framework */; };
+		840B49A82008229D00D5AB6F /* DLBalloons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B49A72008229C00D5AB6F /* DLBalloons.swift */; };
+		840B49AB200822E900D5AB6F /* DLCoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B49A9200822E900D5AB6F /* DLCoins.swift */; };
+		840B49AC200822E900D5AB6F /* DLFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B49AA200822E900D5AB6F /* DLFrame.swift */; };
+		840B49AE2008242300D5AB6F /* DLScreenStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B49AD2008242300D5AB6F /* DLScreenStar.swift */; };
+		840B49B02008276000D5AB6F /* StarburstTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B49AF2008276000D5AB6F /* StarburstTouch.swift */; };
+		840E07741EDBE30E00332A6C /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E07731EDBE30E00332A6C /* Reward.swift */; };
+		84156F901EDD173200DEF989 /* star-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F8F1EDD173200DEF989 /* star-sound.wav */; };
+		84156F921EDD1CB300DEF989 /* coin-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F911EDD1CB300DEF989 /* coin-sound.wav */; };
+		84156F941EDD1E3A00DEF989 /* shoot-and-roll.wav in Resources */ = {isa = PBXBuildFile; fileRef = 84156F931EDD1E3A00DEF989 /* shoot-and-roll.wav */; };
 		8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */; };
 		8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426EEFE1D08F5BC003BB094 /* Task.swift */; };
 		8497238A1D07FFB60014E975 /* DopamineProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849723891D07FFB60014E975 /* DopamineProperties.plist */; };
 		84B7B9A11D078EA1008BF664 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A01D078EA1008BF664 /* AppDelegate.swift */; };
-		84B7B9A31D078EA1008BF664 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A21D078EA1008BF664 /* FirstViewController.swift */; };
-		84B7B9A51D078EA1008BF664 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A41D078EA1008BF664 /* SecondViewController.swift */; };
+		84B7B9A31D078EA1008BF664 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A21D078EA1008BF664 /* ToDoListViewController.swift */; };
+		84B7B9A51D078EA1008BF664 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9A41D078EA1008BF664 /* AddTaskViewController.swift */; };
 		84B7B9A81D078EA1008BF664 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B7B9A61D078EA1008BF664 /* Main.storyboard */; };
 		84B7B9AA1D078EA1008BF664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B7B9A91D078EA1008BF664 /* Assets.xcassets */; };
 		84B7B9AD1D078EA1008BF664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B7B9AB1D078EA1008BF664 /* LaunchScreen.storyboard */; };
 		84B7B9B81D078EA1008BF664 /* To_Do_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9B71D078EA1008BF664 /* To_Do_ListTests.swift */; };
 		84B7B9C31D078EE5008BF664 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7B9C21D078EE5008BF664 /* TaskManager.swift */; };
+		84B85C441EF1ECC200509596 /* RewardPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B85C431EF1ECC200509596 /* RewardPickerDelegate.swift */; };
+		84B8606E1EF8024800509596 /* TutorialOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8606C1EF8024800509596 /* TutorialOverlayView.swift */; };
+		84B8606F1EF8024800509596 /* TutorialSubtractionPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B8606D1EF8024800509596 /* TutorialSubtractionPath.swift */; };
+		84DE05531EEB803500777AD9 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE05521EEB803500777AD9 /* ContainerViewController.swift */; };
+		84DE05551EEB813300777AD9 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE05541EEB813300777AD9 /* DrawerViewController.swift */; };
+		84FF05DF1ED8D26E00C0F9DE /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF05DE1ED8D26E00C0F9DE /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,13 +49,22 @@
 /* Begin PBXFileReference section */
 		30ACFD24D8F89B3A9FD15426 /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AD5ADDC249C20266ADA7DE /* Pods-To Do List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do List.release.xcconfig"; path = "Pods/Target Support Files/Pods-To Do List/Pods-To Do List.release.xcconfig"; sourceTree = "<group>"; };
+		840B49A72008229C00D5AB6F /* DLBalloons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLBalloons.swift; sourceTree = "<group>"; };
+		840B49A9200822E900D5AB6F /* DLCoins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLCoins.swift; sourceTree = "<group>"; };
+		840B49AA200822E900D5AB6F /* DLFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLFrame.swift; sourceTree = "<group>"; };
+		840B49AD2008242300D5AB6F /* DLScreenStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLScreenStar.swift; sourceTree = "<group>"; };
+		840B49AF2008276000D5AB6F /* StarburstTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarburstTouch.swift; sourceTree = "<group>"; };
+		840E07731EDBE30E00332A6C /* Reward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
+		84156F8F1EDD173200DEF989 /* star-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "star-sound.wav"; sourceTree = "<group>"; };
+		84156F911EDD1CB300DEF989 /* coin-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "coin-sound.wav"; sourceTree = "<group>"; };
+		84156F931EDD1E3A00DEF989 /* shoot-and-roll.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "shoot-and-roll.wav"; sourceTree = "<group>"; };
 		8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewCell.swift; sourceTree = "<group>"; };
 		8426EEFE1D08F5BC003BB094 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		849723891D07FFB60014E975 /* DopamineProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DopamineProperties.plist; sourceTree = "<group>"; };
 		84B7B99D1D078EA1008BF664 /* To Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B7B9A01D078EA1008BF664 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84B7B9A21D078EA1008BF664 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		84B7B9A41D078EA1008BF664 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		84B7B9A21D078EA1008BF664 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ToDoListViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		84B7B9A41D078EA1008BF664 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		84B7B9A71D078EA1008BF664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84B7B9A91D078EA1008BF664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B7B9AC1D078EA1008BF664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +73,12 @@
 		84B7B9B71D078EA1008BF664 /* To_Do_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_ListTests.swift; sourceTree = "<group>"; };
 		84B7B9B91D078EA1008BF664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84B7B9C21D078EE5008BF664 /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		84B85C431EF1ECC200509596 /* RewardPickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardPickerDelegate.swift; sourceTree = "<group>"; };
+		84B8606C1EF8024800509596 /* TutorialOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialOverlayView.swift; sourceTree = "<group>"; };
+		84B8606D1EF8024800509596 /* TutorialSubtractionPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialSubtractionPath.swift; sourceTree = "<group>"; };
+		84DE05521EEB803500777AD9 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		84DE05541EEB813300777AD9 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		84FF05DE1ED8D26E00C0F9DE /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		BD2846C46C8532ED1FD4073C /* Pods-To Do List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do List.debug.xcconfig"; path = "Pods/Target Support Files/Pods-To Do List/Pods-To Do List.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +118,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		84156F8E1EDD173200DEF989 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				84156F931EDD1E3A00DEF989 /* shoot-and-roll.wav */,
+				84156F911EDD1CB300DEF989 /* coin-sound.wav */,
+				84156F8F1EDD173200DEF989 /* star-sound.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		84B7B9941D078EA1008BF664 = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +152,15 @@
 			isa = PBXGroup;
 			children = (
 				84B7B9A01D078EA1008BF664 /* AppDelegate.swift */,
-				84B7B9A21D078EA1008BF664 /* FirstViewController.swift */,
-				84B7B9A41D078EA1008BF664 /* SecondViewController.swift */,
+				84B7B9A21D078EA1008BF664 /* ToDoListViewController.swift */,
+				84B7B9A41D078EA1008BF664 /* AddTaskViewController.swift */,
+				84DE05521EEB803500777AD9 /* ContainerViewController.swift */,
+				84B8606C1EF8024800509596 /* TutorialOverlayView.swift */,
+				84B8606D1EF8024800509596 /* TutorialSubtractionPath.swift */,
+				84DE05541EEB813300777AD9 /* DrawerViewController.swift */,
+				84DE05561EEC924100777AD9 /* RewardPicker */,
+				84FF05DE1ED8D26E00C0F9DE /* Helper.swift */,
+				840E07731EDBE30E00332A6C /* Reward.swift */,
 				8426EEFE1D08F5BC003BB094 /* Task.swift */,
 				84B7B9C21D078EE5008BF664 /* TaskManager.swift */,
 				8426EEFC1D08CD44003BB094 /* TaskViewCell.swift */,
@@ -121,6 +168,7 @@
 				84B7B9A91D078EA1008BF664 /* Assets.xcassets */,
 				84B7B9AB1D078EA1008BF664 /* LaunchScreen.storyboard */,
 				849723891D07FFB60014E975 /* DopamineProperties.plist */,
+				84156F8E1EDD173200DEF989 /* Sounds */,
 				84B7B9AE1D078EA1008BF664 /* Info.plist */,
 			);
 			path = "To Do List";
@@ -133,6 +181,19 @@
 				84B7B9B91D078EA1008BF664 /* Info.plist */,
 			);
 			path = "To Do ListTests";
+			sourceTree = "<group>";
+		};
+		84DE05561EEC924100777AD9 /* RewardPicker */ = {
+			isa = PBXGroup;
+			children = (
+				840B49A72008229C00D5AB6F /* DLBalloons.swift */,
+				840B49AF2008276000D5AB6F /* StarburstTouch.swift */,
+				840B49AD2008242300D5AB6F /* DLScreenStar.swift */,
+				840B49A9200822E900D5AB6F /* DLCoins.swift */,
+				840B49AA200822E900D5AB6F /* DLFrame.swift */,
+				84B85C431EF1ECC200509596 /* RewardPickerDelegate.swift */,
+			);
+			name = RewardPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +244,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = DopamineLabs;
 				TargetAttributes = {
 					84B7B99C1D078EA1008BF664 = {
@@ -224,8 +285,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8497238A1D07FFB60014E975 /* DopamineProperties.plist in Resources */,
+				84156F901EDD173200DEF989 /* star-sound.wav in Resources */,
 				84B7B9AD1D078EA1008BF664 /* LaunchScreen.storyboard in Resources */,
+				84156F921EDD1CB300DEF989 /* coin-sound.wav in Resources */,
 				84B7B9AA1D078EA1008BF664 /* Assets.xcassets in Resources */,
+				84156F941EDD1E3A00DEF989 /* shoot-and-roll.wav in Resources */,
 				84B7B9A81D078EA1008BF664 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,13 +325,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-To Do List-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E1A00E9708140874E884ADC7 /* [CP] Embed Pods Frameworks */ = {
@@ -276,9 +343,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-To Do List/Pods-To Do List-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BasalGifglia/BasalGifglia.framework",
+				"${BUILT_PRODUCTS_DIR}/DopamineKit/DopamineKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BasalGifglia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DopamineKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -292,12 +364,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B7B9A51D078EA1008BF664 /* SecondViewController.swift in Sources */,
+				84B7B9A51D078EA1008BF664 /* AddTaskViewController.swift in Sources */,
+				84FF05DF1ED8D26E00C0F9DE /* Helper.swift in Sources */,
 				84B7B9A11D078EA1008BF664 /* AppDelegate.swift in Sources */,
+				840B49AC200822E900D5AB6F /* DLFrame.swift in Sources */,
+				840B49AE2008242300D5AB6F /* DLScreenStar.swift in Sources */,
+				84B8606F1EF8024800509596 /* TutorialSubtractionPath.swift in Sources */,
+				840B49B02008276000D5AB6F /* StarburstTouch.swift in Sources */,
+				84DE05551EEB813300777AD9 /* DrawerViewController.swift in Sources */,
+				840B49A82008229D00D5AB6F /* DLBalloons.swift in Sources */,
 				8426EEFD1D08CD44003BB094 /* TaskViewCell.swift in Sources */,
 				84B7B9C31D078EE5008BF664 /* TaskManager.swift in Sources */,
 				8426EEFF1D08F5BC003BB094 /* Task.swift in Sources */,
-				84B7B9A31D078EA1008BF664 /* FirstViewController.swift in Sources */,
+				84B7B9A31D078EA1008BF664 /* ToDoListViewController.swift in Sources */,
+				84B8606E1EF8024800509596 /* TutorialOverlayView.swift in Sources */,
+				840E07741EDBE30E00332A6C /* Reward.swift in Sources */,
+				84DE05531EEB803500777AD9 /* ContainerViewController.swift in Sources */,
+				840B49AB200822E900D5AB6F /* DLCoins.swift in Sources */,
+				84B85C441EF1ECC200509596 /* RewardPickerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,14 +432,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -384,6 +474,7 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -396,14 +487,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -425,6 +522,7 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -442,7 +540,8 @@
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.usedopamine.app.opaque;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -459,7 +558,8 @@
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.usedopamine.app.opaque;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -471,7 +571,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.usedopamine.ios.Dope-To-Do-ListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To Do List.app/To Do List";
 			};
 			name = Debug;
@@ -484,7 +584,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.usedopamine.ios.Dope-To-Do-ListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/To Do List.app/To Do List";
 			};
 			name = Release;

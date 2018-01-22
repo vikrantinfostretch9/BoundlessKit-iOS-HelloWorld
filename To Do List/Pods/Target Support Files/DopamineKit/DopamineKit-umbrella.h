@@ -11,6 +11,14 @@
 #endif
 
 #import "DopamineKit.h"
+#import "ASIdentifierManager+ASIdentifierManagerHelper.h"
+#import "SKPaymentTransactionObserver+Dopamine.h"
+#import "SwizzleHelper.h"
+#import "UIApplication+Dopamine.h"
+#import "UIApplicationDelegate+Dopamine.h"
+#import "UICollectionViewDelegate+Dopamine.h"
+#import "UITapGestureRecognizer+Dopamine.h"
+#import "UIViewController+Dopamine.h"
 
 FOUNDATION_EXPORT double DopamineKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char DopamineKitVersionString[];

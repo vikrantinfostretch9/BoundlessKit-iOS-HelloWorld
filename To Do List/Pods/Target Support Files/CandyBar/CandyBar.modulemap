@@ -1,6 +1,0 @@
-framework module CandyBar {
-  umbrella header "CandyBar-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -8,11 +8,12 @@
 
 import UIKit
 import DopamineKit
+import BasalGifglia
 
 // A protocol that the TaskViewCell uses to inform its delegate of state change
 protocol TaskViewCellDelegate {
-    func taskItemDeleted(_ taskItem: Task)
-    func presentReward()
+    func taskItemDeleted(_ taskItem: Task, animation: UITableViewRowAnimation)
+    func presentTaskDoneReward(view: UIView, gesture: UIGestureRecognizer)
 }
 
 class TaskViewCell: UITableViewCell {
@@ -22,6 +23,8 @@ class TaskViewCell: UITableViewCell {
     var deleteOnDragRelease = false
     
     var tickLabel: UILabel
+    var tickLabelLeft: UILabel
+    var swipingRight = false
     
     var delegate: TaskViewCellDelegate?
     // The item that this cell renders.
@@ -32,6 +35,9 @@ class TaskViewCell: UITableViewCell {
         tickLabel = TaskViewCell.createCueLabel()
         tickLabel.text = "\u{2713}"
         tickLabel.textAlignment = .left
+        tickLabelLeft = TaskViewCell.createCueLabel()
+        tickLabelLeft.text = "\u{2713}"
+        tickLabelLeft.textAlignment = .right
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -52,7 +58,7 @@ class TaskViewCell: UITableViewCell {
         
         
         addSubview(tickLabel)
-        
+        addSubview(tickLabelLeft)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -66,6 +72,7 @@ class TaskViewCell: UITableViewCell {
         super.layoutSubviews()
         gradientLayer.frame = bounds
         tickLabel.frame = CGRect(x: bounds.size.width+kUICuesMargin, y: 0, width: bounds.size.width-kUICuesMargin, height: bounds.size.height)
+        tickLabelLeft.frame = CGRect(x: 0-bounds.size.width-kUICuesMargin, y: 0, width: bounds.size.width-kUICuesMargin, height: bounds.size.height)
     }
     
     // utility method for creating the contextual cues
@@ -77,14 +84,8 @@ class TaskViewCell: UITableViewCell {
         return label
     }
     
-    
-    let dopeGreen = UIColor.init(red: 51/255.0, green: 153/255.0, blue: 51/255.0, alpha: 0.9)
-    let dopeRed = UIColor.init(red: 204/255.0, green: 51/255.0, blue: 51/255.0, alpha: 0.9)
-    let dopeBlue = UIColor.init(red: 51/255.0, green: 102/255.0, blue: 153/255.0, alpha: 0.9)
-    let dopeYellow = UIColor.init(red: 255/255.0, green: 204/255.0, blue: 0, alpha: 0.9)
-    
     //MARK: - horizontal pan gesture methods
-    func handlePan(_ recognizer: UIPanGestureRecognizer) {
+    @objc func handlePan(_ recognizer: UIPanGestureRecognizer) {
         // 1
         if recognizer.state == .began {
             // when the gesture begins, record the current center location
@@ -95,21 +96,27 @@ class TaskViewCell: UITableViewCell {
             let translation = recognizer.translation(in: self)
             center = CGPoint(x: originalCenter.x + translation.x, y: originalCenter.y)
             // has the user dragged the item far enough to initiate a delete/complete?
-            deleteOnDragRelease = frame.origin.x < -frame.size.width / 4.0
+            deleteOnDragRelease = (frame.origin.x < -frame.size.width / 8.0) || (frame.origin.x > frame.size.width / 8.0)
+            swipingRight = frame.origin.x > 0
             
             // fade context cues
-            let cueAlpha = fabs(frame.origin.x) / (frame.size.width / 4.0)
-            tickLabel.alpha = cueAlpha
+            tickLabel.alpha = fabs(frame.origin.x) / (frame.size.width / 8.0)
+            tickLabelLeft.alpha = fabs(tickLabelLeft.frame.origin.x) / (frame.size.width / 8.0)
             if(deleteOnDragRelease){
-                tickLabel.textColor = dopeGreen
+                tickLabel.textColor = Helper.dopeGreen
                 tickLabel.backgroundColor = UIColor.clear
+                tickLabelLeft.textColor = Helper.dopeGreen
+                tickLabelLeft.backgroundColor = UIColor.clear
             } else{
                 tickLabel.textColor = UIColor.clear
-                tickLabel.backgroundColor = dopeGreen
+                tickLabel.backgroundColor = Helper.dopeGreen
+                tickLabelLeft.textColor = UIColor.clear
+                tickLabelLeft.backgroundColor = Helper.dopeGreen
             }
         
         }
         // 3
+        
         if recognizer.state == .ended {
             // the frame this cell had before user dragged it
             let originalFrame = CGRect(x: 0, y: frame.origin.y,
@@ -121,30 +128,19 @@ class TaskViewCell: UITableViewCell {
                 if delegate != nil && task != nil {
                     
                     // notify the delegate that this item should be deleted
-                    delegate!.taskItemDeleted(task!)
+                    delegate!.taskItemDeleted(task!, animation: swipingRight ? .right : .left)
                     
                     // The completed task has been deleted
                     // Let's give em some positive reinforcement!
-                    DopamineKit.reinforce("action1", completion: {reinforcement in
-                        // So we don't run on the main thread
-                        DispatchQueue.main.async(execute: {
-                            
-                            switch(reinforcement){
-                            case "thumbsUp" :
-                                fallthrough
-                            case "stars" :
-                                fallthrough
-                            case "medalStar" :
-                                self.delegate?.presentReward()
-                                NSLog("DopamineKit - Show reward!")
-                            case "neutralResponse" :
-                                fallthrough
-                            default:
-                                // Show nothing! This is called a neutral response, and builds up the good feelings for the next surprise!
-                                NSLog("DopamineKit - No reward this time.")
-                                return
-                            }
-                        })
+                    DopamineKit.reinforce("completedTask", completion: {reinforcement in
+                        // NOTE: rearranged cases to have rewards show more often for demonstration
+                        switch(reinforcement){
+                        case "reward1" :
+                            return
+                        default:
+                            self.delegate?.presentTaskDoneReward(view: self.superview!, gesture: recognizer)
+                            NSLog("DopamineKit - Show reward!")
+                        }
                     })
                 }
             }
@@ -161,5 +157,41 @@ class TaskViewCell: UITableViewCell {
         }
         return false
     }
-
+    
+    func showTutorial(tableViewController: ToDoListViewController, completion: @escaping () -> Void) {
+        DispatchQueue.main.async {
+            // Setup
+            let overlay = TAOverlayView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,
+                                                      height: UIScreen.main.bounds.height), subtractedPaths: [
+                                                        TARectangularSubtractionPath(frame: tableViewController.tableView.frame,
+                                                                                     horizontalPadding: 0, verticalPadding: 0)
+                ])
+            overlay.alpha = 0.0
+            tableViewController.view.addSubview(overlay)
+            
+            // Animate
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {overlay.alpha = TAOverlayView.defaultAlpha}) { _ in
+                UIView.animate(withDuration: 0.8, delay: 0, options: .curveEaseInOut, animations: {
+                    self.center = CGPoint(x: self.center.x - self.frame.size.width / 8.0, y: self.center.y)
+                    
+                    self.tickLabel.textColor = UIColor.white
+                    self.tickLabel.backgroundColor = Helper.dopeGreen
+                }) { success in
+                    // Message
+                    tableViewController.presentTutorialAlert(title: "Reinforced Action (1/3)", message: "Swipe to complete a task!\n\nMaybe you'll receive a reward, maybe you won't.") {
+                        // Breakdown
+                        UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseIn, animations: {
+                            self.frame = CGRect(x: 0, y: self.frame.origin.y, width: self.bounds.size.width, height: self.bounds.size.height)
+                            overlay.alpha = 0.0
+                        }, completion: {success in
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                overlay.removeFromSuperview()
+                                completion()
+                            }
+                        })
+                    }
+                }
+            }
+        }
+    }
 }

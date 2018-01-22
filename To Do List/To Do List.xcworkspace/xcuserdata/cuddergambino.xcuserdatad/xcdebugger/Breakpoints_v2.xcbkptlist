@@ -2,4 +2,228 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Do List/AppDelegate.swift"
+            timestampString = "534202443.801902"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/Events/CustomClassMethod.swift"
+            timestampString = "537412067.447427"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "CustomClassMethod"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DopamineKit.CustomClassMethod.__deallocating_deinit"
+                  moduleName = "DopamineKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cuddergambino/Code/Dopamine/DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/Events/CustomClassMethod.swift"
+                  timestampString = "537411075.5278569"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DopamineKit.CustomClassMethod.__allocating_init() -&gt; DopamineKit.CustomClassMethod"
+                  moduleName = "DopamineKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cuddergambino/Code/Dopamine/DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/Events/CustomClassMethod.swift"
+                  timestampString = "537411075.53054"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DopamineKit.CustomClassMethod.init() -&gt; DopamineKit.CustomClassMethod"
+                  moduleName = "DopamineKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cuddergambino/Code/Dopamine/DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/Events/CustomClassMethod.swift"
+                  timestampString = "537411075.533394"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/Events/CustomClassMethod.swift"
+            timestampString = "537412067.447749"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "registerMethods"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in variable initialization expression of static DopamineKit.CustomClassMethod.registerMethods : ()"
+                  moduleName = "DopamineKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cuddergambino/Code/Dopamine/DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/Events/CustomClassMethod.swift"
+                  timestampString = "537411075.537058"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DopamineKit.CustomClassMethod.registerMethods.unsafeMutableAddressor : ()"
+                  moduleName = "DopamineKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cuddergambino/Code/Dopamine/DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/Events/CustomClassMethod.swift"
+                  timestampString = "537411075.539593"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static DopamineKit.CustomClassMethod.registerMethods.getter : ()"
+                  moduleName = "DopamineKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cuddergambino/Code/Dopamine/DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/Events/CustomClassMethod.swift"
+                  timestampString = "537411075.542264"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/Events/CustomClassMethod.swift"
+            timestampString = "537412067.447943"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "registerVisualizerMethods()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/Events/CustomClassMethod.swift"
+            timestampString = "537412067.4481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "registerMethod()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/Events/CustomClassMethod.swift"
+            timestampString = "537412067.4482599"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "attemptReinforcement()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/CodelessAPI.swift"
+            timestampString = "538343069.37667"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "boot()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../DopamineKit-iOS/repo/Sources/RESTfulAPI/Codeless/CodelessAPI.swift"
+            timestampString = "538343069.376736"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "boot()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

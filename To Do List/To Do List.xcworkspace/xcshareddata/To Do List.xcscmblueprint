@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F3446E9360013312A1B5D7E8F1F5D7B5683B5BE3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3A1539A85E8E5D2644AE7F0F01D0A038CF3D4A1C" : 9223372036854775807,
+    "F3446E9360013312A1B5D7E8F1F5D7B5683B5BE3" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "92A44F14-2180-42F5-9002-F9F7642316A1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3A1539A85E8E5D2644AE7F0F01D0A038CF3D4A1C" : "DopamineKit-iOS\/repo\/",
+    "F3446E9360013312A1B5D7E8F1F5D7B5683B5BE3" : "DopamineKit-iOS-HelloWorld\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "To Do List",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "To Do List\/To Do List.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DopamineLabs\/DopamineKit-iOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3A1539A85E8E5D2644AE7F0F01D0A038CF3D4A1C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DopamineLabs\/DopamineAPI_Swift-Demo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F3446E9360013312A1B5D7E8F1F5D7B5683B5BE3"
+    }
+  ]
+}
